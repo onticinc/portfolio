@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import ResponsivePlayer from './components/responsive-player/ResponsivePlayer';
 // import './Main.js';
 
@@ -105,7 +105,7 @@ function App() {
         <header>
           {/* TOP NAVBAR */}
           <div className="container flex justify-between align-middle mx-auto px-4 md:px-8 lg:px-12 w-full">
-            <div className="text-lg font-bold">M-Smith<span className='text-selected-text'>.info</span></div>
+            <div className="text-lg font-bold">M-Smith<span className='text-blue-500'>.info</span></div>
 
             <div className="flex sm-flex space-x-5 items-center">
 
@@ -250,7 +250,7 @@ function App() {
                   <h3 className="text-white text-3xl font-semibold mb-10">Personal Portfolio</h3>
                 </div>
 
-                <p className="mt-10">I wanted to learn how to use Tailwind with React... Why not use it for my portfolio? Eventually, I would like to build a backend to update future projects. I really enjoyed learning how to use Tailwind, it reminds me of bootstrap but a little more customizeable. </p>
+                <p className="mt-10">I wanted to learn how to use Tailwind with React and deploy it on a Linode server. Why not use it for my portfolio? I decided to use Linode over AWS because I didn't want to get locked into more expensive hosting. Combining Tailwind with a React App took some getting used to but I was able to figure it out. It reminds me of Bootstrap with a little more functionality.</p>
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
                   <img src={portfolio_1} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
@@ -296,9 +296,9 @@ function App() {
                   <h3 className="text-white text-3xl font-semibold mb-10">Memory Game</h3>
                 </div>
 
-                <p className="mt-10">I made this game while I was in the General Assembly 12 week full stack program. It was the first project for the program and I spent a ton of time figuring out flex CSS getting the layout to scale on mobile screens.</p>
+                <p className="mt-10">I made this game while I was in the <a className="text-blue-500 font-bold" href="https://generalassemb.ly/">General Assembly</a> 12 week full stack program. It was the first major project for the program and I spent a ton of time figuring out flex CSS and getting the layout to scale on mobile screens.</p>
                 <p className="mt-5">It was right before christmas so I decided to make something that my niece and nephews would enjoy. I gave them the link on Christmas Morning.</p>
-                <p className="mt-5">I would like to redesign this and add more functionality. Like choosing how many pairs of cards you want, adding extra players, and making custom icons. I would also simplify the code.</p>
+                <p className="mt-5">Eventually, I would like to redesign this and add more functionality. Like choosing how many pairs of cards you want, adding extra players, and making custom icons. I would also simplify the code.</p>
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
@@ -382,7 +382,7 @@ function App() {
             <div className="w-full border border-nav p-16 lg:px-20 lg:py-20 lg:space-x-20 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
 
               {/* SMALL SCREEN - Title */}
-              <div className="flex flex-wrap justify-center text-center lg:hidden ">
+              <div className="flex flex-wrap justify-center text-center lg:hidden container">
                 <h3 className="text-white text-3xl font-semibold mb-10">DJ Ontic</h3>
               </div>
 
@@ -398,7 +398,7 @@ function App() {
                 <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
                   <h3 className="text-white text-3xl font-semibold mb-10">DJ Ontic</h3>
                 </div>
-                <p className="text-secondary mt-10 mb-10">I started working as a dj in 1996, my first paid gig was on NYE that year. I used to call my business 90 Decibels becuase that was the level that I could play music for those gigs. Eventually, I switched to Ontic which stands for On Time. I like to arrive early for gigs and keep the beat lined up.</p>
+                <p className="text-secondary mt-10 mb-10">I started working as a dj in 1996, my first paid gig was on NYE that year. I used to call my business 90 Decibels becuase that was the volume that I was allowed to play music at those first few gigs. Eventually, I switched to Ontic which stands for On Time. I like to arrive early for gigs because it allows time for a proper setup and time to diagnose any problems that may arrise.</p>
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
@@ -434,7 +434,7 @@ function App() {
 
               {/* <!-- Project logo --> */}
               <div className="mb-6 lg:mb-0">
-                <img src={mtn_view_icon} alt="M-Smith.info Icon" className="img_300" />
+                <img src={mtn_view_icon} alt="Mountain View Lawncare Icon" className="img_300" />
               </div>
 
               {/* <!-- Project info --> */}
@@ -446,12 +446,12 @@ function App() {
                 </div>
 
 
-                <p className="text-secondary mt-10 mb-10">When covid hit, my calendar went from really busy to no gigs in the near future. I started Mtn View Lawn Care as a way to help pay the bills. I really enjoy doing landscaping as a hobbie to stay in shape. I didn't have any intention on doing it longer than needed. </p>
+                <p className="text-secondary mt-10 mb-10">When covid hit, my calendar went from really busy to no gigs in the near future. I started Mtn View Lawn Care as a way to help pay the bills. I really enjoy doing landscaping as a hobbie to stay in shape, I didn't have any intention on doing it longer than needed. </p>
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
-                  <img src={mtn_view_1} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
-                  <img src={mtn_view_2} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
-                  <img src={mtn_view_3} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
+                  <img src={mtn_view_1} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" alt="Picture of Mountain View Lawncare Website" />
+                  <img src={mtn_view_2} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" alt="Picture of Mountain View Lawncare Website"/>
+                  <img src={mtn_view_3} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" alt="Picture of Mountain View Lawncare Website"/>
                 </div>
 
                 {/* Buttons */}
@@ -546,7 +546,7 @@ function App() {
 
                 {/* <!-- Project logo --> */}
                 <div className="mb-6 lg:mb-0">
-                  <img src={jenn} alt="Picture of Studio C at Shoreline Studios." className="img_300" />
+                  <img src={jenn} alt="Picture of Jen Blossil." className="img_300" />
                 </div>
 
                 {/* <!-- Project info --> */}
