@@ -111,12 +111,12 @@ function App() {
 
               {/* Github Icon */}
               <a href="https://github.com/onticinc">
-                <svg className="w-8 h-8 mt-1" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" fill="white"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" /></svg>
+                <svg alt="link to github" className="w-8 h-8 mt-1" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" fill="white"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" /></svg>
               </a>
 
               {/* LinkedIn Icon */}
               <a href="https://www.linkedin.com/in/onticinc/">
-                <svg className="w-8 h-8  mt-1" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" fill="white"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+                <svg alt="link to linkedin profile" className="w-8 h-8  mt-1" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" fill="white"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
               </a>
 
               <a href="#hire"><button className="px-6 py-2 bg-theme font-bold">Hire Me</button></a>
@@ -152,7 +152,7 @@ function App() {
             <div className="flex flex-wrap max-w-xl justify-center place-items-center">
               <div className="container lg:ml-16">
                 <img src={picture} alt="Picture of Michael Smith in Nome AK." className="prortfolio_profile_image mt-10 h-screen" />
-                <h4 className="mt-5 text-secondary">Bering Sea | Nome Alaska.</h4>
+                <h4 className="mt-5 text white">Bering Sea | Nome Alaska.</h4>
               </div>
             </div>
 
@@ -199,13 +199,13 @@ function App() {
 
                 <p className="mt-5">I worked on this with <a className="text-blue-500" href="https://github.com/pambonian">Patrick Brennan</a>, another student in my class. This project is built with Django any Python, it has a fully functioning blog with auth and password reset on your profile. It will compress the uploaded profile picture and scale it to the correct size. The show list populates from the rss feed for the podcast, which eliminates the need to update the website everytime a new show is published.</p>
 
-                <p className="mt-5">I used my podcast "Eggs" to demonstrate functionality, you can watch the presentation video through the private link posted below.</p>
+                <p className="mt-5">I used the podcast "Eggs" to demonstrate functionality, you can watch the presentation video through the private link posted below.</p>
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
-                  <img src={eggs_1} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
-                  <img src={eggs_2} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
-                  <img src={eggs_3} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
+                  <img src={eggs_1} alt="Eggs Podcast Website Screen Shot" className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
+                  <img src={eggs_2} alt="Eggs Podcast Website Screen Shot" className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
+                  <img src={eggs_3} alt="Eggs Podcast Website Screen Shot" className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
                 </div>
 
                 <div className="mt-16 justify-right">
@@ -239,7 +239,7 @@ function App() {
 
               {/* <!-- Project logo --> */}
               <div className="mb-6 lg:mb-0">
-                <img src={ms_icon} alt="M-Smith.info Icon" className="img_300" />
+                <img alt="M-Smith.info website icon."src={ms_icon} alt="M-Smith.info Icon" className="img_300" />
               </div>
 
               {/* <!-- Project info --> */}
@@ -253,8 +253,8 @@ function App() {
                 <p className="mt-10">I wanted to learn how to use Tailwind with React and deploy it on a Linode server. Why not use it for my portfolio? I decided to use Linode over AWS because I didn't want to get locked into more expensive hosting. Combining Tailwind with a React App took some getting used to but I was able to figure it out. It reminds me of Bootstrap with a little more functionality.</p>
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
-                  <img src={portfolio_1} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
-                  <img src={portfolio_2} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
+                  <img alt="picture of m-smith.info website" src={portfolio_1} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
+                  <img alt="picture of m-smith.info website" src={portfolio_2} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
                 </div>
 
                 {/* Buttons */}
@@ -285,7 +285,7 @@ function App() {
 
               {/* <!-- Project logo --> */}
               <div className="mb-6 lg:mb-0">
-                <img src={memory_icon} alt="M-Smith.info Icon" className="img_300" />
+                <img src={memory_icon} alt="Merory Game Icon" className="img_300" />
               </div>
 
               {/* <!-- Project info --> */}
@@ -302,10 +302,9 @@ function App() {
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
-                  <img src={memory_2} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
-                  <img src={memory_3} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
-                  <img src={memory_1} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
-                 
+                  <img src={memory_2} alt="memory game screenshot" className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
+                  <img src={memory_3} alt="memory game screenshot" className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
+                  <img src={memory_1} alt="memory game screenshot" className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />                 
                 </div>
 
                 {/* Buttons */}
@@ -351,13 +350,13 @@ function App() {
                   <h3 className="text-white text-3xl font-semibold mb-10">Audiostar Website</h3>
                 </div>
 
-                <p className="text-secondary mt-10 mb-10">Audiostar is my portfolio for anything Audio related. It is a fairly straight forward wordpress site. Nothing fancy. </p>
+                <p className="text white mt-10 mb-10">Audiostar is my portfolio for anything Audio related. It is a fairly straight forward wordpress site. Nothing fancy. </p>
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
-                  <img src={audiostar_website_3} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
-                  <img src={audiostar_website_1} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
-                  <img src={audiostar_website_2} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
+                  <img src={audiostar_website_3} alt="audiostar website screenshot" className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
+                  <img src={audiostar_website_1} alt="audiostar website screenshot" className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
+                  <img src={audiostar_website_2} alt="audiostar website screenshot" className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
                 </div>
 
                 {/* Buttons */}
@@ -398,12 +397,12 @@ function App() {
                 <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
                   <h3 className="text-white text-3xl font-semibold mb-10">DJ Ontic</h3>
                 </div>
-                <p className="text-secondary mt-10 mb-10">I started working as a dj in 1996, my first paid gig was on NYE that year. I used to call my business 90 Decibels becuase that was the volume that I was allowed to play music at those first few gigs. Eventually, I switched to Ontic which stands for On Time. I like to arrive early for gigs because it allows time for a proper setup and time to diagnose any problems that may arrise.</p>
+                <p className="text white mt-10 mb-10">I started working as a dj in 1996, my first paid gig was on NYE that year. I used to call my business 90 Decibels becuase that was the volume that I was allowed to play music at those first few gigs. Eventually, I switched to Ontic which stands for On Time. I like to arrive early for gigs because it allows time for a proper setup and time to diagnose any problems that may arrise.</p>
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
-                  <img src={ontic_website_2} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
-                  <img src={ontic_website} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
+                  <img alt="screen shot of dj ontic website" src={ontic_website_2} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
+                  <img alt="screen shot of dj ontic website" src={ontic_website} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
                 </div>
 
                 {/* Buttons */}
@@ -426,7 +425,7 @@ function App() {
 
             {/* Start Mtn View Lawn */}
             <div className="w-full border border-nav p-16 lg:px-20 lg:py-20 lg:space-x-20 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
-
+              
               {/* SMALL SCREEN - Title */}
               <div className="flex flex-wrap justify-center text-center lg:hidden ">
                 <h3 className="text-white text-3xl font-semibold mb-10">Mountain View Lawn Care</h3>
@@ -445,13 +444,15 @@ function App() {
                   <h3 className="text-white text-3xl font-semibold mb-10">Mountain View Lawn Care</h3>
                 </div>
 
+                <p className="text white mt-10 mb-10">When covid hit, my event calendar went from really busy to no gigs in the near future. I started Mountain View Lawn Care as a way to help pay the bills. I really enjoy doing landscaping as a hobbie to stay in shape, not as a fulltime job. I didn't intend on doing it longer than needed. </p>
 
-                <p className="text-secondary mt-10 mb-10">When covid hit, my calendar went from really busy to no gigs in the near future. I started Mtn View Lawn Care as a way to help pay the bills. I really enjoy doing landscaping as a hobbie to stay in shape, I didn't have any intention on doing it longer than needed. </p>
+                <p className="text white mb-10">This website is essentially a portfolio of the landscaping work that I did at my parents house in Idaho. They had a very large pine tree growing too close to the house, when we took it out it left a large area that needed a rock wall. That simple tree removal turned into a three year project that was really fun. You can watch a timelapse video of the entire project on the website.</p>
+
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
                   <img src={mtn_view_1} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" alt="Picture of Mountain View Lawncare Website" />
-                  <img src={mtn_view_2} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" alt="Picture of Mountain View Lawncare Website"/>
-                  <img src={mtn_view_3} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" alt="Picture of Mountain View Lawncare Website"/>
+                  <img src={mtn_view_2} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" alt="Picture of Mountain View Lawncare Website" />
+                  <img src={mtn_view_3} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" alt="Picture of Mountain View Lawncare Website" />
                 </div>
 
                 {/* Buttons */}
@@ -507,7 +508,7 @@ function App() {
                   </div>
 
                   <p className="text-white font-semibold mt-5 mb-5">Recorded at Shoreline Studios.</p>
-                  <p className="text-secondary mb-10">As you can tell by listening to this recording, Eric is a very talented musician. This was an amazing experience for me because it was the first time I was able to record a Hammond B3 Organ. I think the finished product sounds great and I hope to be able to record Erich again someday. </p>
+                  <p className="text white mb-10">As you can tell by listening to this recording, Eric is a very talented musician. This was an amazing experience for me because it was the first time I was able to record a Hammond B3 Organ. I think the finished product sounds great and I hope to be able to record Erich again someday. </p>
                   
                   {/* Audio Player */}
                   <ResponsivePlayer url="https://soundcloud.com/audiostarinc/follow-me-erich-friedrick" />
@@ -557,7 +558,7 @@ function App() {
                     <h3 className="text-white text-3xl font-semibold mb-5">Jenn Blosil (Live Recording)</h3>
                     <h4 className="text-white text-2xl font-semi-bold">"I'm Tired"</h4>
                   </div>
-                  <p className="text-secondary mt-10 mb-10">Jenn Blosil has a very unique voice and an amazing personality. You can listen to her music on spotify and see her perform on American Idol. I really enjoyed working with her and hope to do it again sometime. </p>
+                  <p className="text white mt-10 mb-10">Jenn Blosil has a very unique voice and an amazing personality. You can listen to her music on spotify and see her perform on American Idol. I really enjoyed working with her and hope to do it again sometime. </p>
                   
                   {/* Audio Player */}
                   <ResponsivePlayer url="https://soundcloud.com/audiostarinc/jen-blossil-im-tired" />
@@ -609,7 +610,7 @@ function App() {
                     <h4 className="text-white text-1xl font-semi-bold">Children's Audio Book.</h4>
                   </div>
 
-                  <p className="text-secondary mt-10 mb-10">Rectangulo can count is childrens book to help them learn how to count in Spanish. The audio book is really helpful so they can hear how to pronounce the words. I really enjoyed working on this project and would love to do similar projects in the future.  </p>
+                  <p className="text white mt-10 mb-10">Rectangulo can count is childrens book to help them learn how to count in Spanish. The audio book is really helpful so they can hear how to pronounce the words. I really enjoyed working on this project and would love to do similar projects in the future.  </p>
                   
                   {/* Audio Player */}
                   <ResponsivePlayer url="https://soundcloud.com/audiostarinc/rectangulo-can-count-audio-book" />
@@ -654,8 +655,8 @@ function App() {
                     <h3 className="text-white text-3xl font-semibold">"Carolina"</h3> 
                   </div>
 
-                  <p className="text-secondary mt-10 mb-10">Mixed at Shoreline Studios.</p>
-                  <p className="text-secondary mt-10 mb-10">Shoreling Studios provided me with the stems and I mixed them in Studio C on the Toft cosole. I really like how this mix turned out, always fun to work on a analog board with outboard gear.</p>
+                  <p className="text white mt-10 mb-10">Mixed at Shoreline Studios.</p>
+                  <p className="text white mt-10 mb-10">Shoreling Studios provided me with the stems and I mixed them in Studio C on the Toft cosole. I really like how this mix turned out, always fun to work on a analog board with outboard gear.</p>
                   
                   {/* Audio Player */}
                   <ResponsivePlayer url="https://soundcloud.com/audiostarinc/carolina-mix-down" />
@@ -703,7 +704,7 @@ function App() {
                     <h4 className="text-white text-1xl font-semi-bold">Live at Campbells Resort, Chelan WA.</h4>
                   </div>
 
-                  <p className="text-secondary mt-10">This was at a wedding ceremony. After the soundcheck, I decided to hit record because I loved his voice and the ambient sound around the lake was amazing. If you listen close, you can hear birds and people enjoying the lake in the distance. It made for a very unique recording and I love how it turned out!</p>
+                  <p className="text white mt-10">This was at a wedding ceremony. After the soundcheck, I decided to hit record because I loved his voice and the ambient sound around the lake was amazing. If you listen close, you can hear birds and people enjoying the lake in the distance. It made for a very unique recording and I love how it turned out!</p>
                   <h4 className="mt-10 text-white text-1xl font-semi-bold">Recorded and Edited With:</h4>
 
                   {/* Audio Player */}
@@ -754,7 +755,7 @@ function App() {
                     <h4 className="text-white text-1xl font-semi-bold">Live at a private event.</h4>
                   </div>
 
-                  <p className="text-secondary mt-10 mb-10">Scott asked me to provide a sound system for him to use at a private event, usually when I work with Scott I play background music when he needs a break. I had my laptop there for that reason and decided to just record his set. I think it turned out pretty good. Enjoy! </p>
+                  <p className="text white mt-10 mb-10">Scott asked me to provide a sound system for him to use at a private event, usually when I work with Scott I play background music when he needs a break. I had my laptop there for that reason and decided to just record his set. I think it turned out pretty good. Enjoy! </p>
                   
 
                   {/* Audio Player */}
@@ -803,7 +804,7 @@ function App() {
                     <h4 className="text-white text-1xl font-semi-bold"></h4>
                   </div>
 
-                  <p className="text-secondary mt-10 mb-10">This is a custom cheer mix that I made for a high school in Seattle. It took a few hours to line everything up and make it sound good, but overall I am pleased with how it turned out. </p>
+                  <p className="text white mt-10 mb-10">This is a custom cheer mix that I made for a high school in Seattle. It took a few hours to line everything up and make it sound good, but overall I am pleased with how it turned out. </p>
                   
 
                   {/* Audio Player */}
@@ -1303,6 +1304,8 @@ function App() {
         <div className="container mt-64 flex justify-between mx-auto px-8 md:px-14 lg:px-24 w-full">
           <section className="w-full">
           <h2 className="text-center text-2xl sm:text-3xl font-bold">Hire Me!</h2>
+          <a href="https://forms.gle/VhVXcct1mnE5rhvi7" target="_blank"><button className="px-6 py-2 ml-2 bg-theme font-bold">Request A Quote</button></a>
+
           <h2 className="text-center text-xl font-semibold mt-10">onticinc@gmail.com</h2>
             <div id="hire" className="secondary-title flex justify-center mt-10"></div>
             {/* <ContactForm className="mt-5" /> */}
