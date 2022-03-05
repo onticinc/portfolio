@@ -1,0 +1,7 @@
+.player-wrapper {
+    width: 450px; 
+    height: 200px;
+  }
+  .react-player > div {
+    position: absolute; 
+  }
