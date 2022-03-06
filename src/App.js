@@ -239,7 +239,7 @@ function App() {
 
               {/* <!-- Project logo --> */}
               <div className="mb-6 lg:mb-0">
-                <img alt="M-Smith.info website icon."src={ms_icon} alt="M-Smith.info Icon" className="img_300" />
+                <img alt="M-Smith.info website icon." src={ms_icon} className="img_300" />
               </div>
 
               {/* <!-- Project info --> */}
@@ -457,7 +457,7 @@ function App() {
 
                 {/* Buttons */}
                 <div className="mt-16 justify-right">
-                  <a href="https://www.djontic.com" target="_blank"><button className="px-6 py-2 bg-theme font-bold">View Website</button></a>
+                  <a href="https://www.mtnviewlawn.com" target="_blank"><button className="px-6 py-2 bg-theme font-bold">View Website</button></a>
                 </div>
 
                 {/* Built With */}
@@ -840,7 +840,7 @@ function App() {
           <section className="w-full">
             <h2 className="text-center text-2xl sm:text-3xl font-bold">Event Photos</h2>
             <div id="event" className="secondary-title flex justify-center mt-10"></div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
               
               {/* new img block */}
               <div className="group relative">
@@ -1303,12 +1303,12 @@ function App() {
         {/* <!-- Hire me --> */}
         <div className="container mt-64 flex justify-between mx-auto px-8 md:px-14 lg:px-24 w-full">
           <section className="w-full">
-          <h2 className="text-center text-2xl sm:text-3xl font-bold">Hire Me!</h2>
-          <a href="https://forms.gle/VhVXcct1mnE5rhvi7" target="_blank"><button className="px-6 py-2 ml-2 bg-theme font-bold">Request A Quote</button></a>
-
-          <h2 className="text-center text-xl font-semibold mt-10">onticinc@gmail.com</h2>
+            <h2 className="text-center text-2xl sm:text-3xl font-bold">Hire Me!</h2>
             <div id="hire" className="secondary-title flex justify-center mt-10"></div>
+
             {/* <ContactForm className="mt-5" /> */}
+            <a href="https://forms.gle/VhVXcct1mnE5rhvi7" target="_blank"><button className="px-6 py-2 ml-2 bg-theme font-bold mt-10">Request A Quote</button></a>
+            <h2 className="text-center text-xl font-semibold mt-10">onticinc@gmail.com</h2>
           </section>
         </div>
 
