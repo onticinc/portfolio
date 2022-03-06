@@ -119,7 +119,7 @@ function App() {
                 <svg alt="link to linkedin profile" className="w-8 h-8  mt-1" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" fill="white"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
               </a>
 
-              <a href="#hire"><button className="px-6 py-2 bg-theme font-bold">Hire Me</button></a>
+              <a href="https://forms.gle/VhVXcct1mnE5rhvi7" target="_blank"><button className="px-6 py-2 bg-theme font-bold">Hire Me</button></a>
             </div>
           </div>
         </header>
@@ -160,9 +160,9 @@ function App() {
             <div className="flex flex-wrap mx-auto justify-center place-items-center max-w-xl md:ml-20 mt-16">
               <h1 className="font-bold text-5xl md:text-6xl lg:text-7xl text-center">Create<br />Document<br />Produce</h1>
               <div className="w-full flex justify-center md:text-left">
-                <button className="px-8 py-4 bg-theme text-white font-bold mt-12 flex justify-center items-center space-x-3">
+                <a href="#software"><button className="px-8 py-4 bg-theme text-white font-bold mt-12 flex justify-center items-center space-x-3">
                   <span>View my work.</span>
-                </button>
+                </button></a>
               </div>
             </div>
           </div>
@@ -195,11 +195,11 @@ function App() {
                   <h3 className="text-white text-3xl font-semibold mb-10">Podcast Website Template</h3>
                 </div>
 
-                <p className="mt-10">This was the capstone project for my 12 week bootcamp at <a className="text-blue-500" href="https://generalassemb.ly/"> General Assembly.</a></p>
+                <p className="mt-10 font-semibold">This was the capstone project for my 12 week bootcamp at <a className="text-blue-500" href="https://generalassemb.ly/"> General Assembly</a>. I worked on this with <a className="text-blue-500" href="https://github.com/pambonian">Patrick Brennan</a>, another student in my class. </p>
 
-                <p className="mt-5">I worked on this with <a className="text-blue-500" href="https://github.com/pambonian">Patrick Brennan</a>, another student in my class. This project is built with Django any Python, it has a fully functioning blog with auth and password reset on your profile. It will compress the uploaded profile picture and scale it to the correct size. The show list populates from the rss feed for the podcast, which eliminates the need to update the website everytime a new show is published.</p>
+                <p className="mt-5 font-semibold">This project is built with Django any Python, it has a fully functioning blog with auth and password reset on your profile. It will compress the uploaded profile picture and scale it to the correct size. The show list populates from the rss feed for the podcast, which eliminates the need to update the website everytime a new show is published.</p>
 
-                <p className="mt-5">I used the podcast "Eggs" to demonstrate functionality, you can watch the presentation video through the private link posted below.</p>
+                <p className="mt-5 font-semibold">I used the podcast "Eggs" to demonstrate functionality, you can watch the presentation video through the private link posted below.</p>
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
@@ -250,7 +250,7 @@ function App() {
                   <h3 className="text-white text-3xl font-semibold mb-10">Personal Portfolio</h3>
                 </div>
 
-                <p className="mt-10">I wanted to learn how to use Tailwind with React and deploy it on a Linode server. Why not use it for my portfolio? I decided to use Linode over AWS because I didn't want to get locked into more expensive hosting. Combining Tailwind with a React App took some getting used to but I was able to figure it out. It reminds me of Bootstrap with a little more functionality.</p>
+                <p className="mt-10 font-semibold">I wanted to learn how to use Tailwind with React and deploy it on a Linode server. Why not do that for my portfolio? I decided to use Linode over AWS because I didn't want to get locked into more expensive hosting. Combining Tailwind with a React App took some getting used to but I was able to figure it out. It reminds me of Bootstrap with a little more functionality.</p>
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
                   <img alt="picture of m-smith.info website" src={portfolio_1} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
@@ -397,7 +397,7 @@ function App() {
                 <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
                   <h3 className="text-white text-3xl font-semibold mb-10">DJ Ontic</h3>
                 </div>
-                <p className="text white mt-10 mb-10">I started working as a dj in 1996, my first paid gig was on NYE that year. I used to call my business 90 Decibels becuase that was the volume that I was allowed to play music at those first few gigs. Eventually, I switched to Ontic which stands for On Time. I like to arrive early for gigs because it allows time for a proper setup and time to diagnose any problems that may arrise.</p>
+                <p className="text white mt-10 mb-10">I started working as a dj in 1996, my first paid gig was on NYE of that year. I used to call my business 90 Decibels becuase that was the volume I was allowed to play music at for those first few gigs. Eventually, I switched to Ontic which stands for On Time. I like to arrive early for gigs because it allows time for a proper setup and time to diagnose any problems that may arrise.</p>
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
@@ -444,9 +444,9 @@ function App() {
                   <h3 className="text-white text-3xl font-semibold mb-10">Mountain View Lawn Care</h3>
                 </div>
 
-                <p className="text white mt-10 mb-10">When covid hit, my event calendar went from really busy to no gigs in the near future. I started Mountain View Lawn Care as a way to help pay the bills. I really enjoy doing landscaping as a hobbie to stay in shape, not as a fulltime job. I didn't intend on doing it longer than needed. </p>
+                <p className="text white mt-10 mb-10">When covid hit, my event calendar went from really busy to no gigs in the near future. I started Mountain View Lawn Care as a way to help pay the bills. I enjoy landscaping as a hobbie just to stay in shape, not as a fulltime job. I didn't intend on doing it longer than needed. </p>
 
-                <p className="text white mb-10">This website is essentially a portfolio of the landscaping work that I did at my parents house in Idaho. They had a very large pine tree growing too close to the house, when we took it out it left a large area that needed a rock wall. That simple tree removal turned into a three year project that was really fun. You can watch a timelapse video of the entire project on the website.</p>
+                <p className="text white mb-10">This website is essentially a portfolio of the landscaping work that I did at my parents house in Idaho. They had a very large pine tree growing too close to the house, when we took it out it left a large area that needed a rock wall. That simple tree removal turned into a three year project that was allot fun to work on. You can watch a timelapse video of the entire project on the website.</p>
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
