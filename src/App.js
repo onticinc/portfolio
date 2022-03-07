@@ -1308,6 +1308,7 @@ function App() {
 
             {/* <ContactForm className="mt-5" /> */}
             <a href="https://forms.gle/VhVXcct1mnE5rhvi7" target="_blank"><button className="px-6 py-2 ml-2 bg-theme font-bold mt-10">Request A Quote</button></a>
+            <a href="https://github.com/onticinc/m-smith/blob/33d6be801a99a70b0392c111f73afbdce451e984/src/michael-david-smith_2022_resume.pdf#L1" target="_blank"><button className="px-6 py-2 ml-2 mt-10 bg-theme font-bold mt-10">View Resume</button></a> 
             <h2 className="text-center text-xl font-semibold mt-10">onticinc@gmail.com</h2>
           </section>
         </div>
