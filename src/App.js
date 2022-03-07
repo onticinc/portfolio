@@ -96,7 +96,6 @@ import event_49 from './img/events/49.png';
 
 
 import './App.css';
-import ContactForm from './components/contactForm/ContactForm';
 
 function App() {
   return (
@@ -119,7 +118,7 @@ function App() {
                 <svg alt="link to linkedin profile" className="w-8 h-8  mt-1" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" fill="white"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
               </a>
 
-              <a href="https://forms.gle/VhVXcct1mnE5rhvi7" target="_blank"><button className="px-6 py-2 bg-theme font-bold">Hire Me</button></a>
+              <a href="#hire" target="_blank" rel="noreferrer"><button className="px-6 py-2 bg-theme font-bold">Hire Me</button></a>
             </div>
           </div>
         </header>
@@ -151,7 +150,7 @@ function App() {
             {/* Profile Image */}
             <div className="flex flex-wrap max-w-xl justify-center place-items-center">
               <div className="container lg:ml-16">
-                <img src={picture} alt="Picture of Michael Smith in Nome AK." className="prortfolio_profile_image mt-10 h-screen" />
+                <img src={picture} alt="Michael Smith in Nome AK." className="prortfolio_profile_image mt-10 h-screen" />
                 <h4 className="mt-5 text white">Bering Sea | Nome Alaska.</h4>
               </div>
             </div>
@@ -197,7 +196,7 @@ function App() {
 
                 <p className="mt-10 font-semibold">This was the capstone project for my 12 week bootcamp at <a className="text-blue-500" href="https://generalassemb.ly/"> General Assembly</a>. I worked on this with <a className="text-blue-500" href="https://github.com/pambonian">Patrick Brennan</a>, another student in my class. </p>
 
-                <p className="mt-5 font-semibold">This project is built with Django any Python, it has a fully functioning blog with auth and password reset on your profile. It will compress the uploaded profile picture and scale it to the correct size. The show list populates from the rss feed for the podcast, which eliminates the need to update the website everytime a new show is published.</p>
+                <p className="mt-5 font-semibold">This project is built with Django and Python, it has a fully functioning blog with auth and password reset on your profile. It will compress the uploaded profile picture and scale it to the correct size. The show list populates from the rss feed for the podcast, which eliminates the need to update the website everytime a new show is published.</p>
 
                 <p className="mt-5 font-semibold">I used the podcast "Eggs" to demonstrate functionality, you can watch the presentation video through the private link posted below.</p>
 
@@ -209,8 +208,8 @@ function App() {
                 </div>
 
                 <div className="mt-16 justify-right">
-                  <a href="https://youtu.be/wwqg7ifEoJU" target="_blank"><button className="px-6 py-2 bg-theme font-bold mb-5">View Project Video</button></a>
-                  <a href="https://github.com/onticinc/podcast_template" target="_blank"><button className="px-6 py-2 ml-2 mb-5 bg-theme font-bold">View Github</button></a>
+                  <a href="https://youtu.be/wwqg7ifEoJU" target="_blank" rel="noreferrer"><button className="px-6 py-2 bg-theme font-bold mb-5">View Project Video</button></a>
+                  <a href="https://github.com/onticinc/podcast_template" target="_blank" rel="noreferrer"><button className="px-6 py-2 ml-2 mb-5 bg-theme font-bold">View Github</button></a>
                 </div>
 
                 <div className="container">
@@ -253,13 +252,13 @@ function App() {
                 <p className="mt-10 font-semibold">I wanted to learn how to use Tailwind with React and deploy it on a Linode server. Why not do that for my portfolio? I decided to use Linode over AWS because I didn't want to get locked into more expensive hosting. Combining Tailwind with a React App took some getting used to but I was able to figure it out. It reminds me of Bootstrap with a little more functionality.</p>
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
-                  <img alt="picture of m-smith.info website" src={portfolio_1} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
-                  <img alt="picture of m-smith.info website" src={portfolio_2} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
+                  <img alt="m-smith.info website screen shot" src={portfolio_1} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
+                  <img alt="m-smith.info website screen shot" src={portfolio_2} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
                 </div>
 
                 {/* Buttons */}
                 <div className="mt-16 justify-right">
-                  <a href="https://github.com/onticinc/m-smith" target="_blank"><button className="px-6 py-2 bg-theme font-bold">View Github</button></a>
+                  <a href="https://github.com/onticinc/m-smith" target="_blank" rel="noreferrer"><button className="px-6 py-2 bg-theme font-bold">View Github</button></a>
                 </div>
 
                 {/* Built With */}
@@ -309,8 +308,8 @@ function App() {
 
                 {/* Buttons */}
                 <div className="mt-16 justify-right">
-                  <a href="https://onticinc.github.io/card_match_game/" target="_blank"><button className="px-6 py-2 bg-theme font-bold">View Game</button></a>
-                  <a href="https://github.com/onticinc/card_match_game"><button className="px-6 py-2 ml-2 bg-theme font-bold">View Github</button></a>
+                  <a href="https://onticinc.github.io/card_match_game/" target="_blank" rel="noreferrer"><button className="px-6 py-2 bg-theme font-bold">View Game</button></a>
+                  <a href="https://github.com/onticinc/card_match_game" target="_blank" rel="noreferrer"><button className="px-6 py-2 ml-2 bg-theme font-bold">View Github</button></a>
                 </div>
 
                 {/* Built With */}
@@ -361,7 +360,7 @@ function App() {
 
                 {/* Buttons */}
                 <div className="mt-16 justify-right">
-                  <a href="https://www.audiostarinc.com" target="_blank"><button className="px-6 py-2 bg-theme font-bold">View Website</button></a>
+                  <a href="https://www.audiostarinc.com" target="_blank" rel="noreferrer"><button className="px-6 py-2 bg-theme font-bold">View Website</button></a>
                 </div>
 
                 {/* Built With */}
@@ -407,7 +406,7 @@ function App() {
 
                 {/* Buttons */}
                 <div className="mt-16 justify-right">
-                  <a href="https://www.djontic.com" target="_blank"><button className="px-6 py-2 bg-theme font-bold">View Website</button></a>
+                  <a href="https://www.djontic.com" target="_blank" rel="noreferrer"><button className="px-6 py-2 bg-theme font-bold">View Website</button></a>
                 </div>
 
                 {/* Built With */}
@@ -450,14 +449,14 @@ function App() {
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
-                  <img src={mtn_view_1} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" alt="Picture of Mountain View Lawncare Website" />
-                  <img src={mtn_view_2} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" alt="Picture of Mountain View Lawncare Website" />
-                  <img src={mtn_view_3} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" alt="Picture of Mountain View Lawncare Website" />
+                  <img src={mtn_view_1} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" alt="Mountain View Lawncare Website Screen Shot" />
+                  <img src={mtn_view_2} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" alt="Mountain View Lawncare Website Screen Shot" />
+                  <img src={mtn_view_3} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" alt="Mountain View Lawncare Website Screen Shot" />
                 </div>
 
                 {/* Buttons */}
                 <div className="mt-16 justify-right">
-                  <a href="https://www.mtnviewlawn.com" target="_blank"><button className="px-6 py-2 bg-theme font-bold">View Website</button></a>
+                  <a href="https://www.mtnviewlawn.com" target="_blank" rel="noreferrer"><button className="px-6 py-2 bg-theme font-bold">View Website</button></a>
                 </div>
 
                 {/* Built With */}
@@ -495,7 +494,7 @@ function App() {
 
                 {/* <!-- Project logo --> */}
                 <div className="mb-6 lg:mb-0">
-                  <img src={studio_c} alt="Picture of Studio C at Shoreline Studios." className="img_300" />
+                  <img src={studio_c} alt="Studio C at Shoreline Studios." className="img_300" />
                 </div>
 
                 {/* <!-- Project info --> */}
@@ -515,7 +514,7 @@ function App() {
 
                   {/* Buttons */}
                   <div className="mt-16 justify-right">
-                    <a href="https://app.shoreline.edu/sccstudio/equipment.asp" target="_blank"><button className="px-6 py-2 bg-theme font-bold">Shoreline Studios</button></a>
+                    <a href="https://app.shoreline.edu/sccstudio/equipment.asp" target="_blank" rel="noreferrer"><button className="px-6 py-2 bg-theme font-bold">Shoreline Studios</button></a>
                   </div>
 
                   {/* Built With */}
@@ -547,7 +546,7 @@ function App() {
 
                 {/* <!-- Project logo --> */}
                 <div className="mb-6 lg:mb-0">
-                  <img src={jenn} alt="Picture of Jen Blossil." className="img_300" />
+                  <img src={jenn} alt="Jen Blossil." className="img_300" />
                 </div>
 
                 {/* <!-- Project info --> */}
@@ -565,8 +564,8 @@ function App() {
 
                   {/* Buttons */}
                   <div className="mt-16 justify-right">
-                    <a href="https://open.spotify.com/artist/0l044F6bMOeoWWvk4Neru8?si=AVlij17bReehhZ27Ti884A" target="_blank"><button className="px-6 py-2 mb-5 bg-theme font-bold">Listen to Jenn on Spotify.</button></a>
-                    <a href="https://www.youtube.com/watch?v=3f42T2IU9A4" target="_blank"><button className="xl:ml-5 px-6 py-2 bg-theme font-bold">Watch Jenn on Americon Idol</button></a>
+                    <a href="https://open.spotify.com/artist/0l044F6bMOeoWWvk4Neru8?si=AVlij17bReehhZ27Ti884A" target="_blank" rel="noreferrer"><button className="px-6 py-2 mb-5 bg-theme font-bold">Listen to Jenn on Spotify.</button></a>
+                    <a href="https://www.youtube.com/watch?v=3f42T2IU9A4" target="_blank" rel="noreferrer"><button className="xl:ml-5 px-6 py-2 bg-theme font-bold">Watch Jenn on Americon Idol</button></a>
                   </div>
 
                   {/* Built With */}
@@ -598,7 +597,7 @@ function App() {
 
                 {/* <!-- Project logo --> */}
                 <div className="mb-6 lg:mb-0">
-                  <img src={rectangulo} alt="Picture of Rectangulo Audio Book" className="img_300" />
+                  <img src={rectangulo} alt="Rectangulo Audio Book" className="img_300" />
                 </div>
 
                 {/* <!-- Project info --> */}
@@ -617,7 +616,7 @@ function App() {
 
                   {/* Buttons */}
                   <div className="mt-16 justify-right">
-                    <a href="https://campbellsresort.com/" target="_blank"><button className="px-6 py-2 bg-theme font-bold">Buy the Book</button></a>
+                    <a href="https://campbellsresort.com/" target="_blank" rel="noreferrer"><button className="px-6 py-2 bg-theme font-bold">Buy the Book</button></a>
                   </div>
 
                   {/* Built With */}
@@ -639,12 +638,11 @@ function App() {
                 {/* SMALL SCREEN - Title */}
                 <div className="flex flex-wrap justify-center text-center lg:hidden ">
                   <h3 className="text-white text-3xl font-semibold">"Carolina"</h3>
-                  <h4 className="text-white text-1xl font-semi-bold"></h4>
                 </div>
 
                 {/* <!-- Project logo --> */}
                 <div className="mb-6 lg:mb-0">
-                  <img src={studio_a} alt="Picture of Studio A." className="img_300" />
+                  <img src={studio_a} alt="Studio A Shoreline Studios." className="img_300" />
                 </div>
 
                 {/* <!-- Project info --> */}
@@ -663,7 +661,7 @@ function App() {
 
                   {/* Buttons */}
                   <div className="mt-16 justify-right">
-                    <a href="https://app.shoreline.edu/sccstudio/equipment.asp" target="_blank"><button className="px-6 py-2 bg-theme font-bold">Shoreline Studios</button></a>
+                    <a href="https://app.shoreline.edu/sccstudio/equipment.asp" target="_blank" rel="noreferrer"><button className="px-6 py-2 bg-theme font-bold">Shoreline Studios</button></a>
                   </div>
 
                   {/* Built With */}
@@ -692,7 +690,7 @@ function App() {
 
                 {/* <!-- Project logo --> */}
                 <div className="mb-6 lg:mb-0">
-                  <img src={casey} alt="Picture of Casey Connor playing the guitar at Campbells Resort in Lake Chelan." className="img_300" />
+                  <img src={casey} alt="Casey Connor playing the guitar at Campbells Resort in Lake Chelan." className="img_300" />
                 </div>
 
                 {/* <!-- Project info --> */}
@@ -712,8 +710,8 @@ function App() {
 
                   {/* Buttons */}
                   <div className="mt-16 justify-right">
-                    <a href="https://campbellsresort.com/" target="_blank"><button className="px-6 py-2 bg-theme font-bold">Campbells Resort</button></a>
-                    <a href="https://caseyconnor.org/" target="_blank"><button className="px-6 py-2 ml-2 bg-theme font-bold">Casey Connor</button></a>
+                    <a href="https://campbellsresort.com/" target="_blank" rel="noreferrer"><button className="px-6 py-2 bg-theme font-bold">Campbells Resort</button></a>
+                    <a href="https://caseyconnor.org/" target="_blank" rel="noreferrer"><button className="px-6 py-2 ml-2 bg-theme font-bold">Casey Connor</button></a>
                   </div>
 
                   {/* Built With */}
@@ -743,7 +741,7 @@ function App() {
 
                 {/* <!-- Project logo --> */}
                 <div className="mb-6 lg:mb-0">
-                  <img src={event_16} alt="Picture of Scott Foster playing the guitar at Siren Songs Winery in Lake Chelan." className="img_300" />
+                  <img src={event_16} alt="Scott Foster playing the guitar at Siren Songs Winery in Lake Chelan." className="img_300" />
                 </div>
 
                 {/* <!-- Project info --> */}
@@ -763,7 +761,7 @@ function App() {
 
                   {/* Buttons */}
                   <div className="mt-16 justify-right">
-                    <a href="http://scottfosterrock.com/" target="_blank"><button className="px-6 py-2 bg-theme font-bold">Scott Foster</button></a>
+                    <a href="http://scottfosterrock.com/" target="_blank" rel="noreferrer"><button className="px-6 py-2 bg-theme font-bold">Scott Foster</button></a>
                   </div>
 
                   {/* Built With */}
@@ -801,7 +799,6 @@ function App() {
                   {/* Title */}
                   <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
                     <h3 className="text-white text-3xl font-semibold">Custom Cheer Mix</h3>
-                    <h4 className="text-white text-1xl font-semi-bold"></h4>
                   </div>
 
                   <p className="text white mt-10 mb-10">This is a custom cheer mix that I made for a high school in Seattle. It took a few hours to line everything up and make it sound good, but overall I am pleased with how it turned out. </p>
@@ -812,7 +809,7 @@ function App() {
 
                   {/* Buttons */}
                   <div className="mt-16 justify-right">
-                    {/* <a href="http://scottfosterrock.com/" target="_blank"><button className="px-6 py-2 bg-theme font-bold">Scott Foster</button></a> */}
+                    {/* <a href="http://scottfosterrock.com/" target="_blank" rel="noreferrer" ><button className="px-6 py-2 bg-theme font-bold">Scott Foster</button></a> */}
                   </div>
 
                   {/* Built With */}
@@ -848,7 +845,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="DJ Ontic setup at Larc Hill Vineyard." src={event_1}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.larchill.com/" target="_blank">Larc Hill Vineyard, Chelan WA</a>
+                  <a href="https://www.larchill.com/" target="_blank" rel="noreferrer">Larc Hill Vineyard, Chelan WA</a>
                 </h3>
               </div>
 
@@ -858,7 +855,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_2}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.larchill.com/" target="_blank">Larc Hill Vineyard, Chelan WA</a>
+                  <a href="https://www.larchill.com/" target="_blank" rel="noreferrer">Larc Hill Vineyard, Chelan WA</a>
                 </h3>
               </div>
 
@@ -868,7 +865,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_3}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.audiostarinc.com" target="_blank">Recording a Podcast with Gail Miller owner of the Utah Jazz.</a>
+                  <a href="https://www.audiostarinc.com" target="_blank" rel="noreferrer">Recording a Podcast with Gail Miller owner of the Utah Jazz.</a>
                 </h3>
               </div>
 
@@ -878,7 +875,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_4}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.audiostarinc.com" target="_blank">Home Editing Station</a>
+                  <a href="https://www.audiostarinc.com" target="_blank" rel="noreferrer">Home Editing Station</a>
                 </h3>
               </div>
 
@@ -888,7 +885,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_5}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://tsillancellars.com/" target="_blank">Tsillan Cellars, Chelan WA</a>
+                  <a href="https://tsillancellars.com/" target="_blank" rel="noreferrer">Tsillan Cellars, Chelan WA</a>
                 </h3>
               </div>
 
@@ -898,7 +895,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_6}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://eggscast.com/" target="_blank">Recording The Eggs Podcast</a>
+                  <a href="https://eggscast.com/" target="_blank" rel="noreferrer">Recording The Eggs Podcast</a>
                 </h3>
               </div>
 
@@ -908,7 +905,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_7}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.djrobswift.com/" target="_blank">Respect The Decks DJ Battle with Rob Swift</a>
+                  <a href="https://www.djrobswift.com/" target="_blank" rel="noreferrer">Respect The Decks DJ Battle with Rob Swift</a>
                 </h3>
               </div>
 
@@ -918,7 +915,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_8}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.fsbwa.com/" target="_blank">1st Security Bank Holiday Party</a>
+                  <a href="https://www.fsbwa.com/" target="_blank" rel="noreferrer">1st Security Bank Holiday Party</a>
                 </h3>
               </div>
 
@@ -928,7 +925,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_10}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.tavern-hall.com/" target="_blank">Tavern Hall</a>
+                  <a href="https://www.tavern-hall.com/" target="_blank" rel="noreferrer">Tavern Hall</a>
                 </h3>
               </div>
 
@@ -938,7 +935,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_11}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.weddingwire.com/biz/hollywood-schoolhouse-woodinville/1f63f9a79c73f334.html" target="_blank">Hollywood Schoolhouse</a>
+                  <a href="https://www.weddingwire.com/biz/hollywood-schoolhouse-woodinville/1f63f9a79c73f334.html" target="_blank" rel="noreferrer">Hollywood Schoolhouse</a>
                 </h3>
               </div>
 
@@ -948,7 +945,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_12}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.audiostarinc.com" target="_blank">Prepping for a Gig</a>
+                  <a href="https://www.audiostarinc.com" target="_blank" rel="noreferrer">Prepping for a Gig</a>
                 </h3>
               </div>
 
@@ -958,7 +955,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_13}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.djontic.com" target="_blank">Lighting and Audio for High School Prom</a>
+                  <a href="https://youtu.be/c124jL8kaNI" target="_blank" rel="noreferrer">Lighting and Audio for High School Prom</a>
                 </h3>
               </div>
 
@@ -968,7 +965,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_14}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.withinsodo.com/" target="_blank">Wedding at WithinSodo</a>
+                  <a href="https://www.withinsodo.com/" target="_blank" rel="noreferrer">Wedding at WithinSodo</a>
                 </h3>
               </div>
 
@@ -979,7 +976,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_16}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.sirensongwines.com/" target="_blank">Audio for Scott Foster at Siren Song Winery</a>
+                  <a href="https://www.sirensongwines.com/" target="_blank" rel="noreferrer">Audio for Scott Foster at Siren Song Winery</a>
                 </h3>
               </div>
 
@@ -989,7 +986,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_17}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.sirensongwines.com/" target="_blank">Wedding at Siren Song Winery</a>
+                  <a href="https://www.sirensongwines.com/" target="_blank" rel="noreferrer">Wedding at Siren Song Winery</a>
                 </h3>
               </div>
 
@@ -999,7 +996,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_18}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.djontic.com/" target="_blank">Lighting and Audio for High School Prom.</a>
+                  <a href="https://youtu.be/c124jL8kaNI" target="_blank" rel="noreferrer">Lighting and Audio for High School Prom.</a>
                 </h3>
               </div>
 
@@ -1009,7 +1006,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_19}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.audiostarinc.com/" target="_blank">Audio for Ian Foster.</a>
+                  <a href="https://www.audiostarinc.com/" target="_blank" rel="noreferrer">Audio for Ian Foster.</a>
                 </h3>
               </div>
 
@@ -1019,7 +1016,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_20}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.djontic.com/" target="_blank">Tones for Chrons Event in Anacortes.</a>
+                  <a href="https://www.djontic.com/" target="_blank" rel="noreferrer">Tones for Chrons Event in Anacortes.</a>
                 </h3>
               </div>
 
@@ -1029,7 +1026,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_21}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.djontic.com/" target="_blank">Student Event Clover Park Technical College.</a>
+                  <a href="https://www.djontic.com/" target="_blank" rel="noreferrer">Student Event Clover Park Technical College.</a>
                 </h3>
               </div>
 
@@ -1039,7 +1036,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_22}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.bombaysapphire.com/us/en/" target="_blank">Private Event for Bombay Sapphire.</a>
+                  <a href="https://www.bombaysapphire.com/us/en/" target="_blank" rel="noreferrer">Private Event for Bombay Sapphire.</a>
                 </h3>
               </div>
 
@@ -1049,7 +1046,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_23}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://djontic.com" target="_blank">Sound and Lights for the Kiss FM stage at the 2005 Tempe Block Party.</a>
+                  <a href="https://djontic.com" target="_blank" rel="noreferrer">Sound and Lights for the Kiss FM stage at the 2005 Tempe Block Party.</a>
                 </h3>
               </div>
 
@@ -1059,7 +1056,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_25}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://campbellsresort.com/" target="_blank">Wedding at Campbells Resort in Chelan.</a>
+                  <a href="https://campbellsresort.com/" target="_blank" rel="noreferrer">Wedding at Campbells Resort in Chelan.</a>
                 </h3>
               </div>
 
@@ -1069,7 +1066,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_26}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://talaricosfremont.com/" target="_blank">Ballroom in Fremont WA.</a>
+                  <a href="https://talaricosfremont.com/" target="_blank" rel="noreferrer">Ballroom in Fremont WA.</a>
                 </h3>
               </div>
 
@@ -1079,7 +1076,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_27}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://goodkarmawines.com/" target="_blank">Wedding at Karma Vineyards.</a>
+                  <a href="https://goodkarmawines.com/" target="_blank" rel="noreferrer">Wedding at Karma Vineyards.</a>
                 </h3>
               </div>
 
@@ -1089,7 +1086,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_28}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://jazzbones.com/" target="_blank">Jazzbone's Nightclub, Tacoma WA.</a>
+                  <a href="https://jazzbones.com/" target="_blank" rel="noreferrer">Jazzbone's Nightclub, Tacoma WA.</a>
                 </h3>
               </div>
 
@@ -1099,7 +1096,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_29}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.instagram.com/jonesbarpdx/" target="_blank">Jones Bar, Portland OR.</a>
+                  <a href="https://www.instagram.com/jonesbarpdx/" target="_blank" rel="noreferrer">Jones Bar, Portland OR.</a>
                 </h3>
               </div>
 
@@ -1109,7 +1106,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_30}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.eggscast.com" target="_blank">Live show with the Eggs podcast.</a>
+                  <a href="https://www.eggscast.com" target="_blank" rel="noreferrer">Live show with the Eggs podcast.</a>
                 </h3>
               </div>
 
@@ -1119,7 +1116,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_31}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.audiostarinc.com" target="_blank">Podcast for Nxtset.</a>
+                  <a href="https://www.audiostarinc.com" target="_blank" rel="noreferrer">Podcast for Nxtset.</a>
                 </h3>
               </div>
 
@@ -1129,7 +1126,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_32}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://thanksgivingpoint.org/" target="_blank">Wedding at Thanksgiving Point UT.</a>
+                  <a href="https://thanksgivingpoint.org/" target="_blank" rel="noreferrer">Wedding at Thanksgiving Point UT.</a>
                 </h3>
               </div>
 
@@ -1139,7 +1136,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_33}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.wigwamarizona.com/" target="_blank">Pool Party at Whigwam Resort.</a>
+                  <a href="https://www.wigwamarizona.com/" target="_blank" rel="noreferrer">Pool Party at Whigwam Resort.</a>
                 </h3>
               </div>
 
@@ -1149,7 +1146,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_34}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.audiostarinc.com/" target="_blank">Livestream Medical Conference.</a>
+                  <a href="https://www.audiostarinc.com/" target="_blank" rel="noreferrer">Livestream Medical Conference.</a>
                 </h3>
               </div>
 
@@ -1159,7 +1156,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_35}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.highwest.com/" target="_blank">Audio for Scott Foster at High West Distillery.</a>
+                  <a href="https://www.highwest.com/" target="_blank" rel="noreferrer">Audio for Scott Foster at High West Distillery.</a>
                 </h3>
               </div>
 
@@ -1169,7 +1166,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_36}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.djontic.com/" target="_blank">Emblem Night Club, Tacoma WA.</a>
+                  <a href="https://www.djontic.com/" target="_blank" rel="noreferrer">Emblem Night Club, Tacoma WA.</a>
                 </h3>
               </div>
 
@@ -1179,7 +1176,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_37}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.audiostarinc.com/" target="_blank">Live Stream For City Weekly, Salt Lake.</a>
+                  <a href="https://www.audiostarinc.com/" target="_blank" rel="noreferrer">Live Stream For City Weekly, Salt Lake.</a>
                 </h3>
               </div>
 
@@ -1189,7 +1186,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_38}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.audiostarinc.com/" target="_blank">Live Stream For City Weekly, Salt Lake.</a>
+                  <a href="https://www.audiostarinc.com/" target="_blank" rel="noreferrer">Live Stream For City Weekly, Salt Lake.</a>
                 </h3>
               </div>
 
@@ -1199,7 +1196,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_39}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.djontic.com/" target="_blank">Wedding in Mesa, AZ.</a>
+                  <a href="https://www.djontic.com/" target="_blank" rel="noreferrer">Wedding in Mesa, AZ.</a>
                 </h3>
               </div>
 
@@ -1209,7 +1206,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_41}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.larchill.com/" target="_blank">Larc Hill Vineyard, Chelan WA.</a>
+                  <a href="https://www.larchill.com/" target="_blank" rel="noreferrer">Larc Hill Vineyard, Chelan WA.</a>
                 </h3>
               </div>
 
@@ -1219,7 +1216,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_42}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.audiostarinc.com/" target="_blank">Audio for Private Event, Provo UT.</a>
+                  <a href="https://www.audiostarinc.com/" target="_blank" rel="noreferrer">Audio for Private Event, Provo UT.</a>
                 </h3>
               </div>
 
@@ -1229,7 +1226,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_43}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.djontic.com/" target="_blank">Tsillan Cellars, Chelan WA.</a>
+                  <a href="https://www.djontic.com/" target="_blank" rel="noreferrer">Tsillan Cellars, Chelan WA.</a>
                 </h3>
               </div>
 
@@ -1239,7 +1236,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_44}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.djontic.com/" target="_blank">Private Event, Chelan WA.</a>
+                  <a href="https://www.djontic.com/" target="_blank" rel="noreferrer">Private Event, Chelan WA.</a>
                 </h3>
               </div>
 
@@ -1249,7 +1246,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_45}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.withinsodo.com/" target="_blank">WithinSodo</a>
+                  <a href="https://www.withinsodo.com/" target="_blank" rel="noreferrer">WithinSodo</a>
                 </h3>
               </div>
 
@@ -1259,7 +1256,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_46}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://goodkarmawines.com/" target="_blank">Karma Vineyards</a>
+                  <a href="https://goodkarmawines.com/" target="_blank" rel="noreferrer">Karma Vineyards</a>
                 </h3>
               </div>
 
@@ -1269,7 +1266,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_47}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.djontic.com/" target="_blank">Sound and Lights for High School Prom.</a>
+                  <a href="https://youtu.be/c124jL8kaNI" target="_blank" rel="noreferrer">Sound and Lights for High School Prom.</a>
                 </h3>
               </div>
 
@@ -1279,7 +1276,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_48}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.djontic.com/" target="_blank">Sound and Lights for High School Prom.</a>
+                  <a href="https://youtu.be/c124jL8kaNI" target="_blank" rel="noreferrer">Sound and Lights for High School Prom.</a>
                 </h3>
               </div>
 
@@ -1289,7 +1286,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_49}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.djontic.com/" target="_blank">Wedding at Larc Hill Vineyard.</a>
+                  <a href="https://www.djontic.com/" target="_blank" rel="noreferrer">Wedding at Larc Hill Vineyard.</a>
                 </h3>
               </div>
 
@@ -1307,8 +1304,8 @@ function App() {
             <div id="hire" className="secondary-title flex justify-center mt-10"></div>
 
             {/* <ContactForm className="mt-5" /> */}
-            <a href="https://forms.gle/VhVXcct1mnE5rhvi7" target="_blank"><button className="px-6 py-2 ml-2 bg-theme font-bold mt-10">Request A Quote</button></a>
-            <a href="https://github.com/onticinc/m-smith/blob/33d6be801a99a70b0392c111f73afbdce451e984/src/michael-david-smith_2022_resume.pdf#L1" target="_blank"><button className="px-6 py-2 ml-2 mt-10 bg-theme font-bold mt-10">View Resume</button></a> 
+            <a href="https://forms.gle/VhVXcct1mnE5rhvi7" target="_blank" rel="noreferrer"><button className="px-6 py-2 ml-2 bg-theme font-bold mt-10">Request A Quote</button></a>
+            <a href="https://github.com/onticinc/m-smith/blob/33d6be801a99a70b0392c111f73afbdce451e984/src/michael-david-smith_2022_resume.pdf#L1" target="_blank" rel="noreferrer"><button className="px-6 py-2 ml-2 mt-10 bg-theme font-bold mt-10">View Resume</button></a> 
             <h2 className="text-center text-xl font-semibold mt-10">onticinc@gmail.com</h2>
           </section>
         </div>
