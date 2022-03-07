@@ -349,7 +349,7 @@ function App() {
                   <h3 className="text-white text-3xl font-semibold mb-10">Audiostar Website</h3>
                 </div>
 
-                <p className="text white mt-10 mb-10">Audiostar is my portfolio for anything Audio related. It is a fairly straight forward wordpress site. Nothing fancy. </p>
+                <p className="text white mt-10 mb-10">Audiostar is the brand that I use for anything audio releated. The website is built with wordpress, combined with soundcloud. Eventually, I would like to rebuild the site and eliminate the need to use soundcloud. I am not a fan of their embeded player and the popups trying to drive traffic to their site. </p>
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
@@ -443,9 +443,9 @@ function App() {
                   <h3 className="text-white text-3xl font-semibold mb-10">Mountain View Lawn Care</h3>
                 </div>
 
-                <p className="text white mt-10 mb-10">When covid hit, my event calendar went from really busy to no gigs in the near future. I started Mountain View Lawn Care as a way to help pay the bills. I enjoy landscaping as a hobbie just to stay in shape, not as a fulltime job. I didn't intend on doing it longer than needed. </p>
+                <p className="text white mt-10 mb-10">When covid hit, my event calendar went from really busy to no gigs in the near future. I started Mountain View Lawn Care as a way to help pay the bills. I enjoy landscaping as a hobbie just to stay in shape, not as a fulltime job. I did not intend on running the business for longer than necessary. </p>
 
-                <p className="text white mb-10">This website is essentially a portfolio of the landscaping work that I did at my parents house in Idaho. They had a very large pine tree growing too close to the house, when we took it out it left a large area that needed a rock wall. That simple tree removal turned into a three year project that was allot fun to work on. You can watch a timelapse video of the entire project on the website.</p>
+                <p className="text white mb-10">This website is essentially a portfolio of the landscaping work that I did at my parents house in Idaho. They had a very large pine tree growing too close to the house. When we removed it, there was a large area next to the house that needed a rock wall. That simple tree removal turned into a three year project that was allot fun to work on. You can watch a timelapse video of the project on the website.</p>
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
@@ -852,7 +852,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_2}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Wedding at Larc Hill Vineyard" src={event_2}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.larchill.com/" target="_blank" rel="noreferrer">Larc Hill Vineyard, Chelan WA</a>
@@ -862,7 +862,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_3}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Podcast with Gail Miller" src={event_3}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.audiostarinc.com" target="_blank" rel="noreferrer">Recording a Podcast with Gail Miller owner of the Utah Jazz.</a>
@@ -872,17 +872,17 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_4}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Editing Station" src={event_4}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.audiostarinc.com" target="_blank" rel="noreferrer">Home Editing Station</a>
+                  <a href="https://www.audiostarinc.com" target="_blank" rel="noreferrer">Editing Station</a>
                 </h3>
               </div>
 
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_5}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Wedding at Tsillan Cellars" src={event_5}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://tsillancellars.com/" target="_blank" rel="noreferrer">Tsillan Cellars, Chelan WA</a>
@@ -892,7 +892,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_6}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Recording The Eggs Podcast" src={event_6}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://eggscast.com/" target="_blank" rel="noreferrer">Recording The Eggs Podcast</a>
@@ -902,7 +902,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_7}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Respect The Decks DJ Battle with Rob Swift" src={event_7}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.djrobswift.com/" target="_blank" rel="noreferrer">Respect The Decks DJ Battle with Rob Swift</a>
@@ -912,7 +912,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_8}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Holiday Party for 1st Security Bank" src={event_8}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.fsbwa.com/" target="_blank" rel="noreferrer">1st Security Bank Holiday Party</a>
@@ -922,7 +922,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_10}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Dj Booth at Tavern Hall in Bellevue." src={event_10}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.tavern-hall.com/" target="_blank" rel="noreferrer">Tavern Hall</a>
@@ -932,7 +932,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_11}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Wedding at Hollywood Schoolhouse" src={event_11}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.weddingwire.com/biz/hollywood-schoolhouse-woodinville/1f63f9a79c73f334.html" target="_blank" rel="noreferrer">Hollywood Schoolhouse</a>
