@@ -473,7 +473,7 @@ function App() {
                 <div className="container">
                   <h4 className="mt-10 text-white text-1xl font-semi-bold underline">Built With:</h4>
                   <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
-                  <a href="https://wordpress.org/" target="_blank" rel="noreferrer"><div className="badge">Wordpress</div></a>
+                    <a href="https://wordpress.org/" target="_blank" rel="noreferrer"><div className="badge">Wordpress</div></a>
                     <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer"><div className="badge">CSS</div></a>
                   </div>
                 </div>
@@ -529,14 +529,17 @@ function App() {
 
                   {/* Built With */}
                   <div className="container">
-                    <h4 className="mt-10 text-white text-1xl font-semi-bold underline">Equipment | Software:</h4>
+                    <h4 className="mt-10 text-white text-1xl font-semi-bold mb-10">Equipment | Software:</h4>
                     <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
-                      <div className="badge">Logic Pro</div>
-                      <div className="badge">Sony MX 3036 Console</div>
-                      <div className="badge">Distressor EL8</div>
-                      <div className="badge">Neumann TL 103</div>
-                      <div className="badge">Earthworks QTC30</div>
-                      <div className="badge">Royer 121</div>
+                      
+                      <a href="https://app.shoreline.edu/sccstudio/downloads/manuals/sony/Sony_mxp3000.pdf" target="_blank" rel="noreferrer"><div className="badge">Sony MX 3036 Console</div></a>
+                      <a href="https://www.apple.com/logic-pro/" target="_blank" rel="noreferrer"><div className="badge">Logic Pro</div></a>
+                      <a href="https://www.empiricallabs.com/distressor/" target="_blank" rel="noreferrer"><div className="badge">Distressor EL8</div></a>
+                      <a href="https://en-de.neumann.com/tlm-103" target="_blank" rel="noreferrer"><div className="badge">Neumann TL 103</div></a>
+                      <a href="https://earthworksaudio.com/omni-microphones/qtc30/" target="_blank" rel="noreferrer"><div className="badge">Earthworks QTC30</div></a>
+                      <a href="https://royerlabs.com/r-121/" target="_blank" rel="noreferrer"><div className="badge">Royer 121</div></a>
+                      
+                    
                     </div>
                   </div>
                 </div>
@@ -582,9 +585,11 @@ function App() {
                   <div className="container">
                     <h4 className="mt-10 text-white text-1xl font-semi-bold underline">Equipment | Software:</h4>
                     <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
-                      <div className="badge">SM58</div>
-                      <div className="badge">X32 Rack</div>
-                      <div className="badge">Protools</div>
+                      
+                      <a href="https://www.avid.com/pro-tools" target="_blank" rel="noreferrer"><div className="badge">Protools</div></a>
+                      <a href="https://www.shure.com/en-US/products/microphones/sm58" target="_blank" rel="noreferrer"><div className="badge">Shure SM58</div></a>
+                      <a href="https://www.behringer.com/product.html?modelCode=P0AWN" target="_blank" rel="noreferrer"><div className="badge">X32 Rack</div></a>
+                      
                     </div>
                   </div>
                 </div>
