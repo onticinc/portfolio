@@ -94,7 +94,6 @@ import event_46 from './img/events/46.png';
 import event_47 from './img/events/47.png';
 import event_48 from './img/events/48.png';
 import event_49 from './img/events/49.png';
-import tailwindConfig from '../tailwind.config';
 
 function App() {
   return (
@@ -117,7 +116,7 @@ function App() {
                 <svg alt="link to linkedin profile" className="w-8 h-8  mt-1" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" fill="white"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
               </a>
 
-              <a href="#hire" target="_blank" rel="noreferrer"><button className="px-6 py-2 bg-theme font-bold">Hire Me</button></a>
+              <a href="#hire"><button className="px-6 py-2 bg-theme font-bold">Hire Me</button></a>
             </div>
           </div>
         </header>
@@ -148,10 +147,10 @@ function App() {
 
             {/* Profile Image */}
             <div className="flex flex-wrap max-w-xl justify-center place-items-center">
-              <div className="container lg:ml-16">
+             
                 <img src={picture} alt="Michael Smith in Nome AK." className="prortfolio_profile_image mt-10 h-screen" />
                 <h4 className="mt-5 text white">Bering Sea | Nome Alaska.</h4>
-              </div>
+             
             </div>
 
             {/* HERO TITLE AND BUTTON */}
@@ -839,7 +838,7 @@ function App() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
               
               {/* new img block */}
-              <div className="group relative">
+              <div className="group relative items-center">
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="DJ Ontic setup at Larc Hill Vineyard." src={event_1}/>
                 </div>
