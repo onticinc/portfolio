@@ -19,7 +19,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npx tailwindcss -i ./index.css -o ./tailwind.css -w",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

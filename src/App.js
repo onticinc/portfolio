@@ -1,5 +1,6 @@
 import React from 'react';
 import ResponsivePlayer from './components/responsive-player/ResponsivePlayer';
+
 // import './Main.js';
 
 // IMAGES
@@ -93,6 +94,7 @@ import event_46 from './img/events/46.png';
 import event_47 from './img/events/47.png';
 import event_48 from './img/events/48.png';
 import event_49 from './img/events/49.png';
+import tailwindConfig from '../tailwind.config';
 
 function App() {
   return (

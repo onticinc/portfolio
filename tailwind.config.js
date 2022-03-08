@@ -19,7 +19,7 @@ module.exports = {
         '2/3': '66.66667%',
       },
       fontFamily: {
-        'poppins': ["'Poppins", 'sans-serif']
+        'poppins': ['Poppins', 'sans-serif']
       }
     },
   },
