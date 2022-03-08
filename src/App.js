@@ -1,4 +1,4 @@
- import React from 'react';
+import React from 'react';
 import ResponsivePlayer from './components/responsive-player/ResponsivePlayer';
 // import './Main.js';
 
@@ -93,9 +93,6 @@ import event_46 from './img/events/46.png';
 import event_47 from './img/events/47.png';
 import event_48 from './img/events/48.png';
 import event_49 from './img/events/49.png';
-
-
-import './App.css';
 
 function App() {
   return (
@@ -942,17 +939,17 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_12}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Preparing For A Show" src={event_12}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.audiostarinc.com" target="_blank" rel="noreferrer">Prepping for a Gig</a>
+                  <a href="https://www.audiostarinc.com" target="_blank" rel="noreferrer">Preparing for a show.</a>
                 </h3>
               </div>
 
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_13}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Lighting and Audio for Prom" src={event_13}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://youtu.be/c124jL8kaNI" target="_blank" rel="noreferrer">Lighting and Audio for High School Prom</a>
@@ -962,7 +959,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_14}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Wedding at WithinSodo" src={event_14}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.withinsodo.com/" target="_blank" rel="noreferrer">Wedding at WithinSodo</a>
@@ -973,7 +970,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_16}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Scott Foster playing at Siren Songs Winery" src={event_16}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.sirensongwines.com/" target="_blank" rel="noreferrer">Audio for Scott Foster at Siren Song Winery</a>
@@ -983,7 +980,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_17}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Wedding at Siren Song Winery" src={event_17}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.sirensongwines.com/" target="_blank" rel="noreferrer">Wedding at Siren Song Winery</a>
@@ -993,7 +990,7 @@ function App() {
                {/* new img block */}
                <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_18}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Lighting and Audio for High School Prom" src={event_18}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://youtu.be/c124jL8kaNI" target="_blank" rel="noreferrer">Lighting and Audio for High School Prom.</a>
@@ -1003,7 +1000,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_19}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Audio for Ian Foster" src={event_19}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.audiostarinc.com/" target="_blank" rel="noreferrer">Audio for Ian Foster.</a>
@@ -1013,7 +1010,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_20}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Music for Tones for Chrons Event" src={event_20}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.djontic.com/" target="_blank" rel="noreferrer">Tones for Chrons Event in Anacortes.</a>
@@ -1023,7 +1020,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_21}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Music for Clover Park Technical College Event" src={event_21}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.djontic.com/" target="_blank" rel="noreferrer">Student Event Clover Park Technical College.</a>
@@ -1033,7 +1030,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_22}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Private Event for Bombay Sapphire" src={event_22}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.bombaysapphire.com/us/en/" target="_blank" rel="noreferrer">Private Event for Bombay Sapphire.</a>
@@ -1043,7 +1040,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_23}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Sound and Lights for 2005 Tempe Block Party" src={event_23}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://djontic.com" target="_blank" rel="noreferrer">Sound and Lights for the Kiss FM stage at the 2005 Tempe Block Party.</a>
@@ -1053,7 +1050,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_25}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Wedding at Campbells Resort" src={event_25}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://campbellsresort.com/" target="_blank" rel="noreferrer">Wedding at Campbells Resort in Chelan.</a>
@@ -1063,7 +1060,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_26}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Gig at Ballroom in Fremont" src={event_26}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://talaricosfremont.com/" target="_blank" rel="noreferrer">Ballroom in Fremont WA.</a>
@@ -1073,7 +1070,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_27}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Wedding at Karma Vineyards" src={event_27}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://goodkarmawines.com/" target="_blank" rel="noreferrer">Wedding at Karma Vineyards.</a>
@@ -1083,7 +1080,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_28}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Gig at Jazzbones in Tacoma WA" src={event_28}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://jazzbones.com/" target="_blank" rel="noreferrer">Jazzbone's Nightclub, Tacoma WA.</a>
@@ -1093,7 +1090,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_29}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Gig at Jones Bar in Portland" src={event_29}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.instagram.com/jonesbarpdx/" target="_blank" rel="noreferrer">Jones Bar, Portland OR.</a>
@@ -1103,7 +1100,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_30}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Live Podcast" src={event_30}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.eggscast.com" target="_blank" rel="noreferrer">Live show with the Eggs podcast.</a>
@@ -1113,7 +1110,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_31}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Podcast for NxtSet" src={event_31}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.audiostarinc.com" target="_blank" rel="noreferrer">Podcast for Nxtset.</a>
@@ -1123,7 +1120,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_32}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Wedding at Thanksgiving Point Utah" src={event_32}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://thanksgivingpoint.org/" target="_blank" rel="noreferrer">Wedding at Thanksgiving Point UT.</a>
@@ -1133,10 +1130,10 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_33}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Private Event at Whigwam Resort" src={event_33}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.wigwamarizona.com/" target="_blank" rel="noreferrer">Pool Party at Whigwam Resort.</a>
+                  <a href="https://www.wigwamarizona.com/" target="_blank" rel="noreferrer">Private Event at Whigwam Resort.</a>
                 </h3>
               </div>
 
