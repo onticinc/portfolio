@@ -628,14 +628,14 @@ function App() {
 
                   {/* Buttons */}
                   <div className="mt-16 justify-right">
-                    <a href="https://campbellsresort.com/" target="_blank" rel="noreferrer"><button className="px-6 py-2 bg-theme font-bold">Buy the Book</button></a>
+                    <a href="https://www.amazon.com/Rect%C3%A1ngulo-Can-Count-Ryan-Roghaar/dp/1519571240" target="_blank" rel="noreferrer"><button className="px-6 py-2 bg-theme font-bold">Buy the Book</button></a>
                   </div>
 
                   {/* Built With */}
                   <div className="container">
                     <h4 className="mt-10 text-white text-1xl font-semi-bold underline">Edited With:</h4>
                     <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
-                      <div className="badge">Protools</div>
+                      <a href="https://www.avid.com/pro-tools" target="_blank" rel="noreferrer"><div className="badge">Protools</div></a>
                     </div>
                   </div>
 
@@ -680,10 +680,11 @@ function App() {
                   <div className="container">
                     <h4 className="mt-10 text-white text-1xl font-semi-bold mb-10">Equipment | Software:</h4>
                     <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
-                      <div className="badge">Protools</div>
-                      <div className="badge">Toft Audio ATB-32a</div>
-                      <div className="badge">Distressor EL8</div>
-                    
+                      
+                      <a href="https://www.avid.com/pro-tools" target="_blank" rel="noreferrer"><div className="badge">Protools</div></a>
+                      <a href="http://toftaudio.com/" target="_blank" rel="noreferrer"><div className="badge">Toft Audio ATB-32a</div></a>
+                      <a href="https://www.empiricallabs.com/distressor/" target="_blank" rel="noreferrer"><div className="badge">Distressor EL8</div></a>                      
+                      
                     </div>
                   </div>
                 </div>
@@ -907,7 +908,7 @@ function App() {
                     <h4 className="text-white text-2xl mt-5 font-semibold">Foster Brothers</h4>
                   </div>
 
-                  <p className="text white mt-10 mb-10 font-semibold">I recorded this at a podcasting studio in Salt Lake. Scott and Ian were in town and they had their guitars with them so we spent a few hours and made a scratch track of "Taking Christmas Back From Santa". I like how it turned out but I want to re-record a few parts mix it down again at some point. You can watch Ian and Scott on Discovery's hit show <a href="https://go.discovery.com/show/bering-sea-gold-discovery" target="_blank" className="text-blue-500">"Bering Sea Gold"</a> in season One and Two.</p>
+                  <p className="text white mt-10 mb-10 font-semibold">I recorded this at a podcasting studio in Salt Lake. Scott and Ian were in town and they had their guitars with them so we spent a few hours and made a scratch track of "Taking Christmas Back From Santa". I like how it turned out but I want to re-record a few parts mix it down again at some point. You can watch Ian and Scott on Discovery's hit show <a href="https://go.discovery.com/show/bering-sea-gold-discovery" target="_blank" rel="noreferrer" className="text-blue-500">"Bering Sea Gold"</a> in season One and Two.</p>
                   
 
                   {/* Audio Player */}
@@ -1321,7 +1322,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_36}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Emblem Nightclub Tacoma WA" src={event_36}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.djontic.com/" target="_blank" rel="noreferrer">Emblem Night Club, Tacoma WA.</a>
@@ -1331,7 +1332,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_37}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Live Stream for City Weekly" src={event_37}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.audiostarinc.com/" target="_blank" rel="noreferrer">Live Stream For City Weekly, Salt Lake.</a>
@@ -1341,7 +1342,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_38}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Live Stream for City Weekly" src={event_38}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.audiostarinc.com/" target="_blank" rel="noreferrer">Live Stream For City Weekly, Salt Lake.</a>
@@ -1351,7 +1352,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_39}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Wedding In Mesa AZ" src={event_39}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.djontic.com/" target="_blank" rel="noreferrer">Wedding in Mesa, AZ.</a>
@@ -1361,7 +1362,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_41}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Larc Hill Vineyard" src={event_41}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.larchill.com/" target="_blank" rel="noreferrer">Larc Hill Vineyard, Chelan WA.</a>
@@ -1371,7 +1372,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_42}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Private Event" src={event_42}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.audiostarinc.com/" target="_blank" rel="noreferrer">Audio for Private Event, Provo UT.</a>
@@ -1381,7 +1382,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_43}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Tsillan Cellars" src={event_43}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.djontic.com/" target="_blank" rel="noreferrer">Tsillan Cellars, Chelan WA.</a>
@@ -1391,7 +1392,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_44}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Private Event, Chelan WA." src={event_44}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.djontic.com/" target="_blank" rel="noreferrer">Private Event, Chelan WA.</a>
@@ -1401,7 +1402,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_45}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Wedding at WithinSodo" src={event_45}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.withinsodo.com/" target="_blank" rel="noreferrer">WithinSodo</a>
@@ -1411,7 +1412,7 @@ function App() {
                {/* new img block */}
                <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_46}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Karma Vineyards" src={event_46}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://goodkarmawines.com/" target="_blank" rel="noreferrer">Karma Vineyards</a>
@@ -1421,7 +1422,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_47}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="High School Prom" src={event_47}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://youtu.be/c124jL8kaNI" target="_blank" rel="noreferrer">Sound and Lights for High School Prom.</a>
@@ -1431,7 +1432,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_48}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="High School Prom" src={event_48}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://youtu.be/c124jL8kaNI" target="_blank" rel="noreferrer">Sound and Lights for High School Prom.</a>
@@ -1441,7 +1442,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_49}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Larc Hill Vineyard" src={event_49}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.djontic.com/" target="_blank" rel="noreferrer">Wedding at Larc Hill Vineyard.</a>
