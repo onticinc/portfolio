@@ -47,6 +47,8 @@ import rectangulo from './img/rectangulo.png';
 import studio_a from './img/studio_a.png';
 import studio_c from './img/studio_c.png';
 import jenn from './img/jenn.png';
+import brandon from './img/brandon_smith.png';
+import foster_brothers from './img/foster_brothers.png';
 
 // Event Photos
 import event_1 from './img/events/01.png';
@@ -293,7 +295,7 @@ function App() {
                   <h3 className="text-white text-3xl font-semibold mb-10">Memory Game</h3>
                 </div>
 
-                <p className="mt-10">I made this game while I was in the <a className="text-blue-500 font-bold" href="https://generalassemb.ly/">General Assembly</a> 12 week full stack program. It was the first major project for the program and I spent a ton of time figuring out flex CSS and getting the layout to scale on mobile screens.</p>
+                <p className="mt-10">I made this game while I was in the <a className="text-blue-500 font-bold" href="https://generalassemb.ly/">General Assembly</a> 12 week full stack program. It was the first major project for the program and I focused on learning how flex CSS and getting the layout to scale on mobile screens.</p>
                 <p className="mt-5">It was right before christmas so I decided to make something that my niece and nephews would enjoy. I gave them the link on Christmas Morning.</p>
                 <p className="mt-5">Eventually, I would like to redesign this and add more functionality. Like choosing how many pairs of cards you want, adding extra players, and making custom icons. I would also simplify the code.</p>
 
@@ -572,10 +574,7 @@ function App() {
                     <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
                       <div className="badge">SM58</div>
                       <div className="badge">X32 Rack</div>
-                      <div className="badge">Distressor EL8</div>
-                      <div className="badge">Neumann TL 103</div>
-                      <div className="badge">Earthworks QTC30</div>
-                      <div className="badge">Royer 121</div>
+                      <div className="badge">Protools</div>
                     </div>
                   </div>
                 </div>
@@ -696,11 +695,11 @@ function App() {
 
                   {/* Title */}
                   <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
-                    <h3 className="text-white text-3xl font-semibold">Casey Connor</h3>
+                    <h3 className="text-white text-3xl font-semibold">Casey Connor (Live Recording)</h3>
                     <h4 className="text-white text-1xl font-semi-bold">Live at Campbells Resort, Chelan WA.</h4>
                   </div>
 
-                  <p className="text white mt-10">This was at a wedding ceremony. After the soundcheck, I decided to hit record because I loved his voice and the ambient sound around the lake was amazing. If you listen close, you can hear birds and people enjoying the lake in the distance. It made for a very unique recording and I love how it turned out!</p>
+                  <p className="text white mt-10">This was at a wedding ceremony that I provided equipment for. After the soundcheck, I decided to hit record because I loved his voice and the ambient sound around the lake was amazing. If you listen close, you can hear birds and people enjoying the lake in the distance. It made for a very unique recording and I love how it turned out!</p>
                   <h4 className="mt-10 text-white text-1xl font-semi-bold">Recorded and Edited With:</h4>
 
                   {/* Audio Player */}
@@ -755,7 +754,7 @@ function App() {
                   
 
                   {/* Audio Player */}
-                  <ResponsivePlayer url="https://soundcloud.com/audiostarinc/scott-foster-dont-fail-me-now" />
+                  <ResponsivePlayer url="https://soundcloud.com/audiostarinc/scott-foster-like-a-stone-cover" />
 
                   {/* Buttons */}
                   <div className="mt-16 justify-right">
@@ -822,6 +821,102 @@ function App() {
 
               </div>
               {/* End Cheer Mix */}
+
+              {/* Brandon Smith Live Recording */}
+              <div className="w-full border border-nav p-16 lg:px-20 lg:py-20 lg:space-x-20 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
+
+                {/* SMALL SCREEN - Title */}
+                <div className="flex flex-wrap justify-center text-center lg:hidden ">
+                  <h3 className="text-white text-3xl font-semibold">Live recording for Brandon Smith</h3>
+                </div>
+
+                {/* <!-- Project logo --> */}
+                <div className="mb-6 lg:mb-0">
+                  <img src={brandon} alt="Audiostar Logo." className="img_300" />
+                </div>
+
+                {/* <!-- Project info --> */}
+                <div className="flex flex-wrap justify-center text-center lg:text-left lg:block">
+
+                  {/* Title */}
+                  <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
+                    <h3 className="text-white text-3xl font-semibold">Live recording for Brandon Smith</h3>
+                  </div>
+
+                  <p className="text white mt-10 mb-10">I enjoyed recording this show for Brandon and a few of his friends. He was recording a video and wanted to capture clean audio to use. I love working with acoustic performers, always turns out great! </p>
+                  
+
+                  {/* Audio Player */}
+                  <ResponsivePlayer url="https://soundcloud.com/audiostarinc/brandon-smith-afraid" />
+
+                  {/* Buttons */}
+                  <div className="mt-16 justify-right">
+                    {/* <a href="http://scottfosterrock.com/" target="_blank" rel="noreferrer" ><button className="px-6 py-2 bg-theme font-bold">Scott Foster</button></a> */}
+                  </div>
+
+                  {/* Built With */}
+                  <div className="container">
+                    <h4 className="mt-10 text-white text-1xl font-semi-bold underline">Edited With:</h4>
+                    <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
+                      <div className="badge">Protools</div>
+                      <div className="badge">X32</div>
+                      <div className="badge">SM 7B</div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+              {/* End Cheer Mix */}
+
+              {/* Foster Brothers Studio Recording */}
+              <div className="w-full border border-nav p-16 lg:px-20 lg:py-20 lg:space-x-20 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
+
+                {/* SMALL SCREEN - Title */}
+                <div className="flex flex-wrap justify-center text-center lg:hidden ">
+                  <h3 className="text-white text-3xl font-semibold">"Taking Christmas Back From Santa"</h3>
+                  <h4 className="text-white font-semibold">Foster Brothers</h4>
+                </div>
+
+                {/* <!-- Project logo --> */}
+                <div className="mb-6 lg:mb-0">
+                  <img src={foster_brothers} alt="Scott and Ian Foster from Bearing Sea Gold." className="img_300" />
+                </div>
+
+                {/* <!-- Project info --> */}
+                <div className="flex flex-wrap justify-center text-center lg:text-left lg:block">
+
+                  {/* Title */}
+                  <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
+                    <h3 className="text-white text-3xl font-semibold">"Taking Christmas Back From Santa"</h3>
+                    <h4 className="text-white text-2xl mt-5 font-semibold">Foster Brothers</h4>
+                  </div>
+
+                  <p className="text white mt-10 mb-10">I recorded this in my podcasting studio in Salt Lake. Scott and Ian were in town and they had their guitars with them so we spent a few hours and made a scratch track of "Taking Christmas Back From Santa". I like how it turned out but I want to re-record a few parts mix it down again at some point. You can watch Ian and Scott on Discovery's hit show "Bering Sea Gold" in season One and Two.</p>
+                  
+
+                  {/* Audio Player */}
+                  <ResponsivePlayer url="https://soundcloud.com/audiostarinc/taking-christmas-back-from-santa-foster-brothers-1mp3" />
+
+                  {/* Buttons */}
+                  <div className="mt-16 justify-right">
+                    {/* <a href="http://scottfosterrock.com/" target="_blank" rel="noreferrer" ><button className="px-6 py-2 bg-theme font-bold">Scott Foster</button></a> */}
+                  </div>
+
+                  {/* Built With */}
+                  <div className="container">
+                    <h4 className="mt-10 text-white text-1xl font-semi-bold underline">Edited With:</h4>
+                    <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
+                      <div className="badge">Protools</div>
+                      <div className="badge">X32</div>
+                      <div className="badge">SM 7B</div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+              {/* End Foster Brothers Studio  */}
 
 
             </div>
@@ -1141,7 +1236,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_34}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Live Stream for a Medical Conference" src={event_34}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.audiostarinc.com/" target="_blank" rel="noreferrer">Livestream Medical Conference.</a>
@@ -1151,7 +1246,7 @@ function App() {
               {/* new img block */}
               <div className="group relative">
                 <div className="relative w-full">
-                  <img className="w-full bg-nav h-72 object-cover img_rounded" src={event_35}/>
+                  <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Audio System for Scott Foster" src={event_35}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
                   <a href="https://www.highwest.com/" target="_blank" rel="noreferrer">Audio for Scott Foster at High West Distillery.</a>
