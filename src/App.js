@@ -49,6 +49,7 @@ import studio_c from './img/studio_c.png';
 import jenn from './img/jenn.png';
 import brandon from './img/brandon_smith.png';
 import foster_brothers from './img/foster_brothers.png';
+import spike_coggins from './img/spike_coggins.png';
 
 // Event Photos
 import event_1 from './img/events/01.png';
@@ -151,7 +152,7 @@ function App() {
             <div className="flex flex-wrap max-w-xl justify-center place-items-center">
              
                 <img src={picture} alt="Michael Smith in Nome AK." className="prortfolio_profile_image mt-10 h-screen" />
-                <h4 className="mt-5 text white">Bering Sea | Nome Alaska.</h4>
+                <h4 className="mt-5 text white font-semibold">Bering Sea | Nome Alaska.</h4>
              
             </div>
 
@@ -213,7 +214,7 @@ function App() {
                 </div>
 
                 <div className="container">
-                  <h4 className="mt-10 text-white text-1xl font-semi-bold underline">Built With:</h4>
+                  <h4 className="mt-10 text-white text-1xl font-semi-bold mb-10">Built With:</h4>
                   <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
                     <div className="badge">Python</div>
                     <div className="badge">Django</div>
@@ -249,7 +250,7 @@ function App() {
                   <h3 className="text-white text-3xl font-semibold mb-10">Personal Portfolio</h3>
                 </div>
 
-                <p className="mt-10 font-semibold">I wanted to learn how to use Tailwind with React and deploy it on a Linode server. Why not do that for my portfolio? I decided to use Linode over AWS because I didn't want to get locked into more expensive hosting. Combining Tailwind with a React App took some getting used to but I was able to figure it out. It reminds me of Bootstrap with a little more functionality.</p>
+                <p className="mt-10 font-semibold">I wanted to learn how to use Tailwind with React and deploy it on a Linode server. Why not do that for my portfolio? Combining Tailwind with a React App took some getting used to but I was able to figure it out. It reminds me of Bootstrap with a little more functionality. Learning how to deploy to Linode was challenging but I am glad I took the time to figure it out. </p>
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
                   <img alt="m-smith.info website screen shot" src={portfolio_1} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
@@ -267,6 +268,8 @@ function App() {
                   <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
                     <div className="badge">Tailwind</div>
                     <div className="badge">React</div>
+                    <div className="badge">React Player</div>
+                    <div className="badge">Node</div>
                   </div>
                 </div>
               </div>
@@ -295,9 +298,9 @@ function App() {
                   <h3 className="text-white text-3xl font-semibold mb-10">Memory Game</h3>
                 </div>
 
-                <p className="mt-10">I made this game while I was in the <a className="text-blue-500 font-bold" href="https://generalassemb.ly/">General Assembly</a> 12 week full stack program. It was the first major project for the program and I focused on learning how flex CSS and getting the layout to scale on mobile screens.</p>
-                <p className="mt-5">It was right before christmas so I decided to make something that my niece and nephews would enjoy. I gave them the link on Christmas Morning.</p>
-                <p className="mt-5">Eventually, I would like to redesign this and add more functionality. Like choosing how many pairs of cards you want, adding extra players, and making custom icons. I would also simplify the code.</p>
+                <p className="mt-10 font-semibold">I made this game while I was in the <a className="text-blue-500 font-bold" href="https://generalassemb.ly/">General Assembly</a> 12 week full stack program. It was the first major project for the program and I focused on learning how flex CSS and getting the layout to scale on mobile screens.</p>
+                <p className="mt-5 font-semibold">It was right before christmas so I decided to make something that my niece and nephews would enjoy. I gave them the link on Christmas Morning.</p>
+                <p className="mt-5 font-semibold">Eventually, I would like to redesign this and add more functionality. Like choosing how many pairs of cards you want, adding extra players, and making custom icons. I would also simplify the code.</p>
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
@@ -349,7 +352,7 @@ function App() {
                   <h3 className="text-white text-3xl font-semibold mb-10">Audiostar Website</h3>
                 </div>
 
-                <p className="text white mt-10 mb-10">Audiostar is the brand that I use for anything audio releated. The website is built with wordpress, combined with soundcloud. Eventually, I would like to rebuild the site and eliminate the need to use soundcloud. I am not a fan of their embeded player and the popups trying to drive traffic to their site. </p>
+                <p className="text white mt-10 mb-10 font-semibold">Audiostar is the brand that I use for anything audio releated. The website is built with wordpress, combined with soundcloud. Eventually, I would like to rebuild the site and eliminate the need to use soundcloud. I am not a fan of their embeded player and the popups trying to drive traffic to their site. </p>
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
@@ -396,7 +399,7 @@ function App() {
                 <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
                   <h3 className="text-white text-3xl font-semibold mb-10">DJ Ontic</h3>
                 </div>
-                <p className="text white mt-10 mb-10">I started working as a dj in 1996, my first paid gig was on NYE of that year. I used to call my business 90 Decibels becuase that was the volume I was allowed to play music at for those first few gigs. Eventually, I switched to Ontic which stands for On Time. I like to arrive early for gigs because it allows time for a proper setup and time to diagnose any problems that may arrise.</p>
+                <p className="text white mt-10 mb-10 font-semibold">I started working as a dj in 1996, my first paid gig was on NYE of that year. I used to call my business 90 Decibels becuase that was the volume I was allowed to play music at for those first few gigs. Eventually, I switched to Ontic which stands for On Time. I like to arrive early for gigs because it allows time for a proper setup and time to diagnose any problems that may arrise.</p>
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
@@ -443,9 +446,9 @@ function App() {
                   <h3 className="text-white text-3xl font-semibold mb-10">Mountain View Lawn Care</h3>
                 </div>
 
-                <p className="text white mt-10 mb-10">When covid hit, my event calendar went from really busy to no gigs in the near future. I started Mountain View Lawn Care as a way to help pay the bills. I enjoy landscaping as a hobbie just to stay in shape, not as a fulltime job. I did not intend on running the business for longer than necessary. </p>
+                <p className="text white mt-10 mb-10 font-semibold">When covid hit, my event calendar went from really busy to no gigs in the near future. I started Mountain View Lawn Care as a way to help pay the bills. I enjoy landscaping as a hobbie just to stay in shape, not as a fulltime job. I did not intend on running the business for longer than necessary. </p>
 
-                <p className="text white mb-10">This website is essentially a portfolio of the landscaping work that I did at my parents house in Idaho. They had a very large pine tree growing too close to the house. When we removed it, there was a large area next to the house that needed a rock wall. That simple tree removal turned into a three year project that was allot fun to work on. You can watch a timelapse video of the project on the website.</p>
+                <p className="text white mb-10 font-semibold">This website is essentially a portfolio of the landscaping work that I did at my parents house in Idaho. They had a very large pine tree growing too close to the house. When we removed it, there was a large area next to the house that needed a rock wall. That simple tree removal turned into a three year project that was allot fun to work on. You can watch a timelapse video of the project on the website.</p>
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
@@ -507,7 +510,7 @@ function App() {
                   </div>
 
                   <p className="text-white font-semibold mt-5 mb-5">Recorded at Shoreline Studios.</p>
-                  <p className="text white mb-10">As you can tell by listening to this recording, Eric is a very talented musician. This was an amazing experience for me because it was the first time I was able to record a Hammond B3 Organ. I think the finished product sounds great and I hope to be able to record Erich again someday. </p>
+                  <p className="text white mb-10 font-semibold">As you can tell by listening to this recording, Eric is a very talented musician. This was an amazing experience for me because it was the first time I was able to record a Hammond B3 Organ. I think the finished product sounds great and I hope to be able to record Erich again someday. </p>
                   
                   {/* Audio Player */}
                   <ResponsivePlayer url="https://soundcloud.com/audiostarinc/follow-me-erich-friedrick" />
@@ -557,7 +560,7 @@ function App() {
                     <h3 className="text-white text-3xl font-semibold mb-5">Jenn Blosil (Live Recording)</h3>
                     <h4 className="text-white text-2xl font-semi-bold">"I'm Tired"</h4>
                   </div>
-                  <p className="text white mt-10 mb-10">Jenn Blosil has a very unique voice and an amazing personality. You can listen to her music on spotify and see her perform on American Idol. I really enjoyed working with her and hope to do it again sometime. </p>
+                  <p className="text white mt-10 mb-10 font-semibold">Jenn Blosil has a very unique voice and an amazing personality. You can listen to her music on spotify and see her perform on American Idol. I really enjoyed working with her and hope to do it again sometime. </p>
                   
                   {/* Audio Player */}
                   <ResponsivePlayer url="https://soundcloud.com/audiostarinc/jen-blossil-im-tired" />
@@ -589,7 +592,7 @@ function App() {
                 {/* SMALL SCREEN - Title */}
                 <div className="flex flex-wrap justify-center text-center lg:hidden ">
                   <h3 className="text-white text-3xl font-semibold">Rectangulo Can Count</h3>
-                  <h4 className="text-white text-1xl font-semi-bold mt-10">Children's Audio Book.</h4>
+                  <h4 className="text-white text-2xl font-semi-bold mt-10">Children's Audio Book.</h4>
                 </div>
 
                 {/* <!-- Project logo --> */}
@@ -603,10 +606,10 @@ function App() {
                   {/* Title */}
                   <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
                     <h3 className="text-white text-3xl font-semibold">Rectangulo Can Count</h3>
-                    <h4 className="text-white text-1xl font-semi-bold">Children's Audio Book.</h4>
+                    <h4 className="text-white text-1xl mt-5 marker:font-semi-bold">Children's Audio Book.</h4>
                   </div>
 
-                  <p className="text white mt-10 mb-10">Rectangulo can count is childrens book to help them learn how to count in Spanish. The audio book is really helpful so they can hear how to pronounce the words. I really enjoyed working on this project and would love to do similar projects in the future.  </p>
+                  <p className="text white mt-10 mb-10 font-semibold">Rectangulo can count is childrens book to help them learn how to count in Spanish. The audio book is really helpful so they can hear how to pronounce the words. I really enjoyed working on this project and would love to do similar projects in the future.  </p>
                   
                   {/* Audio Player */}
                   <ResponsivePlayer url="https://soundcloud.com/audiostarinc/rectangulo-can-count-audio-book" />
@@ -650,8 +653,8 @@ function App() {
                     <h3 className="text-white text-3xl font-semibold">"Carolina"</h3> 
                   </div>
 
-                  <p className="text white mt-10 mb-10">Mixed at Shoreline Studios.</p>
-                  <p className="text white mt-10 mb-10">Shoreling Studios provided me with the stems and I mixed them in Studio C on the Toft cosole. I really like how this mix turned out, always fun to work on a analog board with outboard gear.</p>
+                  <p className="text white mt-10 mb-10 font-semibold">Mixed at Shoreline Studios.</p>
+                  <p className="text white mt-10 mb-10 font-semibold">Shoreling Studios provided me with the stems and I mixed them in Studio C on the Toft cosole. I really like how this mix turned out, always fun to work on a analog board with outboard gear.</p>
                   
                   {/* Audio Player */}
                   <ResponsivePlayer url="https://soundcloud.com/audiostarinc/carolina-mix-down" />
@@ -663,7 +666,7 @@ function App() {
 
                   {/* Built With */}
                   <div className="container">
-                    <h4 className="mt-10 text-white text-1xl font-semi-bold underline">Equipment | Software:</h4>
+                    <h4 className="mt-10 text-white text-1xl font-semi-bold mb-10">Equipment | Software:</h4>
                     <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
                       <div className="badge">Protools</div>
                       <div className="badge">Toft Audio ATB-32a</div>
@@ -699,8 +702,8 @@ function App() {
                     <h4 className="text-white text-1xl font-semi-bold">Live at Campbells Resort, Chelan WA.</h4>
                   </div>
 
-                  <p className="text white mt-10">This was at a wedding ceremony that I provided equipment for. After the soundcheck, I decided to hit record because I loved his voice and the ambient sound around the lake was amazing. If you listen close, you can hear birds and people enjoying the lake in the distance. It made for a very unique recording and I love how it turned out!</p>
-                  <h4 className="mt-10 text-white text-1xl font-semi-bold">Recorded and Edited With:</h4>
+                  <p className="text white mt-10 font-semibold">This was at a wedding ceremony that I provided equipment for. After the soundcheck, I decided to hit record because I loved his voice and the ambient sound around the lake was amazing. If you listen close, you can hear birds and people enjoying the lake in the distance. It made for a very unique recording and I love how it turned out!</p>
+                  <h4 className="mt-10 text-white text-1xl font-semi-bold mb-10">Recorded and Edited With:</h4>
 
                   {/* Audio Player */}
                   <ResponsivePlayer url="https://soundcloud.com/audiostarinc/casey-conner-live-at-campbells-resort-lake-chelan" />
@@ -713,8 +716,8 @@ function App() {
 
                   {/* Built With */}
                   <div className="container">
-                    <h4 className="mt-10 text-white text-1xl font-semi-bold underline">Recorded and Edited With:</h4>
-                    <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
+                    <h4 className="mt-10 text-white text-1xl font-semi-bold mb-10">Recorded and Edited With:</h4>
+                    <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3">
                       <div className="badge">Allen and Heath QU-16</div>
                       <div className="badge">Shure SM 57</div>
                       <div className="badge">Shure SM 58</div>
@@ -750,7 +753,7 @@ function App() {
                     <h4 className="text-white text-1xl font-semi-bold">Live at a private event.</h4>
                   </div>
 
-                  <p className="text white mt-10 mb-10">Scott asked me to provide a sound system for him to use at a private event, usually when I work with Scott I play background music when he needs a break. I had my laptop there for that reason and decided to just record his set. I think it turned out pretty good. Enjoy! </p>
+                  <p className="text white mt-10 mb-10 font-semibold">Scott asked me to provide a sound system for him to use at a private event, usually when I work with Scott I play background music when he needs a break. I had my laptop there for that reason and decided to just record his set. I think it turned out pretty good. Enjoy! </p>
                   
 
                   {/* Audio Player */}
@@ -763,7 +766,7 @@ function App() {
 
                   {/* Built With */}
                   <div className="container">
-                    <h4 className="mt-10 text-white text-1xl font-semi-bold underline">Recorded and Edited With:</h4>
+                    <h4 className="mt-10 text-white text-1xl font-semi-bold mb-10">Recorded and Edited With:</h4>
                     <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
                       <div className="badge">Allen and Heath QU-16</div>
                       <div className="badge">Shure SM 57</div>
@@ -798,7 +801,7 @@ function App() {
                     <h3 className="text-white text-3xl font-semibold">Custom Cheer Mix</h3>
                   </div>
 
-                  <p className="text white mt-10 mb-10">This is a custom cheer mix that I made for a high school in Seattle. It took a few hours to line everything up and make it sound good, but overall I am pleased with how it turned out. </p>
+                  <p className="text white mt-10 mb-10 font-semibold">This is a custom cheer mix that I made for a high school in Seattle. It took a few hours to line everything up and make it sound good, but overall I am pleased with how it turned out. If you would like a custom cheer mix made for your school, reach out! </p>
                   
 
                   {/* Audio Player */}
@@ -811,7 +814,7 @@ function App() {
 
                   {/* Built With */}
                   <div className="container">
-                    <h4 className="mt-10 text-white text-1xl font-semi-bold underline">Edited With:</h4>
+                    <h4 className="mt-10 text-white text-1xl font-semi-bold mb-10">Edited With:</h4>
                     <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
                       <div className="badge">Protools</div>
                     </div>
@@ -822,17 +825,19 @@ function App() {
               </div>
               {/* End Cheer Mix */}
 
-              {/* Brandon Smith Live Recording */}
+              
+              {/* Start Spike Coggins */}
               <div className="w-full border border-nav p-16 lg:px-20 lg:py-20 lg:space-x-20 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
 
                 {/* SMALL SCREEN - Title */}
                 <div className="flex flex-wrap justify-center text-center lg:hidden ">
-                  <h3 className="text-white text-3xl font-semibold">Live recording for Brandon Smith</h3>
+                  <h3 className="text-white text-3xl font-semibold">"Lonely Gemini Drinking For Two"</h3>
+                  <h4 className="text-white text-2xl font-semibold">Spike Coggins</h4>
                 </div>
 
                 {/* <!-- Project logo --> */}
                 <div className="mb-6 lg:mb-0">
-                  <img src={brandon} alt="Audiostar Logo." className="img_300" />
+                  <img src={spike_coggins} alt="Spike Coggins" className="img_300" />
                 </div>
 
                 {/* <!-- Project info --> */}
@@ -840,34 +845,32 @@ function App() {
 
                   {/* Title */}
                   <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
-                    <h3 className="text-white text-3xl font-semibold">Live recording for Brandon Smith</h3>
+                    <h3 className="text-white text-3xl font-semibold">"Lonely Gemini Drinking For Two"</h3>
+                    <h4 className="text-white text-2xl font-semibold">Spike Coggins</h4>
                   </div>
 
-                  <p className="text white mt-10 mb-10">I enjoyed recording this show for Brandon and a few of his friends. He was recording a video and wanted to capture clean audio to use. I love working with acoustic performers, always turns out great! </p>
+                  <p className="text white mt-10 mb-10 font-semibold">When I moved to Idaho, I didn't know any musicians in the area so I decided to attend an open mic session at Station Square. I met the guy who ran the open mic and when he heard I could record, he asked if I could help out with some audio problems that they were having.</p>
+                  <p className="text white mb-10 font-semibold">The first week I was there, Spike Showed up and played a few songs. When I saw the beard, bango and chains on his ankles, I knew it was going to be a good set and I hit record.</p>
+                  <p className="text white mb-10 font-semibold">Since then we have worked togethor a few times and I really like his style. Always fun to record a Bango! </p>
                   
 
                   {/* Audio Player */}
-                  <ResponsivePlayer url="https://soundcloud.com/audiostarinc/brandon-smith-afraid" />
+                  <ResponsivePlayer url="https://soundcloud.com/audiostarinc/spike-coggins-lonely-gemeni-drinking-for-two-open-mic-station-square-10142021" />
 
-                  {/* Buttons */}
-                  <div className="mt-16 justify-right">
-                    {/* <a href="http://scottfosterrock.com/" target="_blank" rel="noreferrer" ><button className="px-6 py-2 bg-theme font-bold">Scott Foster</button></a> */}
-                  </div>
-
+           
                   {/* Built With */}
                   <div className="container">
-                    <h4 className="mt-10 text-white text-1xl font-semi-bold underline">Edited With:</h4>
+                    <h4 className="mt-10 text-white text-1xl font-semi-bold mb-10">Edited With:</h4>
                     <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
                       <div className="badge">Protools</div>
-                      <div className="badge">X32</div>
-                      <div className="badge">SM 7B</div>
                     </div>
                   </div>
 
                 </div>
 
               </div>
-              {/* End Cheer Mix */}
+              {/* End Spike Coggins */}
+
 
               {/* Foster Brothers Studio Recording */}
               <div className="w-full border border-nav p-16 lg:px-20 lg:py-20 lg:space-x-20 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
@@ -892,7 +895,7 @@ function App() {
                     <h4 className="text-white text-2xl mt-5 font-semibold">Foster Brothers</h4>
                   </div>
 
-                  <p className="text white mt-10 mb-10">I recorded this in my podcasting studio in Salt Lake. Scott and Ian were in town and they had their guitars with them so we spent a few hours and made a scratch track of "Taking Christmas Back From Santa". I like how it turned out but I want to re-record a few parts mix it down again at some point. You can watch Ian and Scott on Discovery's hit show "Bering Sea Gold" in season One and Two.</p>
+                  <p className="text white mt-10 mb-10 font-semibold">I recorded this at a podcasting studio in Salt Lake. Scott and Ian were in town and they had their guitars with them so we spent a few hours and made a scratch track of "Taking Christmas Back From Santa". I like how it turned out but I want to re-record a few parts mix it down again at some point. You can watch Ian and Scott on Discovery's hit show <a href="https://go.discovery.com/show/bering-sea-gold-discovery" target="_blank" className="text-blue-500">"Bering Sea Gold"</a> in season One and Two.</p>
                   
 
                   {/* Audio Player */}
@@ -905,7 +908,7 @@ function App() {
 
                   {/* Built With */}
                   <div className="container">
-                    <h4 className="mt-10 text-white text-1xl font-semi-bold underline">Edited With:</h4>
+                    <h4 className="mt-10 text-white text-1xl font-semi-bold">Edited With:</h4>
                     <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
                       <div className="badge">Protools</div>
                       <div className="badge">X32</div>
@@ -917,6 +920,56 @@ function App() {
 
               </div>
               {/* End Foster Brothers Studio  */}
+
+
+              {/* Brandon Smith Live Recording */}
+              <div className="w-full border border-nav p-16 lg:px-20 lg:py-20 lg:space-x-20 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
+
+                {/* SMALL SCREEN - Title */}
+                <div className="flex flex-wrap justify-center text-center lg:hidden ">
+                  <h3 className="text-white text-3xl font-semibold">Live recording for Brandon Smith</h3>
+                </div>
+
+                {/* <!-- Project logo --> */}
+                <div className="mb-6 lg:mb-0">
+                  <img src={brandon} alt="Audiostar Logo." className="img_300" />
+                </div>
+
+                {/* <!-- Project info --> */}
+                <div className="flex flex-wrap justify-center text-center lg:text-left lg:block">
+
+                  {/* Title */}
+                  <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
+                    <h3 className="text-white text-3xl font-semibold">Live recording for Brandon Smith</h3>
+                  </div>
+
+                  <p className="text white mt-10 mb-10 font-semibold">I enjoyed recording this show for Brandon and a few of his friends. He was recording a video and wanted to capture clean audio to use. I love working with acoustic performers, always turns out great! </p>
+                  
+
+                  {/* Audio Player */}
+                  <ResponsivePlayer url="https://soundcloud.com/audiostarinc/brandon-smith-afraid" />
+
+                  {/* Buttons */}
+                  <div className="mt-16 justify-right">
+                    {/* <a href="http://scottfosterrock.com/" target="_blank" rel="noreferrer" ><button className="px-6 py-2 bg-theme font-bold">Scott Foster</button></a> */}
+                  </div>
+
+                  {/* Built With */}
+                  <div className="container">
+                    <h4 className="mt-10 text-white text-1xl font-semi-bold mb-10">Edited With:</h4>
+                    <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
+                      <div className="badge">Protools</div>
+                      <div className="badge">X32</div>
+                      <div className="badge">SM 7B</div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+              {/* End Brandon Smith */}
+
+              
 
 
             </div>
