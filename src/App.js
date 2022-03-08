@@ -110,12 +110,12 @@ function App() {
             <div className="flex sm-flex space-x-5 items-center">
 
               {/* Github Icon */}
-              <a href="https://github.com/onticinc">
+              <a href="https://github.com/onticinc" target="_blank" rel="noreferrer">
                 <svg alt="link to github" className="w-8 h-8 mt-1" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" fill="white"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" /></svg>
               </a>
 
               {/* LinkedIn Icon */}
-              <a href="https://www.linkedin.com/in/onticinc/">
+              <a href="https://www.linkedin.com/in/onticinc/" target="_blank" rel="noreferrer">
                 <svg alt="link to linkedin profile" className="w-8 h-8  mt-1" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" fill="white"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
               </a>
 
@@ -195,7 +195,7 @@ function App() {
                   <h3 className="text-white text-3xl font-semibold mb-10">Podcast Website Template</h3>
                 </div>
 
-                <p className="mt-10 font-semibold">This was the capstone project for my 12 week bootcamp at <a className="text-blue-500" href="https://generalassemb.ly/"> General Assembly</a>. I worked on this with <a className="text-blue-500" href="https://github.com/pambonian">Patrick Brennan</a>, another student in my class. </p>
+                <p className="mt-10 font-semibold">This was the capstone project for my 12 week bootcamp at <a className="text-blue-500" href="https://generalassemb.ly/"> General Assembly</a>. I worked on this with <a className="text-blue-500" target="_blank" rel="noreferrer" href="https://github.com/pambonian">Patrick Brennan</a>, another student in my class. </p>
 
                 <p className="mt-5 font-semibold">This project is built with Django and Python, it has a fully functioning blog with auth and password reset on your profile. It will compress the uploaded profile picture and scale it to the correct size. The show list populates from the rss feed for the podcast, which eliminates the need to update the website everytime a new show is published.</p>
 
@@ -216,11 +216,11 @@ function App() {
                 <div className="container">
                   <h4 className="mt-10 text-white text-1xl font-semi-bold mb-10">Built With:</h4>
                   <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
-                    <div className="badge">Python</div>
-                    <div className="badge">Django</div>
-                    <div className="badge">Bootstrap</div>
-                    <div className="badge">Postgres</div>
-                    <div className="badge">RSS</div>
+                    <a href="https://www.python.org/" target="_blank" rel="noreferrer"><div className="badge">Python</div></a>
+                    <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer"><div className="badge">Django</div></a>
+                    <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer"><div className="badge">Bootstrap</div></a>
+                    <a href="https://www.postgresql.org/" target="_blank" rel="noreferrer"><div className="badge">Postgres</div></a>
+                    <a href="https://www.linode.com/" target="_blank" rel="noreferrer"><div className="badge">Linode</div></a>
                   </div>
                 </div>
               </div>
@@ -273,6 +273,7 @@ function App() {
                     <a href="https://www.npmjs.com/package/react-player" target="_blank" rel="noreferrer"><div className="badge">React Player</div></a>
                     <a href="https://www.linode.com/" target="_blank" rel="noreferrer"><div className="badge">Linode</div></a>
                     <a href="https://purgecss.com/" target="_blank" rel="noreferrer"><div className="badge">Purge CSS</div></a>
+
                   </div>
                 </div>
               </div>
@@ -322,11 +323,13 @@ function App() {
                 <div className="container">
                   <h4 className="mt-10 text-white text-1xl font-semi-bold underline">Built With:</h4>
                   <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
-                    <div className="badge">Javascript</div>
-                    <div className="badge">HTML</div>
-                    <div className="badge">CSS</div>
-                    <div className="badge">Font Awesome</div>
-                    <div className="badge">Bulma</div>
+                    
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><div className="badge">Javascript</div></a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics" target="_blank" rel="noreferrer"><div className="badge">HTML</div></a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer"><div className="badge">CSS</div></a>
+                    <a href="https://fontawesome.com/" target="_blank" rel="noreferrer"><div className="badge">Font Awesome</div></a>
+                    <a href="https://bulma.io/" target="_blank" rel="noreferrer"><div className="badge">Bulma</div></a>
+                  
                   </div>
                 </div>
               </div>
@@ -373,8 +376,9 @@ function App() {
                 <div className="container">
                   <h4 className="mt-10 text-white text-1xl font-semi-bold underline">Built With:</h4>
                   <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
-                    <div className="badge">Wordpress</div>
-                    <div className="badge">CSS</div>
+                    <a href="https://wordpress.org/" target="_blank" rel="noreferrer"><div className="badge">Wordpress</div></a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer"><div className="badge">CSS</div></a>
+                   
                   </div>
                 </div>
               </div>
@@ -419,8 +423,8 @@ function App() {
                 <div className="container">
                   <h4 className="mt-10 text-white text-1xl font-semi-bold underline">Built With:</h4>
                   <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
-                    <div className="badge">Wordpress</div>
-                    <div className="badge">CSS</div>
+                  <a href="https://wordpress.org/" target="_blank" rel="noreferrer"><div className="badge">Wordpress</div></a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer"><div className="badge">CSS</div></a>
                   </div>
                 </div>
               </div>
@@ -469,8 +473,8 @@ function App() {
                 <div className="container">
                   <h4 className="mt-10 text-white text-1xl font-semi-bold underline">Built With:</h4>
                   <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
-                    <div className="badge">Wordpress</div>
-                    <div className="badge">CSS</div>
+                  <a href="https://wordpress.org/" target="_blank" rel="noreferrer"><div className="badge">Wordpress</div></a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer"><div className="badge">CSS</div></a>
                   </div>
                 </div>
               </div>
@@ -835,7 +839,7 @@ function App() {
                 {/* SMALL SCREEN - Title */}
                 <div className="flex flex-wrap justify-center text-center lg:hidden ">
                   <h3 className="text-white text-3xl font-semibold">"Lonely Gemini Drinking For Two"</h3>
-                  <h4 className="text-white text-2xl font-semibold">Spike Coggins</h4>
+                  <h4 className="text-white text-2xl font-semibold mb-10">Spike Coggins</h4>
                 </div>
 
                 {/* <!-- Project logo --> */}
@@ -881,7 +885,7 @@ function App() {
                 {/* SMALL SCREEN - Title */}
                 <div className="flex flex-wrap justify-center text-center lg:hidden ">
                   <h3 className="text-white text-3xl font-semibold">"Taking Christmas Back From Santa"</h3>
-                  <h4 className="text-white font-semibold">Foster Brothers</h4>
+                  <h4 className="text-white font-semibold mb-10">Written By: Ian Foster</h4>
                 </div>
 
                 {/* <!-- Project logo --> */}
@@ -906,7 +910,7 @@ function App() {
 
                   {/* Buttons */}
                   <div className="mt-16 justify-right">
-                    {/* <a href="http://scottfosterrock.com/" target="_blank" rel="noreferrer" ><button className="px-6 py-2 bg-theme font-bold">Scott Foster</button></a> */}
+                    <a href="https://www.indiegogo.com/projects/center-cam-finally-a-middle-screen-webcam--2#/" target="_blank" rel="noreferrer" ><button className="px-6 py-2 bg-theme font-bold">Ian Foster</button></a>
                   </div>
 
                   {/* Built With */}
@@ -1155,7 +1159,7 @@ function App() {
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Audio for Ian Foster" src={event_19}/>
                 </div>
                 <h3 className="mt-6 text-sm text-blue-500">
-                  <a href="https://www.audiostarinc.com/" target="_blank" rel="noreferrer">Audio for Ian Foster.</a>
+                  <a href="https://www.indiegogo.com/individuals/10667196" target="_blank" rel="noreferrer">Audio for Ian Foster.</a>
                 </h3>
               </div>
 
