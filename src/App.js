@@ -266,10 +266,13 @@ function App() {
                 <div className="container">
                   <h4 className="mt-10 text-white text-1xl font-semi-bold underline">Built With:</h4>
                   <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
-                    <div className="badge">Tailwind</div>
-                    <div className="badge">React</div>
-                    <div className="badge">React Player</div>
-                    <div className="badge">Node</div>
+                    
+                    <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"><div className="badge">Tailwind CSS</div></a>
+                    <a href="https://reactjs.org/" target="_blank" rel="noreferrer"><div className="badge">React</div></a>
+                    <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><div className="badge">Node Js</div></a>
+                    <a href="https://www.npmjs.com/package/react-player" target="_blank" rel="noreferrer"><div className="badge">React Player</div></a>
+                    <a href="https://www.linode.com/" target="_blank" rel="noreferrer"><div className="badge">Linode</div></a>
+                    <a href="https://purgecss.com/" target="_blank" rel="noreferrer"><div className="badge">Purge CSS</div></a>
                   </div>
                 </div>
               </div>
@@ -1453,6 +1456,8 @@ function App() {
             <a href="https://forms.gle/VhVXcct1mnE5rhvi7" target="_blank" rel="noreferrer"><button className="px-6 py-2 ml-2 bg-theme font-bold mt-10">Request A Quote</button></a>
             <a href="https://github.com/onticinc/m-smith/blob/33d6be801a99a70b0392c111f73afbdce451e984/src/michael-david-smith_2022_resume.pdf#L1" target="_blank" rel="noreferrer"><button className="px-6 py-2 ml-2 mt-10 bg-theme font-bold mt-10">View Resume</button></a> 
             <h2 className="text-center text-xl font-semibold mt-10">onticinc@gmail.com</h2>
+            <h2 className="text-center text-xl font-semibold mt-10">Logo's Designed by: <a className="text-blue-500" href="http://www.r2mg.com" target="_blank" rel="noreferrer"> Ryan Roghaar</a></h2>
+            
           </section>
         </div>
 
