@@ -128,7 +128,7 @@ function App() {
           <div className="flex flex-wrap md:flex-nowrap">
 
             {/* Side Nav Dots */}
-            {/* <nav className="inline-block hidden md:block lg:mr-24 lg:w-4 fixed left-percentage xl:block">
+            {/* <nav className="hidden inline-block md:block lg:mr-24 lg:w-4 fixed left-percentage xl:block">
               <div className="absolute left-50 transform -translate-x-1/2 space-y-6 mt-36">
                 <a href="#" className="nav-dot selected-circle block w-7 h-7 rounded-full border-4 border-nav bg-body">
                   <span className="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Home</span>
@@ -455,7 +455,7 @@ function App() {
 
                 <p className="text white mt-10 mb-10 font-semibold">When covid hit, my event calendar went from really busy to no gigs in the near future. I started Mountain View Lawn Care as a way to help pay the bills. I enjoy landscaping as a hobbie just to stay in shape, not as a fulltime job. I did not intend on running the business for longer than necessary. </p>
 
-                <p className="text white mb-10 font-semibold">This website is essentially a portfolio of the landscaping work that I did at my parents house in Idaho. They had a very large pine tree growing too close to the house. When we removed it, there was a large area next to the house that needed a rock wall. That simple tree removal turned into a three year project that was allot fun to work on. You can watch a timelapse video of the project on the website.</p>
+                <p className="text white mb-10 font-semibold">This website is essentially a portfolio of the landscaping work that I did at my parents house in Idaho. They had a very large pine tree growing too close to the house. When we removed it, there was a large area next to the house that needed a rock wall. That simple tree removal turned into a three year project that was a lot fun to work on. You can watch a timelapse video of the project on the website.</p>
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
@@ -578,7 +578,7 @@ function App() {
                   {/* Buttons */}
                   <div className="mt-16 justify-right">
                     <a href="https://open.spotify.com/artist/0l044F6bMOeoWWvk4Neru8?si=AVlij17bReehhZ27Ti884A" target="_blank" rel="noreferrer"><button className="px-6 py-2 mb-5 bg-theme font-bold">Listen to Jenn on Spotify.</button></a>
-                    <a href="https://www.youtube.com/watch?v=3f42T2IU9A4" target="_blank" rel="noreferrer"><button className="xl:ml-5 px-6 py-2 bg-theme font-bold">Watch Jenn on Americon Idol</button></a>
+                    <a href="https://www.youtube.com/watch?v=3f42T2IU9A4" target="_blank" rel="noreferrer"><button className="xl:ml-5 px-6 py-2 bg-theme font-bold">Watch Jenn on American Idol</button></a>
                   </div>
 
                   {/* Built With */}
@@ -666,7 +666,7 @@ function App() {
                   </div>
 
                   <p className="text white mt-10 mb-10 font-semibold">Mixed at Shoreline Studios.</p>
-                  <p className="text white mt-10 mb-10 font-semibold">Shoreling Studios provided me with the stems and I mixed them in Studio C on the Toft cosole. I really like how this mix turned out, always fun to work on a analog board with outboard gear.</p>
+                  <p className="text white mt-10 mb-10 font-semibold">Shoreline Studios provided me with the stems and I mixed them in Studio C on the Toft cosole. I really like how this mix turned out, always fun to work on a analog board with outboard gear.</p>
                   
                   {/* Audio Player */}
                   <ResponsivePlayer url="https://soundcloud.com/audiostarinc/carolina-mix-down" />
@@ -715,7 +715,7 @@ function App() {
                     <h4 className="text-white text-1xl font-semi-bold">Live at Campbells Resort, Chelan WA.</h4>
                   </div>
 
-                  <p className="text white mt-10 font-semibold">This was at a wedding ceremony that I provided equipment for. After the soundcheck, I decided to hit record because I loved his voice and the ambient sound around the lake was amazing. If you listen close, you can hear birds and people enjoying the lake in the distance. It made for a very unique recording and I love how it turned out!</p>
+                  <p className="text white mt-10 font-semibold">This was at a wedding ceremony at Campbells Resort. After the soundcheck, I hit record because I loved his voice and the ambient sound around the lake was amazing. If you listen close, you can hear birds and people enjoying the lake in the distance. It made for a very unique recording and I love how it turned out!</p>
                   <h4 className="mt-10 text-white text-1xl font-semi-bold mb-10">Recorded and Edited With:</h4>
 
                   {/* Audio Player */}
