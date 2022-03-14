@@ -105,7 +105,7 @@ function App() {
         <header>
           {/* TOP NAVBAR */}
           <div className="container flex justify-between align-middle mx-auto px-4 md:px-8 lg:px-12 w-full">
-            <div className="text-lg font-bold">M-Smith<span className='text-blue-500'>.info</span></div>
+            <div className="text-lg font-bold">M-Smith<span className='text-blue-400'>.info</span></div>
 
             <div className="flex sm-flex space-x-5 items-center">
 
@@ -179,7 +179,7 @@ function App() {
 
               {/* Phone Title */}
               <div className="flex flex-wrap justify-center text-center lg:hidden ">
-                <h3 className="text-white text-3xl font-semibold mb-10">Podcast Website Template</h3>
+                <h3 className="text-white text-3xl  mb-10">Podcast Website Template</h3>
               </div>
 
               {/* <!-- Project logo --> */}
@@ -192,14 +192,14 @@ function App() {
 
                 {/* Title */}
                 <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
-                  <h3 className="text-white text-3xl font-semibold mb-10">Podcast Website Template</h3>
+                  <h3 className="text-white text-3xl  mb-10">Podcast Website Template</h3>
                 </div>
 
-                <p className="mt-10 font-semibold">This was the capstone project for my 12 week bootcamp at <a className="text-blue-500" href="https://generalassemb.ly/"> General Assembly</a>. I worked on this with <a className="text-blue-500" target="_blank" rel="noreferrer" href="https://github.com/pambonian">Patrick Brennan</a>, another student in my class. </p>
+                <p className="mt-10 ">This was the capstone project for my 12 week bootcamp at <a className="text-blue-400" href="https://generalassemb.ly/"> General Assembly</a>. I worked on this with <a className="text-blue-400" target="_blank" rel="noreferrer" href="https://github.com/pambonian">Patrick Brennan</a>, another student in my class. </p>
 
-                <p className="mt-5 font-semibold">This project is built with Django and Python, it has a fully functioning blog with auth and password reset on your profile. It will compress the uploaded profile picture and scale it to the correct size. The show list populates from the rss feed for the podcast, which eliminates the need to update the website everytime a new show is published.</p>
+                <p className="mt-5 ">This project is built with Django and Python, it has a fully functioning blog with auth and password reset on your profile. It will compress the uploaded profile picture and scale it to the correct size. The show list populates from the rss feed for the podcast, which eliminates the need to update the website everytime a new show is published.</p>
 
-                <p className="mt-5 font-semibold">I used the podcast "Eggs" to demonstrate functionality, you can watch the presentation video through the private link posted below.</p>
+                <p className="mt-5 ">I used the podcast "Eggs" to demonstrate functionality, you can watch the presentation video through the private link posted below.</p>
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
@@ -234,7 +234,7 @@ function App() {
 
               {/* SMALL SCREEN - Title */}
               <div className="flex flex-wrap justify-center text-center lg:hidden ">
-                <h3 className="text-white text-3xl font-semibold mb-10">Personal Portfolio</h3>
+                <h3 className="text-white text-3xl  mb-10">Personal Portfolio</h3>
               </div>
 
               {/* <!-- Project logo --> */}
@@ -247,10 +247,10 @@ function App() {
 
                 {/* Title */}
                 <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
-                  <h3 className="text-white text-3xl font-semibold mb-10">Personal Portfolio</h3>
+                  <h3 className="text-white text-3xl  mb-10">Personal Portfolio</h3>
                 </div>
 
-                <p className="mt-10 font-semibold">I wanted to learn how to use Tailwind with React and deploy it on a Linode server. Why not do that for my portfolio? Combining Tailwind with a React App took some getting used to but I was able to figure it out. It reminds me of Bootstrap with a little more functionality. Learning how to deploy to Linode was challenging but I am glad I took the time to figure it out. </p>
+                <p className="mt-10 ">I wanted to learn how to use Tailwind with React and deploy it on a Linode server. Why not do that for my portfolio? Combining Tailwind with a React App took some getting used to but I was able to figure it out. It reminds me of Bootstrap with a little more functionality. Learning how to deploy to Linode was challenging but I am glad I took the time to figure it out. </p>
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
                   <img alt="m-smith.info website screen shot" src={portfolio_1} className="w-full pr-5 h-36 lg:h-72 object-cover responsive" />
@@ -286,7 +286,7 @@ function App() {
 
               {/* SMALL SCREEN - Title */}
               <div className="flex flex-wrap justify-center text-center lg:hidden ">
-                <h3 className="text-white text-3xl font-semibold mb-10">Memory Game</h3>
+                <h3 className="text-white text-3xl  mb-10">Memory Game</h3>
               </div>
 
               {/* <!-- Project logo --> */}
@@ -299,12 +299,12 @@ function App() {
 
                 {/* Title */}
                 <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
-                  <h3 className="text-white text-3xl font-semibold mb-10">Memory Game</h3>
+                  <h3 className="text-white text-3xl  mb-10">Memory Game</h3>
                 </div>
 
-                <p className="mt-10 font-semibold">I made this game while I was in the <a className="text-blue-500 font-bold" href="https://generalassemb.ly/">General Assembly</a> 12 week full stack program. It was the first major project for the program and I focused on learning how flex CSS and getting the layout to scale on mobile screens.</p>
-                <p className="mt-5 font-semibold">It was right before christmas so I decided to make something that my niece and nephews would enjoy. I gave them the link on Christmas Morning.</p>
-                <p className="mt-5 font-semibold">Eventually, I would like to redesign this and add more functionality. Like choosing how many pairs of cards you want, adding extra players, and making custom icons. I would also simplify the code.</p>
+                <p className="mt-10 ">I made this game while I was in the <a className="text-blue-400 font-bold" href="https://generalassemb.ly/">General Assembly</a> 12 week full stack program. It was the first major project for the program and I focused on learning how flex CSS and getting the layout to scale on mobile screens.</p>
+                <p className="mt-5 ">It was right before christmas so I decided to make something that my niece and nephews would enjoy. I gave them the link on Christmas Morning.</p>
+                <p className="mt-5 ">Eventually, I would like to redesign this and add more functionality. Like choosing how many pairs of cards you want, adding extra players, and making custom icons. I would also simplify the code.</p>
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
@@ -342,7 +342,7 @@ function App() {
 
               {/* SMALL SCREEN - Title */}
               <div className="flex flex-wrap justify-center text-center lg:hidden ">
-                <h3 className="text-white text-3xl font-semibold mb-10">Audiostar Website</h3>
+                <h3 className="text-white text-3xl  mb-10">Audiostar Website</h3>
               </div>
 
               {/* <!-- Project logo --> */}
@@ -355,10 +355,10 @@ function App() {
 
                 {/* Title */}
                 <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
-                  <h3 className="text-white text-3xl font-semibold mb-10">Audiostar Website</h3>
+                  <h3 className="text-white text-3xl  mb-10">Audiostar Website</h3>
                 </div>
 
-                <p className="text white mt-10 mb-10 font-semibold">Audiostar is the brand that I use for anything audio releated. The website is built with wordpress, combined with soundcloud. Eventually, I would like to rebuild the site and eliminate the need to use soundcloud. I am not a fan of their embeded player and the popups trying to drive traffic to their site. </p>
+                <p className="text white mt-10 mb-10 ">Audiostar is the brand that I use for anything audio releated. The website is built with wordpress, combined with soundcloud. Eventually, I would like to rebuild the site and eliminate the need to use soundcloud. I am not a fan of their embeded player and the popups trying to drive traffic to their site. </p>
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
@@ -391,7 +391,7 @@ function App() {
 
               {/* SMALL SCREEN - Title */}
               <div className="flex flex-wrap justify-center text-center lg:hidden container">
-                <h3 className="text-white text-3xl font-semibold mb-10">DJ Ontic</h3>
+                <h3 className="text-white text-3xl  mb-10">DJ Ontic</h3>
               </div>
 
               {/* <!-- Project logo --> */}
@@ -404,9 +404,9 @@ function App() {
 
                 {/* Title */}
                 <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
-                  <h3 className="text-white text-3xl font-semibold mb-10">DJ Ontic</h3>
+                  <h3 className="text-white text-3xl  mb-10">DJ Ontic</h3>
                 </div>
-                <p className="text white mt-10 mb-10 font-semibold">I started working as a dj in 1996, my first paid gig was on NYE of that year. I used to call my business 90 Decibels becuase that was the volume I was allowed to play music at for those first few gigs. Eventually, I switched to Ontic which stands for On Time. I like to arrive early for gigs because it allows time for a proper setup and time to diagnose any problems that may arrise.</p>
+                <p className="text white mt-10 mb-10 ">I started working as a dj in 1996, my first paid gig was on NYE of that year. I used to call my business 90 Decibels becuase that was the volume I was allowed to play music at for those first few gigs. Eventually, I switched to Ontic which stands for On Time. I like to arrive early for gigs because it allows time for a proper setup and time to diagnose any problems that may arrise.</p>
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
@@ -437,7 +437,7 @@ function App() {
               
               {/* SMALL SCREEN - Title */}
               <div className="flex flex-wrap justify-center text-center lg:hidden ">
-                <h3 className="text-white text-3xl font-semibold mb-10">Mountain View Lawn Care</h3>
+                <h3 className="text-white text-3xl  mb-10">Mountain View Lawn Care</h3>
               </div>
 
               {/* <!-- Project logo --> */}
@@ -450,12 +450,12 @@ function App() {
 
                 {/* Title */}
                 <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
-                  <h3 className="text-white text-3xl font-semibold mb-10">Mountain View Lawn Care</h3>
+                  <h3 className="text-white text-3xl  mb-10">Mountain View Lawn Care</h3>
                 </div>
 
-                <p className="text white mt-10 mb-10 font-semibold">When covid hit, my event calendar went from really busy to no gigs in the near future. I started Mountain View Lawn Care as a way to help pay the bills. I enjoy landscaping as a hobbie just to stay in shape, not as a fulltime job. I did not intend on running the business for longer than necessary. </p>
+                <p className="text white mt-10 mb-10 ">When covid hit, my event calendar went from really busy to no gigs in the near future. I started Mountain View Lawn Care as a way to help pay the bills. I enjoy landscaping as a hobbie just to stay in shape, not as a fulltime job. I did not intend on running the business for longer than necessary. </p>
 
-                <p className="text white mb-10 font-semibold">This website is essentially a portfolio of the landscaping work that I did at my parents house in Idaho. They had a very large pine tree growing too close to the house. When we removed it, there was a large area next to the house that needed a rock wall. That simple tree removal turned into a three year project that was a lot fun to work on. You can watch a timelapse video of the project on the website.</p>
+                <p className="text white mb-10 ">This website is essentially a portfolio of the landscaping work that I did at my parents house in Idaho. They had a very large pine tree growing too close to the house. When we removed it, there was a large area next to the house that needed a rock wall. That simple tree removal turned into a three year project that was a lot fun to work on. You can watch a timelapse video of the project on the website.</p>
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
@@ -498,7 +498,7 @@ function App() {
 
                 {/* SMALL SCREEN - Title */}
                 <div className="flex flex-wrap justify-center text-center lg:hidden ">
-                  <h3 className="text-white text-3xl font-semibold mb-5">Erich Friedrick (Studio Recording)</h3>
+                  <h3 className="text-white text-3xl  mb-5">Erich Friedrick (Studio Recording)</h3>
                   <h4 className="text-white text-2xl font-semi-bold mb-5">"Follow Me"</h4>
                 </div>
 
@@ -512,16 +512,16 @@ function App() {
 
                   {/* Title */}
                   <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
-                    <h3 className="text-white text-3xl font-semibold mb-5">Erich Friedrick (Studio Recording)</h3>
+                    <h3 className="text-white text-3xl  mb-5">Erich Friedrick (Studio Recording)</h3>
                     <h4 className="text-white text-2xl font-semi-bold">"Follow Me"</h4>
                   </div>
 
-                  <p className="text-white font-semibold mt-5 mb-5">Recorded at Shoreline Studios.</p>
-                  <p className="text white mb-10 font-semibold">As you can tell by listening to this recording, Eric is a very talented musician. This was an amazing experience for me because it was the first time I was able to record a Hammond B3 Organ. I think the finished product sounds great and I hope to be able to record Erich again someday. </p>
+                  <p className="text-white  mt-5 mb-5">Recorded at Shoreline Studios.</p>
+                  <p className="text white mb-10 ">As you can tell by listening to this recording, Eric is a very talented musician. This was an amazing experience for me because it was the first time I was able to record a Hammond B3 Organ. I think the finished product sounds great and I hope to be able to record Erich again someday. </p>
                   
                   {/* Audio Player */}
                   <ResponsivePlayer url="https://soundcloud.com/audiostarinc/follow-me-erich-friedrick" />
-
+                 
                   {/* Buttons */}
                   <div className="mt-16 justify-right">
                     <a href="https://app.shoreline.edu/sccstudio/equipment.asp" target="_blank" rel="noreferrer"><button className="px-6 py-2 bg-theme font-bold">Shoreline Studios</button></a>
@@ -553,7 +553,7 @@ function App() {
 
                 {/* SMALL SCREEN - Title */}
                 <div className="flex flex-wrap justify-center text-center lg:hidden ">
-                  <h3 className="text-white text-3xl font-semibold mb-5">Jen Blossil (Live Recording)</h3>
+                  <h3 className="text-white text-3xl  mb-5">Jen Blossil (Live Recording)</h3>
                   <h4 className="text-white text-2xl font-semi-bold">"I'm Tired"</h4>
                 </div>
 
@@ -567,10 +567,10 @@ function App() {
 
                   {/* Title */}
                   <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
-                    <h3 className="text-white text-3xl font-semibold mb-5">Jenn Blosil (Live Recording)</h3>
+                    <h3 className="text-white text-3xl  mb-5">Jenn Blosil (Live Recording)</h3>
                     <h4 className="text-white text-2xl font-semi-bold">"I'm Tired"</h4>
                   </div>
-                  <p className="text white mt-10 mb-10 font-semibold">Jenn Blosil has a very unique voice and an amazing personality. You can listen to her music on spotify and see her perform on American Idol. I really enjoyed working with her and hope to do it again sometime. </p>
+                  <p className="text white mt-10 mb-10 ">Jenn Blosil has a very unique voice and an amazing personality. You can listen to her music on spotify and see her perform on American Idol. I really enjoyed working with her and hope to do it again sometime. </p>
                   
                   {/* Audio Player */}
                   <ResponsivePlayer url="https://soundcloud.com/audiostarinc/jen-blossil-im-tired" />
@@ -603,7 +603,7 @@ function App() {
 
                 {/* SMALL SCREEN - Title */}
                 <div className="flex flex-wrap justify-center text-center lg:hidden ">
-                  <h3 className="text-white text-3xl font-semibold">Rectangulo Can Count</h3>
+                  <h3 className="text-white text-3xl ">Rectangulo Can Count</h3>
                   <h4 className="text-white text-2xl font-semi-bold mt-10">Children's Audio Book.</h4>
                 </div>
 
@@ -617,11 +617,11 @@ function App() {
 
                   {/* Title */}
                   <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
-                    <h3 className="text-white text-3xl font-semibold">Rectangulo Can Count</h3>
+                    <h3 className="text-white text-3xl ">Rectangulo Can Count</h3>
                     <h4 className="text-white text-1xl mt-5 marker:font-semi-bold">Children's Audio Book.</h4>
                   </div>
 
-                  <p className="text white mt-10 mb-10 font-semibold">Rectangulo can count is childrens book to help them learn how to count in Spanish. The audio book is really helpful so they can hear how to pronounce the words. I really enjoyed working on this project and would love to do similar projects in the future.  </p>
+                  <p className="text white mt-10 mb-10 ">Rectangulo can count is childrens book to help them learn how to count in Spanish. The audio book is really helpful so they can hear how to pronounce the words. I really enjoyed working on this project and would love to do similar projects in the future.  </p>
                   
                   {/* Audio Player */}
                   <ResponsivePlayer url="https://soundcloud.com/audiostarinc/rectangulo-can-count-audio-book" />
@@ -649,7 +649,7 @@ function App() {
 
                 {/* SMALL SCREEN - Title */}
                 <div className="flex flex-wrap justify-center text-center lg:hidden ">
-                  <h3 className="text-white text-3xl font-semibold">"Carolina"</h3>
+                  <h3 className="text-white text-3xl ">"Carolina"</h3>
                 </div>
 
                 {/* <!-- Project logo --> */}
@@ -662,11 +662,11 @@ function App() {
 
                   {/* Title */}
                   <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
-                    <h3 className="text-white text-3xl font-semibold">"Carolina"</h3> 
+                    <h3 className="text-white text-3xl ">"Carolina"</h3> 
                   </div>
 
-                  <p className="text white mt-10 mb-10 font-semibold">Mixed at Shoreline Studios.</p>
-                  <p className="text white mt-10 mb-10 font-semibold">Shoreline Studios provided me with the stems and I mixed them in Studio C on the Toft cosole. I really like how this mix turned out, always fun to work on a analog board with outboard gear.</p>
+                  <p className="text white mt-10 mb-10 ">Mixed at Shoreline Studios.</p>
+                  <p className="text white mt-10 mb-10 ">Shoreline Studios provided me with the stems and I mixed them in Studio C on the Toft cosole. I really like how this mix turned out, always fun to work on a analog board with outboard gear.</p>
                   
                   {/* Audio Player */}
                   <ResponsivePlayer url="https://soundcloud.com/audiostarinc/carolina-mix-down" />
@@ -697,7 +697,7 @@ function App() {
 
                 {/* SMALL SCREEN - Title */}
                 <div className="flex flex-wrap justify-center text-center lg:hidden ">
-                  <h3 className="text-white text-3xl font-semibold">Casey Connor</h3>
+                  <h3 className="text-white text-3xl ">Casey Connor</h3>
                   <h4 className="text-white text-1xl font-semi-bold">Campbells Resort, Chelan WA.</h4>
                 </div>
 
@@ -711,11 +711,11 @@ function App() {
 
                   {/* Title */}
                   <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
-                    <h3 className="text-white text-3xl font-semibold">Casey Connor (Live Recording)</h3>
+                    <h3 className="text-white text-3xl ">Casey Connor (Live Recording)</h3>
                     <h4 className="text-white text-1xl font-semi-bold">Live at Campbells Resort, Chelan WA.</h4>
                   </div>
 
-                  <p className="text white mt-10 font-semibold">This was at a wedding ceremony at Campbells Resort. After the soundcheck, I hit record because I loved his voice and the ambient sound around the lake was amazing. If you listen close, you can hear birds and people enjoying the lake in the distance. It made for a very unique recording and I love how it turned out!</p>
+                  <p className="text white mt-10 ">This was at a wedding ceremony at Campbells Resort. After the soundcheck, I hit record because I loved his voice and the ambient sound around the lake was amazing. If you listen close, you can hear birds and people enjoying the lake in the distance. It made for a very unique recording and I love how it turned out!</p>
                   <h4 className="mt-10 text-white text-1xl font-semi-bold mb-10">Recorded and Edited With:</h4>
 
                   {/* Audio Player */}
@@ -748,7 +748,7 @@ function App() {
 
                 {/* SMALL SCREEN - Title */}
                 <div className="flex flex-wrap justify-center text-center lg:hidden ">
-                  <h3 className="text-white text-3xl font-semibold">Scott Foster</h3>
+                  <h3 className="text-white text-3xl ">Scott Foster</h3>
                   <h4 className="text-white text-1xl font-semi-bold">Live at a private event.</h4>
                 </div>
 
@@ -762,11 +762,11 @@ function App() {
 
                   {/* Title */}
                   <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
-                    <h3 className="text-white text-3xl font-semibold">Scott Foster</h3>
+                    <h3 className="text-white text-3xl ">Scott Foster</h3>
                     <h4 className="text-white text-1xl font-semi-bold">Live at a private event.</h4>
                   </div>
 
-                  <p className="text white mt-10 mb-10 font-semibold">Scott asked me to provide a sound system for him to use at a private event, usually when I work with Scott I play background music when he needs a break. I had my laptop there for that reason and decided to just record his set. I think it turned out pretty good. Enjoy! </p>
+                  <p className="text white mt-10 mb-10 ">Scott asked me to provide a sound system for him to use at a private event, usually when I work with Scott I play background music when he needs a break. I had my laptop there for that reason and decided to just record his set. I think it turned out pretty good. Enjoy! </p>
                   
 
                   {/* Audio Player */}
@@ -798,7 +798,7 @@ function App() {
 
                 {/* SMALL SCREEN - Title */}
                 <div className="flex flex-wrap justify-center text-center lg:hidden ">
-                  <h3 className="text-white text-3xl font-semibold">Custom Cheer Mix</h3>
+                  <h3 className="text-white text-3xl ">Custom Cheer Mix</h3>
                 </div>
 
                 {/* <!-- Project logo --> */}
@@ -811,10 +811,10 @@ function App() {
 
                   {/* Title */}
                   <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
-                    <h3 className="text-white text-3xl font-semibold">Custom Cheer Mix</h3>
+                    <h3 className="text-white text-3xl ">Custom Cheer Mix</h3>
                   </div>
 
-                  <p className="text white mt-10 mb-10 font-semibold">This is a custom cheer mix that I made for a high school in Seattle. It took a few hours to line everything up and make it sound good, but overall I am pleased with how it turned out. If you would like a custom cheer mix made for your school, reach out! </p>
+                  <p className="text white mt-10 mb-10 ">This is a custom cheer mix that I made for a high school in Seattle. It took a few hours to line everything up and make it sound good, but overall I am pleased with how it turned out. If you would like a custom cheer mix made for your school, reach out! </p>
                   
 
                   {/* Audio Player */}
@@ -844,8 +844,8 @@ function App() {
 
                 {/* SMALL SCREEN - Title */}
                 <div className="flex flex-wrap justify-center text-center lg:hidden ">
-                  <h3 className="text-white text-3xl font-semibold">"Lonely Gemini Drinking For Two"</h3>
-                  <h4 className="text-white text-2xl font-semibold mb-10">Spike Coggins</h4>
+                  <h3 className="text-white text-3xl ">"Lonely Gemini Drinking For Two"</h3>
+                  <h4 className="text-white text-2xl  mb-10">Spike Coggins</h4>
                 </div>
 
                 {/* <!-- Project logo --> */}
@@ -858,13 +858,13 @@ function App() {
 
                   {/* Title */}
                   <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
-                    <h3 className="text-white text-3xl font-semibold">"Lonely Gemini Drinking For Two"</h3>
-                    <h4 className="text-white text-2xl font-semibold">Spike Coggins</h4>
+                    <h3 className="text-white text-3xl ">"Lonely Gemini Drinking For Two"</h3>
+                    <h4 className="text-white text-2xl ">Spike Coggins</h4>
                   </div>
 
-                  <p className="text white mt-10 mb-10 font-semibold">When I moved to Idaho, I didn't know any musicians in the area so I decided to attend an open mic session at Station Square. I met the guy who ran the open mic and when he heard I could record, he asked if I could help out with some audio problems that they were having.</p>
-                  <p className="text white mb-10 font-semibold">The first week I was there, Spike Showed up and played a few songs. When I saw the beard, bango and chains on his ankles, I knew it was going to be a good set and I hit record.</p>
-                  <p className="text white mb-10 font-semibold">Since then we have worked togethor a few times and I really like his style. Always fun to record a Bango! </p>
+                  <p className="text white mt-10 mb-10 ">When I moved to Idaho, I didn't know any musicians in the area so I decided to attend an open mic session at Station Square. I met the guy who ran the open mic and when he heard I could record, he asked if I could help out with some audio problems that they were having.</p>
+                  <p className="text white mb-10 ">The first week I was there, Spike Showed up and played a few songs. When I saw the beard, bango and chains on his ankles, I knew it was going to be a good set and I hit record.</p>
+                  <p className="text white mb-10 ">Since then we have worked togethor a few times and I really like his style. Always fun to record a Bango! </p>
                   
 
                   {/* Audio Player */}
@@ -890,8 +890,8 @@ function App() {
 
                 {/* SMALL SCREEN - Title */}
                 <div className="flex flex-wrap justify-center text-center lg:hidden ">
-                  <h3 className="text-white text-3xl font-semibold">"Taking Christmas Back From Santa"</h3>
-                  <h4 className="text-white font-semibold mb-10">Written By: Ian Foster</h4>
+                  <h3 className="text-white text-3xl ">"Taking Christmas Back From Santa"</h3>
+                  <h4 className="text-white  mb-10">Written By: Ian Foster</h4>
                 </div>
 
                 {/* <!-- Project logo --> */}
@@ -904,11 +904,11 @@ function App() {
 
                   {/* Title */}
                   <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
-                    <h3 className="text-white text-3xl font-semibold">"Taking Christmas Back From Santa"</h3>
-                    <h4 className="text-white text-2xl mt-5 font-semibold">Foster Brothers</h4>
+                    <h3 className="text-white text-3xl ">"Taking Christmas Back From Santa"</h3>
+                    <h4 className="text-white text-2xl mt-5 ">Foster Brothers</h4>
                   </div>
 
-                  <p className="text white mt-10 mb-10 font-semibold">I recorded this at a podcasting studio in Salt Lake. Scott and Ian were in town and they had their guitars with them so we spent a few hours and made a scratch track of "Taking Christmas Back From Santa". I like how it turned out but I want to re-record a few parts mix it down again at some point. You can watch Ian and Scott on Discovery's hit show <a href="https://go.discovery.com/show/bering-sea-gold-discovery" target="_blank" rel="noreferrer" className="text-blue-500">"Bering Sea Gold"</a> in season One and Two.</p>
+                  <p className="text white mt-10 mb-10 ">I recorded this at a podcasting studio in Salt Lake. Scott and Ian were in town and they had their guitars with them so we spent a few hours and made a scratch track of "Taking Christmas Back From Santa". I like how it turned out but I want to re-record a few parts mix it down again at some point. You can watch Ian and Scott on Discovery's hit show <a href="https://go.discovery.com/show/bering-sea-gold-discovery" target="_blank" rel="noreferrer" className="text-blue-400">"Bering Sea Gold"</a> in season One and Two.</p>
                   
 
                   {/* Audio Player */}
@@ -940,7 +940,7 @@ function App() {
 
                 {/* SMALL SCREEN - Title */}
                 <div className="flex flex-wrap justify-center text-center lg:hidden ">
-                  <h3 className="text-white text-3xl font-semibold">Live recording for Brandon Smith</h3>
+                  <h3 className="text-white text-3xl ">Live recording for Brandon Smith</h3>
                 </div>
 
                 {/* <!-- Project logo --> */}
@@ -953,10 +953,10 @@ function App() {
 
                   {/* Title */}
                   <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
-                    <h3 className="text-white text-3xl font-semibold">Live recording for Brandon Smith</h3>
+                    <h3 className="text-white text-3xl ">Live recording for Brandon Smith</h3>
                   </div>
 
-                  <p className="text white mt-10 mb-10 font-semibold">I enjoyed recording this show for Brandon and a few of his friends. He was recording a video and wanted to capture clean audio to use. I love working with acoustic performers, always turns out great! </p>
+                  <p className="text white mt-10 mb-10 ">I enjoyed recording this show for Brandon and a few of his friends. He was recording a video and wanted to capture clean audio to use. I love working with acoustic performers, always turns out great! </p>
                   
 
                   {/* Audio Player */}
@@ -1003,7 +1003,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="DJ Ontic setup at Larc Hill Vineyard." src={event_1}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.larchill.com/" target="_blank" rel="noreferrer">Larc Hill Vineyard, Chelan WA</a>
                 </h3>
               </div>
@@ -1013,7 +1013,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Wedding at Larc Hill Vineyard" src={event_2}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.larchill.com/" target="_blank" rel="noreferrer">Larc Hill Vineyard, Chelan WA</a>
                 </h3>
               </div>
@@ -1023,7 +1023,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Podcast with Gail Miller" src={event_3}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.audiostarinc.com" target="_blank" rel="noreferrer">Recording a Podcast with Gail Miller owner of the Utah Jazz.</a>
                 </h3>
               </div>
@@ -1033,7 +1033,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Editing Station" src={event_4}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.audiostarinc.com" target="_blank" rel="noreferrer">Editing Station</a>
                 </h3>
               </div>
@@ -1043,7 +1043,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Wedding at Tsillan Cellars" src={event_5}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://tsillancellars.com/" target="_blank" rel="noreferrer">Tsillan Cellars, Chelan WA</a>
                 </h3>
               </div>
@@ -1053,7 +1053,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Recording The Eggs Podcast" src={event_6}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://eggscast.com/" target="_blank" rel="noreferrer">Recording The Eggs Podcast</a>
                 </h3>
               </div>
@@ -1063,7 +1063,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Respect The Decks DJ Battle with Rob Swift" src={event_7}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.djrobswift.com/" target="_blank" rel="noreferrer">Respect The Decks DJ Battle with Rob Swift</a>
                 </h3>
               </div>
@@ -1073,7 +1073,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Holiday Party for 1st Security Bank" src={event_8}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.fsbwa.com/" target="_blank" rel="noreferrer">1st Security Bank Holiday Party</a>
                 </h3>
               </div>
@@ -1083,7 +1083,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Dj Booth at Tavern Hall in Bellevue." src={event_10}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.tavern-hall.com/" target="_blank" rel="noreferrer">Tavern Hall</a>
                 </h3>
               </div>
@@ -1093,7 +1093,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Wedding at Hollywood Schoolhouse" src={event_11}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.weddingwire.com/biz/hollywood-schoolhouse-woodinville/1f63f9a79c73f334.html" target="_blank" rel="noreferrer">Hollywood Schoolhouse</a>
                 </h3>
               </div>
@@ -1103,7 +1103,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Preparing For A Show" src={event_12}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.audiostarinc.com" target="_blank" rel="noreferrer">Preparing for a show.</a>
                 </h3>
               </div>
@@ -1113,7 +1113,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Lighting and Audio for Prom" src={event_13}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://youtu.be/c124jL8kaNI" target="_blank" rel="noreferrer">Lighting and Audio for High School Prom</a>
                 </h3>
               </div>
@@ -1123,7 +1123,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Wedding at WithinSodo" src={event_14}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.withinsodo.com/" target="_blank" rel="noreferrer">Wedding at WithinSodo</a>
                 </h3>
               </div>
@@ -1134,7 +1134,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Scott Foster playing at Siren Songs Winery" src={event_16}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.sirensongwines.com/" target="_blank" rel="noreferrer">Audio for Scott Foster at Siren Song Winery</a>
                 </h3>
               </div>
@@ -1144,7 +1144,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Wedding at Siren Song Winery" src={event_17}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.sirensongwines.com/" target="_blank" rel="noreferrer">Wedding at Siren Song Winery</a>
                 </h3>
               </div>
@@ -1154,7 +1154,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Lighting and Audio for High School Prom" src={event_18}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://youtu.be/c124jL8kaNI" target="_blank" rel="noreferrer">Lighting and Audio for High School Prom.</a>
                 </h3>
               </div>
@@ -1164,7 +1164,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Audio for Ian Foster" src={event_19}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.indiegogo.com/individuals/10667196" target="_blank" rel="noreferrer">Audio for Ian Foster.</a>
                 </h3>
               </div>
@@ -1174,7 +1174,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Music for Tones for Chrons Event" src={event_20}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.djontic.com/" target="_blank" rel="noreferrer">Tones for Chrons Event in Anacortes.</a>
                 </h3>
               </div>
@@ -1184,7 +1184,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Music for Clover Park Technical College Event" src={event_21}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.djontic.com/" target="_blank" rel="noreferrer">Student Event Clover Park Technical College.</a>
                 </h3>
               </div>
@@ -1194,7 +1194,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Private Event for Bombay Sapphire" src={event_22}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.bombaysapphire.com/us/en/" target="_blank" rel="noreferrer">Private Event for Bombay Sapphire.</a>
                 </h3>
               </div>
@@ -1204,7 +1204,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Sound and Lights for 2005 Tempe Block Party" src={event_23}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://djontic.com" target="_blank" rel="noreferrer">Sound and Lights for the Kiss FM stage at the 2005 Tempe Block Party.</a>
                 </h3>
               </div>
@@ -1214,7 +1214,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Wedding at Campbells Resort" src={event_25}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://campbellsresort.com/" target="_blank" rel="noreferrer">Wedding at Campbells Resort in Chelan.</a>
                 </h3>
               </div>
@@ -1224,7 +1224,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Gig at Ballroom in Fremont" src={event_26}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://talaricosfremont.com/" target="_blank" rel="noreferrer">Ballroom in Fremont WA.</a>
                 </h3>
               </div>
@@ -1234,7 +1234,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Wedding at Karma Vineyards" src={event_27}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://goodkarmawines.com/" target="_blank" rel="noreferrer">Wedding at Karma Vineyards.</a>
                 </h3>
               </div>
@@ -1244,7 +1244,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Gig at Jazzbones in Tacoma WA" src={event_28}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://jazzbones.com/" target="_blank" rel="noreferrer">Jazzbone's Nightclub, Tacoma WA.</a>
                 </h3>
               </div>
@@ -1254,7 +1254,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Gig at Jones Bar in Portland" src={event_29}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.instagram.com/jonesbarpdx/" target="_blank" rel="noreferrer">Jones Bar, Portland OR.</a>
                 </h3>
               </div>
@@ -1264,7 +1264,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Live Podcast" src={event_30}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.eggscast.com" target="_blank" rel="noreferrer">Live show with the Eggs podcast.</a>
                 </h3>
               </div>
@@ -1274,7 +1274,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Podcast for NxtSet" src={event_31}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.audiostarinc.com" target="_blank" rel="noreferrer">Podcast for Nxtset.</a>
                 </h3>
               </div>
@@ -1284,7 +1284,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Wedding at Thanksgiving Point Utah" src={event_32}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://thanksgivingpoint.org/" target="_blank" rel="noreferrer">Wedding at Thanksgiving Point UT.</a>
                 </h3>
               </div>
@@ -1294,7 +1294,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Private Event at Whigwam Resort" src={event_33}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.wigwamarizona.com/" target="_blank" rel="noreferrer">Private Event at Whigwam Resort.</a>
                 </h3>
               </div>
@@ -1304,7 +1304,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Live Stream for a Medical Conference" src={event_34}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.audiostarinc.com/" target="_blank" rel="noreferrer">Livestream Medical Conference.</a>
                 </h3>
               </div>
@@ -1314,7 +1314,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Audio System for Scott Foster" src={event_35}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.highwest.com/" target="_blank" rel="noreferrer">Audio for Scott Foster at High West Distillery.</a>
                 </h3>
               </div>
@@ -1324,7 +1324,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Emblem Nightclub Tacoma WA" src={event_36}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.djontic.com/" target="_blank" rel="noreferrer">Emblem Night Club, Tacoma WA.</a>
                 </h3>
               </div>
@@ -1334,7 +1334,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Live Stream for City Weekly" src={event_37}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.audiostarinc.com/" target="_blank" rel="noreferrer">Live Stream For City Weekly, Salt Lake.</a>
                 </h3>
               </div>
@@ -1344,7 +1344,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Live Stream for City Weekly" src={event_38}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.audiostarinc.com/" target="_blank" rel="noreferrer">Live Stream For City Weekly, Salt Lake.</a>
                 </h3>
               </div>
@@ -1354,7 +1354,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Wedding In Mesa AZ" src={event_39}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.djontic.com/" target="_blank" rel="noreferrer">Wedding in Mesa, AZ.</a>
                 </h3>
               </div>
@@ -1364,7 +1364,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Larc Hill Vineyard" src={event_41}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.larchill.com/" target="_blank" rel="noreferrer">Larc Hill Vineyard, Chelan WA.</a>
                 </h3>
               </div>
@@ -1374,7 +1374,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Private Event" src={event_42}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.audiostarinc.com/" target="_blank" rel="noreferrer">Audio for Private Event, Provo UT.</a>
                 </h3>
               </div>
@@ -1384,7 +1384,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Tsillan Cellars" src={event_43}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.djontic.com/" target="_blank" rel="noreferrer">Tsillan Cellars, Chelan WA.</a>
                 </h3>
               </div>
@@ -1394,7 +1394,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Private Event, Chelan WA." src={event_44}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.djontic.com/" target="_blank" rel="noreferrer">Private Event, Chelan WA.</a>
                 </h3>
               </div>
@@ -1404,7 +1404,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Wedding at WithinSodo" src={event_45}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.withinsodo.com/" target="_blank" rel="noreferrer">WithinSodo</a>
                 </h3>
               </div>
@@ -1414,7 +1414,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Karma Vineyards" src={event_46}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://goodkarmawines.com/" target="_blank" rel="noreferrer">Karma Vineyards</a>
                 </h3>
               </div>
@@ -1424,7 +1424,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="High School Prom" src={event_47}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://youtu.be/c124jL8kaNI" target="_blank" rel="noreferrer">Sound and Lights for High School Prom.</a>
                 </h3>
               </div>
@@ -1434,7 +1434,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="High School Prom" src={event_48}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://youtu.be/c124jL8kaNI" target="_blank" rel="noreferrer">Sound and Lights for High School Prom.</a>
                 </h3>
               </div>
@@ -1444,7 +1444,7 @@ function App() {
                 <div className="relative w-full">
                   <img className="w-full bg-nav h-72 object-cover img_rounded" alt="Larc Hill Vineyard" src={event_49}/>
                 </div>
-                <h3 className="mt-6 text-sm text-blue-500">
+                <h3 className="mt-6 text-sm text-blue-400">
                   <a href="https://www.djontic.com/" target="_blank" rel="noreferrer">Wedding at Larc Hill Vineyard.</a>
                 </h3>
               </div>
@@ -1465,8 +1465,8 @@ function App() {
             {/* <ContactForm className="mt-5" /> */}
             <a href="https://forms.gle/VhVXcct1mnE5rhvi7" target="_blank" rel="noreferrer"><button className="px-6 py-2 ml-2 bg-theme font-bold mt-10">Request A Quote</button></a>
             <a href="https://github.com/onticinc/m-smith/blob/33d6be801a99a70b0392c111f73afbdce451e984/src/michael-david-smith_2022_resume.pdf#L1" target="_blank" rel="noreferrer"><button className="px-6 py-2 ml-2 mt-10 bg-theme font-bold mt-10">View Resume</button></a> 
-            <h2 className="text-center text-xl font-semibold mt-10">onticinc@gmail.com</h2>
-            <h2 className="text-center text-xl font-semibold mt-10">Logo's Designed by: <a className="text-blue-500" href="http://www.r2mg.com" target="_blank" rel="noreferrer"> Ryan Roghaar</a></h2>
+            <h2 className="text-center text-xl  mt-10">onticinc@gmail.com</h2>
+            <h2 className="text-center text-xl  mt-10">Logo's Designed by: <a className="text-blue-400" href="http://www.r2mg.com" target="_blank" rel="noreferrer"> Ryan Roghaar</a></h2>
             
           </section>
         </div>
