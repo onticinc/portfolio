@@ -406,7 +406,7 @@ function App() {
                 <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
                   <h3 className="text-white text-3xl  mb-10">DJ Ontic</h3>
                 </div>
-                <p className="text white mt-10 mb-10 ">I started working as a dj in 1996, my first paid gig was on NYE of that year. I used to call my business 90 Decibels becuase that was the volume I was allowed to play music at for those first few gigs. Eventually, I switched to Ontic which stands for On Time. I like to arrive early for gigs because it allows time for a proper setup and time to diagnose any problems that may arrise.</p>
+                <p className="text white mt-10 mb-10 ">I started working as a dj in 1996, my first paid gig was on NYE of that year. I have gone by a few names over the years, Ontic is what I ended up with. I like to arrive early for gigs because it allows time for a proper setup and time to diagnose any problems that may arrise.</p>
 
                 {/* Images */}
                 <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mt-10">
