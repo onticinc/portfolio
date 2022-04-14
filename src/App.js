@@ -716,8 +716,7 @@ function App() {
                   </div>
 
                   <p className="text white mt-10 ">This was at a wedding ceremony at Campbells Resort. After the soundcheck, I hit record because I loved his voice and the ambient sound around the lake was amazing. If you listen close, you can hear birds and people enjoying the lake in the distance. It made for a very unique recording and I love how it turned out!</p>
-                  <h4 className="mt-10 text-white text-1xl font-semi-bold mb-10">Recorded and Edited With:</h4>
-
+                
                   {/* Audio Player */}
                   <ResponsivePlayer url="https://soundcloud.com/audiostarinc/casey-conner-live-at-campbells-resort-lake-chelan" />
 
