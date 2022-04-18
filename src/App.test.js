@@ -3,7 +3,5 @@ import App from './App';
 
 test('Should contain the word bering', () => {
     render(<App />);
-    
-
 });
 
