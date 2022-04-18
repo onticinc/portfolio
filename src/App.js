@@ -538,8 +538,6 @@ function App() {
                       <a href="https://en-de.neumann.com/tlm-103" target="_blank" rel="noreferrer"><div className="badge">Neumann TL 103</div></a>
                       <a href="https://earthworksaudio.com/omni-microphones/qtc30/" target="_blank" rel="noreferrer"><div className="badge">Earthworks QTC30</div></a>
                       <a href="https://royerlabs.com/r-121/" target="_blank" rel="noreferrer"><div className="badge">Royer 121</div></a>
-                      
-                    
                     </div>
                   </div>
                 </div>
