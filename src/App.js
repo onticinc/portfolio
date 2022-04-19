@@ -734,15 +734,12 @@ function App() {
                       <div className="badge">Audition</div>
                     </div>
                   </div>
-
                 </div>
-
               </div>
               {/* End Casey Connor */}
 
               {/* Start Scott Foster */}
               <div className="w-full border border-nav p-16 lg:px-20 lg:py-20 lg:space-x-20 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
-
                 {/* SMALL SCREEN - Title */}
                 <div className="flex flex-wrap justify-center text-center lg:hidden ">
                   <h3 className="text-white text-3xl ">Scott Foster</h3>
@@ -756,7 +753,6 @@ function App() {
 
                 {/* <!-- Project info --> */}
                 <div className="flex flex-wrap justify-center text-center lg:text-left lg:block">
-
                   {/* Title */}
                   <div className="flex flex-wrap hidden justify-center text-center lg:text-left lg:block">
                     <h3 className="text-white text-3xl ">Scott Foster</h3>
@@ -812,8 +808,6 @@ function App() {
                   </div>
 
                   <p className="text white mt-10 mb-10 ">This is a custom cheer mix that I made for a high school in Seattle. It took a few hours to line everything up and make it sound good, but overall I am pleased with how it turned out. If you would like a custom cheer mix made for your school, reach out! </p>
-                  
-
                   {/* Audio Player */}
                   <ResponsivePlayer url="https://soundcloud.com/audiostarinc/ckc-cheer-mix-part-2" />
 
