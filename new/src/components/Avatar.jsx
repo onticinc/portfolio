@@ -71,7 +71,7 @@ export function AvatarImage() {
       let fromScale = 6
       let toScale = 60 / 16
       let fromX = 0
-      let toX = 1 / 16
+      let toX = 0 / 16
 
       let scrollY = downDelay - window.scrollY
 
@@ -108,27 +108,22 @@ export function AvatarImage() {
             ref={avatarRef}
             className="order-last mt-[calc(theme(spacing.16)-theme(spacing.3))]"
           />
-          <Container
-            className="p-25"
-          >
-            <div
-              className="w-full"
-            >
-              <div className="relative">
+           
+              <div>
                 <AvatarContainer
-                  className="left-0 top-3  transition-opacity"
+                  className="left-0 transition-opacity"
                   style={{
                     opacity: 'var(--avatar-border-opacity, 0)',
                     transform: 'var(--avatar-border-transform)',
                   }}
                 />
                 <Avatar
-                  className="block h-16 w-16 origin-left"
+                  className="block h-16 w-16"
                   style={{ transform: 'var(--avatar-image-transform)' }}
                 />
               </div>
-            </div>
-          </Container>
+            
+          
     </>
   )
 }
