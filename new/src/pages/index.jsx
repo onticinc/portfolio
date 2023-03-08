@@ -12,10 +12,10 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
+import logoZ103 from '@/images/logos/z103-logo.svg'
+import logoShoreline from '@/images/logos/shorelineLogo.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+import logoAudiostar from '@/images/logos/audiostarLogo.png'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -118,7 +118,7 @@ function Newsletter() {
         <span className="ml-3">Stay up to date</span>
       </h2>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        Get notified when I publish something new, and unsubscribe at any time.
+        Get notified when I do or make something cool, and unsubscribe at any time. 😎
       </p>
       <div className="mt-6 flex">
         <input
@@ -139,35 +139,53 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
+      company: 'Eggs The Podcast',
+      title: 'Host | Producer | Co-Owner',
       logo: logoPlanetaria,
-      start: '2019',
+      link: 'https://www.eggscast.com/',
+      start: '2022',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear(),
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
+      company: 'DJ Ontic',
+      title: 'Mixshow DJ | Event DJ',
+      logo: logoPlanetaria,
+      link: 'https://www.djontic.com/',
       start: '2014',
-      end: '2019',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear(),
+      },
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
+      company: 'Audiostar Inc',
+      title: 'Owner',
+      logo: logoAudiostar,
+      link: 'https://www.audiostarinc.com/',
+      start: '1996',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear(),
+      },
     },
     {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      company: 'Riverbend Communications',
+      title: 'Radio DJ | On-Air Personality for Z103fm',
+      logo: logoZ103,
+      link: 'https://www.z103fm.com/',
+      start: '2022',
+      end: '2023',
+    },
+    {
+      company: 'Shoreline Community College',
+      title: 'Audio Engineering Production AAAS Student',
+      logo: logoShoreline,
+      link: 'https://www.shoreline.edu/programs/music-technology/digital-audio-engineering-aaas.aspx',
+      start: '2016',
+      end: '2018',
     },
   ]
 
@@ -219,8 +237,11 @@ function Resume() {
   )
 }
 
+
+// Photos.js
+
 function Photos() {
-  let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
+  let rotations = ['rotate-1', '-rotate-0', 'rotate-0', 'rotate-0', '-rotate-1']
 
   return (
     <div className="mt-16 sm:mt-20">
@@ -251,46 +272,27 @@ export default function Home({ articles }) {
     <>
       <Head>
         <title>
-          Spencer Sharp - Software designer, founder, and amateur astronaut
+          Michael Smith - Create, Document, Produce. A web developer's blog | portfolio. 
         </title>
         <meta
           name="description"
           content="I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
         />
       </Head>
-      <Container className="mt-9">
+      <Container className="mt-52">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Software designer, founder, and amateur astronaut.
+            Software developer, Audio Engineer, Podcast connoisseur.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+         
+          
+          I am a software developer with a passion for audio recording and everything music.
+
+          Focusing on Next JS, TypeScript, and React. Currently working on a new app for the Eggs Podcast that should be launching soon.
+
           </p>
-          <div className="mt-6 flex gap-6">
-            <SocialLink
-              href="https://twitter.com"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            />
-            <SocialLink
-              href="https://instagram.com"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href="https://github.com"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href="https://linkedin.com"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
-            />
-          </div>
+          <SocialLink />
         </div>
       </Container>
       <Photos />

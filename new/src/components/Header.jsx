@@ -6,7 +6,7 @@ import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import avatarImage from '@/images/avatar.jpg'
+import avatarImage from '@/images/avatar.png'
 
 function CloseIcon(props) {
   return (
@@ -238,7 +238,7 @@ function Avatar({ large = false, className, ...props }) {
         alt=""
         sizes={large ? '4rem' : '2.25rem'}
         className={clsx(
-          'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800',
+          'rounded-md bg-zinc-100 object-cover dark:bg-zinc-800',
           large ? 'h-16 w-16' : 'h-9 w-9'
         )}
         priority
@@ -308,10 +308,10 @@ export function Header() {
         return
       }
 
-      let fromScale = 1
+      let fromScale = 5
       let toScale = 36 / 64
       let fromX = 0
-      let toX = 2 / 16
+      let toX = 4 / 16
 
       let scrollY = downDelay - window.scrollY
 
@@ -366,7 +366,7 @@ export function Header() {
               className="order-last mt-[calc(theme(spacing.16)-theme(spacing.3))]"
             />
             <Container
-              className="top-0 order-last -mb-3 pt-3"
+              className="top-0 order-last -mb-3 p-25"
               style={{ position: 'var(--header-position)' }}
             >
               <div
