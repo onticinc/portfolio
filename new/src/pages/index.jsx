@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
+import { AvatarImage } from '@/components/Avatar'
 
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
@@ -19,6 +20,7 @@ import { formatDate } from '@/lib/formatDate'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import SocialLinks from '@/components/SocialLinks'
+import GithubContributions from 'react-github-graph'
 
 function MailIcon(props) {
   return (
@@ -268,6 +270,7 @@ export default function Home({ articles }) {
         />
       </Head>
 
+      <AvatarImage />
       {/* CTA */}
       <Container className="mt-52">
         <div className="max-w-2xl">
@@ -287,14 +290,14 @@ export default function Home({ articles }) {
         </div>
       </Container>
       <Photos />
-      <Container className="mt-24 md:mt-28">
+      <Container className="md:mt-10">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
             {articles.map((article) => (
               <Article key={article.slug} article={article} />
             ))}
           </div>
-          <div className="space-y-10 lg:pl-16 xl:pl-24">
+          <div className="space-y-10 lg:pl-16 xl:pl-16">
             <Newsletter />
             <Resume />
           </div>
