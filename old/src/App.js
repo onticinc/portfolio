@@ -127,26 +127,7 @@ function App() {
         <div className="container mt-16 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
           <div className="flex flex-wrap md:flex-nowrap">
 
-            {/* Side Nav Dots */}
-            {/* <nav className="hidden inline-block md:block lg:mr-24 lg:w-4 fixed left-percentage xl:block">
-              <div className="absolute left-50 transform -translate-x-1/2 space-y-6 mt-36">
-                <a href="#" className="nav-dot selected-circle block w-7 h-7 rounded-full border-4 border-nav bg-body">
-                  <span className="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Home</span>
-                </a>
-                <a href="#software" className="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
-                  <span className="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Software</span>
-                </a>
-                <a href="#audio" className="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
-                  <span className="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Audio</span>
-                </a>
-                <a href="#event" className="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
-                  <span className="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Events</span>
-                </a>
-                <a href="#hire" className="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
-                  <span className="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Hire</span>
-                </a>
-              </div>
-            </nav> */}
+            
 
             {/* Profile Image */}
             <div className="flex flex-wrap max-w-xl justify-center place-items-center">
