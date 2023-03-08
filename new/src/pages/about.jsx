@@ -4,13 +4,8 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import {
-  GitHubIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  TwitterIcon,
-} from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.jpg'
+import SocialLinks from '@/components/SocialLinks'
 
 function SocialLink({ className, href, children, icon: Icon }) {
   return (
@@ -96,26 +91,7 @@ export default function About() {
           <div className="lg:pl-20">
             <ul role="list">
             <div className="mt-6 flex gap-6">
-            <SocialLink
-              href="https://twitter.com/zMikeMurray"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            />
-            <SocialLink
-              href="https://www.instagram.com/djontic/"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href="https://github.com/onticinc"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href="https://linkedin.com"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
-            />
+              <SocialLinks />
           </div>
             </ul>
           </div>

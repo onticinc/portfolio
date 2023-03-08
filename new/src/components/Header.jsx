@@ -161,7 +161,7 @@ function NavItem({ href, children }) {
 function DesktopNavigation(props) {
   return (
     <nav {...props}>
-      <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+      <ul className="flex rounded-md bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
         <NavItem href="/about">About</NavItem>
         <NavItem href="/articles">Articles</NavItem>
         <NavItem href="/projects">Projects</NavItem>
@@ -198,7 +198,7 @@ function ModeToggle() {
     <button
       type="button"
       aria-label="Toggle dark mode"
-      className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+      className="group rounded-md bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
       onClick={toggleMode}
     >
       <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-teal-600" />
@@ -206,6 +206,9 @@ function ModeToggle() {
     </button>
   )
 }
+
+
+// Begin Avatar 
 
 function clamp(number, a, b) {
   let min = Math.min(a, b)
@@ -218,14 +221,14 @@ function AvatarContainer({ className, ...props }) {
     <div
       className={clsx(
         className,
-        'h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10'
+        'h-16 w-16 rounded-md bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-orange-500/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10'
       )}
       {...props}
     />
   )
 }
 
-function Avatar({ large = false, className, ...props }) {
+function Avatar({ large = true, className, ...props }) {
   return (
     <Link
       href="/"
@@ -236,9 +239,9 @@ function Avatar({ large = false, className, ...props }) {
       <Image
         src={avatarImage}
         alt=""
-        sizes={large ? '4rem' : '2.25rem'}
+        sizes={large ? '60rem' : '4.25rem'}
         className={clsx(
-          'rounded-md bg-zinc-100 object-cover dark:bg-zinc-800',
+          'rounded-md bg-zinc-100 object-cover mt-20 dark:bg-zinc-800',
           large ? 'h-16 w-16' : 'h-9 w-9'
         )}
         priority
@@ -255,7 +258,7 @@ export function Header() {
   let isInitial = useRef(true)
 
   useEffect(() => {
-    let downDelay = avatarRef.current?.offsetTop ?? 0
+    let downDelay = avatarRef.current?.offsetTop ?? 2
     let upDelay = 64
 
     function setProperty(property, value) {
@@ -308,10 +311,10 @@ export function Header() {
         return
       }
 
-      let fromScale = 5
-      let toScale = 36 / 64
+      let fromScale = 4
+      let toScale = 10 / 16
       let fromX = 0
-      let toX = 4 / 16
+      let toX = 1 / 16
 
       let scrollY = downDelay - window.scrollY
 
@@ -325,23 +328,16 @@ export function Header() {
         '--avatar-image-transform',
         `translate3d(${x}rem, 0, 0) scale(${scale})`
       )
-
-      let borderScale = 1 / (toScale / scale)
-      let borderX = (-toX + x) * borderScale
-      let borderTransform = `translate3d(${borderX}rem, 0, 0) scale(${borderScale})`
-
-      setProperty('--avatar-border-transform', borderTransform)
-      setProperty('--avatar-border-opacity', scale === toScale ? 1 : 0)
     }
 
     function updateStyles() {
       updateHeaderStyles()
       updateAvatarStyles()
-      isInitial.current = false
+      isInitial.current = true
     }
 
     updateStyles()
-    window.addEventListener('scroll', updateStyles, { passive: true })
+    window.addEventListener('scroll', updateStyles, { passive: false })
     window.addEventListener('resize', updateStyles)
 
     return () => {
@@ -382,7 +378,6 @@ export function Header() {
                     }}
                   />
                   <Avatar
-                    large
                     className="block h-16 w-16 origin-left"
                     style={{ transform: 'var(--avatar-image-transform)' }}
                   />

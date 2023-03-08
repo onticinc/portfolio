@@ -6,15 +6,9 @@ import clsx from 'clsx'
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
-import {
-  GitHubIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  TwitterIcon,
-} from '@/components/SocialIcons'
 import logoZ103 from '@/images/logos/z103-logo.svg'
 import logoShoreline from '@/images/logos/shorelineLogo.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoEggs from '@/images/logos/eggsLogo.jpeg'
 import logoAudiostar from '@/images/logos/audiostarLogo.png'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
@@ -24,6 +18,7 @@ import image5 from '@/images/photos/image-5.jpg'
 import { formatDate } from '@/lib/formatDate'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
+import SocialLinks from '@/components/SocialLinks'
 
 function MailIcon(props) {
   return (
@@ -99,13 +94,6 @@ function Article({ article }) {
   )
 }
 
-function SocialLink({ icon: Icon, ...props }) {
-  return (
-    <Link className="group -m-1 p-1" {...props}>
-      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
-    </Link>
-  )
-}
 
 function Newsletter() {
   return (
@@ -141,7 +129,7 @@ function Resume() {
     {
       company: 'Eggs The Podcast',
       title: 'Host | Producer | Co-Owner',
-      logo: logoPlanetaria,
+      logo: logoEggs,
       link: 'https://www.eggscast.com/',
       start: '2022',
       end: {
@@ -152,7 +140,7 @@ function Resume() {
     {
       company: 'DJ Ontic',
       title: 'Mixshow DJ | Event DJ',
-      logo: logoPlanetaria,
+      logo: logoEggs,
       link: 'https://www.djontic.com/',
       start: '2014',
       end: {
@@ -279,20 +267,23 @@ export default function Home({ articles }) {
           content="I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
         />
       </Head>
+
+      {/* CTA */}
       <Container className="mt-52">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Software developer, Audio Engineer, Podcast connoisseur.
+            Create, Document, Produce.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
          
           
-          I am a software developer with a passion for audio recording and everything music.
+          Software developer, Audio Engineer, Podcast connoisseur... I am a software developer with a passion for audio recording and everything music.
 
-          Focusing on Next JS, TypeScript, and React. Currently working on a new app for the Eggs Podcast that should be launching soon.
+          Focused on Next JS, React, Postgres, Mongo, TypeScript, and a little bit of python.
+          Currently working on a new app for the Eggs Podcast that should be launching soon.
 
           </p>
-          <SocialLink />
+          <SocialLinks />
         </div>
       </Container>
       <Photos />
