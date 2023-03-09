@@ -61,7 +61,8 @@ export default function Home(articles) {
       </Head>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-16  lg:grid-rows-[auto_1fr] lg:gap-y-12 mt-36 bg-inherit ">
-       <div id="avatar" className="col-span-1">
+      
+        <div id="avatar" className="col-span-1">
           <AvatarImage />
         </div>
        <Container>
