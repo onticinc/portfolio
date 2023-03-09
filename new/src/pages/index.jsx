@@ -1,59 +1,14 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import clsx from 'clsx'
+import ImageSlider from '@/components/ImageSlider'
 import { AvatarImage } from '@/components/Avatar'
 import Resume from '@/components/Resume'
-import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
-
-import image1 from '@/images/photos/image-1.jpg'
-import image2 from '@/images/photos/image-2.jpg'
-import image3 from '@/images/photos/image-3.jpg'
-import image4 from '@/images/photos/image-4.jpg'
-import image5 from '@/images/photos/image-5.jpg'
-import { formatDate } from '@/lib/formatDate'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import SocialLinks from '@/components/SocialLinks'
-import GithubContributions from 'react-github-graph'
 import Newsletter from '@/components/Newsletter'
-import { SimpleLayout } from '@/components/SimpleLayout'
 import Bio from '@/components/Bio'
-
-// Photos.js
-
-function Photos() {
-  let rotations = ['rotate-1', '-rotate-0', 'rotate-0', 'rotate-0', '-rotate-1']
-
-  return (
- 
-    <div className="mt-16 sm:mt-20">
-      <div id="slider" className="-my-4 flex justify-center gap-5 py-4 sm:gap-8 overflow-x-scroll scroll whitespace-nowrap scroll-smooth">
-
-        
-          {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
-            <div
-              key={image.src}
-              className={clsx(
-                'relative aspect-[9/10] flex-none inline-block cursor-pointer hover:scale-105 ease-out  duration-500 overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
-                rotations[imageIndex % rotations.length]
-              )}
-            >
-              <Image
-                src={image}
-                alt=""
-                sizes="(min-width: 640px) 18rem, 11rem"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-            </div>
-          ))}
-     
-      </div>
-    </div>
-  
-  )
-}
+import { Header } from '@/components/Header'
 
 
 
@@ -67,9 +22,11 @@ export default function Home(articles) {
         <meta name="portfolio" content="Portfolio of work by Michael Smith." />
         
       </Head>
-      
+      <div className="sticky top-0">
+      <Header />
+      </div>
+
       <div className="flex flex-row justify-center mt-20 items-center">
-      
         <div id="avatar" className="col-span-1 hidden lg:block w-1/3">
           <AvatarImage />
         </div>
@@ -81,16 +38,17 @@ export default function Home(articles) {
         </Container>
       </div>  
       <div className="flex flex-col">
-        <Photos />
+          <ImageSlider />      
+      </div>
 
-        <Container>
-          <Newsletter />
+      <div className="flex flex-row p-8">
+        <Container class="w-1/2">
+          <Newsletter className="pt-64" />
+        </Container>
+        <Container class="w-1/2">
           <Resume />
         </Container>
       </div>
-        
-       
-      
     </>
   )
 }
