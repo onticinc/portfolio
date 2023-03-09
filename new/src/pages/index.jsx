@@ -60,24 +60,27 @@ export default function Home(articles) {
         <meta name="portfolio" content="Portfolio of work by Michael Smith." />
       </Head>
       
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-16  lg:grid-rows-[auto_1fr] lg:gap-y-12 mt-36 bg-inherit ">
+      <div className="flex flex-row justify-center mt-20">
       
-        <div id="avatar" className="col-span-1">
+        <div id="avatar" className="col-span-1 hidden lg:block w-1/3">
           <AvatarImage />
         </div>
-       <Container>
-          <div id="bio" className="col-span-1">
+       <Container className="w-2/3">
+          <div id="bio" className="col-span-1 m-5 align-top flex-initial">
             <Bio />
             <SocialLinks />
           </div>    
-        </Container>  
-      </div>
-         
-       
+        </Container>
+      </div>  
+      <div className="flex flex-col">
+        <Photos />
 
-                <Photos />
-                <Newsletter />
-                <Resume />
+        <Container>
+          <Newsletter />
+          <Resume />
+        </Container>
+      </div>
+        
        
       
     </>

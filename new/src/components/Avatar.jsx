@@ -63,10 +63,10 @@ export function AvatarImage() {
     }
 
     function updateAvatarStyles() {
-      let fromScale = 8
+      let fromScale = 6
       let toScale = 60 / 15
-      let fromX = 35
-      let toX = 20 
+      let fromX = 27
+      let toX = 10 
 
       let scrollY = downDelay - window.scrollY
 
@@ -106,7 +106,7 @@ export function AvatarImage() {
       />
 
         <AvatarContainer
-          className="transition-opacity"
+          className="transition-opacity animate-ping"
           style={{
             opacity: 'var(--avatar-border-opacity, 0)',
             transform: 'var(--avatar-border-transform)',
