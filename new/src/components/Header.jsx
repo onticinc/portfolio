@@ -7,6 +7,9 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 
+
+
+
 function CloseIcon(props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -67,6 +70,10 @@ function MoonIcon(props) {
     </svg>
   )
 }
+
+
+
+// MOBILE NAVIGATION
 
 function MobileNavItem({ href, children }) {
   return (
@@ -146,7 +153,7 @@ function NavItem({ href, children }) {
           'relative block px-3 py-2 transition',
           isActive
             ? 'text-indigo-500 dark:text-orange-400'
-            : 'hover:text-orange-500 dark:hover:text-prange-400'
+            : 'hover:text-indigo-400 dark:hover:text-orange-400'
         )}
       >
         {children}
@@ -157,6 +164,10 @@ function NavItem({ href, children }) {
     </li>
   )
 }
+
+
+
+// DESKTOP NAVIGATION
 
 function DesktopNavigation(props) {
   return (
@@ -208,9 +219,6 @@ function ModeToggle() {
   )
 }
 
-
-
-
 export function Header() {
   let isHomePage = useRouter().pathname === '/'
 
@@ -222,27 +230,23 @@ export function Header() {
   return (
     <>
       <header
-        className="pointer-events-none relative z-50 flex flex-col"
-        style={{
-          height: 'var(--header-height)',
-          marginBottom: 'var(--header-mb)',
-        }}
+        className="pointer-events-none relative flex flex-col"
+        
       >
         
         <div
           ref={headerRef}
-          className="top-0 z-10 h-16 pt-6"
-          style={{ position: 'var(--header-position)' }}
+          className="h-16 pt-10"
+          
         >
           <Container
-            className="top-[var(--header-top,theme(spacing.6))] w-full"
-            style={{ position: 'var(--header-inner-position)' }}
+            className="w-full"
           >
             <div className="relative flex gap-4">
               
-              <div className="flex flex-1 ">
+              <div className="flex">
                 <MobileNavigation className="pointer-events-auto md:hidden" />
-                <DesktopNavigation className="pointer-events-auto hidden md:block" />
+                <DesktopNavigation className="pointer-events-auto hidden md:block sticky" />
               </div>
               <div className="flex justify-end md:flex-1">
                 <div className="pointer-events-auto">
@@ -253,7 +257,7 @@ export function Header() {
           </Container>
         </div>
       </header>
-      {isHomePage && <div style={{ height: 'var(--content-offset)' }} />}
+     
     </>
   )
 }

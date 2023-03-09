@@ -19,6 +19,7 @@ import SocialLinks from '@/components/SocialLinks'
 import GithubContributions from 'react-github-graph'
 import Newsletter from '@/components/Newsletter'
 import { SimpleLayout } from '@/components/SimpleLayout'
+import Bio from '@/components/Bio'
 
 // Photos.js
 
@@ -26,6 +27,7 @@ function Photos() {
   let rotations = ['rotate-1', '-rotate-0', 'rotate-0', 'rotate-0', '-rotate-1']
 
   return (
+ 
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
@@ -46,6 +48,7 @@ function Photos() {
         ))}
       </div>
     </div>
+  
   )
 }
 
@@ -54,37 +57,27 @@ export default function Home(articles) {
     <>
       <Head>
         <title>Michael Smith - Create, Document, Produce. </title>
-        <meta name="description" content="Hi I'm Mike. Nice to meet you!" />
+        <meta name="portfolio" content="Portfolio of work by Michael Smith." />
       </Head>
       
-    <SimpleLayout>
-        <div className="">
-      
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-16  lg:grid-rows-[auto_1fr] lg:gap-y-12 mt-36 bg-inherit ">
+       <div id="avatar" className="col-span-1">
+          <AvatarImage />
+        </div>
+       <Container>
+          <div id="bio" className="col-span-1">
+            <Bio />
+            <SocialLinks />
+          </div>    
+        </Container>  
+      </div>
+         
+       
 
-        <AvatarImage />
-          <div className="">
-            <div className="mt-6 flex-auto text-base text-zinc-600 dark:text-zinc-400">
-              <div className="max-w-2xl">
-                <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-                  Create, Document, Produce.
-                </h1>
-                <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                  Software developer, Audio Engineer, Podcast connoisseur... I
-                  am a software developer with a passion for audio recording and
-                  everything music. Focused on Next JS, React, Postgres, Mongo,
-                  TypeScript, and a little bit of python. Currently working on a
-                  new app for the Eggs Podcast that should be launching soon.
-                </p>
-
-                <SocialLinks />
                 <Photos />
                 <Newsletter />
                 <Resume />
-              </div>
-            </div>
-          </div>
-        </div>
-        </SimpleLayout>
+       
       
     </>
   )
