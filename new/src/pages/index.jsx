@@ -7,9 +7,6 @@ import Resume from '@/components/Resume'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 
-
-
-
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -21,9 +18,7 @@ import { getAllArticles } from '@/lib/getAllArticles'
 import SocialLinks from '@/components/SocialLinks'
 import GithubContributions from 'react-github-graph'
 import Newsletter from '@/components/Newsletter'
-
-
-
+import { SimpleLayout } from '@/components/SimpleLayout'
 
 // Photos.js
 
@@ -54,67 +49,42 @@ function Photos() {
   )
 }
 
-export default function Home({ articles }) {
+export default function Home(articles) {
   return (
     <>
       <Head>
-        <title>
-          Michael Smith - Create, Document, Produce. A web developer's blog | portfolio. 
-        </title>
-        <meta
-          name="description"
-          content="I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
-        />
+        <title>Michael Smith - Create, Document, Produce. </title>
+        <meta name="description" content="Hi I'm Mike. Nice to meet you!" />
       </Head>
+      
+    <SimpleLayout>
+        <div className="">
+      
 
-      <div className="container mt-16 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
-          <div className="flex flex-wrap ">
+        <AvatarImage />
+          <div className="">
+            <div className="mt-6 flex-auto text-base text-zinc-600 dark:text-zinc-400">
+              <div className="max-w-2xl">
+                <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+                  Create, Document, Produce.
+                </h1>
+                <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+                  Software developer, Audio Engineer, Podcast connoisseur... I
+                  am a software developer with a passion for audio recording and
+                  everything music. Focused on Next JS, React, Postgres, Mongo,
+                  TypeScript, and a little bit of python. Currently working on a
+                  new app for the Eggs Podcast that should be launching soon.
+                </p>
 
-            
-
-            {/* Profile Image */}
-            <div className="flex flex-wrap max-w-xl justify-center place-items-center">
-                <AvatarImage />
-            </div>
-
-            {/* HERO TITLE AND BUTTON */}
-            <div className="flex flex-wrap mx-auto justify-center place-items-center max-w-xl md:ml-20 mt-16">
-              <h1 className=" text-5xl md:text-6xl text-white lg:text-7xl text-center">Create<br />Document<br />Produce</h1>
-              <div className="w-full flex justify-center md:text-left">
-                <a href="#software"><button className="px-8 py-4 bg-theme text-white font-bold mt-12 flex justify-center items-center space-x-3">
-                  <span>View my work.</span>
-                </button></a>
+                <SocialLinks />
+                <Photos />
+                <Newsletter />
+                <Resume />
               </div>
             </div>
           </div>
         </div>
-
-
-      
-      {/* CTA */}
-      <Container className="mt-52">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Create, Document, Produce.
-          </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-         
-          
-          Software developer, Audio Engineer, Podcast connoisseur... I am a software developer with a passion for audio recording and everything music.
-
-          Focused on Next JS, React, Postgres, Mongo, TypeScript, and a little bit of python.
-          Currently working on a new app for the Eggs Podcast that should be launching soon.
-
-          </p>
-          <SocialLinks />
-        </div>
-      </Container>
-
-      <Photos />
-      <Newsletter />
-      <Resume />
-
-
+        </SimpleLayout>
       
     </>
   )

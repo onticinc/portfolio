@@ -106,12 +106,12 @@ export function AvatarImage() {
         <>
           <div
             ref={avatarRef}
-            className="order-last mt-[calc(theme(spacing.16)-theme(spacing.3))]"
+            className="mt-[calc(theme(spacing.16)-theme(spacing.3))]"
           />
            
               <div>
                 <AvatarContainer
-                  className="left-0 transition-opacity"
+                  className="transition-opacity"
                   style={{
                     opacity: 'var(--avatar-border-opacity, 0)',
                     transform: 'var(--avatar-border-transform)',

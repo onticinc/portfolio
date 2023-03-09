@@ -3,8 +3,6 @@ import Image from 'next/image'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 
-
-
 import logoZ103 from '@/images/logos/z103-logo.svg'
 import logoShoreline from '@/images/logos/shorelineLogo.svg'
 import logoEggs from '@/images/logos/eggsLogo.jpeg'
@@ -101,8 +99,9 @@ export default function Resume() {
 
   return (
     <>
+   
       <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-        <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <h2 className="flex flex-auto text-sm font-semibold text-zinc-900 dark:text-zinc-100">
           <BriefcaseIcon className="h-6 w-6 flex-none" />
           <span className="ml-3">Work</span>
         </h2>
@@ -145,6 +144,7 @@ export default function Resume() {
           <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
         </Button>
       </div>
+    
     </>
   )
 }
