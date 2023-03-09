@@ -29,44 +29,52 @@ function Photos() {
   return (
  
     <div className="mt-16 sm:mt-20">
-      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
-          <div
-            key={image.src}
-            className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
-              rotations[imageIndex % rotations.length]
-            )}
-          >
-            <Image
-              src={image}
-              alt=""
-              sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>
-        ))}
+      <div id="slider" className="-my-4 flex justify-center gap-5 py-4 sm:gap-8 overflow-x-scroll scroll whitespace-nowrap scroll-smooth">
+
+        
+          {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
+            <div
+              key={image.src}
+              className={clsx(
+                'relative aspect-[9/10] flex-none inline-block cursor-pointer hover:scale-105 ease-out  duration-500 overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
+                rotations[imageIndex % rotations.length]
+              )}
+            >
+              <Image
+                src={image}
+                alt=""
+                sizes="(min-width: 640px) 18rem, 11rem"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </div>
+          ))}
+     
       </div>
     </div>
   
   )
 }
 
+
+
 export default function Home(articles) {
+
+
   return (
     <>
       <Head>
         <title>Michael Smith - Create, Document, Produce. </title>
         <meta name="portfolio" content="Portfolio of work by Michael Smith." />
+        
       </Head>
       
-      <div className="flex flex-row justify-center mt-20">
+      <div className="flex flex-row justify-center mt-20 items-center">
       
         <div id="avatar" className="col-span-1 hidden lg:block w-1/3">
           <AvatarImage />
         </div>
-       <Container className="w-2/3">
-          <div id="bio" className="col-span-1 m-5 align-top flex-initial">
+       <Container className="w-2/3 ">
+          <div id="bio" className="col-span-1 mr-5">
             <Bio />
             <SocialLinks />
           </div>    
