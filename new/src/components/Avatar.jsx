@@ -63,10 +63,10 @@ export function AvatarImage() {
     }
 
     function updateAvatarStyles() {
-      let fromScale = 6
-      let toScale = 60 / 50
+      let fromScale = 5.5
+      let toScale = 0 / 60
       let fromX = 28
-      let toX = 70 
+      let toX = 30 
 
       let scrollY = downDelay - window.scrollY
 

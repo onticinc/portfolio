@@ -12,7 +12,7 @@ export default function ImageSlider() {
   
     return (
    
-      <div className="mt-16 sm:mt-20">
+      <div className="mt-10">
         <div id="slider" className="-my-4 flex justify-center gap-5 py-4 sm:gap-8 overflow-x-scroll scroll whitespace-nowrap scroll-smooth">
   
           
