@@ -8,7 +8,7 @@ export default function Portrait() {
           src={avatar}
           alt=""
           className=
-            'mt-20 rounded-md bg-zinc-100 dark:bg-zinc-800 lg:hidden w-16 md:w-32 lg:w-48'
+            'mt-20 rounded-md bg-zinc-100 dark:bg-zinc-800 lg:hidden w-full '
         />
     )
   }
