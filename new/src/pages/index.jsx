@@ -22,11 +22,9 @@ export default function Home() {
         <meta name="portfolio" content="Portfolio of work by Michael Smith." /> 
       </Head>
 
-      <div className="flex flex-col">
-        <div className="flex flex-col justify-center items-center">
-          <Portriat />
+        <div className="flex flex-col m-10 min-w-min justify-center">
+          <Portriat className="justify-center"/>
         </div>  
-      </div>
 
       <div className="flex flex-row justify-center lg:mt-20 items-center">
         <div id="avatar" className="col-span-1 hidden lg:block lg:w-1/3">
