@@ -20,7 +20,7 @@ export default function ImageSlider() {
               <div
                 key={image.src}
                 className={clsx(
-                  'relative aspect-[9/10] flex-none inline-block cursor-pointer hover:scale-105 ease-out  duration-500 overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
+                  'relative aspect-[9/10] flex-none inline-block cursor-pointer hover:scale-105 ease-out  duration-500 overflow-hidden  bg-zinc-100 dark:bg-zinc-800 w-72 rounded-2xl',
                   rotations[imageIndex % rotations.length]
                 )}
               >

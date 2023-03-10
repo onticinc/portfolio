@@ -6,6 +6,7 @@ import { Container } from '@/components/Container'
 import logoZ103 from '@/images/logos/z103-logo.svg'
 import logoShoreline from '@/images/logos/shorelineLogo.svg'
 import logoEggs from '@/images/logos/eggsLogo.jpeg'
+import logoOntic from '@/images/logos/ontic_logo.jpg'
 import logoAudiostar from '@/images/logos/audiostarLogo.png'
 
 function BriefcaseIcon(props) {
@@ -44,7 +45,7 @@ function ArrowDownIcon(props) {
   )
 }
 
-export default function Resume() {
+export default function WorkHistory() {
   let resume = [
     {
       company: 'Eggs The Podcast',
@@ -60,7 +61,7 @@ export default function Resume() {
     {
       company: 'DJ Ontic',
       title: 'Mixshow DJ | Event DJ',
-      logo: logoEggs,
+      logo: logoOntic,
       link: 'https://www.djontic.com/',
       start: '2014',
       end: {
@@ -87,23 +88,16 @@ export default function Resume() {
       start: '2022',
       end: '2023',
     },
-    {
-      company: 'Shoreline Community College',
-      title: 'Audio Engineering Production AAAS Student',
-      logo: logoShoreline,
-      link: 'https://www.shoreline.edu/programs/music-technology/digital-audio-engineering-aaas.aspx',
-      start: '2016',
-      end: '2018',
-    },
+    
   ]
 
   return (
     <>
    
-      <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+      <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 mt-10">
         <h2 className="flex flex-auto text-sm font-semibold text-zinc-900 dark:text-zinc-100">
           <BriefcaseIcon className="h-6 w-6 flex-none" />
-          <span className="ml-3">Work</span>
+          <span className="ml-3">Work History</span>
         </h2>
         <ol className="mt-6 space-y-4">
           {resume.map((role, roleIndex) => (
