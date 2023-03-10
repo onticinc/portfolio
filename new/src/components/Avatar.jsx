@@ -46,7 +46,7 @@ function Avatar({ large = true, className, ...props }) {
   )
 }
 
-export function AvatarImage() {
+export function AvatarScale() {
   let avatarRef = useRef()
   let isInitial = useRef(true)
 
