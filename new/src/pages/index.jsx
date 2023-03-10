@@ -20,17 +20,17 @@ export default function Home() {
       </Head>
       
       <Container className="mt-16 sm:mt-32 ">
-        <div className="lg:p-16 grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-12 w-full ">
-          
+        <div className=" grid lg:p-16  lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-12">
             <div id="avatar">
               <Image
                 src={Avatar} alt="Mike Smith - Nome AK"
-                className="w-full rounded-md bg-zinc-100 dark:bg-zinc-800 "
+                className="w-full rounded-lg bg-zinc-100 dark:bg-zinc-800 "
               />
               <h4 className="dark:text-zinc-400">Bering Sea - Nome AK</h4>
             </div>
             
-            <div id="bio" className="">
+            <div id="bio" className="mt-20">
+            
               <Bio />
               <SocialLinks />
             </div>
