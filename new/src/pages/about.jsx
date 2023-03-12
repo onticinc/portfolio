@@ -7,6 +7,9 @@ import { Container } from '@/components/Container'
 import portraitImage from '@/images/portrait.jpg'
 import SocialLinks from '@/components/SocialLinks'
 
+const date = new Date().getFullYear() - 1996
+
+
 function SocialLink({ className, href, children, icon: Icon }) {
   return (
     <li className={clsx(className, 'flex')}>
@@ -46,7 +49,7 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              Im Michael Smith. I live in Idaho and Washington depending on what time of the year it is. I have been self employed as a DJ | Audio Engineer for {date.getFullYear() - 1996} years. 
+              Im Michael Smith. I live in Idaho and Washington depending on what time of the year it is. I have been self employed as a DJ | Audio Engineer for {date} years. 
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>

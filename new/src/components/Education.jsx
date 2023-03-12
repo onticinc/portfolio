@@ -1,12 +1,7 @@
-import { Button } from '@/components/Button'
 import Image from 'next/image'
 
-import logoZ103 from '@/images/logos/z103-logo.svg'
-import logoShoreline from '@/images/logos/shorelineLogo.svg'
+import logoShoreline from '@/images/logos/shoreline_logo.png'
 import logoGa from '@/images/logos/GaLogo.jpeg'
-import logoOntic from '@/images/logos/ontic_logo.jpg'
-import logoAudiostar from '@/images/logos/audiostarLogo.png'
-
 function BriefcaseIcon(props) {
   return (
     <svg
