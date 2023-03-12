@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import logoShoreline from '@/images/logos/shoreline_logo.png'
 import logoGa from '@/images/logos/GaLogo.jpeg'
@@ -69,9 +70,11 @@ export default function Education() {
         <ol className="mt-6 space-y-4">
           {resume.map((role, roleIndex) => (
             <li key={roleIndex} className="flex gap-4">
-              <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+              <Link href={role.link} target="_blank">
+              <div className="relative mt-1 flex h-12 w-12 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                <Image src={role.logo} alt="" className="h-12 w-12" unoptimized />
               </div>
+              </Link>
               <dl className="flex flex-auto flex-wrap gap-x-2">
                 <dt className="sr-only">Company</dt>
                 <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
