@@ -22,7 +22,6 @@ function SocialLink({ className, href, children, icon: Icon }) {
 }
 
 
-
 export default function About() {
   return (
     <>
@@ -47,8 +46,7 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I’m Spencer Sharp. I live in New York City, where I design the
-              future.
+              Im Michael Smith. I live in Idaho and Washington depending on what time of the year it is. I have been self employed as a DJ | Audio Engineer for {date.getFullYear() - 1996} years. 
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
