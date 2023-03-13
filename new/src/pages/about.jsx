@@ -10,20 +10,6 @@ import SocialLinks from '@/components/SocialLinks'
 const date = new Date().getFullYear() - 1996
 
 
-function SocialLink({ className, href, children, icon: Icon }) {
-  return (
-    <li className={clsx(className, 'flex')}>
-      <Link
-        href={href}
-        className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
-      >
-        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
-        <span className="ml-4">{children}</span>
-      </Link>
-    </li>
-  )
-}
-
 
 export default function About() {
   return (
@@ -49,11 +35,11 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              Im Michael Smith. I live in Idaho and Washington depending on what time of the year it is. I have been self employed as a DJ | Audio Engineer for {date} years. 
+              Create, Document, Produce.   
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                I’ve loved making things for as long as I can remember, and
+                I’ve loved making things for as long as I can remember, and {date} years.
                 wrote my first program when I was 6 years old, just two weeks
                 after my mom brought home the brand new Macintosh LC 550 that I
                 taught myself to type on.

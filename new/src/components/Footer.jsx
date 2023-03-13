@@ -1,4 +1,5 @@
-import Link from 'next/link'
+import Link from 'next/link' 
+import SocialLinks from './SocialLinks'
 
 import { Container } from '@/components/Container'
 
@@ -26,8 +27,9 @@ export function Footer() {
                 <NavLink href="/speaking">Speaking</NavLink>
                 <NavLink href="/uses">Uses</NavLink>
               </div>
+              <SocialLinks />
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
-                &copy; {new Date().getFullYear()} Spencer Sharp. All rights
+                &copy; {new Date().getFullYear()} Ontic Llc. All rights
                 reserved.
               </p>
             </div>

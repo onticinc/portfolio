@@ -5,8 +5,6 @@ import WorkHistory from '@/components/WorkHistory'
 import { Container } from '@/components/Container'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
-import SocialLinks from '@/components/SocialLinks'
-import Newsletter from '@/components/Newsletter'
 import Bio from '@/components/Bio'
 import Avatar from '@/images/avatar.png'
 import Image from 'next/image'
@@ -19,38 +17,28 @@ export default function Home() {
         <title>Michael Smith - Create, Document, Produce. </title>
         <meta name="portfolio" content="Portfolio of work by Michael Smith." />
       </Head>
-      
-      <Container className="mt-16 sm:mt-32 ">
-        <div className="grid grid-cols-1 p-16 lg:max-width-10xl lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-12">
-            <div id="avatar mb-20
-            ">
-              <div className="rounded-2xl w-full border border-zinc-100 p-6 dark:border-zinc-700/40 ">
+
+      <Container className=" ">
+        <div className="grid p-16 lg:gap-12">
+          <div id="avatar mb-20">
+            <div className="w-full justify-center rounded-2xl border border-zinc-100 p-6  dark:border-zinc-700/40 ">
+              <div className="flex flex-auto flex-row">
                 <Image
-                  src={Avatar} alt="Mike Smith - Nome AK" className="w-full rounded-2xl h-full object-cover"
+                  src={Avatar}
+                  alt="Mike Smith - Nome AK"
+                  className="h-full w-full rounded-l-lg  object-cover lg:h-36 lg:w-36"
                 />
-                <h4 className="dark:text-zinc-400">Bering Sea - Nome AK</h4>
-              </div>
-                <div className="rounded-2xl w-full border mt-10 border-zinc-100 p-6 dark:border-zinc-700/40 ">
                 <Bio />
-                <SocialLinks />
               </div>
+              <h4 className="dark:text-zinc-400 ">Bering Sea - Nome AK</h4>
             </div>
-            
-            <div id="bio" className="divide-solid w-1/2">
-              
-              <WorkHistory />
-              <Education />
-            </div>
+            <WorkHistory />
+            <Education />
+          </div>
         </div>
+      <ImageSlider />
       </Container>
-
-        <ImageSlider />
-
-        {/* PUT ARTICLE HERE */}
-        <Container class="h-full">
-          <Newsletter />
-        </Container>
-
+    
     </>
   )
 }

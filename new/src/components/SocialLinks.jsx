@@ -23,11 +23,13 @@ export default function SocialLinks(){
               href="https://linkedin.com"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
+              target="_blank"
             />
             <SocialLink
               href="https://github.com/onticinc"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
+              target="_blank"
             />
             
             <SocialLink
