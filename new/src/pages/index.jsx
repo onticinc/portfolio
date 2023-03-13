@@ -5,6 +5,8 @@ import WorkHistory from '@/components/WorkHistory'
 import { Container } from '@/components/Container'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
+import SocialLinks from '@/components/SocialLinks'
+import Newsletter from '@/components/Newsletter'
 import Bio from '@/components/Bio'
 import Avatar from '@/images/avatar.png'
 import Image from 'next/image'
@@ -18,7 +20,7 @@ export default function Home() {
         <meta name="portfolio" content="Portfolio of work by Michael Smith." />
       </Head>
 
-      <Container className=" ">
+      <Container className="">
         <div className="grid p-16 lg:gap-12">
           <div id="avatar mb-20">
             <div className="w-full justify-center rounded-2xl border border-zinc-100 p-6  dark:border-zinc-700/40 ">
@@ -26,7 +28,7 @@ export default function Home() {
                 <Image
                   src={Avatar}
                   alt="Mike Smith - Nome AK"
-                  className="h-full w-full rounded-l-lg  object-cover lg:h-36 lg:w-36"
+                  className=" rounded-l-lg  object-cover h-44 w-44"
                 />
                 <Bio />
               </div>
@@ -36,8 +38,8 @@ export default function Home() {
             <Education />
           </div>
         </div>
-      <ImageSlider />
       </Container>
+      <ImageSlider />
     
     </>
   )
