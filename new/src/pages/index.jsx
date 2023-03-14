@@ -1,12 +1,9 @@
 import Head from 'next/head'
-import ImageSlider from '@/components/ImageSlider'
 // import { AvatarImage } from '@/components/Avatar'
 import WorkHistory from '@/components/WorkHistory'
 import { Container } from '@/components/Container'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
-import SocialLinks from '@/components/SocialLinks'
-import Newsletter from '@/components/Newsletter'
 import Bio from '@/components/Bio'
 import Avatar from '@/images/avatar.png'
 import Image from 'next/image'
@@ -39,7 +36,7 @@ export default function Home() {
           </div>
         </div>
       </Container>
-      <ImageSlider />
+      
     
     </>
   )

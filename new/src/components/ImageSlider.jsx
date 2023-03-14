@@ -35,15 +35,153 @@ import image34 from '@/images/events/34.png'
 import clsx from 'clsx'
 
 export default function ImageSlider() {
+
+  let imageInfo = [
+    {
+      title: 'Wedding at Larc Hill Vineyard',
+      image: image1,
+      altTag: 'Wedding at Larc Hill Vineyard',
+      link: 'https://www.generalassemb.ly',
+    },
+    {
+      title: 'Recording a Podcast with Gail Miller, Owner of the Utah Jazz',
+      image: image2,
+      altTag: 'Recording a Podcast with Gail Miller, Owner of the Utah Jazz',
+      link: 'https://utahjazz.com',
+    },
+    {
+      title: 'Editing Station',
+      image: image3,
+      altTag: 'Audio and Video editing station',
+      link: 'https://www.audiostarinc.com',
+    },
+    {
+      title: 'Wedding at Tsillan Cellars in Lake Chelan WA',
+      image: image4,
+      altTag: 'Wedding Reception at Tsillian Cellars in Chelan WA',
+      link: 'https://tsillancellars.com/',
+    },
+    {
+      title: 'Recording an Episode of the Eggs Podcast with Ryan Roghaar', 
+      image: image5,
+      altTag: 'Recording a podcast with Ryan Roghaar',
+      link: 'https://www.eggscast.com',
+    },
+    {
+      title: 'Respect the Decks DJ Battle with Rob Swift',
+      image: image6,
+      altTag: 'Respect the Decks DJ Battle with Rob Swift',
+      link: 'https://www.brolicarmy.com',
+    },
+    {
+      title: 'Holiday party for 1st Capital Bank',
+      image: image7,
+      altTag: 'Holiday party for 1st Capital Bank',
+      link: 'https://www.1stcapitalbank.com',
+    },
+    {
+      title: 'Tavern Hall Bellvue',
+      image: image1,
+      altTag: 'DJ Event at Tavern Hall in Bellvue',
+      link: 'https://www.tavern-hall.com/',
+    },
+    {
+      title: 'Wedding Reception at The Historic Farmhouse',
+      image: image1,
+      altTag: 'Wedding Reception at The Historic Farmhouse',
+      link: 'https://www.djontic.com',
+    },
+    {
+      title: 'Weddomg at Larc Hill Vineyard',
+      image: image1,
+      altTag: 'Wedding at Larc Hill Vineyard',
+      link: 'https://www.generalassemb.ly',
+    },
+    {
+      title: 'Weddomg at Larc Hill Vineyard',
+      image: image1,
+      altTag: 'Wedding at Larc Hill Vineyard',
+      link: 'https://www.generalassemb.ly',
+    },
+    {
+      title: 'Weddomg at Larc Hill Vineyard',
+      image: image1,
+      altTag: 'Wedding at Larc Hill Vineyard',
+      link: 'https://www.generalassemb.ly',
+    },
+    {
+      title: 'Weddomg at Larc Hill Vineyard',
+      image: image1,
+      altTag: 'Wedding at Larc Hill Vineyard',
+      link: 'https://www.generalassemb.ly',
+    },
+    {
+      title: 'Weddomg at Larc Hill Vineyard',
+      image: image1,
+      altTag: 'Wedding at Larc Hill Vineyard',
+      link: 'https://www.generalassemb.ly',
+    },
+    {
+      title: 'Weddomg at Larc Hill Vineyard',
+      image: image1,
+      altTag: 'Wedding at Larc Hill Vineyard',
+      link: 'https://www.generalassemb.ly',
+    },
+    {
+      title: 'Weddomg at Larc Hill Vineyard',
+      image: image1,
+      altTag: 'Wedding at Larc Hill Vineyard',
+      link: 'https://www.generalassemb.ly',
+    },
+    {
+      title: 'Weddomg at Larc Hill Vineyard',
+      image: image1,
+      altTag: 'Wedding at Larc Hill Vineyard',
+      link: 'https://www.generalassemb.ly',
+    },
+    {
+      title: 'Weddomg at Larc Hill Vineyard',
+      image: image1,
+      altTag: 'Wedding at Larc Hill Vineyard',
+      link: 'https://www.generalassemb.ly',
+    },
+    {
+      title: 'Weddomg at Larc Hill Vineyard',
+      image: image1,
+      altTag: 'Wedding at Larc Hill Vineyard',
+      link: 'https://www.generalassemb.ly',
+    },
+    {
+      title: 'Weddomg at Larc Hill Vineyard',
+      image: image1,
+      altTag: 'Wedding at Larc Hill Vineyard',
+      link: 'https://www.generalassemb.ly',
+    },
+    {
+      title: 'Weddomg at Larc Hill Vineyard',
+      image: image1,
+      altTag: 'Wedding at Larc Hill Vineyard',
+      link: 'https://www.generalassemb.ly',
+    },
+    {
+      title: 'Weddomg at Larc Hill Vineyard',
+      image: image1,
+      altTag: 'Wedding at Larc Hill Vineyard',
+      link: 'https://www.generalassemb.ly',
+    },
+
+  ]
+
+
     let rotations = ['rotate-0', '-rotate-0', 'rotate-0', 'rotate-0', '-rotate-0']
   
     return (
    
       <div className="mt-10">
-        <div id="slider" className="-my-4 flex justify-center gap-5 py-4 sm:gap-8 overflow-x-scroll scroll whitespace-nowrap scroll-smooth">
+        <div id="slider" className="-my-6 flex gap-5 py-4 sm:gap-8  ">
   
           
-            {[  image1, 
+            {[  , 
                 image2, 
                 image3, 
                 image4, 
@@ -78,17 +216,17 @@ export default function ImageSlider() {
               <div
                 key={image.src}
                 className={clsx(
-                  'scroll-auto scroll-ml-6 scroll-p-8 md:scroll-p-0 snap-x flex flex-wrap scroll w-96 relative aspect-[10/10] cursor-pointer hover:scale-105 ease-out scroll-p-6 duration-500  bg-zinc-100 dark:bg-zinc-800 rounded-2xl',
+                  ' flex flex-row items-center scroll w-96 cursor-pointer hover:scale-105 ease-out duration-500 scroll scroll-smooth  overflow-x-scroll snap-x  bg-zinc-100 dark:bg-zinc-800 rounded-2xl',
                   rotations[imageIndex % rotations.length]
                 )}
               >
                 <Image
                   src={image}
                   alt=""
-                  layout='fill'
                   placeholder='blur'
                 />
               </div>
+              
             ))}
        
         </div>

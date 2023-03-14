@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-
+import ImageSlider from '@/components/ImageSlider'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 
@@ -31,6 +31,7 @@ export default function App({ Component, pageProps, router }) {
           <Header />
           <Component previousPathname={previousPathname} {...pageProps} />
         </main>
+        <ImageSlider />
         <Footer />
       </div>
     </>
