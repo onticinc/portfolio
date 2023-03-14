@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import image1 from '@/images/events/01.png'
 import image2 from '@/images/events/02.png'
 import image3 from '@/images/events/03.png'
@@ -32,16 +33,15 @@ import image33 from '@/images/events/33.png'
 import image34 from '@/images/events/34.png'
 
 
-import clsx from 'clsx'
 
 export default function ImageSlider() {
 
-  let imageInfo = [
+  let image = [
     {
       title: 'Wedding at Larc Hill Vineyard',
       image: image1,
       altTag: 'Wedding at Larc Hill Vineyard',
-      link: 'https://www.generalassemb.ly',
+      link: 'https://www.larchill.com/',
     },
     {
       title: 'Recording a Podcast with Gail Miller, Owner of the Utah Jazz',
@@ -81,156 +81,164 @@ export default function ImageSlider() {
     },
     {
       title: 'Tavern Hall Bellvue',
-      image: image1,
+      image: image8,
       altTag: 'DJ Event at Tavern Hall in Bellvue',
       link: 'https://www.tavern-hall.com/',
     },
     {
       title: 'Wedding Reception at The Historic Farmhouse',
-      image: image1,
+      image: image10,
       altTag: 'Wedding Reception at The Historic Farmhouse',
       link: 'https://www.djontic.com',
     },
     {
-      title: 'Weddomg at Larc Hill Vineyard',
-      image: image1,
-      altTag: 'Wedding at Larc Hill Vineyard',
-      link: 'https://www.generalassemb.ly',
+      title: 'Getting ready for a corporate event in Salt Lake',
+      image: image11,
+      altTag: 'Getting ready for a gig. DJ equipment and lighting',
+      link: 'https://www.djontic.com',
     },
     {
-      title: 'Weddomg at Larc Hill Vineyard',
-      image: image1,
-      altTag: 'Wedding at Larc Hill Vineyard',
-      link: 'https://www.generalassemb.ly',
+      title: 'High School Prom in Phoenix AZ',
+      image: image12,
+      altTag: 'High School Prom in Phoenix AZ',
+      link: 'https://www.djontic.com',
     },
     {
-      title: 'Weddomg at Larc Hill Vineyard',
-      image: image1,
-      altTag: 'Wedding at Larc Hill Vineyard',
-      link: 'https://www.generalassemb.ly',
+      title: 'Weddomg at Within Sodo',
+      image: image13,
+      altTag: 'Wedding at Within Sodo',
+      link: 'https://www.djontic.com',
     },
     {
-      title: 'Weddomg at Larc Hill Vineyard',
-      image: image1,
-      altTag: 'Wedding at Larc Hill Vineyard',
-      link: 'https://www.generalassemb.ly',
+      title: 'Providing audio for Scott Foster at Siren Songs Winery',
+      image: image14,
+      altTag: 'Wedding with Scott Foster at Siren Songs Winery',
+      link: 'https://audiostarinc.com',
     },
     {
-      title: 'Weddomg at Larc Hill Vineyard',
-      image: image1,
-      altTag: 'Wedding at Larc Hill Vineyard',
-      link: 'https://www.generalassemb.ly',
+      title: 'Wedding Ceremony and Reception at Siren Songs Winery.',
+      image: image16,
+      altTag: 'Wedding Ceremony and Reception at Siren Songs Winery.',
+      link: 'https://www.djontic.com',
     },
     {
-      title: 'Weddomg at Larc Hill Vineyard',
-      image: image1,
-      altTag: 'Wedding at Larc Hill Vineyard',
-      link: 'https://www.generalassemb.ly',
+      title: 'High School Prom in Phoenix Arizona',
+      image: image17,
+      altTag: 'High School Prom in Phoenix Arizona',
+      link: 'https://www.djontic.com',
+    },
+
+    {
+      title: 'Wedding for Ian Foster in Provo Utah',
+      image: image18,
+      altTag: 'Wedding for Ian Foster in Provo Utah',
+      link: 'https://www.djontic.com',
     },
     {
-      title: 'Weddomg at Larc Hill Vineyard',
-      image: image1,
-      altTag: 'Wedding at Larc Hill Vineyard',
-      link: 'https://www.generalassemb.ly',
+      title: 'Tones For Chrons Event in Anacortes WA',
+      image: image19,
+      altTag: 'Tones for Chrons Event in Anacortes WA',
+      link: 'https://www.djontic.com',
     },
     {
-      title: 'Weddomg at Larc Hill Vineyard',
-      image: image1,
-      altTag: 'Wedding at Larc Hill Vineyard',
-      link: 'https://www.generalassemb.ly',
+      title: 'Lunch Jam for Clover Park Community College',
+      image: image20,
+      altTag: 'Lunch Jam for Clover Park Community College',
+      link: 'https://www.djontic.com',
     },
     {
-      title: 'Weddomg at Larc Hill Vineyard',
-      image: image1,
-      altTag: 'Wedding at Larc Hill Vineyard',
-      link: 'https://www.generalassemb.ly',
+      title: 'Corporate Event for Bombay Sapphire in Seattle WA',
+      image: image21,
+      altTag: 'Corporate Event for Bombay Sapphire in Seattle WA',
+      link: 'https://www.djontic.com',
     },
     {
-      title: 'Weddomg at Larc Hill Vineyard',
-      image: image1,
-      altTag: 'Wedding at Larc Hill Vineyard',
-      link: 'https://www.generalassemb.ly',
+      title: 'Lighting and Audio for the Tempe Block Party in Tempe AZ',
+      image: image22,
+      altTag: 'Lighting and Audio for the Tempe Block Party in Tempe AZ',
+      link: 'https://www.djontic.com',
     },
     {
-      title: 'Weddomg at Larc Hill Vineyard',
-      image: image1,
-      altTag: 'Wedding at Larc Hill Vineyard',
-      link: 'https://www.generalassemb.ly',
+      title: 'Wedding reception at Campbells Resort in Lake Chelan',
+      image: image23,
+      altTag: 'Wedding reception at Campbells Resort in Lake Chelan',
+      link: 'https://www.djontic.com',
     },
     {
-      title: 'Weddomg at Larc Hill Vineyard',
-      image: image1,
-      altTag: 'Wedding at Larc Hill Vineyard',
-      link: 'https://www.generalassemb.ly',
+      title: 'DJing at The Ballroom in Fremont WA',
+      image: image25,
+      altTag: 'DJing at The Ballroom in Fremont WA',
+      link: 'https://www.djontic.com',
     },
     {
-      title: 'Weddomg at Larc Hill Vineyard',
-      image: image1,
-      altTag: 'Wedding at Larc Hill Vineyard',
-      link: 'https://www.generalassemb.ly',
+      title: 'Wedding Reception at Karma Vineyards in Chelan WA',
+      image: image26,
+      altTag: 'Wedding Reception at Karma Vineyards in Chelan WA',
+      link: 'https://www.djontic.com',
+    },
+    {
+      title: 'Performing at Jazzbones in Tacoma WA',
+      image: image27,
+      altTag: 'Performing at Jazzbones in Tacoma WA',
+      link: 'https://www.djontic.com',
+    },
+    {
+      title: 'Performing at Jones 80s Retro Bar in Portland OR',
+      image: image28,
+      altTag: 'Performing at Jones 80s Retro Bar in Portland OR',
+      link: 'https://www.djontic.com',
+    },
+    {
+      title: 'Recording the Eggs Podcast with Ryan Roghaar',
+      image: image29,
+      altTag: 'Recording the Eggs Podcast with Ryan Roghaar',
+      link: 'https://www.eggscast.com',
+    },
+    {
+      title: 'Recording the Nextset Podcast',
+      image: image30,
+      altTag: 'Recording the Nextset Podcast',
+      link: 'https://www.audiostaring.com',
+    },
+    {
+      title: 'Recording the Eggs Podcast with Ryan Roghaar',
+      image: image31,
+      altTag: 'Recording the Eggs Podcast with Ryan Roghaar',
+      link: 'https://www.eggscast.com',
+    },
+    {
+      title: 'Wedding Reception in Provo Utah',
+      image: image32,
+      altTag: 'Wedding Receotion in Provo Utah',
+      link: 'https://www.djontic.com',
+    },
+    {
+      title: 'Performing in Scottsdale AZ',
+      image: image33,
+      altTag: 'Performing in Scottsdale AZ',
+      link: 'https://www.djontic.com',
+    },
+    {
+      title: 'Providing lights and sound for a medical conference in Salt Lake City',
+      image: image34,
+      altTag: 'Providing lights and sound for a medical conference in Salt Lake City',
+      link: 'https://www.audiostarinc.com',
     },
 
   ]
 
-
-    let rotations = ['rotate-0', '-rotate-0', 'rotate-0', 'rotate-0', '-rotate-0']
   
     return (
    
-      <div className="mt-10">
-        <div id="slider" className="-my-6 flex gap-5 py-4 sm:gap-8  ">
-  
-          
-            {[  , 
-                image2, 
-                image3, 
-                image4, 
-                image5,
-                image6,
-                image7,
-                image8,
-                image10,
-                image11,
-                image12,
-                image13,
-                image14,
-                image16,
-                image17,
-                image18,
-                image19,
-                image20,
-                image21,
-                image22,
-                image23,
-                image25,
-                image26,
-                image27,
-                image28,
-                image29,
-                image30,
-                image31,
-                image32,
-                image33,
-                image34           
-              ].map((image, imageIndex) => (
-              <div
-                key={image.src}
-                className={clsx(
-                  ' flex flex-row items-center scroll w-96 cursor-pointer hover:scale-105 ease-out duration-500 scroll scroll-smooth  overflow-x-scroll snap-x  bg-zinc-100 dark:bg-zinc-800 rounded-2xl',
-                  rotations[imageIndex % rotations.length]
-                )}
-              >
-                <Image
-                  src={image}
-                  alt=""
-                  placeholder='blur'
-                />
-              </div>
-              
-            ))}
-       
+      image.map((role, roleIndex) => (
+        <div key={roleIndex} className="rounded-2xl border flex flex-row border-zinc-100 p-6 dark:border-zinc-700/40 mt-10">
+          <Link href={role.link} target="_blank">
+            <div className="relative mt-1 flex h-12 w-12 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+              <Image src={role.image} alt={role.altTag} className="h-12 w-12" />
+              <p className="text-white">{role.title}</p>
+            </div>
+          </Link>
         </div>
-      </div>
-    
+      ))
     )
-  }
+  };
