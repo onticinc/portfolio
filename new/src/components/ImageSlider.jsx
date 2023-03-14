@@ -229,16 +229,17 @@ export default function ImageSlider() {
 
   
     return (
-   
-      image.map((role, roleIndex) => (
-        <div key={roleIndex} className="rounded-2xl border flex flex-row border-zinc-100 p-6 dark:border-zinc-700/40 mt-10">
+   <div class="flex flex-row">
+      {image.map((role, roleIndex) => (
+        <div key={roleIndex} className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 mt-10">
           <Link href={role.link} target="_blank">
             <div className="relative mt-1 flex h-12 w-12 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <Image src={role.image} alt={role.altTag} className="h-12 w-12" />
-              <p className="text-white">{role.title}</p>
             </div>
+              <p className="text-white">{role.title}</p>
           </Link>
         </div>
-      ))
+      ))}
+    </div>
     )
   };
