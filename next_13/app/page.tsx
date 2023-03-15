@@ -1,24 +1,17 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from './page.module.css'
-import WorkHistory from "@/components/WorkHistory"
-import { Container } from '@/components/Container'
-import { generateRssFeed } from '@/lib/generateRssFeed'
-import { getAllArticles } from '@/lib/getAllArticles'
-import Bio from '@/components/Bio'
-import Avatar from '@/images/avatar.png'
-import Education from '@/components/Education'
+import Link from 'next/link'
 
-const inter = Inter({ subsets: ['latin'] })
+
+
+
 
 export default function Home() {
   return (
     <>
-      <Head>
         <title>Michael Smith - Create, Document, Produce. </title>
         <meta name="portfolio" content="Portfolio of work by Michael Smith." />
-      </Head>
-  
+      
         <div className="grid p-16 lg:gap-12 md:grid md:grid-rows-2 lg:grid-flow-row">
           <div id="avatar mb-20">
 
@@ -37,8 +30,6 @@ export default function Home() {
             <WorkHistory />
             <Education />
         </div>
-       
-      
       
     
     </>
