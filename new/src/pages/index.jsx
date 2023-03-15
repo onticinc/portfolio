@@ -25,7 +25,7 @@ export default function Home() {
                 <Image
                   src={Avatar}
                   alt="Mike Smith - Nome AK"
-                  className=" rounded-l-lg  object-cover h-44 w-44"
+                  className="rounded-l-lg  object-cover h-44 w-44"
                 />
                 <Bio />
               </div>

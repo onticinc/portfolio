@@ -31,6 +31,7 @@ import image31 from '@/images/events/31.png'
 import image32 from '@/images/events/32.png'
 import image33 from '@/images/events/33.png'
 import image34 from '@/images/events/34.png'
+import { Container } from './Container'
 
 
 
@@ -235,17 +236,19 @@ export default function ImageSlider() {
 
   
     return (
+
    <div class="flex flex-row">
       {image.map((role, roleIndex) => (
-        <div key={roleIndex} className="rounded-2xl scroll-smooth overflow-scroll border w-full border-zinc-100 p-6 dark:border-zinc-700/40 mt-10 gap-2 mr-3 bg-zinc-800">
+        <div key={roleIndex} className="rounded-2xlborder w-full border-zinc-100 p-6 dark:border-zinc-700/40 mt-10 gap-2 mr-3 bg-zinc-800">
           <Link href={role.link} target="_blank">
-            <div className="relative mt-1 w-96 flex flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image src={role.image} alt={role.altTag} className=" w-full" />
+            <div className="relative mt-1 w-96 items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+              <Image src={role.image} alt={role.altTag} className="rounded-2xl w-full" />
             </div>
-              <p className="text-white">{role.title}</p>
+              <p className="text-white mt-2 italic">{role.title}</p>
           </Link>
         </div>
       ))}
     </div>
+  
     )
   };
