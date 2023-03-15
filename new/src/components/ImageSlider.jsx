@@ -44,74 +44,80 @@ export default function ImageSlider() {
       link: 'https://www.larchill.com/',
     },
     {
-      title: 'Recording a Podcast with Gail Miller, Owner of the Utah Jazz',
+      title: 'Wedding at Larc Hill Vineyard',
       image: image2,
+      altTag: 'Wedding at Larc Hill Vineyard',
+      link: 'https://www.larchill.com/',
+    },
+    {
+      title: 'Recording a Podcast with Gail Miller, Owner of the Utah Jazz',
+      image: image3,
       altTag: 'Recording a Podcast with Gail Miller, Owner of the Utah Jazz',
       link: 'https://utahjazz.com',
     },
     {
       title: 'Editing Station',
-      image: image3,
+      image: image4,
       altTag: 'Audio and Video editing station',
       link: 'https://www.audiostarinc.com',
     },
     {
       title: 'Wedding at Tsillan Cellars in Lake Chelan WA',
-      image: image4,
+      image: image5,
       altTag: 'Wedding Reception at Tsillian Cellars in Chelan WA',
       link: 'https://tsillancellars.com/',
     },
     {
       title: 'Recording an Episode of the Eggs Podcast with Ryan Roghaar', 
-      image: image5,
+      image: image6,
       altTag: 'Recording a podcast with Ryan Roghaar',
       link: 'https://www.eggscast.com',
     },
     {
       title: 'Respect the Decks DJ Battle with Rob Swift',
-      image: image6,
+      image: image7,
       altTag: 'Respect the Decks DJ Battle with Rob Swift',
       link: 'https://www.brolicarmy.com',
     },
     {
       title: 'Holiday party for 1st Capital Bank',
-      image: image7,
+      image: image8,
       altTag: 'Holiday party for 1st Capital Bank',
       link: 'https://www.1stcapitalbank.com',
     },
     {
       title: 'Tavern Hall Bellvue',
-      image: image8,
+      image: image10,
       altTag: 'DJ Event at Tavern Hall in Bellvue',
       link: 'https://www.tavern-hall.com/',
     },
     {
       title: 'Wedding Reception at The Historic Farmhouse',
-      image: image10,
+      image: image11,
       altTag: 'Wedding Reception at The Historic Farmhouse',
       link: 'https://www.djontic.com',
     },
     {
       title: 'Getting ready for a corporate event in Salt Lake',
-      image: image11,
+      image: image12,
       altTag: 'Getting ready for a gig. DJ equipment and lighting',
       link: 'https://www.djontic.com',
     },
     {
       title: 'High School Prom in Phoenix AZ',
-      image: image12,
+      image: image13,
       altTag: 'High School Prom in Phoenix AZ',
       link: 'https://www.djontic.com',
     },
     {
-      title: 'Weddomg at Within Sodo',
-      image: image13,
+      title: 'Wedding at Within Sodo',
+      image: image14,
       altTag: 'Wedding at Within Sodo',
       link: 'https://www.djontic.com',
     },
     {
       title: 'Providing audio for Scott Foster at Siren Songs Winery',
-      image: image14,
+      image: image16,
       altTag: 'Wedding with Scott Foster at Siren Songs Winery',
       link: 'https://audiostarinc.com',
     },
@@ -231,10 +237,10 @@ export default function ImageSlider() {
     return (
    <div class="flex flex-row">
       {image.map((role, roleIndex) => (
-        <div key={roleIndex} className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 mt-10">
+        <div key={roleIndex} className="rounded-2xl scroll-smooth overflow-scroll border w-full border-zinc-100 p-6 dark:border-zinc-700/40 mt-10 gap-2 mr-3 bg-zinc-800">
           <Link href={role.link} target="_blank">
-            <div className="relative mt-1 flex h-12 w-12 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image src={role.image} alt={role.altTag} className="h-12 w-12" />
+            <div className="relative mt-1 w-96 flex flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+              <Image src={role.image} alt={role.altTag} className=" w-full" />
             </div>
               <p className="text-white">{role.title}</p>
           </Link>
