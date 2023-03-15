@@ -16,10 +16,10 @@ export default function Home() {
         <title>Michael Smith - Create, Document, Produce. </title>
         <meta name="portfolio" content="Portfolio of work by Michael Smith." />
       </Head>
-
-      <Container className="">
-        <div className="grid p-16 lg:gap-12">
+  
+        <div className="grid p-16 lg:gap-12 md:grid md:grid-rows-2 lg:grid-flow-row">
           <div id="avatar mb-20">
+
             <div className="w-full justify-center rounded-2xl border border-zinc-100 p-6  dark:border-zinc-700/40 ">
               <div className="flex flex-auto flex-row">
                 <Image
@@ -31,11 +31,12 @@ export default function Home() {
               </div>
               <h4 className="dark:text-zinc-400 ">Bering Sea - Nome AK</h4>
             </div>
+          </div>
             <WorkHistory />
             <Education />
-          </div>
         </div>
-      </Container>
+       
+      
       
     
     </>

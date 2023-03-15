@@ -22,17 +22,17 @@ export default function App({ Component, pageProps, router }) {
 
   return (
     <>
-      <div className="fixed inset-0 flex min-w-0  justify-center">
+      <div className="fixed inset-0 flex min-w-0 justify-center">
         <div className="flex w-full">
           <div className="w-full  bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20" />
         </div>
       </div>
       <div className="relative">
-        <main>
           <Header />
+        <main>
           <Component previousPathname={previousPathname} {...pageProps} />
         </main>
-        
+    
           <ImageSlider/>
         
         <Footer />
