@@ -17,7 +17,7 @@ export default function Home() {
         <meta name="portfolio" content="Portfolio of work by Michael Smith." />
       </Head>
   
-        <div className="grid p-16 lg:gap-12 md:grid md:grid-rows-2 lg:grid-flow-row">
+        <div className="grid p-16 lg:gap-12 md:grid md:grid-rows-2 lg:grid-flow-row max-w-7xl justify-center">
           <div id="avatar mb-20">
 
             <div className="w-full justify-center rounded-2xl border border-zinc-100 p-6  dark:border-zinc-700/40 ">
