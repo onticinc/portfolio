@@ -237,12 +237,12 @@ export default function ImageSlider() {
   
     return (
       <Container>
-      <div className="relative border border-zinc-100 justify-center  dark:border-zinc-700/40 lg:max-w-screen-1xl 1xl:max-w-screen-2xl m-4">
+      <div className="relative border border-zinc-100 justify-center  dark:border-zinc-700/40  p-4 m-4">
         <div class="flex items-center overscroll-contain overflow-x-scroll ">
             {image.map((role, roleIndex) => (
               <div key={roleIndex} className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 mt-10 gap-2 mr-4 dark:bg-zinc-800  dark:hover:bg-zinc-700 ">
                 <Link href={role.link} target="_blank">
-                  <div className="relative mt-1 w-96 items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                  <div className="relative mt-1 w-64 md:w-96 items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                     <Image src={role.image} alt={role.altTag} className="rounded-2xl w-full" />
                   </div>
                     <p className="text-white mt-2 italic">{role.title}</p>

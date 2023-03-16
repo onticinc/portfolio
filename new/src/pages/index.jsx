@@ -19,10 +19,10 @@ export default function Home() {
         <meta name="portfolio" content="Portfolio of work by Michael Smith." />
       </Head>
   
-        <div className="grid p-16 rid md:grid-cols-1 lg:grid-cols-3 gap-4">
+        <div className="grid p-16 rid lg:grid-cols-1 xl:grid-cols-3 gap-4 ">
    
-          <div id="avatar" className="col-span-2">
-            <div className="w-full justify-center min-w-full rounded-2xl border border-zinc-100 p-6  dark:border-zinc-700/40 ">
+          <div id="avatar" className="col-span-1 lg:col-span-2">
+            <div className="w-full justify-items-stretch justify-center rounded-2xl border border-zinc-100 p-6  dark:border-zinc-700/40 ">
               <div className="flex flex-auto flex-row">
                 <Image
                   src={Avatar}
@@ -31,12 +31,12 @@ export default function Home() {
                 />
                 <Bio />
               </div>
-              <h4 className="dark:text-zinc-400 ">Bering Sea - Nome AK</h4>
+              <h4 className="dark:text-zinc-400">Bering Sea - Nome AK</h4>
             </div>
             <Newsletter />
             </div>
          
-          <div className=" xl:col-span-1 lg:col-span-2 mr-10">
+          <div className=" xl:col-span-1 lg:col-span-2">
             <WorkHistory />
             
             <Education />

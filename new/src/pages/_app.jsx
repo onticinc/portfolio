@@ -22,13 +22,13 @@ export default function App({ Component, pageProps, router }) {
 
   return (
     <>
-      <div className="fixed dark:bg-zinc-900 inset-0 flex py-10">
+      <div className="fixed  dark:bg-zinc-900 inset-0 flex py-10">
         <div className="flex w-full justify-center">
-          <div className="w-full  bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20" />
+          <div className="w-full bg-white dark:bg-zinc-900 dark:ring-zinc-300/20" />
         </div>
       </div>
-      <div className="relative justify-center m-4">
-        <main>
+      <div className="relative max-w-sm sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-1xl 2xl:max-w-screen-2xl">
+        <main className="content-evenly">
           <Header />
           <Component previousPathname={previousPathname} {...pageProps} />
           <ImageSlider/>
