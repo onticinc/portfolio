@@ -22,12 +22,12 @@ export default function App({ Component, pageProps, router }) {
 
   return (
     <>
-      <div className="fixed dark:bg-zinc-900 inset-0 flex min-w-0">
+      <div className="fixed dark:bg-zinc-900 inset-0 flex py-10">
         <div className="flex w-full justify-center">
           <div className="w-full  bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20" />
         </div>
       </div>
-      <div className="relative justify-center">
+      <div className="relative justify-center m-4">
         <main>
           <Header />
           <Component previousPathname={previousPathname} {...pageProps} />

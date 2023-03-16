@@ -1,4 +1,4 @@
-import article from '../../data/article.json'
+
 
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
@@ -18,15 +18,6 @@ export default function ArticleCard({ article }) {
     )
   }
 
-<Container>
-        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))}
-          </div>
-          <div className="space-y-10 lg:pl-16 xl:pl-16">
-           
-          </div>
-        </div>
-      </Container>
+
+       
+   

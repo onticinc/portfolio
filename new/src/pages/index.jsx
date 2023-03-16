@@ -8,6 +8,8 @@ import Bio from '@/components/Bio'
 import Avatar from '@/images/avatar.png'
 import Image from 'next/image'
 import Education from '@/components/Education'
+import ArticleCard from '@/components/ArticleCard'
+import Newsletter from '@/components/Newsletter'
 
 export default function Home() {
   return (
@@ -17,8 +19,9 @@ export default function Home() {
         <meta name="portfolio" content="Portfolio of work by Michael Smith." />
       </Head>
   
-        <div className="grid p-16">
-          <div id="avatar">
+        <div className="grid p-16 rid md:grid-cols-1 lg:grid-cols-3 gap-4">
+   
+          <div id="avatar" className="col-span-2">
             <div className="w-full justify-center min-w-full rounded-2xl border border-zinc-100 p-6  dark:border-zinc-700/40 ">
               <div className="flex flex-auto flex-row">
                 <Image
@@ -30,11 +33,12 @@ export default function Home() {
               </div>
               <h4 className="dark:text-zinc-400 ">Bering Sea - Nome AK</h4>
             </div>
-          </div>
-          <div className="col-span-1">
-            <WorkHistory />
+            <Newsletter />
             </div>
-            <div className="col-span-1">
+         
+          <div className=" xl:col-span-1 lg:col-span-2 mr-10">
+            <WorkHistory />
+            
             <Education />
             </div>
         </div>
