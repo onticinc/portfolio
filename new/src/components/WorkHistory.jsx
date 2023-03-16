@@ -20,7 +20,7 @@ function BriefcaseIcon(props) {
     >
       <path
         d="M2.75 9.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
-        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
+        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-400 dark:stroke-zinc-100"
       />
       <path
         d="M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 0 0 1.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 0 1 2-2h2.5a2 2 0 0 1 2 2V6.5"
@@ -94,7 +94,7 @@ export default function WorkHistory() {
    
       <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
         <h2 className="flex flex-auto text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-          <BriefcaseIcon className="h-6 w-6 flex-none" />
+          <BriefcaseIcon className="h-6 w-6 flex-none"/>
           <span className="ml-3">Work History</span>
         </h2>
         <ol className="mt-6 space-y-4">

@@ -238,6 +238,7 @@ export default function ImageSlider() {
     return (
       <Container>
       <div className="relative border border-zinc-100 justify-center  dark:border-zinc-700/40  p-4 m-4">
+        <h3 className="text-white">Event | Production Photos:</h3>
         <div class="flex items-center overscroll-contain overflow-x-scroll ">
             {image.map((role, roleIndex) => (
               <div key={roleIndex} className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 mt-10 gap-2 mr-4 dark:bg-zinc-800  dark:hover:bg-zinc-700 ">
