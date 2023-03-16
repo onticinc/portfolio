@@ -18,10 +18,12 @@ export default function Home() {
         <title>Michael Smith - Create, Document, Produce. </title>
         <meta name="portfolio" content="Portfolio of work by Michael Smith." />
       </Head>
-  
-        <div className="md:grid lg:p-16 rid lg:grid-cols-1 xl:grid-cols-3 gap-4 ">
-          <div id="avatar" className="col-span-1 lg:col-span-2">
-            <div className="w-full justify-items-stretch justify-center rounded-2xl border border-zinc-100 p-6  dark:border-zinc-700/40 ">
+    
+        <div className="grid  lg:p-16 rid lg:grid-cols-1 xl:grid-cols-3 gap-4 ">
+          
+          {/* Left Column */}
+          <div id="avatar" className="w-full md:col-span-1 lg:col-span-2">
+            <div className="w-full justify-center rounded-2xl border border-zinc-100 p-6  dark:border-zinc-700/40 ">
               <div className="lg:flex lg:flex-auto lg:flex-row">
                 <Image
                   src={Avatar}
@@ -36,6 +38,7 @@ export default function Home() {
             <Newsletter />
             </div>
          
+          {/* Right Column */}
           <div className=" xl:col-span-1 lg:col-span-2">
             <WorkHistory />
             

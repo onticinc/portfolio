@@ -22,17 +22,22 @@ export default function App({ Component, pageProps, router }) {
 
   return (
     <>
+      {/* Background Color */}
       <div className="fixed  dark:bg-zinc-900 inset-0 justify-center flex py-10">
         <div className="flex w-full justify-center">
           <div className="w-full bg-white dark:bg-zinc-900 dark:ring-zinc-300/20" />
         </div>
       </div>
-      <div className="relative max-w-sm sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-1xl 2xl:max-w-screen-2xl">
-        <main className="content-evenly">
+    
+      {/* Main Content */}
+      <div className="relative max-w-prose sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-1xl 2xl:max-w-screen-2xl">
+        <main className="">
+        
           <Header />
           <Component previousPathname={previousPathname} {...pageProps} />
           <ImageSlider/>
           <Footer />
+         
         </main>
        
          
