@@ -17,22 +17,26 @@ export default function Home() {
         <meta name="portfolio" content="Portfolio of work by Michael Smith." />
       </Head>
   
-        <div className="grid p-16 lg:gap-12 md:grid md:grid-rows-2 lg:grid-flow-row max-w-7xl">
-          <div id="avatar mb-20">
-            <div className="w-full justify-center rounded-2xl border border-zinc-100 p-6  dark:border-zinc-700/40 ">
+        <div className="grid p-16">
+          <div id="avatar">
+            <div className="w-full justify-center min-w-full rounded-2xl border border-zinc-100 p-6  dark:border-zinc-700/40 ">
               <div className="flex flex-auto flex-row">
                 <Image
                   src={Avatar}
                   alt="Mike Smith - Nome AK"
-                  className="rounded-l-lg  object-cover h-44 w-44"
+                  className="rounded-l-lg  object-cover h-80 w-80"
                 />
                 <Bio />
               </div>
               <h4 className="dark:text-zinc-400 ">Bering Sea - Nome AK</h4>
             </div>
           </div>
+          <div className="col-span-1">
             <WorkHistory />
+            </div>
+            <div className="col-span-1">
             <Education />
+            </div>
         </div>
        
       
