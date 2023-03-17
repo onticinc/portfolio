@@ -232,7 +232,7 @@ export function Header() {
   return (
     <>
       <header
-        className="pointer-events-none relative flex flex-col"
+        className="pointer-events-none relative"
         
       >
         
@@ -242,19 +242,17 @@ export function Header() {
           
         >
          
-            <div className="relative m-4 grid grid-col-3">
-              <div className="grid-col-row">
+            <div className="relative m-4 flex gap-4">
               
-              <div className="col-span-2">
+              <div className="flex">
                 <MobileNavigation className="pointer-events-auto md:hidden" />
                 <DesktopNavigation className="pointer-events-auto hidden md:block sticky" />
               </div>
-              <div className="col-span-1">
+              <div className="flex-1">
                 <div className="pointer-events-auto">
                   <ModeToggle />
                 </div>
               </div>
-            </div>
             </div>
     
         </div>
