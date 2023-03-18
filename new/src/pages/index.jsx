@@ -22,7 +22,7 @@ export default function Home() {
         <div className="grid mt-10 lg:p-16  lg:grid-cols-3 xl:grid-cols-3 gap-4 ">
           
           {/* Left Column */}
-          <div id="avatar" className="md:col-span-1 lg:col-span-2 m-4">
+          <div id="avatar" className="md:col-span-2 m-4">
             <div className="w-full justify-center rounded-2xl border border-zinc-100 p-10   dark:border-zinc-700/40 ">
               <div className="lg:flex lg:flex-auto lg:flex-row">
                 <Image
@@ -39,7 +39,7 @@ export default function Home() {
             </div>
          
           {/* Right Column */}
-          <div className="m-4 md:col-span-1 lg:col-span-2">
+          <div className="m-4 md:col-span-1">
       
             <WorkHistory />
             
