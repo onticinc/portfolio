@@ -58,7 +58,7 @@ export default function WorkHistory() {
     },
     {
       company: 'DJ Ontic',
-      title: 'Mixshow DJ | Event DJ',
+      title: 'Mixshow | Event DJ',
       logo: logoOntic,
       link: 'https://www.djontic.com/',
       start: '2014',

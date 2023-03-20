@@ -19,7 +19,7 @@ export default function Home() {
         <meta name="portfolio" content="Portfolio of work by Michael Smith." />
       </Head>
     
-        <div className="grid mt-10 lg:p-16  lg:grid-cols-3 xl:grid-cols-3 gap-4 ">
+        <div className="grid mt-10 lg:p-16  xl:grid-cols-3 gap-4 ">
           
           {/* Left Column */}
           <div id="avatar" className="md:col-span-2 m-4">
@@ -39,7 +39,7 @@ export default function Home() {
             </div>
          
           {/* Right Column */}
-          <div className="m-4 md:col-span-1">
+          <div className="m-4 w-full md:col-span-1">
       
             <WorkHistory />
             

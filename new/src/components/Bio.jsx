@@ -15,8 +15,7 @@ export default function BioCard(){
                 Software developer, Audio Engineer, Podcast connoisseur... I
                 am a software developer with a passion for audio recording and
                 everything music. Focused on Next JS, React, Postgres, Mongo,
-                TypeScript, and a little bit of python. Currently working on a
-                new app for the Eggs Podcast that should be launching soon.
+                TypeScript, and a little bit of python. 
               </p>
             </div>
         </>

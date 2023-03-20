@@ -42,7 +42,7 @@ export default function Uses() {
         <div className="space-y-20">
           <ToolsSection title="Workstation">
             <Tool title="16” MacBook Pro, M1 Max, 64GB RAM (2021)">
-              Mac book pro, mac mini, and 
+               
             </Tool>
             <Tool title="Apple Pro Display XDR (Standard Glass)">
               The only display on the market if you want something HiDPI and

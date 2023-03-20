@@ -4,8 +4,7 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import portraitImage from '@/images/portrait.jpg'
-import SocialLinks from '@/components/SocialLinks'
+import Avatar from '@/images/avatar.png'
 
 const date = new Date().getFullYear() - 1996
 
@@ -18,7 +17,7 @@ export default function About() {
         <title>About - Spencer Sharp</title>
         <meta
           name="description"
-          content="I’m Spencer Sharp. I live in New York City, where I design the future."
+          content="Hello, I’m Michael Smith. I am a audio engineer with a passion for software."
         />
       </Head>
       <Container className="mt-16 sm:mt-32">
@@ -26,7 +25,7 @@ export default function About() {
           <div className="lg:pl-20">
             <div className="max-w-xs px-2.5 lg:max-w-none">
               <Image
-                src={portraitImage}
+                src={ Avatar }
                 alt=""
                 sizes="(min-width: 1024px) 32rem, 20rem"
                 className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
@@ -69,7 +68,7 @@ export default function About() {
           <div className="lg:pl-20">
             <ul role="list">
             <div className="mt-6 flex gap-6">
-              <SocialLinks />
+            
           </div>
             </ul>
           </div>
