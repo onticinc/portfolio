@@ -28,24 +28,24 @@ export default function Home() {
                 <Image
                   src={Avatar}
                   alt="Mike Smith - Nome AK"
-                  className="rounded-tl-xl rounded-tr-xl md:rounded-l-lg  object-cover w-full lg:h-80 lg:w-80"
+                  className="  object-cover w-full lg:h-80 lg:w-80"
                 />
               
                 <Bio className="rounded-bl-lg"/>
               </div>
-              <h4 className="dark:text-zinc-400 hidden sm:block">Bering Sea - Nome AK</h4>
+              <h4 className="dark:text-zinc-400 hidden lg:block">Bering Sea - Nome AK</h4>
             </div>
             <Newsletter />
-            </div>
+          </div>
          
           {/* Right Column */}
-          <div className="m-4 w-full md:col-span-1">
+          <div id="avatar" className="md:col-span-2 m-4 xl:col-span-1">
       
             <WorkHistory />
             
             <Education />
-   
-            </div>
+          </div>
+            
         </div>
        
       
