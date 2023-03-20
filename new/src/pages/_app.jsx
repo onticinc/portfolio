@@ -31,17 +31,12 @@ export default function App({ Component, pageProps, router }) {
     
       {/* Main Content */}
       <div className="relative max-w-prose sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-1xl 2xl:max-w-screen-2xl">
-        <main className="">
-        
+        <main>
           <Header />
           <Component previousPathname={previousPathname} {...pageProps} />
           <ImageSlider />
           <Footer />
-         
         </main>
-       
-         
-        
       </div>
     </>
   )
