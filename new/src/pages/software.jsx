@@ -6,20 +6,22 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import logoCosmos from '@/images/logos/cosmos.svg'
 import logoHelioStream from '@/images/logos/helio-stream.svg'
 import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoPodcast from '@/images/logos/podcast_template_logo.png'
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'Podcast Template',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+      'Podcast template to pull data from RSS feed and display it on a Django site.',
+    tech: ['Django', 'Linode', 'Python', 'Bootstrap', 'PostgreSQL'],
+    link: { href: 'https://github.com/onticinc/podcast_template', label: 'github' },
+    logo: logoPodcast,
   },
   {
     name: 'Animaginary',
     description:
       'High performance web animation library, hand-written in optimized WASM.',
+    tech: ['Django', 'Linode', 'Python', 'Bootstrap', 'PostgreSQL'],
     link: { href: '#', label: 'github.com' },
     logo: logoHelioStream,
   },
@@ -27,6 +29,7 @@ const projects = [
     name: 'HelioStream',
     description:
       'Real-time video streaming library, optimized for interstellar transmission.',
+    tech: ['Django', 'Linode', 'Python', 'Bootstrap', 'PostgreSQL'],
     link: { href: '#', label: 'github.com' },
     logo: logoHelioStream,
   },
@@ -34,6 +37,7 @@ const projects = [
     name: 'cosmOS',
     description:
       'The operating system that powers our Planetaria space shuttles.',
+    tech: ['Django', 'Linode', 'Python', 'Bootstrap', 'PostgreSQL'],
     link: { href: '#', label: 'github.com' },
     logo: logoCosmos,
   },
@@ -41,6 +45,7 @@ const projects = [
     name: 'OpenShuttle',
     description:
       'The schematics for the first rocket I designed that successfully made it to orbit.',
+    tech: ['Django', 'Linode', 'Python', 'Bootstrap', 'PostgreSQL'],
     link: { href: '#', label: 'github.com' },
     logo: logoOpenShuttle,
   },
@@ -86,8 +91,9 @@ export default function Projects() {
                 />
               </div>
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                <Card.Link href={project.link.href}>{project.name}</Card.Link>
+                <Card.Link target="_blank" href={project.link.href}>{project.name}</Card.Link>
               </h2>
+              <span>{project.tech}</span>
               <Card.Description>{project.description}</Card.Description>
               <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
                 <LinkIcon className="h-6 w-6 flex-none" />
