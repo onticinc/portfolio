@@ -40,14 +40,21 @@ export default function About() {
               <p>
               const MichaelSmith = "Software developer, audio engineer, and podcast host..." 
               </p>
-              <p>I started my software journey in 2017 by getting involved in a project that I should have avoided. It was a custom app for hosting audio files built from the ground up... We hired someone to build the project, he ended up being a very flaky developer and after a year problems we finally got a working website. During that time I was teaching myself PHP and SQL so I could communicate with the developer when needed. I also manually updated over 8,000 records in a spreadsheet to seed the database with. Lets just say, I learned what not to do with that project.</p>
+              <p>I started my software journey in 2017 by getting involved in a project that I should have avoided. 
+                It was a custom app for hosting audio files built from the ground up... 
+                We hired someone to build the project, he ended up being a very flaky developer and after 
+                a year problems we finally got a working website. 
+                During that time I was teaching myself HTML, CSS, PHP and SQL so I could communicate with the 
+                developer. I also manually updated over 8,000 records in a spreadsheet to seed the database with. 
+                Lets just say, I learned what not to do with that project.</p>
               
-              <p>I have worked as professional DJ for {date} years. My first paid gig was on new years eve in 1996. 
-              Michael is committed to bringing high-quality audio, video, and lighting experiences to audiences from around the world. 
+
+              <p>After that experience, I decided to take a break from software and focus on audio engineering. I started a podcast with a good friend of mine and ended up opening a podcast 
+                recording studio in Salt Lake. That went great until covid hit and we had to close the studio. During that time I was able to work with people like Martha Louise, the princess of Norway and Gail Miller, the owner of the Utah Jazz. 
               </p>
-              <p>He first discovered a passion for music in 1996, when he started DJ'ing at local events. This led him to pursue a formal education in audio engineering at Shoreline Community College, where he honed his skills in recording, mixing, and mastering audio.
+
+              <p>I have worked as professional DJ for {date} years. My first paid gig was on new years eve in 1996. In 2015 I went to college for audio engineering at Shoreline Community College. 
               </p>
-              <p>During college he started Audiostar, a audio recording and editing company that has served clients in a variety of industries, from music and film, to advertising and corporate communications.</p>
             </div>
           </div>
           <div className="lg:pl-20">

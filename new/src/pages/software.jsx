@@ -12,7 +12,7 @@ const projects = [
   {
     name: 'Podcast Template',
     description:
-      'Podcast template to pull data from RSS feed and display it on a Django site.',
+      'Podcast template to pull data from RSS feed and display it on a Django site. Full blog feateres included.',
     tech: ['Django', 'Linode', 'Python', 'Bootstrap', 'PostgreSQL'],
     link: { href: 'https://github.com/onticinc/podcast_template', label: 'github' },
     logo: logoPodcast,
@@ -95,7 +95,7 @@ export default function Projects() {
               </h2>
               <span>{project.tech}</span>
               <Card.Description>{project.description}</Card.Description>
-              <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+              <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-orange-500 dark:text-zinc-200">
                 <LinkIcon className="h-6 w-6 flex-none" />
                 <span className="ml-2">{project.link.label}</span>
               </p>
