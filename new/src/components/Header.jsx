@@ -207,15 +207,15 @@ function ModeToggle() {
   }
 
   return (
-    <div className="flex flex-last">
+    <div className="flex">
     <button
       type="button"
       aria-label="Toggle dark mode"
       className="group rounded-md bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur mr-3 transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
       onClick={toggleMode}
     >
-      <SunIcon className="h-6 w-6 animate-pulse fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-indigo-600" />
-      <MoonIcon className="hidden animate-pulse h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-teal-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-teal-500" />
+      <SunIcon className="h-8 w-8 animate-pulse fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-indigo-600" />
+      <MoonIcon className="hidden animate-pulse h-8 w-8 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-teal-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-teal-500" />
     </button>
     </div>
   )
@@ -238,21 +238,21 @@ export function Header() {
         
         <div
           ref={headerRef}
-          className="h-16 pt-10"
+          className="h-16 mt-5 lg:-ml-3"
           
         >
          
-            <div className="relative m-4 flex gap-4">
+            <div className="m-4 grid grid-cols-2 gap-4">
               
-              <div className="flex">
+              <div className="col-span-1">
                 <MobileNavigation className="pointer-events-auto md:hidden" />
-                <DesktopNavigation className="pointer-events-auto hidden md:block sticky" />
+                <DesktopNavigation className="pointer-events-auto hidden md:block" />
               </div>
-              <div className="flex-1">
-                <div className="pointer-events-auto">
-                  <ModeToggle />
-                </div>
+              
+              <div className="pointer-events-auto col-span-1 place-self-end lg:-mr-3 xl:-mr-6">
+                <ModeToggle />
               </div>
+              
             </div>
     
         </div>
