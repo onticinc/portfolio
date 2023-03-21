@@ -12,10 +12,10 @@ export default function BioCard(){
                 Create, Document, Produce.
               </h1>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                Software developer, Audio Engineer, Podcast connoisseur... I
-                am a software developer with a passion for audio recording and
-                everything music. Focused on Next JS, React, Postgres, Mongo,
-                TypeScript, and a little bit of python. 
+                Software developer, Audio Engineer, and Podcast connoisseur. Michael
+                is a software developer with a passion for audio recording and
+                everything music related. Focused on the MERN stack with Next JS 13,
+                TypeScript, and a little bit of python when needed. 
               </p>
             </div>
         </>
