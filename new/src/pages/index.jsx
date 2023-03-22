@@ -19,7 +19,7 @@ export default function Home() {
         <meta name="portfolio" content="Portfolio of work by Michael Smith." />
       </Head>
     
-        <div className="grid mt-10  xl:m-0 xl:grid-cols-3 gap-4 ">
+        <div className="grid mt-10 p-5 xl:m-0 xl:grid-cols-3 gap-4 ">
           
           {/* Left Column */}
           <div id="avatar" className="md:col-span-2 m-4">
@@ -33,7 +33,7 @@ export default function Home() {
               
                 <Bio className="rounded-bl-lg"/>
               </div>
-              <h4 className="dark:text-zinc-400 hidden lg:block">Bering Sea - Nome AK</h4>
+              <h4 className="dark:text-zinc-400 hidden mt-3 lg:block">Michael Smith - Bering Sea, Nome AK</h4>
             </div>
             <Newsletter />
           </div>

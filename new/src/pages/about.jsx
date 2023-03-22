@@ -57,13 +57,6 @@ export default function About() {
               </p>
             </div>
           </div>
-          <div className="lg:pl-20">
-            <ul role="list">
-            <div className="mt-6 flex gap-6">
-            
-          </div>
-            </ul>
-          </div>
         </div>
       </Container>
     </>
