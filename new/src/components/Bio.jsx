@@ -13,6 +13,20 @@ export default function BioCard(){
               Focused on MERN stack with Next JS 13,
                 TypeScript, and a little bit of python when needed. 
                 </p>
+               
+                
+                {/* ```
+                const product = {
+                  id: 'abc1',
+                  price: 12.99,
+                  tags: ['great-offer', 'hot-and-new'],
+                  details: {
+                    title: 'Red Carpet',
+                    description: 'A great carpet - almost brand-new!'
+                  }
+                };
+                ``` */}
+                
             </div>
         </>
     )
