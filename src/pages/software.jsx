@@ -10,7 +10,7 @@ import logoPodcast from '@/images/logos/podcast_template_logo.png'
 
 const projects = [
   {
-    name: 'Podcast Template',
+    name: 'Podcast Website Template',
     description:
       'Podcast template to pull data from RSS feed and display it on a Django site. Full blog feateres included.',
     tech: ['Django', 'Linode', 'Python', 'Bootstrap', 'PostgreSQL'],
@@ -81,25 +81,31 @@ export default function Projects() {
           className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
         >
           {projects.map((project) => (
-            <Card as="li" key={project.name}>
-              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+            <Card className="rounded-2xl border border-zinc-100 p-5 dark:border-zinc-700/40 gap-2 dark:bg-zinc-800  dark:hover:bg-zinc-700 " as="li" key={project.name}>
+              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-500 dark:hover:bg-zinc-300 dark:ring-0">
                 <Image
                   src={project.logo}
                   alt=""
-                  className="h-8 w-8"
+                  className="h-10 w-10 rounded-full"
                   unoptimized
                 />
               </div>
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
                 <Card.Link target="_blank" href={project.link.href}>{project.name}</Card.Link>
               </h2>
-              <span>{project.tech}</span>
+              
               <Card.Description>{project.description}</Card.Description>
+
+              <ul className="text-gray-400 mt-4">{project.tech.map((tech) => (
+                <li>- {tech}</li>
+              ))}
+              </ul>
+
               <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-orange-500 dark:text-zinc-200">
                 <LinkIcon className="h-6 w-6 flex-none" />
                 <span className="ml-2">{project.link.label}</span>
               </p>
-            </Card>
+              </Card>
           ))}
         </ul>
       </SimpleLayout>
