@@ -1,14 +1,10 @@
 import Head from 'next/head'
 // import { AvatarImage } from '@/components/Avatar'
 import WorkHistory from '@/components/WorkHistory'
-import { Container } from '@/components/Container'
-import { generateRssFeed } from '@/lib/generateRssFeed'
-import { getAllArticles } from '@/lib/getAllArticles'
 import Bio from '@/components/Bio'
 import Avatar from '@/images/avatar.png'
 import Image from 'next/image'
 import Education from '@/components/Education'
-import ArticleCard from '@/components/ArticleCard'
 import Newsletter from '@/components/Newsletter'
 
 export default function Home() {
@@ -55,16 +51,3 @@ export default function Home() {
   )
 }
 
-export async function getStaticProps() {
-  if (process.env.NODE_ENV === 'production') {
-    await generateRssFeed()
-  }
-
-  return {
-    props: {
-      articles: (await getAllArticles())
-        .slice(0, 4)
-        .map(({ component, ...meta }) => meta),
-    },
-  }
-}

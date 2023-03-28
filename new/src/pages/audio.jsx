@@ -1,8 +1,5 @@
 import Head from 'next/head'
 
-import { Card } from '@/components/Card'
-import { Section } from '@/components/Section'
-import { SimpleLayout } from '@/components/SimpleLayout'
 
 
 
@@ -18,7 +15,7 @@ export default function Speaking() {
       </Head>
       <div className="m-5 ">
 
-        
+
       </div>
     </>
   )
