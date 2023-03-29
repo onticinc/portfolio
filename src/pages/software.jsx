@@ -12,13 +12,13 @@ const projects = [
   {
     name: 'Podcast Website Template',
     description:
-      'Podcast template to pull data from RSS feed and display it on a Django site. Full blog feateres included.',
+      'This was the capstone project for my 12 week bootcamp at General Assembly. I worked on this with Patrick Brennan, another student in my class. This project is built with Django and Python, it has a fully functioning blog with auth and password reset on your profile. It will compress the uploaded profile picture and scale it to the correct size. The show list populates from the rss feed for the podcast, which eliminates the need to update the website everytime a new show is published. I used the podcast "Eggs" to demonstrate functionality, you can watch the presentation video through the private link posted below.',
     tech: ['Django', 'Linode', 'Python', 'Bootstrap', 'PostgreSQL'],
     link: { href: 'https://github.com/onticinc/podcast_template', label: 'github' },
     logo: logoPodcast,
   },
   {
-    name: 'Animaginary',
+    name: 'Memory Game',
     description:
       'High performance web animation library, hand-written in optimized WASM.',
     tech: ['Django', 'Linode', 'Python', 'Bootstrap', 'PostgreSQL'],
