@@ -81,8 +81,8 @@ export default function Projects() {
           className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
         >
           {projects.map((project) => (
-            <Card className="rounded-2xl border border-zinc-100 p-5 dark:border-zinc-700/40 gap-2 dark:bg-zinc-800  dark:hover:bg-zinc-700 " as="li" key={project.name}>
-              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-500 dark:hover:bg-zinc-300 dark:ring-0">
+            <Card className="rounded-2xl border border-zinc-100 p-5 dark:border-zinc-700/40 gap-2  dark:bg-zinc-800" as="li" key={project.name}>
+              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-500  dark:ring-0">
                 <Image
                   src={project.logo}
                   alt=""
