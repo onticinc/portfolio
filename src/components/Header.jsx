@@ -152,13 +152,13 @@ function NavItem({ href, children }) {
         className={clsx(
           'relative block px-3 py-2 transition',
           isActive
-            ? 'text-indigo-500 dark:text-orange-400'
-            : 'hover:text-indigo-400 dark:hover:text-orange-400'
+            ? 'text-indigo-500 dark:text-indigo-500'
+            : 'hover:text-indigo-300 dark:hover:text-orange-500'
         )}
       >
         {children}
         {isActive && (
-          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-orange-500/0 via-orange-500/40 to-orange-500/0 dark:from-orange-400/0 dark:via-indigo-400/40 dark:to-indigo-400/0" />
+          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-orange-500/0 via-orange-500/40 to-orange-500/0 dark:from-orange-400/0 dark:via-indigo-500 dark:to-indigo-400/0" />
         )}
       </Link>
     </li>

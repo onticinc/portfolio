@@ -5,11 +5,13 @@ import Link from 'next/link'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
 import logoPodcast from '@/images/logos/podcast_template_logo.png'
-import podcast_template from '@/images/software/podcast_template_01.png'
+import podcast_template_01 from '@/images/software/podcast_template_01.png'
+import podcast_template_02 from '@/images/software/podcast_template_02.png'
+import podcast_template_03 from '@/images/software/podcast_template_03.png'
+import memory_01 from '@/images/software/memory_01.png'
+import memory_02 from '@/images/software/memory_02.png'
+import memory_03 from '@/images/software/memory_03.png'
 
 const projects = [
   {
@@ -17,34 +19,44 @@ const projects = [
     description:
       'I worked on this with Patrick Brennan. This project is built with Django and it has a fully functioning blog with auth and password reset on your profile. It has email verification on signup and it will also compress the uploaded profile picture and scale it to the correct size. The show list populates from the rss feed for the podcast, which eliminates the need to update the website everytime a new show is published. I used the "Eggs Podcast" to demonstrate functionality.',
     tech: ['Django', 'Linode', 'Python', 'Bootstrap', 'PostgreSQL'],
-    link: { href: 'https://github.com/onticinc/podcast_template', label: 'github' },
+    link_01: { href: 'https://github.com/onticinc/podcast_template', label: 'github' },
+    link_02: { href: 'https://github.com/onticinc/podcast_template', label: 'github' },
     logo: logoPodcast,
     images: [
       {
-        src: 'https://unsplash.com/photos/ZDNyhmgkZlQ',
-        alt: 'Podcast Website Template',
+        src: podcast_template_01,
+        alt: 'Screenshot of Podcast Website Template',
       },
       {
-        src: 'https://unsplash.com/photos/ZDNyhmgkZlQ',
-        alt: 'Podcast Website Template',
+        src: podcast_template_02,
+        alt: 'Screenshot of Podcast Website Template',
+      },
+      {
+        src: podcast_template_03,
+        alt: 'Screenshot of Podcast Website Template',
       },
     ],
   },
   {
     name: 'Memory Game',
     description:
-      'I made this game as a present for Christmas for the kids of my friends and family to play. Eventually, I would like to redesign this and add more functionality. Like choosing how many pairs of cards you want, adding extra players, and making custom icons.',
+      'I made this game as a present for Christmas present for my niece and nephews. Eventually, I would like to redesign this and add more functionality. Like choosing how many pairs of cards you want, adding extra players, and making custom icons.',
     tech: ['Font Awesome', 'Javascript', 'CSS', 'HTML'],
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
+    link_01: { href: 'https://onticinc.github.io/card_match_game/', label: 'Play The Game' },
+    link_02: { href: '#', label: 'github.com' },
+    logo: memory_01,
     images: [
       {
-        src: 'https://unsplash.com/photos/ZDNyhmgkZlQ',
-        alt: 'Podcast Website Template',
+        src: memory_02,
+        alt: 'Screenshot of Memory Game',
       },
       {
-        src: 'https://unsplash.com/photos/ZDNyhmgkZlQ',
-        alt: 'Podcast Website Template',
+        src: memory_01,
+        alt: 'Screenshot of Memory Game',
+      },
+      {
+        src: memory_03,
+        alt: 'Screenshot of Memory Game',
       },
     ],
   },
@@ -54,15 +66,15 @@ const projects = [
       'Real-time video streaming library, optimized for interstellar transmission.',
     tech: ['Django', 'Linode', 'Python', 'Bootstrap', 'PostgreSQL'],
     link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
+    logo: memory_01,
     images: [
       {
-        src: 'https://unsplash.com/photos/ZDNyhmgkZlQ',
-        alt: 'Podcast Website Template',
+        src: podcast_template_02,
+        alt: 'Screenshot of Podcast Website Template',
       },
       {
-        src: 'https://unsplash.com/photos/ZDNyhmgkZlQ',
-        alt: 'Podcast Website Template',
+        src: podcast_template_03,
+        alt: 'Screenshot of Podcast Website Template',
       },
     ],
   },
@@ -72,15 +84,15 @@ const projects = [
       'The operating system that powers our Planetaria space shuttles.',
     tech: ['Django', 'Linode', 'Python', 'Bootstrap', 'PostgreSQL'],
     link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
+    logo: memory_01,
     images: [
       {
-        src: 'https://unsplash.com/photos/ZDNyhmgkZlQ',
-        alt: 'Podcast Website Template',
+        src: podcast_template_02,
+        alt: 'Screenshot of Podcast Website Template',
       },
       {
-        src: 'https://unsplash.com/photos/ZDNyhmgkZlQ',
-        alt: 'Podcast Website Template',
+        src: podcast_template_03,
+        alt: 'Screenshot of Podcast Website Template',
       },
     ],
   },
@@ -90,15 +102,15 @@ const projects = [
       'The schematics for the first rocket I designed that successfully made it to orbit.',
     tech: ['Django', 'Linode', 'Python', 'Bootstrap', 'PostgreSQL'],
     link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+    logo: memory_01,
     images: [
       {
-        src: 'https://unsplash.com/photos/ZDNyhmgkZlQ',
-        alt: 'Podcast Website Template',
+        src: podcast_template_02,
+        alt: 'Screenshot of Podcast Website Template',
       },
       {
-        src: 'https://unsplash.com/photos/ZDNyhmgkZlQ',
-        alt: 'Podcast Website Template',
+        src: podcast_template_03,
+        alt: 'Screenshot of Podcast Website Template',
       },
     ],
   },
@@ -159,7 +171,7 @@ export default function Projects() {
                 />
               </div>
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                <Card.Link target="_blank" href={project.link.href}>{project.name}</Card.Link>
+                {/* <Card.Link target="_blank" href={project.link.href}>{project.name}</Card.Link> */}
               </h2>
               
               <Card.Description>{project.description}</Card.Description>
@@ -171,7 +183,7 @@ export default function Projects() {
 
               <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-orange-500 dark:text-zinc-200">
                 <LinkIcon className="h-6 w-6 flex-none" />
-                <span className="ml-2">{project.link.label}</span>
+                {/* <span className="ml-2">{project.link.label}</span> */}
               </p>
               </Card>
           ))}
