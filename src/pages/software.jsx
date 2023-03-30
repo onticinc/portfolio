@@ -1,5 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { unsplashLoader } from '@/utils/unsplashLoader'
+import { ImageLoader } from 'next/image'
+import Link from 'next/link'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
@@ -7,23 +10,44 @@ import logoCosmos from '@/images/logos/cosmos.svg'
 import logoHelioStream from '@/images/logos/helio-stream.svg'
 import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
 import logoPodcast from '@/images/logos/podcast_template_logo.png'
+import podcast_template from '@/images/software/podcast_template_01.png'
 
 const projects = [
   {
     name: 'Podcast Website Template',
     description:
-      'This was the capstone project for my 12 week bootcamp at General Assembly. I worked on this with Patrick Brennan, another student in my class. This project is built with Django and Python, it has a fully functioning blog with auth and password reset on your profile. It will compress the uploaded profile picture and scale it to the correct size. The show list populates from the rss feed for the podcast, which eliminates the need to update the website everytime a new show is published. I used the podcast "Eggs" to demonstrate functionality, you can watch the presentation video through the private link posted below.',
+      'I worked on this with Patrick Brennan. This project is built with Django and it has a fully functioning blog with auth and password reset on your profile. It has email verification on signup and it will also compress the uploaded profile picture and scale it to the correct size. The show list populates from the rss feed for the podcast, which eliminates the need to update the website everytime a new show is published. I used the "Eggs Podcast" to demonstrate functionality.',
     tech: ['Django', 'Linode', 'Python', 'Bootstrap', 'PostgreSQL'],
     link: { href: 'https://github.com/onticinc/podcast_template', label: 'github' },
     logo: logoPodcast,
+    images: [
+      {
+        src: 'https://unsplash.com/photos/ZDNyhmgkZlQ',
+        alt: 'Podcast Website Template',
+      },
+      {
+        src: 'https://unsplash.com/photos/ZDNyhmgkZlQ',
+        alt: 'Podcast Website Template',
+      },
+    ],
   },
   {
     name: 'Memory Game',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    tech: ['Django', 'Linode', 'Python', 'Bootstrap', 'PostgreSQL'],
+      'I made this game as a present for Christmas for the kids of my friends and family to play. Eventually, I would like to redesign this and add more functionality. Like choosing how many pairs of cards you want, adding extra players, and making custom icons.',
+    tech: ['Font Awesome', 'Javascript', 'CSS', 'HTML'],
     link: { href: '#', label: 'github.com' },
     logo: logoHelioStream,
+    images: [
+      {
+        src: 'https://unsplash.com/photos/ZDNyhmgkZlQ',
+        alt: 'Podcast Website Template',
+      },
+      {
+        src: 'https://unsplash.com/photos/ZDNyhmgkZlQ',
+        alt: 'Podcast Website Template',
+      },
+    ],
   },
   {
     name: 'HelioStream',
@@ -32,6 +56,16 @@ const projects = [
     tech: ['Django', 'Linode', 'Python', 'Bootstrap', 'PostgreSQL'],
     link: { href: '#', label: 'github.com' },
     logo: logoHelioStream,
+    images: [
+      {
+        src: 'https://unsplash.com/photos/ZDNyhmgkZlQ',
+        alt: 'Podcast Website Template',
+      },
+      {
+        src: 'https://unsplash.com/photos/ZDNyhmgkZlQ',
+        alt: 'Podcast Website Template',
+      },
+    ],
   },
   {
     name: 'cosmOS',
@@ -40,6 +74,16 @@ const projects = [
     tech: ['Django', 'Linode', 'Python', 'Bootstrap', 'PostgreSQL'],
     link: { href: '#', label: 'github.com' },
     logo: logoCosmos,
+    images: [
+      {
+        src: 'https://unsplash.com/photos/ZDNyhmgkZlQ',
+        alt: 'Podcast Website Template',
+      },
+      {
+        src: 'https://unsplash.com/photos/ZDNyhmgkZlQ',
+        alt: 'Podcast Website Template',
+      },
+    ],
   },
   {
     name: 'OpenShuttle',
@@ -48,6 +92,16 @@ const projects = [
     tech: ['Django', 'Linode', 'Python', 'Bootstrap', 'PostgreSQL'],
     link: { href: '#', label: 'github.com' },
     logo: logoOpenShuttle,
+    images: [
+      {
+        src: 'https://unsplash.com/photos/ZDNyhmgkZlQ',
+        alt: 'Podcast Website Template',
+      },
+      {
+        src: 'https://unsplash.com/photos/ZDNyhmgkZlQ',
+        alt: 'Podcast Website Template',
+      },
+    ],
   },
 ]
 
@@ -82,6 +136,21 @@ export default function Projects() {
         >
           {projects.map((project) => (
             <Card className="rounded-2xl border border-zinc-100 p-5 dark:border-zinc-700/40 gap-2  dark:bg-zinc-800" as="li" key={project.name}>
+              <div className="relative border p-4 m-4 border-zinc-100 justify-center  dark:border-zinc-700/40 ">
+                <h3 className="text-white">Event | Production Photos:</h3>
+                <div class="flex overscroll-contain overflow-x-scroll ">
+                    {project.images.map((role, roleIndex) => (
+                      <div className="rounded-2xl border border-zinc-100 p-4 dark:border-zinc-700/40 mt-10 gap-2 mr-4 dark:bg-zinc-800  dark:hover:bg-zinc-700 ">
+                          <div key={roleIndex}  className="relative mt-1 w-64 md:w-96 items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                          {project.images.map((role, roleIndex) => (
+                            <Image src={role.src} alt={role.alt} width={500}
+                            height={500} className="rounded-2xl w-full" />
+                          ))}
+                          </div>
+                      </div>
+                    ))}
+                </div>
+              </div>
               <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-500  dark:ring-0">
                 <Image
                   src={project.logo}
