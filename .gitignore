@@ -37,3 +37,5 @@ yarn-error.log*
 
 
 /images/
+
+./DS_Store

@@ -1,4 +1,4 @@
-import { ImageLoader } from 'next/image';
+import type { ImageLoader } from 'next/image';
 
 export function normalizeUnslashUrl(src: string) {
 
@@ -15,7 +15,7 @@ export function normalizeUnslashUrl(src: string) {
 // A custon image loader that utilizes the normalizeUnsplashUrl function
 
 
-export const unsplashLoader: ImageLoader = ({ src, width, quality }) => {
+export const unsplashLoader: ImageLoader = ({ src, width, quality, }) => {
     const url = normalizeUnslashUrl(src);
     
     const params = url.searchParams;
