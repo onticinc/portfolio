@@ -12,7 +12,7 @@ export function normalizeUnslashUrl(src: string) {
 }
 
 
-// A custon image loader that utikitizes the normalizeUnsplashUrl function
+// A custon image loader that utilizes the normalizeUnsplashUrl function
 
 
 export const unsplashLoader: ImageLoader = ({ src, width, quality }) => {
