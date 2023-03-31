@@ -10,22 +10,9 @@ export default function BioCard(){
                 Software developer, Audio Engineer, and Podcast connoisseur. 
               </p>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-              Focused on MERN stack with Next JS 13,
+                Focused on MERN stack with Next JS 13,
                 TypeScript, and a little bit of python when needed. 
-                </p>
-               
-                
-                {/* ```
-                const product = {
-                  id: 'abc1',
-                  price: 12.99,
-                  tags: ['great-offer', 'hot-and-new'],
-                  details: {
-                    title: 'Red Carpet',
-                    description: 'A great carpet - almost brand-new!'
-                  }
-                };
-                ``` */}
+              </p>
                 
             </div>
         </>

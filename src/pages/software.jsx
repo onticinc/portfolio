@@ -83,11 +83,11 @@ const projects = [
     images: [
       {
         src: audiostar_01,
-        alt: "Screenshot of Podcast Website Template",
+        alt: "Screenshot of Audiostar Website Template",
       },
       {
         src: audiostar_01,
-        alt: "Screenshot of Podcast Website Template",
+        alt: "Screenshot of Audiostar Website Template",
       },
     ],
   },
@@ -114,7 +114,7 @@ export default function Projects() {
       </Head>
       <SimpleLayout
         title="Software Projects I have worked on..."
-        intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+        intro="I’ve worked on a bunch of projects over the years but these are some of my favorites. I’ve included a brief description of each project and the technologies I used to build them. I’ve also included a link to the live site and the source code on Github."
       >
 
         <div className="border p-5 -ml-9 -mr-9 border-zinc-100 justify-center  dark:border-zinc-700/40">
