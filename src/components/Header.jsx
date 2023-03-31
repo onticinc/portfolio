@@ -214,8 +214,8 @@ function ModeToggle() {
       className="group rounded-md bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur mr-0 lg:mr-1  transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
       onClick={toggleMode}
     >
-      <SunIcon className="h-8 w-8 animate-pulse fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-indigo-600" />
-      <MoonIcon className="hidden animate-pulse h-8 w-8 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-teal-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-teal-500" />
+      <SunIcon className="h-8 w-8 animate-pulse fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-yellow-500 [@media(prefers-color-scheme:dark)]:stroke-orange-200 [@media(prefers-color-scheme:dark)]:group-hover:fill-yellow-500 [@media(prefers-color-scheme:dark)]:group-hover:stroke-orange-300" />
+      <MoonIcon className="hidden animate-pulse h-8 w-8 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-teal-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-orange-500" />
     </button>
     </div>
   )

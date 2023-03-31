@@ -17,12 +17,13 @@ export default function About() {
         <title>About - Michael Smith</title>
         <meta
           name="description"
-          content="Michael Smith - A software develioer with a passion audio engineering."
+          content="Michael Smith - A software developer with a passion for audio engineering."
         />
       </Head>
       <Container className="mt-16 sm:mt-32">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
           <div className="lg:pl-20">
+            
             <div className="max-w-xs px-2.5 lg:max-w-none">
               <Image
                 src={ Avatar }
@@ -45,19 +46,15 @@ export default function About() {
               </p>
               <p>
                 We hired someone to build the project in PHP, he ended up being a very flaky developer and after 
-                a year problems we finally got a "working" app. 
+                a year + of problems, we finally got a "working" app. 
               </p>
               <p>
-                During that time I started teaching myself the basics so I could potentially take over the project if necessary. Fortunately for me that didn't happen.
+                During that time I started teaching myself the basics so I could potentially take over the project if necessary. Fortunately, it didn't come to that.
                 As part of that project, I had manually update over 8,000 records in a spreadsheet in order to seed the database. 
               </p>
-              <p>Because of that experience, I ended up taking a break from software I figured out that I really enjoyed the development process.</p>
+              <p>Because of that experience, I figured out that I really enjoyed the development process. I feel like its a giant puzzle that never ends. I attended General Assembly's bootcamp to learn more and I have been hooked ever since.</p>
 
-              <p>After that experience, I decided to take a break from software and focus on audio engineering. I started a podcast with a good friend of mine and ended up opening a podcast 
-                recording studio in Salt Lake. That went great until covid hit and we had to close the studio. During that time I was able to work with people like Martha Louise, the princess of Norway and Gail Miller, the owner of the Utah Jazz. 
-              </p>
-
-              <p>I have worked as professional DJ for {date} years. My first paid gig was on new years eve in 1996. In 2015 I went to college for audio engineering at Shoreline Community College. 
+              <p>I have worked as professional DJ for {date} years. My first paid gig was on new years eve in 1996. In 2015 I went to college for audio engineering at Shoreline Community College, I focus more on that now. 
               </p>
             </div>
           </div>
