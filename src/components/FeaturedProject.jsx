@@ -9,7 +9,7 @@ export default function FeaturedProject() {
         <div className="w-full justify-center rounded-2xl border shadow border-zinc-100 p-10 dark:border-zinc-700/40 lg:mt-10">
           
           
-          <h1 className="mt-3 hidden text-xl dark:text-zinc-400 lg:block">
+          <h1 className="mt-3 text-sm font-semibold text-zinc-900 dark:text-zinc-100 lg:block">
             Featured Project: 
           </h1>
           {/* <h4 className="dark:text-zinc-400 hidden mt-3 italic lg:block">Randomly Generated </h4> */}
