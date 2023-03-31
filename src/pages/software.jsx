@@ -1,120 +1,98 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { ImageLoader } from 'next/image'
-import Link from 'next/link'
+import Head from "next/head";
+import Image from "next/image";
+import { ImageLoader } from "next/image";
+import Link from "next/link";
 
-import { Card } from '@/components/Card'
-import { SimpleLayout } from '@/components/SimpleLayout'
-import logoPodcast from '@/images/logos/podcast_template_logo.png'
-import podcast_template_01 from '@/images/software/podcast_template_01.png'
-import podcast_template_02 from '@/images/software/podcast_template_02.png'
-import podcast_template_03 from '@/images/software/podcast_template_03.png'
-import memory_01 from '@/images/software/memory_01.png'
-import memory_02 from '@/images/software/memory_02.png'
-import memory_03 from '@/images/software/memory_03.png'
+import { Card } from "@/components/Card";
+import { SimpleLayout } from "@/components/SimpleLayout";
+import logoPodcast from "@/images/logos/podcast_template_logo.png";
+import podcast_template_01 from "@/images/software/podcast_template_01.png";
+import podcast_template_02 from "@/images/software/podcast_template_02.png";
+import podcast_template_03 from "@/images/software/podcast_template_03.png";
+import memory_01 from "@/images/software/memory_01.png";
+import memory_02 from "@/images/software/memory_02.png";
+import memory_03 from "@/images/software/memory_03.png";
+import audiostar_01 from "@/images/software/audiostar_01.png";
+import audiostar_02 from "@/images/software/audiostar_02.png";
+import audiostar_03 from "@/images/software/audiostar_03.png";
 
 const projects = [
+  
+  // Website Template
   {
-    name: 'Podcast Website Template',
-    description:
-      'I worked on this with Patrick Brennan. This project is built with Django and it has a fully functioning blog with auth and password reset on your profile. It has email verification on signup and it will also compress the uploaded profile picture and scale it to the correct size. The show list populates from the rss feed for the podcast, which eliminates the need to update the website everytime a new show is published. I used the "Eggs Podcast" to demonstrate functionality.',
-    tech: ['Django', 'Linode', 'Python', 'Bootstrap', 'PostgreSQL'],
-    link_01: { href: 'https://github.com/onticinc/podcast_template', label: 'github' },
-    link_02: { href: 'https://github.com/onticinc/podcast_template', label: 'github' },
+    name: "Podcast Website Template",
+    description: 'I worked on this with Patrick Brennan. This project is built with Django and it has a fully functioning blog with auth and password reset on your profile. It has email verification on signup and it will also compress the uploaded profile picture and scale it to the correct size. The show list populates from the rss feed for the podcast, which eliminates the need to update the website everytime a new show is published. I used the "Eggs Podcast" to demonstrate functionality.',
+    tech: ["Django", "Linode", "Python", "Bootstrap", "PostgreSQL"],
+    link_01: {
+      href: "https://github.com/onticinc/podcast_template",
+      label: "github",
+    },
+    link_02: {
+      href: "https://github.com/onticinc/podcast_template",
+      label: "github",
+    },
     logo: logoPodcast,
     images: [
       {
         src: podcast_template_01,
-        alt: 'Screenshot of Podcast Website Template',
+        alt: "Screenshot of Podcast Website Template",
       },
       {
         src: podcast_template_02,
-        alt: 'Screenshot of Podcast Website Template',
+        alt: "Screenshot of Podcast Website Template",
       },
       {
         src: podcast_template_03,
-        alt: 'Screenshot of Podcast Website Template',
+        alt: "Screenshot of Podcast Website Template",
       },
     ],
   },
+  // Memory Game
   {
-    name: 'Memory Game',
+    name: "Memory Game",
     description:
-      'I made this game as a present for Christmas present for my niece and nephews. Eventually, I would like to redesign this and add more functionality. Like choosing how many pairs of cards you want, adding extra players, and making custom icons.',
-    tech: ['Font Awesome', 'Javascript', 'CSS', 'HTML'],
-    link_01: { href: 'https://onticinc.github.io/card_match_game/', label: 'Play The Game' },
-    link_02: { href: '#', label: 'github.com' },
+      "I made this game as a present for Christmas present for my niece and nephews. Eventually, I would like to redesign this and add more functionality. Like choosing how many pairs of cards you want, adding extra players, and making custom icons.",
+    tech: ["Font Awesome", "Javascript", "CSS", "HTML"],
+    link_01: {
+      href: "https://onticinc.github.io/card_match_game/",
+      label: "Play The Game",
+    },
+    link_02: { href: "#", label: "github.com" },
     logo: memory_01,
     images: [
       {
         src: memory_02,
-        alt: 'Screenshot of Memory Game',
+        alt: "Screenshot of Memory Game",
       },
       {
         src: memory_01,
-        alt: 'Screenshot of Memory Game',
+        alt: "Screenshot of Memory Game",
       },
       {
         src: memory_03,
-        alt: 'Screenshot of Memory Game',
+        alt: "Screenshot of Memory Game",
       },
     ],
   },
+  // Audiostar
   {
-    name: 'HelioStream',
-    description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    tech: ['Django', 'Linode', 'Python', 'Bootstrap', 'PostgreSQL'],
-    link: { href: '#', label: 'github.com' },
-    logo: memory_01,
+    name: "Audiostar",
+    description: "This is a website that I built for my audio recording business.",
+    tech: ["Wordpress", "Custom CSS",],
+    link: { href: "www.audiostarinc.com", label: "audiostarinc.com" },
     images: [
       {
-        src: podcast_template_02,
-        alt: 'Screenshot of Podcast Website Template',
+        src: audiostar_01,
+        alt: "Screenshot of Podcast Website Template",
       },
       {
-        src: podcast_template_03,
-        alt: 'Screenshot of Podcast Website Template',
+        src: audiostar_01,
+        alt: "Screenshot of Podcast Website Template",
       },
     ],
   },
-  {
-    name: 'cosmOS',
-    description:
-      'The operating system that powers our Planetaria space shuttles.',
-    tech: ['Django', 'Linode', 'Python', 'Bootstrap', 'PostgreSQL'],
-    link: { href: '#', label: 'github.com' },
-    logo: memory_01,
-    images: [
-      {
-        src: podcast_template_02,
-        alt: 'Screenshot of Podcast Website Template',
-      },
-      {
-        src: podcast_template_03,
-        alt: 'Screenshot of Podcast Website Template',
-      },
-    ],
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    tech: ['Django', 'Linode', 'Python', 'Bootstrap', 'PostgreSQL'],
-    link: { href: '#', label: 'github.com' },
-    logo: memory_01,
-    images: [
-      {
-        src: podcast_template_02,
-        alt: 'Screenshot of Podcast Website Template',
-      },
-      {
-        src: podcast_template_03,
-        alt: 'Screenshot of Podcast Website Template',
-      },
-    ],
-  },
-]
+
+];
 
 function LinkIcon(props) {
   return (
@@ -124,21 +102,18 @@ function LinkIcon(props) {
         fill="currentColor"
       />
     </svg>
-  )
+  );
 }
 
 export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects - MIchael Smith</title>
-        <meta
-          name="description"
-          content="Projects I have worked on..."
-        />
+        <title>Software Projects - Michael Smith</title>
+        <meta name="description" content="Projects I have worked on..." />
       </Head>
       <SimpleLayout
-        title="Projects I have worked on..."
+        title="Software Projects I have worked on..."
         intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
       >
         <ul
@@ -146,49 +121,51 @@ export default function Projects() {
           className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
         >
           {projects.map((project) => (
-            <Card className="rounded-2xl border border-zinc-100 p-5 dark:border-zinc-700/40 gap-2  dark:bg-zinc-800" as="li" key={project.name}>
-              <div className="relative border p-4 m-4 border-zinc-100 justify-center  dark:border-zinc-700/40 ">
-                <h3 className="text-white">Event | Production Photos:</h3>
-                <div class="flex overscroll-contain overflow-x-scroll ">
-                    {project.images.map((role, roleIndex) => (
-                      <div className="rounded-2xl border border-zinc-100 p-4 dark:border-zinc-700/40 mt-10 gap-2 mr-4 dark:bg-zinc-800  dark:hover:bg-zinc-700 ">
-                          <div key={roleIndex}  className="relative mt-1 w-64 md:w-96 items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                          {project.images.map((role, roleIndex) => (
-                            <Image src={role.src} alt={role.alt} width={500}
-                            height={500} className="rounded-2xl w-full" />
-                          ))}
-                          </div>
-                      </div>
-                    ))}
-                </div>
-              </div>
-              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-500  dark:ring-0">
-                <Image
-                  src={project.logo}
-                  alt=""
-                  className="h-10 w-10 rounded-full"
-                  unoptimized
-                />
-              </div>
+            <Card
+              className="relative gap-2 rounded-2xl border border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"
+              as="li"
+              key={project.name}
+            >
+              <h3 className="font-2xl font-extrabold text-white">
+                {project.name}
+              </h3>
+               
+                  <div className="relative flex overflow-x-scroll overscroll-containmt-10 mr-4 gap-2 rounded-2xl border border-zinc-100 p-4 dark:border-zinc-700/40 dark:bg-zinc-800  dark:hover:bg-zinc-700 ">
+                    
+                      {project.images.map((role, roleIndex) => (
+                        <Image
+                          src={role.src}
+                          alt={role.alt}
+                          width={500}
+                          height={500}
+                          className="w-full rounded-2xl"
+                        />
+                      ))}
+                 
+                  </div>
+               
+             
+
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                {/* <Card.Link target="_blank" href={project.link.href}>{project.name}</Card.Link> */}
+                {/* <Card.Link target="_blank" href={project.link_01.href}>{project.name}</Card.Link> */}
               </h2>
-              
+
               <Card.Description>{project.description}</Card.Description>
 
-              <ul className="text-gray-400 mt-4">{project.tech.map((tech) => (
-                <li>- {tech}</li>
-              ))}
+              <ul className="mt-4 text-gray-400">
+                {project.tech.map((tech) => (
+                  <li>- {tech}</li>
+                ))}
               </ul>
 
               <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-orange-500 dark:text-zinc-200">
                 <LinkIcon className="h-6 w-6 flex-none" />
-                {/* <span className="ml-2">{project.link.label}</span> */}
+                {/* <span className="ml-2">{project.link_01.label}</span> */}
               </p>
-              </Card>
+            </Card>
           ))}
         </ul>
       </SimpleLayout>
     </>
-  )
+  );
 }
