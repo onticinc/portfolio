@@ -51,7 +51,7 @@ const projects = [
   {
     name: "Memory Game",
     description:
-      "I made this game as a present for Christmas present for my niece and nephews. Eventually, I would like to redesign this and add more functionality. Like choosing how many pairs of cards you want, adding extra players, and making custom icons.",
+      "I made this game as a Christmas present for my niece and nephews. Eventually, I would like to redesign it and add more functionality. It would be nice to choose how many pairs of cards you want and add extra players.",
     tech: ["Font Awesome", "Javascript", "CSS", "HTML"],
     link_01: {
       href: "https://onticinc.github.io/card_match_game/",
@@ -116,6 +116,8 @@ export default function Projects() {
         title="Software Projects I have worked on..."
         intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
       >
+
+        <div className="border p-5 -ml-9 -mr-9 border-zinc-100 justify-center  dark:border-zinc-700/40">
         <ul
           role="list"
           className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
@@ -165,6 +167,7 @@ export default function Projects() {
             </Card>
           ))}
         </ul>
+        </div>
       </SimpleLayout>
     </>
   );
