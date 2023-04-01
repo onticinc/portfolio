@@ -1,6 +1,17 @@
 import Head from 'next/head'
 
 
+export async function getStaticProps() {
+  const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&key=${process.env.SIMPLECAST_API_KEY}&playlistId=${YOUTUBE_PLAYLIST_ID}&maxResults=50`); 
+  const data = await res.json();
+  return {
+    props: {
+      data
+    }
+  }
+}
+
+
 
 export default function Podcast() {
   return (

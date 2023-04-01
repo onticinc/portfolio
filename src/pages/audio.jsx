@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { SimpleLayout } from '@/components/SimpleLayout';
 import { Card } from '@/components/Card';
+import Image from 'next/image';
 
 
 
@@ -9,7 +10,7 @@ const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playli
 const YOUTUBE_PLAYLIST_ID = "PLY5aty1hlHsH4DiIKl4Mj4ZIUbE06A4E2";
 
 export async function getStaticProps() {
-  const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&key=${process.env.YOUTUBE_API_KEY}&part=snippet&playlistId=${YOUTUBE_PLAYLIST_ID}&maxResults=50`); 
+  const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&key=${process.env.YOUTUBE_API_KEY}&playlistId=${YOUTUBE_PLAYLIST_ID}&maxResults=50`); 
   const data = await res.json();
   return {
     props: {
@@ -19,10 +20,9 @@ export async function getStaticProps() {
 }
 
 
-
 // Page Content
 export default function Audio({ data }) {
-  console.log('data', data)
+  // console.log('data', data)
   return (
     <>
       <Head>
@@ -43,9 +43,11 @@ export default function Audio({ data }) {
           className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
         >
           {data.items.map((item) => {
+
             console.log('item', item);
-            const { id, snippet = {} } = item;
-            const { title, thumbnails = {} } = snippet;
+
+            const { id, snippet  = {} } = item;
+            const { title, thumbnails = {}, resourceId } = snippet;
             const { medium = {} } = thumbnails;
 
             <Card
@@ -57,7 +59,7 @@ export default function Audio({ data }) {
                 {title}
               </h3>
               <p>
-                <img width={medium.width} height="medium.height" src="medium.url" alt={title} />
+                <Image width={medium.width} height={medium.height} src={medium.url} alt="" />
               </p>
                
             </Card>
