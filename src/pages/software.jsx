@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { ImageLoader } from "next/image";
 import Link from "next/link";
+import SoftwareTabs from "@/components/SoftwareTabs";
 
 import { Card } from "@/components/Card";
 import { SimpleLayout } from "@/components/SimpleLayout";
@@ -150,7 +151,7 @@ export default function Projects() {
                  
                   </div>
                
-             
+           
 
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
                 {/* <Card.Link target="_blank" href={project.link_01.href}>{project.name}</Card.Link> */}

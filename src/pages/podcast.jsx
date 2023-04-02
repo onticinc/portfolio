@@ -17,7 +17,7 @@ export default function Podcast() {
   return (
     <>
       <Head>
-        <title>Speaking - Spencer Sharp</title>
+        <title>Podcast Interviews - Michael Smith</title>
         <meta
           name="description"
           content="Here are a few interviews that I have enjoyed over the years."
