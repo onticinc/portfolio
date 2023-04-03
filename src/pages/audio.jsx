@@ -44,11 +44,13 @@ export default function Audio({ data }) {
         >
           {data.items.map((item) => {
 
-            console.log('item', item);
+            // console.log('item', item);
 
             const { id, snippet  = {} } = item;
+            console.log(snippet)
             const { title, thumbnails = {}, resourceId } = snippet;
             const { medium = {} } = thumbnails;
+
 
             <Card
               className="relative gap-2 rounded-2xl border border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"
