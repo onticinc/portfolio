@@ -44,10 +44,10 @@ export default function Audio({ data }) {
         >
           {data.items.map((item) => {
 
-            // console.log('item', item);
+            console.log('item', item);
 
             const { id, snippet  = {} } = item;
-            console.log(snippet)
+            // console.log(snippet)
             const { title, thumbnails = {}, resourceId } = snippet;
             const { medium = {} } = thumbnails;
 

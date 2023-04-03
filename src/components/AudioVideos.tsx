@@ -1,10 +1,8 @@
 export default function AudioVideos(){
-    return(
-        <div>
+    videos: String;
 
-        </div>
-    )
-}
+} 
+
 
 export async function getStaticProps(){
 
@@ -14,8 +12,10 @@ export async function getStaticProps(){
                 {
                     title: "hello world",
                     description: 'hi there',
-                    thumbnailUrl:
-                }
+                    thumbnailUrl: 'https://i.ytimg.com/vi/qZC3qzD9tLg/default.jpg',
+                    height: "90",
+                    width: "120",
+                },
             ]
         }
     }
