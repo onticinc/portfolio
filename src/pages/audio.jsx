@@ -37,7 +37,29 @@ export default function Audio({ data }) {
         intro="I’ve worked on a bunch of projects over the years but these are some of my favorites. I’ve included a brief description of each project and the technologies I used to build them. I’ve also included a link to the live site and the source code on Github."
       >
 
-        <div className="border p-5 -ml-9 -mr-9 border-zinc-100 justify-center  dark:border-zinc-700/40">
+
+        <ul>
+          {data.items.map((item) => {
+            console.log('item', item);
+            const { id, snippet = {} } = item;
+            const { title, thumbnails = {} } = snippet;
+            const { medium = {} } = thumbnails;
+
+            return(
+              <li key={id}> 
+                <a href="http:www.audiostarinc.com">
+                <h3>{title}</h3>
+                  <p>
+                    <img width={medium.width} height={medium.height} src={medium.url} alt="" />
+                  </p>
+                </a>
+              </li>
+              )
+          })}
+
+        </ul>
+
+        {/* <div className="border p-5 -ml-9 -mr-9 border-zinc-100 justify-center  dark:border-zinc-700/40">
         <ul
           role="list"
           className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
@@ -67,7 +89,7 @@ export default function Audio({ data }) {
             </Card>
           }, )}
         </ul>
-        </div>
+        </div> */}
       </SimpleLayout>
     </>
   )
