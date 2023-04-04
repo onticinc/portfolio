@@ -38,8 +38,10 @@ export default function Podcast({ data }) {
         intro="Co-Host and Business Partner."
       >
 
-
-        <div className="border border-zinc-100 justify-center p-5  dark:border-zinc-700/40">
+        {/* Main Div */}
+        <div className="border border-zinc-100 justify-center p-5  dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9">
+          
+          {/* Card */}
           <ul className="grid mb-10 grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {data.items.map((item) => {
               console.log('item', item);

@@ -3,6 +3,9 @@ import { SimpleLayout } from '@/components/SimpleLayout';
 import { Card } from '@/components/Card';
 import Image from 'next/image';
 
+import YoutubeVideoPlayer from '@/components/youtubePlayer';
+import { useState, useEffect } from 'react';
+
 
 
 // Youtube API 
@@ -22,7 +25,19 @@ export async function getStaticProps() {
 
 // Page Content
 export default function Audio({ data }) {
-  // console.log('data', data)
+  const [ currentVideo, setCurrentVideo ] = useState(null);
+  const [ playing, setPlaying ] = useState(false);
+
+  useEffect(() => {
+    if (data.items.length > 0) {
+      setCurrentVideo(data.items[0]);
+    }
+  }, [data.items]);
+
+  if (!currentVideo) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <>
       <Head>
@@ -36,18 +51,22 @@ export default function Audio({ data }) {
         title="Audio Projects I have worked on..."
         intro="I’ve worked on a bunch of projects over the years but these are some of my favorites. I’ve included a brief description of each project and the technologies I used to build them. I’ve also included a link to the live site and the source code on Github."
       >
-        <div className="border border-zinc-100 justify-center p-5  dark:border-zinc-700/40">
-        <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {data.items.map((item) => {
-            console.log('item', item);
-            const { id, snippet = {} } = item;
-            const { title, thumbnails = {} } = snippet;
-            const { maxres = {} } = thumbnails;
+        <div className="border border-zinc-100 justify-center p-5 lg:-ml-9 lg:mb-10 lg:-mr-9 dark:border-zinc-700/40">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+          <YoutubeVideoPlayer className="absolute top-0 left-o" id={currentVideo.snippet.resourceId.videoId} playing={playing} />
+          </div>
+        </div>
+        <div className="border border-zinc-100 justify-center p-5 lg:-ml-9 lg:mb-10 lg:-mr-9 dark:border-zinc-700/40">
+          <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {data.items.map((item) => {
+              const { id, snippet = {} } = item;
+              const { title, thumbnails = {} } = snippet;
+              const { maxres = {} } = thumbnails;
 
-            return(
+              return (
                 <li key={id} className="gap-5 rounded-2xl border  border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"> 
                   <a href="http:www.audiostarinc.com">
-                  <h3 className="font-2xl font-extrabold text-zinc-700 dark:text-white">{title}</h3>
+                    <h3 className="font-2xl font-extrabold text-zinc-700 dark:text-white">{title}</h3>
                     <p>
                       <img className="mt-5" width={maxres.width} height={maxres.height} src={maxres.url} alt="" />
                     </p>
@@ -55,41 +74,8 @@ export default function Audio({ data }) {
                 </li>
               )
             })}
-
-        </ul>
-          </div>
-
-        {/* <div className="border p-5 -ml-9 -mr-9 border-zinc-100 justify-center  dark:border-zinc-700/40">
-        <ul
-          role="list"
-          className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          {data.items.map((item) => {
-
-            console.log('item', item);
-
-            const { id, snippet  = {} } = item;
-            // console.log(snippet)
-            const { title, thumbnails = {}, resourceId } = snippet;
-            const { medium = {} } = thumbnails;
-
-
-            <Card
-              className="relative gap-2 rounded-2xl border border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"
-              as="li"
-              key={id}
-            >
-              <h3 className="font-2xl font-extrabold text-zinc-700 dark:text-white">
-                {title}
-              </h3>
-              <p>
-                <Image width={medium.width} height={medium.height} src={medium.url} alt="" />
-              </p>
-               
-            </Card>
-          }, )}
-        </ul>
-        </div> */}
+          </ul>
+        </div>
       </SimpleLayout>
     </>
   )
