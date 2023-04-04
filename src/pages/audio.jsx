@@ -47,7 +47,7 @@ export default function Audio({ data }) {
             const { medium = {} } = thumbnails;
 
             return(
-                <li key={id} className="gap-5 rounded-2xl border border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"> 
+                <li key={id} className="gap-5 rounded-2xl border max-w-[365px] border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"> 
                   <a href="http:www.audiostarinc.com">
                   <h3 className="font-2xl font-extrabold text-zinc-700 dark:text-white">{title}</h3>
                     <p>
