@@ -52,9 +52,16 @@ export default function Audio({ data }) {
         intro="I’ve worked on a bunch of projects over the years but these are some of my favorites. I’ve included a brief description of each project and the technologies I used to build them. I’ve also included a link to the live site and the source code on Github."
       >
         <div className="border border-zinc-100 justify-center p-5 lg:-ml-9 lg:mb-10 lg:-mr-9 dark:border-zinc-700/40">
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-          <YoutubeVideoPlayer className="absolute top-0 left-o" id={currentVideo.snippet.resourceId.videoId} playing={playing} />
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
+            
+            <div className="sm:col-span-2">
+              <YoutubeVideoPlayer className="absolute top-0 left-o" id={currentVideo.snippet.resourceId.videoId} playing={playing} />
+            </div>
+            <div className="sm:col-span-1">
+
+            </div>
           </div>
+
         </div>
         <div className="border border-zinc-100 justify-center p-5 lg:-ml-9 lg:mb-10 lg:-mr-9 dark:border-zinc-700/40">
           <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -65,12 +72,12 @@ export default function Audio({ data }) {
 
               return (
                 <li key={id} className="gap-5 rounded-2xl border  border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"> 
-                  <a href="http:www.audiostarinc.com">
+                  
                     <h3 className="font-2xl font-extrabold text-zinc-700 dark:text-white">{title}</h3>
                     <p>
                       <img className="mt-5" width={maxres.width} height={maxres.height} src={maxres.url} alt="" />
                     </p>
-                  </a>
+                 
                 </li>
               )
             })}

@@ -43,8 +43,10 @@ export default function Podcast({ data }) {
           
           {/* Card */}
           <ul className="grid mb-10 grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {data.items.map((item) => {
-              console.log('item', item);
+              {data.items.map((item) => {
+              
+              // console.log('item', item);
+              
               const { id, snippet = {} } = item;
               const { title, thumbnails = {} } = snippet;
               const { maxres = {} } = thumbnails;
@@ -62,41 +64,8 @@ export default function Podcast({ data }) {
               })}
 
           </ul>
-
             <Pagination />
         </div>
-
-        {/* <div className="border p-5 -ml-9 -mr-9 border-zinc-100 justify-center  dark:border-zinc-700/40">
-        <ul
-          role="list"
-          className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          {data.items.map((item) => {
-
-            console.log('item', item);
-
-            const { id, snippet  = {} } = item;
-            // console.log(snippet)
-            const { title, thumbnails = {}, resourceId } = snippet;
-            const { medium = {} } = thumbnails;
-
-
-            <Card
-              className="relative gap-2 rounded-2xl border border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"
-              as="li"
-              key={id}
-            >
-              <h3 className="font-2xl font-extrabold text-zinc-700 dark:text-white">
-                {title}
-              </h3>
-              <p>
-                <Image width={medium.width} height={medium.height} src={medium.url} alt="" />
-              </p>
-               
-            </Card>
-          }, )}
-        </ul>
-        </div> */}
       </SimpleLayout>
     </>
   )
