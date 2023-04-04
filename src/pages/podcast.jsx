@@ -1,18 +1,17 @@
 import Head from 'next/head'
-import YouTubeVideoPlayer from 'react-player/youtube';
-import { useState } from 'react';
+import { SimpleLayout } from '@/components/SimpleLayout';
+import { Card } from '@/components/Card';
+import Image from 'next/image';
+import Pagination from '@/components/Pagination';
 
 
 
+// Youtube API 
+const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems";
+const EGGS_PODCAST_ID = "UULFz53WsQ9KmEJb5yKeMTsmGg";
 
 export async function getStaticProps() {
-  const MY_PLAYLIST = process.env.EGGS_PLAYLIST_ID;
-  const API_KEY = process.env.YOUTUBE_API_KEY
-  
-  const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems";
-  const YOUTUBE_PLAYLIST_ID = "PLY5aty1hlHsH4DiIKl4Mj4ZIUbE06A4E2";
-  
-  const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&key=${process.env.YOUTUBE_API_KEY}&playlistId=${EGGS_PLAYLIST_ID}&maxResults=50`); 
+  const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&key=${process.env.YOUTUBE_API_KEY}&playlistId=${EGGS_PODCAST_ID}&maxResults=9`); 
   const data = await res.json();
   return {
     props: {
@@ -22,24 +21,141 @@ export async function getStaticProps() {
 }
 
 
-
-export default function Podcast(data) {
-  console.log(data)
-
-  const [currentVideo, setCurrentVideo ] = useState(results[0]);
-  const [playing, setPlaying] = useState(false);
-
+// Page Content
+export default function Podcast({ data }) {
+  // console.log('data', data)
   return (
     <>
       <Head>
-        <title>Podcast Interviews - Michael Smith</title>
+        <title>Eggs The Podcast - Michael Smith</title>
         <meta
           name="description"
-          content="Here are a few interviews that I have enjoyed over the years."
+          content="I have been able to record many great bands over the years, here are a few of my favorites. "
         />
       </Head>
-      <YouTubeVideoPlayer id={currentVideo.snippet.resourceId.videoId} playing={playing} />
-      <h4 className="text-white ml-10 mt-10">Put Content here. </h4>
+      <SimpleLayout
+        title="Eggs The Podcast"
+        intro="Co-Host and Business Partner."
+      >
+
+
+        <div className="border border-zinc-100 justify-center p-5  dark:border-zinc-700/40">
+          <ul className="grid mb-10 grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {data.items.map((item) => {
+              console.log('item', item);
+              const { id, snippet = {} } = item;
+              const { title, thumbnails = {} } = snippet;
+              const { maxres = {} } = thumbnails;
+
+              return(
+                  <li key={id} className="gap-5 rounded-2xl border  border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"> 
+                    <a href="http:www.audiostarinc.com">
+                    <h4 className="font-2xl font-extrabold text-zinc-700 dark:text-white">{title}</h4>
+                      <p>
+                        <img className="mt-5" width={maxres.width} height={maxres.height} src={maxres.url} alt="" />
+                      </p>
+                    </a>
+                  </li>
+                )
+              })}
+
+          </ul>
+
+            <Pagination />
+        </div>
+
+        {/* <div className="border p-5 -ml-9 -mr-9 border-zinc-100 justify-center  dark:border-zinc-700/40">
+        <ul
+          role="list"
+          className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          {data.items.map((item) => {
+
+            console.log('item', item);
+
+            const { id, snippet  = {} } = item;
+            // console.log(snippet)
+            const { title, thumbnails = {}, resourceId } = snippet;
+            const { medium = {} } = thumbnails;
+
+
+            <Card
+              className="relative gap-2 rounded-2xl border border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"
+              as="li"
+              key={id}
+            >
+              <h3 className="font-2xl font-extrabold text-zinc-700 dark:text-white">
+                {title}
+              </h3>
+              <p>
+                <Image width={medium.width} height={medium.height} src={medium.url} alt="" />
+              </p>
+               
+            </Card>
+          }, )}
+        </ul>
+        </div> */}
+      </SimpleLayout>
     </>
   )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import Head from 'next/head'
+// import YouTubeVideoPlayer from 'react-player/youtube';
+// import { useState } from 'react';
+
+
+
+
+// export async function getStaticProps() {
+//   const MY_PLAYLIST = process.env.EGGS_PLAYLIST_ID;
+//   const API_KEY = process.env.YOUTUBE_API_KEY
+  
+//   const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems";
+//   const YOUTUBE_PLAYLIST_ID = "PLY5aty1hlHsH4DiIKl4Mj4ZIUbE06A4E2";
+  
+//   const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&key=${process.env.YOUTUBE_API_KEY}&playlistId=${EGGS_PLAYLIST_ID}&maxResults=50`); 
+//   const data = await res.json();
+//   return {
+//     props: {
+//       data
+//     }
+//   }
+// }
+
+
+
+// export default function Podcast(data) {
+//   console.log(data)
+
+//   const [currentVideo, setCurrentVideo ] = useState(results[0]);
+//   const [playing, setPlaying] = useState(false);
+
+//   return (
+//     <>
+//       <Head>
+//         <title>Podcast Interviews - Michael Smith</title>
+//         <meta
+//           name="description"
+//           content="Here are a few interviews that I have enjoyed over the years."
+//         />
+//       </Head>
+//       <YouTubeVideoPlayer id={currentVideo.snippet.resourceId.videoId} playing={playing} />
+//       <h4 className="text-white ml-10 mt-10">Put Content here. </h4>
+//     </>
+//   )
+// }

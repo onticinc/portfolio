@@ -46,13 +46,14 @@ export default function About() {
               </p>
               <p>
                 We hired someone to build the project in PHP, he ended up being a very flaky developer and after 
-                a year + of problems, we finally got a "working" app. 
+                a 2 years of problems, we finally got a "working" app. 
               </p>
               <p>
                 During that time I started teaching myself the basics so I could potentially take over the project if necessary. Fortunately, it didn't come to that.
-                As part of that project, I had manually update over 8,000 records in a spreadsheet in order to seed the database. 
+                As part of that project, I had manually update over 8,000 records in a spreadsheet in order to seed the database. Yay!  
               </p>
-              <p>Because of that experience, I figured out that I really enjoyed the development process. I feel like its a giant puzzle that never ends. I attended General Assembly's bootcamp to learn more and I have been hooked ever since.</p>
+              <p>Because of that experience, I figured out that I really enjoyed the development process <span className="italic"> *even though I got super frustrated at times. I feel like its a giant puzzle that never ends.</span></p>
+              <p>I attended the General Assembly full stack bootcamp to learn more and I have been hooked ever since.</p>
 
               <p>I have worked as professional DJ for {date} years. My first paid gig was on new years eve in 1996. In 2015 I went to college for audio engineering at Shoreline Community College, I focus more on that now. 
               </p>
