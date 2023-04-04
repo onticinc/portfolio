@@ -1,6 +1,14 @@
 import Head from 'next/head'
 import YouTubePlayer from 'react-player/youtube';
+import { useState } from 'react';
 
+export default function Home({ results}) {
+  const [currentVideo, setCurrentVideo ] = useState(results[0]);
+  const [playing, setPlaying] = useState(false);
+  return(
+    <YoutubeVideoPlayer id={currentVideo.snippet.resourceId.videoId} playing={playing} />
+  )
+}
 
 export async function getStaticProps() {
   const MY_PLAYLIST = process.env.YOUTUBE_PLAYLIST_ID;
@@ -16,7 +24,7 @@ export async function getStaticProps() {
 
 
 
-export default function Podcast() {
+export default function Podcast(result) {
   return (
     <>
       <Head>
