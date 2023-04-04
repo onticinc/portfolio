@@ -38,7 +38,8 @@ export default function Audio({ data }) {
       >
 
 
-        <ul>
+        <div className="border border-zinc-100 justify-center p-5  dark:border-zinc-700/40">
+        <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {data.items.map((item) => {
             console.log('item', item);
             const { id, snippet = {} } = item;
@@ -46,18 +47,19 @@ export default function Audio({ data }) {
             const { medium = {} } = thumbnails;
 
             return(
-              <li key={id}> 
-                <a href="http:www.audiostarinc.com">
-                <h3>{title}</h3>
-                  <p>
-                    <img width={medium.width} height={medium.height} src={medium.url} alt="" />
-                  </p>
-                </a>
-              </li>
+                <li key={id} className="gap-5 rounded-2xl border border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"> 
+                  <a href="http:www.audiostarinc.com">
+                  <h3 className="font-2xl font-extrabold text-zinc-700 dark:text-white">{title}</h3>
+                    <p>
+                      <img width={medium.width} height={medium.height} src={medium.url} alt="" />
+                    </p>
+                  </a>
+                </li>
               )
-          })}
+            })}
 
         </ul>
+          </div>
 
         {/* <div className="border p-5 -ml-9 -mr-9 border-zinc-100 justify-center  dark:border-zinc-700/40">
         <ul
