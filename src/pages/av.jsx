@@ -1,33 +1,33 @@
-import Head from 'next/head'
-import { SimpleLayout } from '@/components/SimpleLayout';
-import { Card } from '@/components/Card';
-import Image from 'next/image';
+import Head from "next/head";
+import { SimpleLayout } from "@/components/SimpleLayout";
+import { Card } from "@/components/Card";
+import Image from "next/image";
 
-import YoutubeVideoPlayer from '@/components/youtubePlayer';
-import { useState, useEffect } from 'react';
+import YoutubeVideoPlayer from "@/components/youtubePlayer";
+import { useState, useEffect } from "react";
 
-
-
-// Youtube API 
-const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems";
+// Youtube API
+const YOUTUBE_PLAYLIST_ITEMS_API =
+  "https://www.googleapis.com/youtube/v3/playlistItems";
 const YOUTUBE_PLAYLIST_ID = "PLY5aty1hlHsH4DiIKl4Mj4ZIUbE06A4E2";
 
 export async function getStaticProps() {
-  const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&key=${process.env.YOUTUBE_API_KEY}&playlistId=${YOUTUBE_PLAYLIST_ID}&maxResults=50`); 
+  const res = await fetch(
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&key=${process.env.YOUTUBE_API_KEY}&playlistId=${YOUTUBE_PLAYLIST_ID}&maxResults=50`
+  );
   const data = await res.json();
   return {
     props: {
-      data
-    }
-  }
+      data,
+    },
+  };
 }
-
 
 // Page Content
 export default function Audio({ data }) {
-  
-  const [ currentVideo, setCurrentVideo ] = useState(null);
-  const [ playing, setPlaying ] = useState(false);
+  const [currentVideo, setCurrentVideo] = useState(null);
+  const [playing, setPlaying] = useState(false);
+  const showBackButton = useState(false);
 
   useEffect(() => {
     if (data.items.length > 0) {
@@ -38,6 +38,33 @@ export default function Audio({ data }) {
   if (!currentVideo) {
     return <div>Loading...</div>;
   }
+
+  if (currentVideo === data.items[0]) {
+    showBackButton = false;
+  } else {
+    showBackButton = true;
+  }
+
+  if (currentVideo === data.items[data.items.length - 1]) {
+    showNextButton = false;
+  }
+
+  const handleNextVideo = () => {
+    const currentIndex = data.items.findIndex(
+      (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
+    );
+    setCurrentVideo(data.items[currentIndex + 1]);
+    setPlaying(true);
+  };
+
+  const handlePreviousVideo = () => {
+    const currentIndex = data.items.findIndex(
+      (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
+    );
+    setCurrentVideo(data.items[currentIndex - 1]);
+    setPlaying(true);
+  };
+    
 
   return (
     <>
@@ -52,44 +79,82 @@ export default function Audio({ data }) {
         title="Audio Projects I have worked on..."
         intro="I’ve worked on a bunch of projects over the years but these are some of my favorites. I’ve included a brief description of each project and the technologies I used to build them. I’ve also included a link to the live site and the source code on Github."
       >
-        <div className="border border-zinc-100 justify-center p-5 lg:-ml-9 lg:mb-10 lg:-mr-9 dark:border-zinc-700/40">
+        <div className="justify-center border border-zinc-100 p-5 dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9">
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
-            
-            <div className="sm:col-span-2">
-              <YoutubeVideoPlayer className="absolute top-0 left-o" id={currentVideo.snippet.resourceId.videoId} playing={playing} />
+            <div className="rounded-2xl border border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-2">
+              <YoutubeVideoPlayer
+                className="left-o absolute top-0"
+                id={currentVideo.snippet.resourceId.videoId}
+                playing={playing}
+              />
             </div>
 
             {/* Current Video Description */}
-            <div className="sm:col-span-1 gap-5 rounded-2xl border  border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800 ">
-            <h3 className="font-2xl font-extrabold text-zinc-700 dark:text-white">{currentVideo.snippet.title}</h3>
-            <p className="text-zinc-700 mt-10 dark:text-white">{currentVideo.snippet.description}</p>
+            <div className="gap-5 rounded-2xl border border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-1 ">
+              <h3 className="font-2xl font-extrabold text-zinc-700 dark:text-white">
+                {currentVideo.snippet.title}
+              </h3>
+              <p className="mt-10 text-zinc-700 dark:text-white">
+                {currentVideo.snippet.description}
+              </p>
+
+              {/* Previous Next Button */}
+              <nav className="flex items-center justify-between px-4 sm:px-0 mb-auto">
+                <div className="-mt-px flex w-0 flex-1">
+                  <a
+                    href="#"
+                    className="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-indigo-500 hover:border-indigo-300 hover:text-orange-500"
+                  >
+                    {/* <ArrowLongLeftIcon className="mr-3 h-5 w-5 text-gray-400" aria-hidden="true" /> */}
+                    Previous
+                  </a>
+                </div>
+                <div className="-mt-px flex w-0 flex-1 justify-end">
+                  <a
+                    href="#"
+                    className="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                  >
+                    Next
+                    {/* <ArrowLongRightIcon className="ml-3 h-5 w-5 text-gray-400" aria-hidden="true" /> */}
+                  </a>
+                </div>
+              </nav>
             </div>
           </div>
-
         </div>
 
         {/* Video Grid */}
-        <div className="border border-zinc-100 justify-center p-5 lg:-ml-9 lg:mb-10 lg:-mr-9 dark:border-zinc-700/40">
+        <div className="justify-center border border-zinc-100 p-5 dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9">
           <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {data.items.map((item) => {
               const { id, snippet = {} } = item;
-              console.log(item)
+              console.log(item);
               const { title, thumbnails = {} } = snippet;
               const { maxres = {} } = thumbnails;
-          
+
               return (
-                <li key={id} className="gap-5 rounded-2xl border  border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"> 
-                  
-                    <p>
-                      <img className="mt-5" width={maxres.width} height={maxres.height} src={maxres.url} alt="" />
-                    </p>
-                    <h3 className="font-2xl mt-5 font-extrabold text-zinc-700 dark:text-white">{title}</h3>
+                <li
+                  key={id}
+                  className="gap-5 rounded-2xl border  border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"
+                >
+                  <p>
+                    <img
+                      className="mt-5"
+                      width={maxres.width}
+                      height={maxres.height}
+                      src={maxres.url}
+                      alt=""
+                    />
+                  </p>
+                  <h3 className="font-2xl mt-5 font-extrabold text-zinc-700 dark:text-white">
+                    {title}
+                  </h3>
                 </li>
-              )
+              );
             })}
           </ul>
         </div>
       </SimpleLayout>
     </>
-  )
+  );
 }
