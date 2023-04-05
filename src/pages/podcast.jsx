@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import { SimpleLayout } from '@/components/SimpleLayout';
-import { Card } from '@/components/Card';
 import Image from 'next/image';
 import Pagination from '@/components/Pagination';
+import YoutubeVideoPlayer from "@/components/youtubePlayer";
+import { useState, useEffect } from "react";
 
 
 
@@ -24,6 +25,45 @@ export async function getStaticProps() {
 // Page Content
 export default function Podcast({ data }) {
   // console.log('data', data)
+  const [currentVideo, setCurrentVideo] = useState(null);
+  const [playing, setPlaying] = useState(false);
+  let showBackButton = useState(false);
+
+  useEffect(() => {
+    if (data.items.length > 0) {
+      setCurrentVideo(data.items[0]);
+    }
+  }, [data.items]);
+
+  if (!currentVideo) {
+    return <div>Loading...</div>;
+  }
+
+  if (currentVideo === data.items[0]) {
+    showBackButton = false;
+  } else {
+    showBackButton = true;
+  }
+
+  if (currentVideo === data.items[data.items.length - 1]) {
+    showNextButton = false;
+  }
+
+  const handleNextVideo = () => {
+    const currentIndex = data.items.findIndex(
+      (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
+    );
+    setCurrentVideo(data.items[currentIndex + 1]);
+    setPlaying(true);
+  };
+
+  const handlePreviousVideo = () => {
+    const currentIndex = data.items.findIndex(
+      (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
+    );
+    setCurrentVideo(data.items[currentIndex - 1]);
+    setPlaying(true);
+  };
   return (
     <>
       <Head>
@@ -37,6 +77,51 @@ export default function Podcast({ data }) {
         title="Eggs The Podcast"
         intro="Co-Host and Business Partner."
       >
+
+        {/* Video Player */}
+        <div className="justify-center border border-zinc-100 p-5 dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9">
+          <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
+            <div className="rounded-2xl border border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-2">
+              <YoutubeVideoPlayer
+                className="left-o absolute top-0"
+                id={currentVideo.snippet.resourceId.videoId}
+                playing={playing}
+              />
+            </div>
+
+            {/* Current Video Description */}
+            <div className="gap-5 rounded-2xl border border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-1 ">
+              <h3 className="font-2xl font-extrabold text-zinc-700 dark:text-white">
+                {currentVideo.snippet.title}
+              </h3>
+              <p className="mt-10 text-zinc-700 dark:text-white">
+                {currentVideo.snippet.description}
+              </p>
+
+              {/* Previous Next Button */}
+              <nav className="flex items-center justify-between px-4 sm:px-0 mb-auto">
+                <div className="-mt-px flex w-0 flex-1">
+                  <a
+                    href="#"
+                    className="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-indigo-500 hover:border-indigo-300 hover:text-orange-500"
+                  >
+                    {/* <ArrowLongLeftIcon className="mr-3 h-5 w-5 text-gray-400" aria-hidden="true" /> */}
+                    Previous
+                  </a>
+                </div>
+                <div className="-mt-px flex w-0 flex-1 justify-end">
+                  <a
+                    href="#"
+                    className="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                  >
+                    Next
+                    {/* <ArrowLongRightIcon className="ml-3 h-5 w-5 text-gray-400" aria-hidden="true" /> */}
+                  </a>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
 
         {/* Main Div */}
         <div className="border border-zinc-100 justify-center p-5  dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9">

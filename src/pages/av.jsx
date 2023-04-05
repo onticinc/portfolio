@@ -27,7 +27,7 @@ export async function getStaticProps() {
 export default function Audio({ data }) {
   const [currentVideo, setCurrentVideo] = useState(null);
   const [playing, setPlaying] = useState(false);
-  const showBackButton = useState(false);
+  let showBackButton = useState(false);
 
   useEffect(() => {
     if (data.items.length > 0) {
@@ -64,20 +64,22 @@ export default function Audio({ data }) {
     setCurrentVideo(data.items[currentIndex - 1]);
     setPlaying(true);
   };
+
+
     
 
   return (
     <>
       <Head>
-        <title>Audio Projects - Michael Smith</title>
+        <title>Audio and Video Projects - Michael Smith</title>
         <meta
           name="description"
           content="I have been able to record many great bands over the years, here are a few of my favorites. "
         />
       </Head>
       <SimpleLayout
-        title="Audio Projects I have worked on..."
-        intro="I’ve worked on a bunch of projects over the years but these are some of my favorites. I’ve included a brief description of each project and the technologies I used to build them. I’ve also included a link to the live site and the source code on Github."
+        title="Audio and Video projects that I have worked on..."
+        intro="I have had the opportunity to work with many great bands over the years. Here are a few of my favorites."
       >
         <div className="justify-center border border-zinc-100 p-5 dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9">
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
