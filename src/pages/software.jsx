@@ -22,7 +22,7 @@ const projects = [
   // Website Template
   {
     name: "Podcast Website Template",
-    description: 'I worked on this with Patrick Brennan. This project is built with Django and it has a fully functioning blog with auth and password reset on your profile. It has email verification on signup and it will also compress the uploaded profile picture and scale it to the correct size. The show list populates from the rss feed for the podcast, which eliminates the need to update the website everytime a new show is published. I used the "Eggs Podcast" to demonstrate functionality.',
+    description: 'This project is built with Django and it has a fully functioning blog with auth and password reset on your profile. It has email verification on signup and it will also compress the uploaded profile picture and scale it to the correct size. The show list populates from the rss feed for the podcast, which eliminates the need to update the website everytime a new show is published. I used the "Eggs Podcast" to demonstrate functionality and I worked on this with Patrick Brennan. ',
     tech: ["Django", "Linode", "Python", "Bootstrap", "PostgreSQL"],
     link_01: {
       href: "https://github.com/onticinc/podcast_template",

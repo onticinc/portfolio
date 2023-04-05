@@ -50,7 +50,7 @@ export default function About() {
               </p>
               <p>
                 During that time I started teaching myself the basics so I could potentially take over the project if necessary. Fortunately, it didn't come to that.
-                As part of that project, I had manually update over 8,000 records in a spreadsheet in order to seed the database. Yay!  
+                As part of that project, I had to manually update over 8,000 records in a spreadsheet in order to seed the database. Yay!  
               </p>
               <p>Because of that experience, I figured out that I really enjoyed the development process <span className="italic"> *even though I got super frustrated at times. I feel like its a giant puzzle that never ends.</span></p>
               <p>I attended the General Assembly full stack bootcamp to learn more and I have been hooked ever since.</p>
