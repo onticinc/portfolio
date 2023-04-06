@@ -11,6 +11,7 @@ import { useState, useEffect } from "react";
 const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems";
 const EGGS_PODCAST_ID = "UULFz53WsQ9KmEJb5yKeMTsmGg";
 
+
 export async function getStaticProps() {
   const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&key=${process.env.YOUTUBE_API_KEY}&playlistId=${EGGS_PODCAST_ID}&maxResults=9`); 
   const data = await res.json();
@@ -27,8 +28,8 @@ export default function Podcast({ data }) {
   // console.log('data', data)
   const [currentVideo, setCurrentVideo] = useState(null);
   const [playing, setPlaying] = useState(false);
-  let [showBackButton, setBackButton] = useState(false);
-  let [showForwardButton, setForwardButton] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(9);
   
 
   useEffect(() => {
@@ -41,21 +42,30 @@ export default function Podcast({ data }) {
     return <div className="text-2xl">Loading...</div>;
   }
 
-  // let handleNextVideo = () => {
-  //   const currentIndex = data.items.findIndex(
-  //     (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
-  //   );
-  //   setCurrentVideo(data.items[currentIndex + 1]);
-  //   setPlaying(true);
-  // };
+  let handleNextVideo = () => {
+    const currentIndex = data.items.findIndex(
+      (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
+    );
+    setCurrentVideo(data.items[currentIndex + 1]);
+    setPlaying(false);
+  };
 
-  // let handlePreviousVideo = () => {
-  //   const currentIndex = data.items.findIndex(
-  //     (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
-  //   );
-  //   setCurrentVideo(data.items[currentIndex - 1]);
-  //   setPlaying(true);
-  // };
+  let handlePreviousVideo = () => {
+    const currentIndex = data.items.findIndex(
+      (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
+    );
+    setCurrentVideo(data.items[currentIndex - 1]);
+    setPlaying(false);
+  };
+
+  function handlePageChange(page) {
+    const lastPostIndex = currentPage * postsPerPage;
+    const firstPostIndex = lastPostIndex - postsPerPage;
+    const currentPosts = data.items.slice(firstPostIndex, lastPostIndex);
+    setCurrentPage(page);
+  }
+
+  
   return (
     <>
       <Head>
@@ -87,7 +97,7 @@ export default function Podcast({ data }) {
                 {currentVideo.snippet.title}
               </h3>
               <div className="relative">
-                <div className="flex overscroll-contain overflow-x-scroll max-h-[450px]">
+                <div className="flex overscroll-contain overflow-x-scroll max-h-[415px]">
                   <p className="mt-5 text-zinc-700 dark:text-white">
                     {currentVideo.snippet.description}
                   </p>
@@ -95,24 +105,24 @@ export default function Podcast({ data }) {
               </div>
 
               {/* Previous Next Button */}
-              <nav className="flex items-center justify-between px-4 sm:px-0 mb-auto">
+              <nav className="flex items-center justify-between px-4 sm:px-0 mb-auto mt-5">
                 <div className="-mt-px flex w-0 flex-1">
-                  <a
-                    href="#"
+                  <button
+                    onClick={handlePreviousVideo}
                     className="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-indigo-500 hover:border-indigo-300 hover:text-orange-500"
                   >
                     {/* <ArrowLongLeftIcon className="mr-3 h-5 w-5 text-gray-400" aria-hidden="true" /> */}
                     Previous
-                  </a>
+                  </button>
                 </div>
                 <div className="-mt-px flex w-0 flex-1 justify-end">
-                  <a
-                    href="#"
+                  <button
+                    onClick={handleNextVideo}
                     className="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
                     Next
                     {/* <ArrowLongRightIcon className="ml-3 h-5 w-5 text-gray-400" aria-hidden="true" /> */}
-                  </a>
+                  </button>
                 </div>
               </nav>
             </div>
