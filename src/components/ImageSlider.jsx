@@ -44,12 +44,7 @@ export default function ImageSlider() {
       altTag: 'Wedding at Larc Hill Vineyard',
       link: 'https://www.larchill.com/',
     },
-    {
-      title: 'Wedding at Larc Hill Vineyard',
-      image: image2,
-      altTag: 'Wedding at Larc Hill Vineyard',
-      link: 'https://www.larchill.com/',
-    },
+    
     {
       title: 'Podcast with Gail Miller, Owner of the Utah Jazz',
       image: image3,
@@ -75,10 +70,16 @@ export default function ImageSlider() {
       link: 'https://www.eggscast.com',
     },
     {
+      title: 'Wedding at Larc Hill Vineyard',
+      image: image2,
+      altTag: 'Wedding at Larc Hill Vineyard',
+      link: 'https://www.larchill.com/',
+    },
+    {
       title: 'Respect the Decks DJ Battle with Rob Swift',
       image: image7,
       altTag: 'Respect the Decks DJ Battle with Rob Swift',
-      link: 'https://www.brolicarmy.com',
+      link: 'https://www.djontic.com',
     },
     {
       title: 'Holiday party for 1st Capital Bank',
@@ -205,7 +206,7 @@ export default function ImageSlider() {
       title: 'Recording the Nextset Podcast',
       image: image31,
       altTag: 'Recording the Nextset Podcast',
-      link: 'https://www.audiostaring.com',
+      link: 'https://www.audiostarinc.com',
     },
     
     {
@@ -233,15 +234,15 @@ export default function ImageSlider() {
     return (
      
       <div className="relative shadow border p-4 m-4 border-zinc-100 justify-center  dark:border-zinc-700/40 ">
-        <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Event | Production Photos:</h3>
+        <h3 className="font-2xl font-extrabold text-zinc-900 dark:text-zinc-100">Event | Production Photos:</h3>
         <div class="flex overscroll-contain overflow-x-scroll ">
             {image.map((role, roleIndex) => (
-              <div key={roleIndex} className="rounded-2xl border border-zinc-100 p-4 dark:border-zinc-700/40 mt-10 gap-2 mr-4 dark:bg-zinc-800  dark:hover:bg-zinc-700 ">
+              <div key={roleIndex} className="rounded-2xl border border-zinc-100 pl-4 pr-4 pt-5 dark:border-zinc-700/40 mt-10 gap-2 mr-4 dark:bg-zinc-800  dark:hover:bg-zinc-700 ">
                 <Link href={role.link} target="_blank">
-                  <div className="relative mt-1 w-64 md:w-96 items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                  <div className="relative w-64 md:w-96 items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                     <Image src={role.image} alt={role.altTag} className="rounded-2xl w-full" />
                   </div>
-                    <p className="text-white mt-2 italic">{role.title}</p>
+                    <p className="text-white mt-4 italic">{role.title}</p>
                 </Link>
               </div>
             ))}

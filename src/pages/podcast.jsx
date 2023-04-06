@@ -27,7 +27,9 @@ export default function Podcast({ data }) {
   // console.log('data', data)
   const [currentVideo, setCurrentVideo] = useState(null);
   const [playing, setPlaying] = useState(false);
-  let showBackButton = useState(false);
+  let [showBackButton, setBackButton] = useState(false);
+  let [showForwardButton, setForwardButton] = useState(true);
+  
 
   useEffect(() => {
     if (data.items.length > 0) {
@@ -36,34 +38,24 @@ export default function Podcast({ data }) {
   }, [data.items]);
 
   if (!currentVideo) {
-    return <div>Loading...</div>;
+    return <div className="text-2xl">Loading...</div>;
   }
 
-  if (currentVideo === data.items[0]) {
-    showBackButton = false;
-  } else {
-    showBackButton = true;
-  }
+  // let handleNextVideo = () => {
+  //   const currentIndex = data.items.findIndex(
+  //     (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
+  //   );
+  //   setCurrentVideo(data.items[currentIndex + 1]);
+  //   setPlaying(true);
+  // };
 
-  if (currentVideo === data.items[data.items.length - 1]) {
-    showNextButton = false;
-  }
-
-  const handleNextVideo = () => {
-    const currentIndex = data.items.findIndex(
-      (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
-    );
-    setCurrentVideo(data.items[currentIndex + 1]);
-    setPlaying(true);
-  };
-
-  const handlePreviousVideo = () => {
-    const currentIndex = data.items.findIndex(
-      (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
-    );
-    setCurrentVideo(data.items[currentIndex - 1]);
-    setPlaying(true);
-  };
+  // let handlePreviousVideo = () => {
+  //   const currentIndex = data.items.findIndex(
+  //     (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
+  //   );
+  //   setCurrentVideo(data.items[currentIndex - 1]);
+  //   setPlaying(true);
+  // };
   return (
     <>
       <Head>
@@ -79,7 +71,7 @@ export default function Podcast({ data }) {
       >
 
         {/* Video Player */}
-        <div className="justify-center border border-zinc-100 p-5 dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9">
+        <div className="justify-center border border-zinc-100 p-5 dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9 mb-10">
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
             <div className="rounded-2xl border border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-2">
               <YoutubeVideoPlayer
@@ -90,13 +82,17 @@ export default function Podcast({ data }) {
             </div>
 
             {/* Current Video Description */}
-            <div className="gap-5 rounded-2xl border border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-1 ">
-              <h3 className="font-2xl font-extrabold text-zinc-700 dark:text-white">
+            <div className="gap-5 rounded-2xl border border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-1">
+              <h3 className="font-2xl font-extrabold text-zinc-700 dark:text-white mb-2">
                 {currentVideo.snippet.title}
               </h3>
-              <p className="mt-10 text-zinc-700 dark:text-white">
-                {currentVideo.snippet.description}
-              </p>
+              <div className="relative">
+                <div className="flex overscroll-contain overflow-x-scroll max-h-[450px]">
+                  <p className="mt-5 text-zinc-700 dark:text-white">
+                    {currentVideo.snippet.description}
+                  </p>
+                </div>
+              </div>
 
               {/* Previous Next Button */}
               <nav className="flex items-center justify-between px-4 sm:px-0 mb-auto">
@@ -138,12 +134,10 @@ export default function Podcast({ data }) {
 
               return(
                   <li key={id} className="gap-5 rounded-2xl border  border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"> 
-                    <a href="http:www.audiostarinc.com">
-                    <h4 className="font-2xl font-extrabold text-zinc-700 dark:text-white">{title}</h4>
+                    <h4 className="mt-4 italic text-zinc-700 dark:text-zinc-100">{title}</h4>
                       <p>
                         <img className="mt-5" width={maxres.width} height={maxres.height} src={maxres.url} alt="" />
                       </p>
-                    </a>
                   </li>
                 )
               })}

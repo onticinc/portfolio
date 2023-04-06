@@ -39,31 +39,31 @@ export default function Audio({ data }) {
     return <div>Loading...</div>;
   }
 
-  if (currentVideo === data.items[0]) {
-    showBackButton = false;
-  } else {
-    showBackButton = true;
-  }
+  // if (currentVideo === data.items[0]) {
+  //   showBackButton = false;
+  // } else {
+  //   showBackButton = true;
+  // }
 
-  if (currentVideo === data.items[data.items.length - 1]) {
-    showNextButton = false;
-  }
+  // if (currentVideo === data.items[data.items.length - 1]) {
+  //   showNextButton = false;
+  // }
 
-  const handleNextVideo = () => {
-    const currentIndex = data.items.findIndex(
-      (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
-    );
-    setCurrentVideo(data.items[currentIndex + 1]);
-    setPlaying(true);
-  };
+  // const handleNextVideo = () => {
+  //   const currentIndex = data.items.findIndex(
+  //     (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
+  //   );
+  //   setCurrentVideo(data.items[currentIndex + 1]);
+  //   setPlaying(true);
+  // };
 
-  const handlePreviousVideo = () => {
-    const currentIndex = data.items.findIndex(
-      (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
-    );
-    setCurrentVideo(data.items[currentIndex - 1]);
-    setPlaying(true);
-  };
+  // const handlePreviousVideo = () => {
+  //   const currentIndex = data.items.findIndex(
+  //     (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
+  //   );
+  //   setCurrentVideo(data.items[currentIndex - 1]);
+  //   setPlaying(true);
+  // };
 
 
     
@@ -81,6 +81,7 @@ export default function Audio({ data }) {
         title="Audio and Video projects that I have worked on..."
         intro="I have had the opportunity to work with many great bands over the years. Here are a few of my favorites."
       >
+        {/* Video Player */}
         <div className="justify-center border border-zinc-100 p-5 dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9">
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
             <div className="rounded-2xl border border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-2">
@@ -92,16 +93,20 @@ export default function Audio({ data }) {
             </div>
 
             {/* Current Video Description */}
-            <div className="gap-5 rounded-2xl border border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-1 ">
+            <div className="gap-5 rounded-2xl border  border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-1">
               <h3 className="font-2xl font-extrabold text-zinc-700 dark:text-white">
                 {currentVideo.snippet.title}
               </h3>
-              <p className="mt-10 text-zinc-700 dark:text-white">
-                {currentVideo.snippet.description}
-              </p>
+              <div className="relative">
+                <div className="flex overscroll-contain overflow-x-scroll max-h-[560px]">
+                  <p className="mt-5 text-zinc-700 dark:text-white">
+                    {currentVideo.snippet.description}
+                  </p>
+                </div>
+              </div>
 
               {/* Previous Next Button */}
-              <nav className="flex items-center justify-between px-4 sm:px-0 mb-auto">
+              <nav className="flex items-center justify-between px-4 sm:px-0">
                 <div className="-mt-px flex w-0 flex-1">
                   <a
                     href="#"
