@@ -4,8 +4,9 @@ import WorkHistory from '@/components/WorkHistory'
 import Bio from '@/components/Bio'
 import Avatar from '@/images/avatar.png'
 import Image from 'next/image'
-import FeaturedProject from '@/components/FeaturedProject'
 import Education from '@/components/Education'
+import FeaturedProject from '@/components/FeaturedProject'
+import ImageSlider from '@/components/ImageSlider'
 import Newsletter from '@/components/Newsletter'
 import ShortIntro from '@/components/ShortIntro'
 
@@ -35,6 +36,11 @@ export default function Home() {
             <Education />
           </div>
             
+        </div>
+        <div id="image-slider" className="col-span-3 m-4">
+
+          <ImageSlider />
+
         </div>
        
       

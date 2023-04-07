@@ -24,7 +24,7 @@ export async function getStaticProps() {
 
 
 // Page Content
-export default function Podcast({ data }) {
+export default function audioRecordings({ data }) {
   // console.log('data', data)
   const [currentVideo, setCurrentVideo] = useState(null);
   const [playing, setPlaying] = useState(false);

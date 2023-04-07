@@ -33,7 +33,7 @@ export default function App({ Component, pageProps, router }) {
         <main>
           <Header />
           <Component previousPathname={previousPathname} {...pageProps} />
-          <ImageSlider />
+          
           <Footer />
         </main>
       </div>
