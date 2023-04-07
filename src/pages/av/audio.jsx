@@ -89,8 +89,8 @@ export default function Podcast({ data }) {
   ```
 */
 const tabs = [
-  { name: 'Audio', href: '/podcast/audio', current: true },
-  { name: 'Video', href: '/podcast/video', current: false }
+  { name: 'Audio', href: '/av/audio', current: true },
+  { name: 'Video', href: '/av/video', current: false }
 ]
 
 function classNames(...classes) {
