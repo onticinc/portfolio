@@ -89,8 +89,8 @@ export default function Podcast({ data }) {
   ```
 */
 const tabs = [
-  { name: 'Audio', href: '/podcast/audio', current: true },
-  { name: 'Video', href: '/podcast/video', current: false }
+  { name: 'Audio', href: '/podcast/audio', current: false },
+  { name: 'Video', href: '/podcast/video', current: true }
 ]
 
 function classNames(...classes) {
@@ -125,7 +125,7 @@ function classNames(...classes) {
         <select
           id="tabs"
           name="tabs"
-          className="block w-full rounded-md mb-10 py-2 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+          className="block w-full border-zinc-700/40 rounded-md mb-10 py-2 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
           defaultValue={tabs.find((tab) => tab.current)}
         >
           {tabs.map((tab) => (
@@ -134,16 +134,16 @@ function classNames(...classes) {
         </select>
       </div>
       <div className="hidden sm:block">
-        <div className=" mb-5">
-          <nav className="flex space-x-10 " aria-label="Tabs">
+        <div className="mb-5">
+          <nav className="flex" aria-label="Tabs">
             {tabs.map((tab) => (
               <a
                 key={tab.name}
                 href={tab.href}
                 className={classNames(
                   tab.current
-                    ? 'border-indigo-500 text-indigo-600'
-                    : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700',
+                    ? 'border-indigo-500 text-orange-500 bg-zinc-700 p-3 rounded-tl-2xl rounded-tr-2xl px-5'
+                    : 'border-transparent bg-zinc-800 text-gray-500 hover:border-zinc-500 hover:text-orange-500 px-5 rounded-tr-2xl rounded-tl-2xl',
                   'whitespace-nowrap border-b-2 py-4 text-sm font-medium'
                 )}
                 aria-current={tab.current ? 'page' : undefined}

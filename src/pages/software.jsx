@@ -96,6 +96,27 @@ const projects = [
       },
     ],
   },
+  // Audiostar
+  {
+    name: "Drum Machine",
+    description: "Drum Machine built in python and pygame.",
+    tech: ["Wordpress", "Custom CSS",],
+    link: { href: "https://github.com/onticinc/drum_machine", label: "github" },
+    images: [
+      {
+        src: audiostar_01,
+        alt: "Screenshot of Audiostar Website Template",
+      },
+      {
+        src: audiostar_02,
+        alt: "Screenshot of Audiostar Website Template",
+      },
+      {
+        src: audiostar_03,
+        alt: "Screenshot of Audiostar Website Template",
+      },
+    ],
+  },
 
 ];
 
