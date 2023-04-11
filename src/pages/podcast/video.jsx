@@ -132,25 +132,6 @@ function classNames(...classes) {
                 playing={playing}
               />
               <div className="hidden sm:block">
-
-          <nav className="flex" aria-label="Tabs">
-            {tabs.map((tab) => (
-              <a
-                key={tab.name}
-                href={tab.href}
-                className={classNames(
-                  tab.current
-                    ? 'border-indigo-500 text-orange-500 bg-zinc-700 p-3  px-5'
-                    : 'border-transparent bg-zinc-800 text-gray-500 hover:border-zinc-500 hover:text-orange-500 px-5',
-                  'whitespace-nowrap border-b-2 py-4 text-sm font-medium'
-                )}
-                aria-current={tab.current ? 'page' : undefined}
-              >
-                {tab.name}
-              </a>
-            ))}
-          </nav>
-       
       </div>
             </div>
             
@@ -175,7 +156,6 @@ function classNames(...classes) {
                     onClick={handlePreviousVideo}
                     className="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-indigo-500 hover:border-indigo-300 hover:text-orange-500"
                   >
-                    {/* <ArrowLongLeftIcon className="mr-3 h-5 w-5 text-gray-400" aria-hidden="true" /> */}
                     Previous
                   </button>
                 </div>
@@ -185,7 +165,6 @@ function classNames(...classes) {
                     className="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
                     Next
-                    {/* <ArrowLongRightIcon className="ml-3 h-5 w-5 text-gray-400" aria-hidden="true" /> */}
                   </button>
                 </div>
               </nav>
