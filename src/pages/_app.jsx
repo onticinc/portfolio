@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import ImageSlider from '@/components/ImageSlider'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
@@ -22,7 +22,10 @@ function usePrevious(value) {
 export default function App({ Component, pageProps, router }) {
   let previousPathname = usePrevious(router.pathname)
 
+  const [queryClient] = useState(() => new QueryClient())
+
   return (
+
     <>
       {/* Background Color */}
       <div className="fixed  dark:bg-zinc-900 inset-0 justify-center flex py-10">
@@ -35,9 +38,10 @@ export default function App({ Component, pageProps, router }) {
       <div className="relative max-w-prose sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-1xl 2xl:max-w-screen-2xl">
         <main>
               <QueryClientProvider client={queryClient}>
-              <Header />
-              <Component previousPathname={previousPathname} {...pageProps} />
-              <Footer />
+                <Header />
+                <Component previousPathname={previousPathname} {...pageProps} />
+                <Footer />
+                <ReactQueryDevtools />
               </QueryClientProvider>
         </main>
       </div>
