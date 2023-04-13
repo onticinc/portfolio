@@ -1,14 +1,11 @@
 import Head from 'next/head'
 // import { AvatarImage } from '@/components/Avatar'
 import WorkHistory from '@/components/WorkHistory'
-import Bio from '@/components/Bio'
-import Avatar from '@/images/avatar.png'
-import Image from 'next/image'
 import Education from '@/components/Education'
 import FeaturedProject from '@/components/FeaturedProject'
 import ImageSlider from '@/components/ImageSlider'
-import Newsletter from '@/components/Newsletter'
 import ShortIntro from '@/components/ShortIntro'
+import axios from 'axios'
 
 export default function Home() {
   return (

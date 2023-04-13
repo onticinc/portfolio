@@ -19,6 +19,14 @@ function usePrevious(value) {
   return ref.current
 }
 
+
+// Set Load Delay
+function wait(duration) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, duration)
+  })
+}
+
 export default function App({ Component, pageProps, router }) {
   let previousPathname = usePrevious(router.pathname)
 
