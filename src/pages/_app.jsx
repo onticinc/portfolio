@@ -49,7 +49,7 @@ export default function App({ Component, pageProps, router }) {
                 <Header />
                 <Component previousPathname={previousPathname} {...pageProps} />
                 <Footer />
-                {/* <ReactQueryDevtools /> */}
+                <ReactQueryDevtools />
               </QueryClientProvider>
         </main>
       </div>
