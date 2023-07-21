@@ -31,7 +31,6 @@ export default function Podcast({ data }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(9);
   
-
   useEffect(() => {
     if (data.items.length > 0) {
       setCurrentVideo(data.items[0]);
@@ -46,7 +45,6 @@ export default function Podcast({ data }) {
     const currentIndex = data.items.findIndex(
       (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
     );
-
     setCurrentVideo(data.items[currentIndex + 1]);
     setPlaying(false);
   };
@@ -59,14 +57,6 @@ export default function Podcast({ data }) {
     setPlaying(false);
   };
 
-  function hidePreviousButton() {
-    if (currentVideo === data.items[0]) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
   function handlePageChange(page) {
     const lastPostIndex = currentPage * postsPerPage;
     const firstPostIndex = lastPostIndex - postsPerPage;
@@ -74,91 +64,21 @@ export default function Podcast({ data }) {
     setCurrentPage(page);
   }
 
-  /*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
-const tabs = [
-  { name: 'Audio', href: '/podcast/audio', current: true },
-  { name: 'Video', href: '/podcast/video', current: false }
-]
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
-  
-
-
-
-  
   return (
     <>
       <Head>
         <title>Eggs The Podcast - Michael Smith</title>
         <meta
           name="description"
-          content="Eggs The Podcast... "
+          content="I have been able to record many great bands over the years, here are a few of my favorites. "
         />
       </Head>
       <SimpleLayout
         title="Eggs The Podcast"
         intro="Co-Host and Business Partner."
       >
-
-
-      <div className="sm:hidden">
-        <label htmlFor="tabs" className="sr-only">
-          Select a tab
-        </label>
-        {/* Use an "onChange" listener to redirect the user to the selected tab URL. */}
-        <select
-          id="tabs"
-          name="tabs"
-          className="block w-full rounded-md mb-10 py-2 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-          defaultValue={tabs.find((tab) => tab.current)}
-        >
-          {tabs.map((tab) => (
-            <option key={tab.name}>{tab.name}</option>
-          ))}
-        </select>
-      </div>
-      <div className="hidden sm:block">
-        <div className=" mb-5">
-          <nav className="flex space-x-10 " aria-label="Tabs">
-            {tabs.map((tab) => (
-              <a
-                key={tab.name}
-                href={tab.href}
-                className={classNames(
-                  tab.current
-                    ? 'border-indigo-500 text-indigo-600'
-                    : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700',
-                  'whitespace-nowrap border-b-2 py-4 text-sm font-medium'
-                )}
-                aria-current={tab.current ? 'page' : undefined}
-              >
-                {tab.name}
-              </a>
-            ))}
-          </nav>
-        </div>
-      </div>
-
-
-
         {/* Video Player */}
-        <div className="justify-center border border-zinc-100 p-5 dark:border-zinc-700/40  lg:mb-10 mb-10">
+        <div className="justify-center border border-zinc-100 p-5 dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9 mb-10">
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
             <div className="rounded-2xl border border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-2">
               <YoutubeVideoPlayer
@@ -207,7 +127,7 @@ function classNames(...classes) {
         </div>
 
         {/* Main Div */}
-        <div className="border border-zinc-100 justify-center p-5  dark:border-zinc-700/40 lg:mb-10">
+        <div className="border border-zinc-100 justify-center p-5  dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9">
           
           {/* Card */}
           <ul className="grid mb-10 grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -236,19 +156,6 @@ function classNames(...classes) {
     </>
   )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // import Head from 'next/head'

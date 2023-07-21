@@ -32,7 +32,7 @@ export default function Podcast({ data }) {
   
 
   useEffect(() => {
-    if (data.items.length > 0) {
+    if (data.items > 0) {
       setCurrentVideo(data.items[0]);
     }
   }, [data.items]);
@@ -96,11 +96,6 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-  
-
-
-
-  
   return (
     <>
       <Head>
