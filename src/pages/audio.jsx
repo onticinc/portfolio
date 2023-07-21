@@ -39,34 +39,31 @@ export default function Audio({ data }) {
     return <div>Loading...</div>;
   }
 
-  // if (currentVideo === data.items[0]) {
-  //   showBackButton = false;
-  // } else {
-  //   showBackButton = true;
-  // }
+  if (currentVideo === data.items[0]) {
+    showBackButton = false;
+  } else {
+    showBackButton = true;
+  }
 
-  // if (currentVideo === data.items[data.items.length - 1]) {
-  //   showNextButton = false;
-  // }
+  if (currentVideo === data.items[data.items.length - 1]) {
+    showNextButton = false;
+  }
 
-  // const handleNextVideo = () => {
-  //   const currentIndex = data.items.findIndex(
-  //     (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
-  //   );
-  //   setCurrentVideo(data.items[currentIndex + 1]);
-  //   setPlaying(true);
-  // };
+  const handleNextVideo = () => {
+    const currentIndex = data.items.findIndex(
+      (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
+    );
+    setCurrentVideo(data.items[currentIndex + 1]);
+    setPlaying(true);
+  };
 
-  // const handlePreviousVideo = () => {
-  //   const currentIndex = data.items.findIndex(
-  //     (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
-  //   );
-  //   setCurrentVideo(data.items[currentIndex - 1]);
-  //   setPlaying(true);
-  // };
-
-
-    
+  const handlePreviousVideo = () => {
+    const currentIndex = data.items.findIndex(
+      (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
+    );
+    setCurrentVideo(data.items[currentIndex - 1]);
+    setPlaying(true);
+  };
 
   return (
     <>

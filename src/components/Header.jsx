@@ -176,8 +176,8 @@ function DesktopNavigation(props) {
         <NavItem href="/">Home</NavItem>
         <NavItem href="/about">About</NavItem>
         <NavItem href="/software">Software</NavItem>
-        <NavItem href="/av/audio">AV</NavItem>
-        <NavItem href="/podcast/audio">Podcast</NavItem>
+        <NavItem href="/audio">AV</NavItem>
+        <NavItem href="/podcast">Podcast</NavItem>
    
       </ul>
     </nav>
