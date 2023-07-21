@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 
 
 
-// Youtube API  
+// Youtube API 
 const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems";
 const EGGS_PODCAST_ID = "UULFz53WsQ9KmEJb5yKeMTsmGg";
 
@@ -31,6 +31,7 @@ export default function Podcast({ data }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(9);
   
+
   useEffect(() => {
     if (data.items.length > 0) {
       setCurrentVideo(data.items[0]);
@@ -64,6 +65,7 @@ export default function Podcast({ data }) {
     setCurrentPage(page);
   }
 
+  
   return (
     <>
       <Head>
@@ -77,6 +79,7 @@ export default function Podcast({ data }) {
         title="Eggs The Podcast"
         intro="Co-Host and Business Partner."
       >
+
         {/* Video Player */}
         <div className="justify-center border border-zinc-100 p-5 dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9 mb-10">
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
@@ -156,6 +159,19 @@ export default function Podcast({ data }) {
     </>
   )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // import Head from 'next/head'
