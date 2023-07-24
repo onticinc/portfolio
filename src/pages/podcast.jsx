@@ -6,7 +6,6 @@ import YoutubeVideoPlayer from "@/components/youtubePlayer";
 import { useState, useEffect } from "react";
 
 
-
 // Youtube API 
 const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems";
 const EGGS_PODCAST_ID = "UULFz53WsQ9KmEJb5yKeMTsmGg";
