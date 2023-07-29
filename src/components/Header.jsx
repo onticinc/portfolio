@@ -160,7 +160,7 @@ function NavItem({ href, children }) {
 function DesktopNavigation(props) {
   return (
     <nav {...props}>
-      <ul className="flex rounded-md bg-white/90 p-3 px-3 text-sm font-medium text-zinc-800 shadow-sm shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 lg:ml-8">
+      <ul className="flex bg-neutral-50 rounded-md bg-white/90 p-3 px-3 text-sm font-medium text-zinc-800 shadow-sm shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 lg:ml-8">
         <NavItem href="/">Home</NavItem>
         <NavItem href="/about">About</NavItem>
         <NavItem href="/software">Software</NavItem>
@@ -198,7 +198,7 @@ function ModeToggle() {
       <button
         type="button"
         aria-label="Toggle dark mode"
-        className="group mr-0 rounded-md bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition  dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20 lg:mr-1"
+        className="group mr-0 rounded-md bg-neutral-50 px-3 py-2   ring-1 ring-zinc-900/5 backdrop-blur transition  dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20 lg:mr-1"
         onClick={toggleMode}
       >
         <SunIcon className="h-8 w-8 animate-pulse fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-orange-600 [@media(prefers-color-scheme:dark)]:stroke-orange-200 [@media(prefers-color-scheme:dark)]:group-hover:fill-orange-500 [@media(prefers-color-scheme:dark)]:group-hover:stroke-orange-300" />

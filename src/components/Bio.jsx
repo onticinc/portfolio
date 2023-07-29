@@ -7,7 +7,7 @@ export default function BioCard(){
               Create, Document, Produce.
             </h1>
             <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-              Software developer, Audio Engineer, and Podcast connoisseur. 
+              Software developer, Audio Engineer, and Event Professional. 
             </p>
             <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
               Focused on MERN | JAM stack with Next JS 13,
