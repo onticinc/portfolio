@@ -122,7 +122,7 @@ function MobileNavigation(props) {
                 <MobileNavItem href="/">Home</MobileNavItem>
                 <MobileNavItem href="/about">About</MobileNavItem>
                 <MobileNavItem href="/software">Software</MobileNavItem>
-                <MobileNavItem href="/av">AV</MobileNavItem>
+                <MobileNavItem href="/audio">Audio</MobileNavItem>
                 <MobileNavItem href="/podcast">Podcast</MobileNavItem>
               </ul>
             </nav>
@@ -164,7 +164,7 @@ function DesktopNavigation(props) {
         <NavItem href="/">Home</NavItem>
         <NavItem href="/about">About</NavItem>
         <NavItem href="/software">Software</NavItem>
-        <NavItem href="/audio">AV</NavItem>
+        <NavItem href="/audio">Audio</NavItem>
         <NavItem href="/podcast">Podcast</NavItem>
       </ul>
     </nav>
@@ -201,7 +201,7 @@ function ModeToggle() {
         className="group mr-0 rounded-md bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition  dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20 lg:mr-1"
         onClick={toggleMode}
       >
-        <SunIcon className="h-8 w-8 animate-pulse fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-yellow-500 [@media(prefers-color-scheme:dark)]:stroke-orange-200 [@media(prefers-color-scheme:dark)]:group-hover:fill-yellow-500 [@media(prefers-color-scheme:dark)]:group-hover:stroke-orange-300" />
+        <SunIcon className="h-8 w-8 animate-pulse fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-orange-600 [@media(prefers-color-scheme:dark)]:stroke-orange-200 [@media(prefers-color-scheme:dark)]:group-hover:fill-orange-500 [@media(prefers-color-scheme:dark)]:group-hover:stroke-orange-300" />
         <MoonIcon className="hidden h-8 w-8 animate-pulse fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-teal-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-orange-500" />
       </button>
     </div>

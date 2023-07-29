@@ -1,26 +1,25 @@
-import Head from 'next/head'
-import { SimpleLayout } from '@/components/SimpleLayout';
-import Image from 'next/image';
-import Pagination from '@/components/Pagination';
+import Head from "next/head";
+import { SimpleLayout } from "@/components/SimpleLayout";
+import Image from "next/image";
+import Pagination from "@/components/Pagination";
 import YoutubeVideoPlayer from "@/components/youtubePlayer";
 import { useState, useEffect } from "react";
 
-
-// Youtube API 
+// Youtube API
 const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems";
 const EGGS_PODCAST_ID = "UULFz53WsQ9KmEJb5yKeMTsmGg";
 
-
 export async function getStaticProps() {
-  const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&key=${process.env.YOUTUBE_API_KEY}&playlistId=${EGGS_PODCAST_ID}&maxResults=9`); 
+  const res = await fetch(
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&key=${process.env.YOUTUBE_API_KEY}&playlistId=${EGGS_PODCAST_ID}&maxResults=9`
+  );
   const data = await res.json();
   return {
     props: {
-      data
-    }
-  }
+      data,
+    },
+  };
 }
-
 
 // Page Content
 export default function Podcast({ data }) {
@@ -29,7 +28,6 @@ export default function Podcast({ data }) {
   const [playing, setPlaying] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(9);
-  
 
   useEffect(() => {
     if (data.items.length > 0) {
@@ -43,7 +41,9 @@ export default function Podcast({ data }) {
 
   let handleNextVideo = () => {
     const currentIndex = data.items.findIndex(
-      (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
+      (item) =>
+        item.snippet.resourceId.videoId ===
+        currentVideo.snippet.resourceId.videoId
     );
     setCurrentVideo(data.items[currentIndex + 1]);
     setPlaying(false);
@@ -51,7 +51,9 @@ export default function Podcast({ data }) {
 
   let handlePreviousVideo = () => {
     const currentIndex = data.items.findIndex(
-      (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
+      (item) =>
+        item.snippet.resourceId.videoId ===
+        currentVideo.snippet.resourceId.videoId
     );
     setCurrentVideo(data.items[currentIndex - 1]);
     setPlaying(false);
@@ -64,7 +66,6 @@ export default function Podcast({ data }) {
     setCurrentPage(page);
   }
 
-  
   return (
     <>
       <Head>
@@ -78,9 +79,8 @@ export default function Podcast({ data }) {
         title="Eggs The Podcast"
         intro="Co-Host and Business Partner."
       >
-
         {/* Video Player */}
-        <div className="justify-center border border-zinc-100 p-5 dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9 mb-10">
+        <div className="mb-10 justify-center border border-zinc-100 p-5 dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9">
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
             <div className="rounded-2xl border border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-2">
               <YoutubeVideoPlayer
@@ -92,11 +92,11 @@ export default function Podcast({ data }) {
 
             {/* Current Video Description */}
             <div className="gap-5 rounded-2xl border border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-1">
-              <h3 className="font-2xl font-extrabold text-zinc-700 dark:text-white mb-2">
+              <h3 className="font-2xl mb-2 font-extrabold text-zinc-700 dark:text-white">
                 {currentVideo.snippet.title}
               </h3>
               <div className="relative">
-                <div className="flex overscroll-contain overflow-x-scroll max-h-[415px]">
+                <div className="flex max-h-[415px] overflow-x-scroll overscroll-contain">
                   <p className="mt-5 text-zinc-700 dark:text-white">
                     {currentVideo.snippet.description}
                   </p>
@@ -104,7 +104,7 @@ export default function Podcast({ data }) {
               </div>
 
               {/* Previous Next Button */}
-              <nav className="flex items-center justify-between px-4 sm:px-0 mb-auto mt-5">
+              <nav className="mb-auto mt-5 flex items-center justify-between px-4 sm:px-0">
                 <div className="-mt-px flex w-0 flex-1">
                   <button
                     onClick={handlePreviousVideo}
@@ -129,65 +129,56 @@ export default function Podcast({ data }) {
         </div>
 
         {/* Main Div */}
-        <div className="border border-zinc-100 justify-center p-5  dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9">
-          
+        <div className="justify-center border border-zinc-100 p-5  dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9">
           {/* Card */}
-          <ul className="grid mb-10 grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {data.items.map((item) => {
-              
+          <ul className="mb-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {data.items.map((item) => {
               // console.log('item', item);
-              
+
               const { id, snippet = {} } = item;
               const { title, thumbnails = {} } = snippet;
               const { maxres = {} } = thumbnails;
 
-              return(
-                  <li key={id} className="gap-5 rounded-2xl border  border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"> 
-                    <h4 className="mt-4 italic text-zinc-700 dark:text-zinc-100">{title}</h4>
-                      <p>
-                        <img className="mt-5" width={maxres.width} height={maxres.height} src={maxres.url} alt="" />
-                      </p>
-                  </li>
-                )
-              })}
-
+              return (
+                <li
+                  key={id}
+                  className="gap-5 rounded-2xl border  border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"
+                >
+                  <h4 className="mt-4 italic text-zinc-700 dark:text-zinc-100">
+                    {title}
+                  </h4>
+                  <p>
+                    <img
+                      className="mt-5"
+                      width={maxres.width}
+                      height={maxres.height}
+                      src={maxres.url}
+                      alt=""
+                    />
+                  </p>
+                </li>
+              );
+            })}
           </ul>
-            <Pagination />
+          <Pagination />
         </div>
       </SimpleLayout>
     </>
-  )
+  );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import Head from 'next/head'
 // import YouTubeVideoPlayer from 'react-player/youtube';
 // import { useState } from 'react';
 
-
-
-
 // export async function getStaticProps() {
 //   const MY_PLAYLIST = process.env.EGGS_PLAYLIST_ID;
 //   const API_KEY = process.env.YOUTUBE_API_KEY
-  
+
 //   const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems";
 //   const YOUTUBE_PLAYLIST_ID = "PLY5aty1hlHsH4DiIKl4Mj4ZIUbE06A4E2";
-  
-//   const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&key=${process.env.YOUTUBE_API_KEY}&playlistId=${EGGS_PLAYLIST_ID}&maxResults=50`); 
+
+//   const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&key=${process.env.YOUTUBE_API_KEY}&playlistId=${EGGS_PLAYLIST_ID}&maxResults=50`);
 //   const data = await res.json();
 //   return {
 //     props: {
@@ -195,8 +186,6 @@ export default function Podcast({ data }) {
 //     }
 //   }
 // }
-
-
 
 // export default function Podcast(data) {
 //   console.log(data)
@@ -218,3 +207,8 @@ export default function Podcast({ data }) {
 //     </>
 //   )
 // }
+
+
+<Jaquiline class="harmony-meadows owner">
+  206-321-0836
+</Jaquiline>
