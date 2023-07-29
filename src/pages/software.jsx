@@ -19,6 +19,7 @@ import audiostar_03 from "@/images/software/audiostar_03.png";
 
 const projects = [
   
+
   // Website Template
   {
     name: "Podcast Website Template",
@@ -48,6 +49,7 @@ const projects = [
       },
     ],
   },
+
   // Memory Game
   {
     name: "Memory Game",
@@ -75,6 +77,7 @@ const projects = [
       },
     ],
   },
+
   // Audiostar
   {
     name: "Audiostar",
@@ -96,6 +99,7 @@ const projects = [
       },
     ],
   },
+  
   // Audiostar
   {
     name: "Drum Machine",

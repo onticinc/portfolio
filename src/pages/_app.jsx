@@ -35,7 +35,7 @@ export default function App({ Component, pageProps, router }) {
 
     <>
       {/* Background Color */}
-      <div className="fixed  dark:bg-zinc-900 inset-0 justify-center flex py-10">
+      <div className="fixed bg-white dark:bg-zinc-900 inset-0 justify-center flex py-10">
         <div className="flex w-full justify-center">
           <div className="w-full bg-white dark:bg-zinc-900 dark:ring-zinc-300/20" />
         </div>
