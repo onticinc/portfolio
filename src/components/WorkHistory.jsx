@@ -133,7 +133,7 @@ export default function WorkHistory() {
             </li>
           ))}
         </ol>
-        <Button href="#" variant="secondary" className="group mt-6 bg-white dark:bg-zinc-900/50 rounded-sm w-full">
+        <Button href="#" variant="secondary" className="group mt-6 bg-zinc-200 dark:bg-zinc-900/50 rounded-sm w-full">
           Download CV
           <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 p-5 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
         </Button>

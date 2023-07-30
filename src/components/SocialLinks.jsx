@@ -9,7 +9,7 @@ import Link from 'next/link'
 function SocialLink({ icon: Icon, ...props }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
-      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-orange-500 dark:fill-zinc-400 dark:group-hover:fill-orange-500" />
     </Link>
   )
 }
@@ -20,7 +20,7 @@ export default function SocialLinks(){
         <div className="mt-6 flex gap-6">
             
             <SocialLink
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/onticinc/"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
               target="_blank"
@@ -30,12 +30,6 @@ export default function SocialLinks(){
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
               target="_blank"
-            />
-            
-            <SocialLink
-              href="https://twitter.com/zMikeMurray"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
             />
             <SocialLink
               href="https://www.instagram.com/djontic/"

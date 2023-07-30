@@ -142,7 +142,7 @@ export default function Podcast({ data }) {
               return (
                 <li
                   key={id}
-                  className="gap-5 rounded-2xl border  border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"
+                  className="gap-5 rounded-2xl border p-5 dark:border-zinc-700/40  dark:bg-zinc-800"
                 >
                   <h4 className="mt-4 italic text-zinc-700 dark:text-zinc-100">
                     {title}

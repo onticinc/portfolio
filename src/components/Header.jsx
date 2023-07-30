@@ -142,8 +142,8 @@ function NavItem({ href, children }) {
         className={clsx(
           "relative block px-3 py-2 transition",
           isActive
-            ? "text-indigo-500 dark:text-indigo-500"
-            : "hover:text-indigo-300 dark:hover:text-orange-500"
+            ? "text-purple-500 dark:text-indigo-500"
+            : "hover:text-orange-500 dark:hover:text-orange-500"
         )}
       >
         {children}
@@ -196,7 +196,7 @@ function ModeToggle() {
       <button
         type="button"
         aria-label="Toggle dark mode"
-        className="group mr-0 rounded-md bg-neutral-50 px-3 py-2   ring-1 ring-zinc-900/5 backdrop-blur transition  dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20 lg:mr-1"
+        className="group rounded-md bg-neutral-50 px-3 py-2   ring-1 ring-orange-900/10 backdrop-blur transition  dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20 lg:mr-1"
         onClick={toggleMode}
       >
         <SunIcon className="h-8 w-8 animate-pulse fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-orange-600 [@media(prefers-color-scheme:dark)]:stroke-orange-200 [@media(prefers-color-scheme:dark)]:group-hover:fill-orange-500 [@media(prefers-color-scheme:dark)]:group-hover:stroke-orange-300" />
@@ -217,8 +217,8 @@ export function Header() {
         <div ref={headerRef} className="mt-5 h-16 lg:-ml-3">
           <div className="m-4 grid grid-cols-2 gap-4">
             <div className="col-span-1">
-              <MobileNavigation className="pointer-events-auto md:hidden" />
-              <DesktopNavigation className="pointer-events-auto hidden md:block" />
+              <MobileNavigation className="pointer-events-auto hidden" />
+              <DesktopNavigation className="pointer-events-auto" />
             </div>
 
             <div className="pointer-events-auto col-span-1 place-self-end">

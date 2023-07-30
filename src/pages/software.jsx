@@ -19,6 +19,9 @@ import audiostar_03 from "@/images/software/audiostar_03.png";
 import ontic_01 from "@/images/software/ontic_01.png";
 import ontic_02 from "@/images/software/ontic_02.png";
 import ontic_03 from "@/images/software/ontic_03.png";
+import mtn_view_01 from "@/images/software/mtn_view_01.png";
+import mtn_view_02 from "@/images/software/mtn_view_02.png";
+import mtn_view_03 from "@/images/software/mtn_view_03.png";
 
 const projects = [
   
@@ -108,7 +111,7 @@ const projects = [
     name: "DJ Ontic Website",
     description: "Website for DJ Ontic.",
     tech: ["Wordpress", "Custom CSS",],
-    link: { href: "https://github.com/onticinc/drum_machine", label: "github" },
+    link: { href: "https://www.djontic.com", label: "website link" },
     images: [
       {
         src: ontic_01,
@@ -121,6 +124,27 @@ const projects = [
       {
         src: ontic_03,
         alt: "Screenshot of DJ Ontic website",
+      },
+    ],
+  },
+  // Mtn View Lawn Care
+  {
+    name: "Mountain View Lawn Website",
+    description: "Website for Mountain View Lawncare.",
+    tech: ["Wordpress", "Custom CSS",],
+    link: { href: "https://www.mtnviewlawn.com", label: "website link" },
+    images: [
+      {
+        src: mtn_view_01,
+        alt: "Screenshot of Mountain View Lawncare website",
+      },
+      {
+        src: mtn_view_02,
+        alt: "Screenshot of Mountain View Lawncare website",
+      },
+      {
+        src: mtn_view_03,
+        alt: "Screenshot of Mountain View Lawncare website",
       },
     ],
   },
@@ -161,7 +185,7 @@ export default function Projects() {
               as="li"
               key={project.name}
             >
-              <h3 className="font-2xl font-extrabold text-white">
+              <h3 className="font-2xl font-extrabold text-zinc-800 dark:text-white">
                 {project.name}
               </h3>
                

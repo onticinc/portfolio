@@ -79,7 +79,7 @@ export default function Audio({ data }) {
         intro="I have had the opportunity to work with many great bands over the years. Here are a few of my favorites."
       >
         {/* Video Player */}
-        <div className="justify-center border border-zinc-100 p-5 dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9">
+        <div className="justify-center border border-transparent p-5 dark:border-zinc-700/40 lg:-ml-9 lg:mb-5 lg:-mr-9">
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
             <div className="rounded-2xl bg-neutral-50 shadow border border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-2">
               <YoutubeVideoPlayer
@@ -128,7 +128,7 @@ export default function Audio({ data }) {
         </div>
 
         {/* Video Grid */}
-        <div className="justify-center border border-zinc-100 p-5 dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9">
+        <div className="justify-center border border-none p-5 dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9">
           <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {data.items.map((item) => {
               const { id, snippet = {} } = item;
