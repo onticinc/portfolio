@@ -16,6 +16,9 @@ import memory_03 from "@/images/software/memory_03.png";
 import audiostar_01 from "@/images/software/audiostar_01.png";
 import audiostar_02 from "@/images/software/audiostar_02.png";
 import audiostar_03 from "@/images/software/audiostar_03.png";
+import ontic_01 from "@/images/software/ontic_01.png";
+import ontic_02 from "@/images/software/ontic_02.png";
+import ontic_03 from "@/images/software/ontic_03.png";
 
 const projects = [
   
@@ -55,7 +58,7 @@ const projects = [
     name: "Memory Game",
     description:
       "I made this game as a Christmas present for my niece and nephews. Eventually, I would like to redesign it and add more functionality. It would be nice to choose how many pairs of cards you want and add extra players.",
-    tech: ["Font Awesome", "Javascript", "CSS", "HTML"],
+    tech: ["Javascript", "CSS", "HTML", "Font Awesome"],
     link_01: {
       href: "https://onticinc.github.io/card_match_game/",
       label: "Play The Game",
@@ -80,10 +83,10 @@ const projects = [
 
   // Audiostar
   {
-    name: "Audiostar",
-    description: "This is a website that I built for my audio recording business.",
+    name: "Audiostar Website",
+    description: "This is a website that I built for Audiostar.",
     tech: ["Wordpress", "Custom CSS",],
-    link: { href: "www.audiostarinc.com", label: "audiostarinc.com" },
+    link: { href: "www.audiostarinc.com", label: "www.audiostarinc.com" },
     images: [
       {
         src: audiostar_01,
@@ -100,24 +103,24 @@ const projects = [
     ],
   },
   
-  // Audiostar
+  // DJ Ontic
   {
-    name: "Drum Machine",
-    description: "Drum Machine built in python and pygame.",
+    name: "DJ Ontic Website",
+    description: "Website for DJ Ontic.",
     tech: ["Wordpress", "Custom CSS",],
     link: { href: "https://github.com/onticinc/drum_machine", label: "github" },
     images: [
       {
-        src: audiostar_01,
-        alt: "Screenshot of Audiostar Website Template",
+        src: ontic_01,
+        alt: "Screenshot of DJ Ontic website",
       },
       {
-        src: audiostar_02,
-        alt: "Screenshot of Audiostar Website Template",
+        src: ontic_02,
+        alt: "Screenshot of DJ Ontic website",
       },
       {
-        src: audiostar_03,
-        alt: "Screenshot of Audiostar Website Template",
+        src: ontic_03,
+        alt: "Screenshot of DJ Ontic website",
       },
     ],
   },
@@ -143,8 +146,8 @@ export default function Projects() {
         <meta name="description" content="Projects I have worked on..." />
       </Head>
       <SimpleLayout
-        title="Software and Websites I have worked on..."
-        intro="I’ve worked on a bunch of projects over the years but these are some of my favorites. I’ve included a brief description of each project and the technologies I used to build them. I’ve also included a link to the live site and the source code on Github."
+        title="Software and Websites."
+        intro="Here are some projects I have been working on."
       >
 
         <div className="border p-5 -ml-9 -mr-9 border-zinc-100 justify-center  dark:border-zinc-700/40">
@@ -154,7 +157,7 @@ export default function Projects() {
         >
           {projects.map((project) => (
             <Card
-              className="relative gap-2 rounded-2xl border border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"
+              className="relative gap-2 rounded-2xl border bg-neutral-50 shadow-md border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"
               as="li"
               key={project.name}
             >
