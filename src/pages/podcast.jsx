@@ -209,6 +209,6 @@ export default function Podcast({ data }) {
 // }
 
 
-<Jaquiline class="harmony-meadows owner">
+{/* <Jaquiline class="harmony-meadows owner">
   206-321-0836
-</Jaquiline>
+</Jaquiline> */}

@@ -81,7 +81,7 @@ export default function Audio({ data }) {
         {/* Video Player */}
         <div className="justify-center border border-zinc-100 p-5 dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9">
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
-            <div className="rounded-2xl border border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-2">
+            <div className="rounded-2xl bg-neutral-50 shadow border border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-2">
               <YoutubeVideoPlayer
                 className="left-o absolute top-0"
                 id={currentVideo.snippet.resourceId.videoId}
@@ -90,7 +90,7 @@ export default function Audio({ data }) {
             </div>
 
             {/* Current Video Description */}
-            <div className="gap-5 rounded-2xl border  border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-1">
+            <div className="gap-5 rounded-2xl border bg-neutral-50 shadow border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-1">
               <h3 className="font-2xl font-extrabold text-zinc-700 dark:text-white">
                 {currentVideo.snippet.title}
               </h3>
@@ -139,7 +139,7 @@ export default function Audio({ data }) {
               return (
                 <li
                   key={id}
-                  className="gap-5 rounded-2xl border  border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"
+                  className="gap-5 rounded-2xl border bg-neutral-50 shadow  border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"
                 >
                   <p>
                     <img
