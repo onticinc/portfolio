@@ -169,10 +169,6 @@ export default function Projects() {
         <title>Software Projects - Michael Smith</title>
         <meta name="description" content="Projects I have worked on..." />
       </Head>
-      <SimpleLayout
-        title="Software and Websites."
-        intro="Here are some projects I have been working on."
-      >
 
         <div className="border p-5 -ml-9 -mr-9 border-zinc-100 justify-center  dark:border-zinc-700/40">
         <ul
@@ -181,7 +177,7 @@ export default function Projects() {
         >
           {projects.map((project) => (
             <Card
-              className="relative gap-2 rounded-2xl border bg-neutral-50 shadow-md border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"
+              className="relative gap-1 rounded-2xl border bg-neutral-50 shadow-md border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"
               as="li"
               key={project.name}
             >
@@ -225,7 +221,7 @@ export default function Projects() {
           ))}
         </ul>
         </div>
-      </SimpleLayout>
+      
     </>
   );
 }
