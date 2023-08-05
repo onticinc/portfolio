@@ -68,17 +68,14 @@ export default function Podcast({ data }) {
 
   return (
     <>
-      <Head>
-        <title>Eggs The Podcast - Michael Smith</title>
-        <meta
-          name="description"
-          content="I have been able to record many great bands over the years, here are a few of my favorites. "
-        />
-      </Head>
-      <SimpleLayout
-        title="Eggs The Podcast"
-        intro="Co-Host and Business Partner."
-      >
+      <div className="p-12">
+        
+        <div className="flex justify-between items-center bg-zinc-800 p-5 rounded-lg">
+          <h1 className="text-3xl p-10 font-bold text-zinc-700 dark:text-white">
+            Audio and Video Projects
+          </h1>
+        </div>
+        
         {/* Video Player */}
         <div className="mb-10 justify-center border border-zinc-100 p-5 dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9">
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
@@ -162,7 +159,7 @@ export default function Podcast({ data }) {
           </ul>
           <Pagination />
         </div>
-      </SimpleLayout>
+      </div>
     </>
   );
 }

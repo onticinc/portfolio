@@ -168,57 +168,58 @@ export default function Projects() {
         <title>Software Projects - Michael Smith</title>
         <meta name="description" content="Projects I have worked on..." />
       </Head>
+      <div className="p-12 -mt-9 relative">
+        <div className="p-5 -ml-9 -mr-9 justify-center">
+          <ul
+            role="list"
+            className="grid grid-cols-1 gap-x-12 gap-y-16 xl:grid-cols-3"
+          >
+            {projects.map((project) => (
+              <Card
+                className="relative gap-1 rounded-2xl border bg-neutral-50 shadow-md border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"
+                as="li"
+                key={project.name}
+              >
+                <h3 className="font-2xl font-extrabold text-zinc-800 dark:text-white">
+                  {project.name}
+                </h3>
+                
+                    <div className="relative flex overflow-x-scroll overscroll-containmt-10 mr-4 gap-2 rounded-2xl border border-zinc-100 p-4 dark:border-zinc-700/40 dark:bg-zinc-800  dark:hover:bg-zinc-700 ">
+                      
+                        {project.images.map((role, roleIndex) => (
+                          <Image
+                            src={role.src}
+                            alt={role.alt}
+                            width={500}
+                            height={500}
+                            className="w-full rounded-2xl"
+                          />
+                        ))}
+                  
+                    </div>
+                
+            
 
-        <div className="border p-5 -ml-9 -mr-9 border-zinc-100 justify-center  dark:border-zinc-700/40">
-        <ul
-          role="list"
-          className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          {projects.map((project) => (
-            <Card
-              className="relative gap-1 rounded-2xl border bg-neutral-50 shadow-md border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"
-              as="li"
-              key={project.name}
-            >
-              <h3 className="font-2xl font-extrabold text-zinc-800 dark:text-white">
-                {project.name}
-              </h3>
-               
-                  <div className="relative flex overflow-x-scroll overscroll-containmt-10 mr-4 gap-2 rounded-2xl border border-zinc-100 p-4 dark:border-zinc-700/40 dark:bg-zinc-800  dark:hover:bg-zinc-700 ">
-                    
-                      {project.images.map((role, roleIndex) => (
-                        <Image
-                          src={role.src}
-                          alt={role.alt}
-                          width={500}
-                          height={500}
-                          className="w-full rounded-2xl"
-                        />
-                      ))}
-                 
-                  </div>
-               
-           
+                <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                  {/* <Card.Link target="_blank" href={project.link_01.href}>{project.name}</Card.Link> */}
+                </h2>
 
-              <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                {/* <Card.Link target="_blank" href={project.link_01.href}>{project.name}</Card.Link> */}
-              </h2>
+                <Card.Description>{project.description}</Card.Description>
 
-              <Card.Description>{project.description}</Card.Description>
+                <ul className="mt-4 text-gray-400">
+                  {project.tech.map((tech) => (
+                    <li>- {tech}</li>
+                  ))}
+                </ul>
 
-              <ul className="mt-4 text-gray-400">
-                {project.tech.map((tech) => (
-                  <li>- {tech}</li>
-                ))}
-              </ul>
-
-              <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-orange-500 dark:text-zinc-200">
-                <LinkIcon className="h-6 w-6 flex-none" />
-                {/* <span className="ml-2">{project.link_01.label}</span> */}
-              </p>
-            </Card>
-          ))}
-        </ul>
+                <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-orange-500 dark:text-zinc-200">
+                  <LinkIcon className="h-6 w-6 flex-none" />
+                  {/* <span className="ml-2">{project.link_01.label}</span> */}
+                </p>
+              </Card>
+            ))}
+          </ul>
+        </div>
         </div>
       
     </>
