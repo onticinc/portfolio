@@ -12,11 +12,11 @@ export default function Home() {
         <title>Michael Smith - Create, Document, Produce. </title>
         <meta name="portfolio" content="Portfolio of work by Michael Smith." />
       </Head>
-      <div className="mt-10 grid gap-4 p-5 xl:m-0 xl:grid-cols-3 ">
+      <div className="md:mt-10 grid gap-4 p-5 xl:m-0 xl:grid-cols-3 ">
         {/* Left Column */}
 
         {/* Short Intro */}
-        <div id="left" className="m-4 md:col-span-2">
+        <div id="left" className="mx-4 md:col-span-2">
           <ShortIntro />
           <FeaturedProject />
         </div>
@@ -24,7 +24,7 @@ export default function Home() {
         {/* End Left Column */}
 
         {/* Right Column */}
-        <div id="right" className="m-4 md:col-span-2 xl:col-span-1 xl:m-0">
+        <div id="right" className="mx-4 md:col-span-2 xl:col-span-1 xl:m-0">
           <WorkHistory />
           <Education />
         </div>

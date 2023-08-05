@@ -5,7 +5,6 @@ import Link from "next/link";
 import SoftwareTabs from "@/components/SoftwareTabs";
 
 import { Card } from "@/components/Card";
-import { SimpleLayout } from "@/components/SimpleLayout";
 import logoPodcast from "@/images/logos/podcast_template_logo.png";
 import podcast_template_01 from "@/images/software/podcast_template_01.png";
 import podcast_template_02 from "@/images/software/podcast_template_02.png";
