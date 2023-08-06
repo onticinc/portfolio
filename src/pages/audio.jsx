@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Pagination from "@/components/Pagination";
+import { ArrowLeft, ArrowRight } from "heroicons-react";
 
 import YoutubeVideoPlayer from "@/components/youtubePlayer";
 import { useState, useEffect } from "react";
@@ -77,8 +78,8 @@ export default function Audio({ data }) {
 
         <div className="p-8">
 
-        <div className="flex justify-center bg-zinc-800 p-5 rounded-xl">
-          <h1 className="text-3xl p-10 font-bold text-zinc-700 dark:text-white">
+        <div className="bg-zinc-800 p-5 rounded-xl">
+          <h1 className="text-3xl p-5 -ml-3 font-bold text-zinc-700 dark:text-white">
             Audio and Video Projects
           </h1>
         </div>
@@ -92,11 +93,36 @@ export default function Audio({ data }) {
                 id={currentVideo.snippet.resourceId.videoId}
                 playing={playing}
               />
+
+              {/* Previous Next Button */}
+              <div className="mt-5">
+                <nav className="flex items-center grow justify-between px-4 sm:px-0">
+                  <div className="-mt-px flex w-0 flex-1">
+                    <a
+                      href="#"
+                      className="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-purple-500 hover:border-indigo-300 hover:text-orange-500"
+                    >
+                      <ArrowLeft className="mr-3 h-5 w-5 text-purple-500" aria-hidden="true" />
+                      Previous
+                    </a>
+                  </div>
+                  <div className="-mt-px flex w-0 flex-1 justify-end">
+                    <a
+                      href="#"
+                      className="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                    >
+                      Next
+                      <ArrowRight className="ml-3 h-5 w-5 text-purple-500" aria-hidden="true" />
+                      {/* <ArrowLongRightIcon className="ml-3 h-5 w-5 text-gray-400" aria-hidden="true" /> */}
+                    </a>
+                  </div>
+                </nav>
+              </div>
             </div>
 
             {/* Current Video Description */}
             <div className="gap-5 rounded-2xl border bg-neutral-50 shadow border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-1">
-              <h3 className="font-2xl font-extrabold text-zinc-700 dark:text-white">
+              <h3 className="text-2xl font-extrabold text-zinc-700 dark:text-white">
                 {currentVideo.snippet.title}
               </h3>
               <div className="relative">
@@ -107,27 +133,6 @@ export default function Audio({ data }) {
                 </div>
               </div>
 
-              {/* Previous Next Button */}
-              <nav className="flex items-center justify-between px-4 sm:px-0">
-                <div className="-mt-px flex w-0 flex-1">
-                  <a
-                    href="#"
-                    className="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-indigo-500 hover:border-indigo-300 hover:text-orange-500"
-                  >
-                    {/* <ArrowLongLeftIcon className="mr-3 h-5 w-5 text-gray-400" aria-hidden="true" /> */}
-                    Previous
-                  </a>
-                </div>
-                <div className="-mt-px flex w-0 flex-1 justify-end">
-                  <a
-                    href="#"
-                    className="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                  >
-                    Next
-                    {/* <ArrowLongRightIcon className="ml-3 h-5 w-5 text-gray-400" aria-hidden="true" /> */}
-                  </a>
-                </div>
-              </nav>
             </div>
           </div>
         </div>
@@ -148,9 +153,6 @@ export default function Audio({ data }) {
                   key={id}
                   className="gap-5 rounded-2xl p-5 dark:bg-zinc-800"
                 >
-                  <h4 className="mt-4 italic text-zinc-700 dark:text-zinc-100">
-                    {title}
-                  </h4>
                   <p>
                     <img
                       className="mt-5"
@@ -160,6 +162,9 @@ export default function Audio({ data }) {
                       alt=""
                     />
                   </p>
+                  <h4 className="mt-4 italic text-zinc-700 dark:text-zinc-100">
+                    {title}
+                  </h4>
                 </li>
               );
             })}
