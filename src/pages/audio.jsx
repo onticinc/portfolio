@@ -87,7 +87,7 @@ export default function Audio({ data }) {
         {/* Video Player */}
         <div className="mb-10 justify-center mt-5">
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
-            <div className="rounded-2xl bg-neutral-50 shadow border border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-2">
+            <div className="rounded-2xl bg-neutral-50 shadow p-5 dark:bg-zinc-800  sm:col-span-2">
               <YoutubeVideoPlayer
                 className="left-o absolute top-0"
                 id={currentVideo.snippet.resourceId.videoId}
@@ -97,23 +97,22 @@ export default function Audio({ data }) {
               {/* Previous Next Button */}
               <div className="mt-5">
                 <nav className="flex items-center grow justify-between px-4 sm:px-0">
-                  <div className="-mt-px flex w-0 flex-1">
+                  <div className="-mt-px hidden flex w-0 flex-1 text-purple-500 hover:text-orange-500">
                     <a
-                      href="#"
-                      className="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-purple-500 hover:border-indigo-300 hover:text-orange-500"
+                      onClick={handlePreviousVideo}
+                      className="inline-flex items-center pr-1 pt-4 text-sm font-medium text-purple-500 hover:border-indigo-300 hover:text-orange-500"
                     >
-                      <ArrowLeft className="mr-3 h-5 w-5 text-purple-500" aria-hidden="true" />
+                      <ArrowLeft className="mr-3 h-5 w-5" aria-hidden="true" />
                       Previous
                     </a>
                   </div>
-                  <div className="-mt-px flex w-0 flex-1 justify-end">
+                  <div className="-mt-px flex w-0 flex-1 justify-end text-purple-500 hover:text-orange-500">
                     <a
-                      href="#"
-                      className="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                      onClick={handleNextVideo}
+                      className="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium"
                     >
                       Next
-                      <ArrowRight className="ml-3 h-5 w-5 text-purple-500" aria-hidden="true" />
-                      {/* <ArrowLongRightIcon className="ml-3 h-5 w-5 text-gray-400" aria-hidden="true" /> */}
+                      <ArrowRight className="ml-3 h-5 w-5" aria-hidden="true" />
                     </a>
                   </div>
                 </nav>
@@ -132,7 +131,6 @@ export default function Audio({ data }) {
                   </p>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
