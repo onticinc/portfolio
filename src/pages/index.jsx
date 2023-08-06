@@ -12,7 +12,7 @@ export default function Home() {
         <title>Michael Smith - Create, Document, Produce. </title>
         <meta name="portfolio" content="Portfolio of work by Michael Smith." />
       </Head>
-      <div className="md:mt-10 grid gap-4 p-5 xl:m-0 xl:grid-cols-3 ">
+      <div className="mt-10 grid gap-4 p-5 xl:m-0 xl:grid-cols-3 ">
         {/* Left Column */}
 
         {/* Short Intro */}

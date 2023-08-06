@@ -1,7 +1,5 @@
 import Head from "next/head";
-import { SimpleLayout } from "@/components/SimpleLayout";
-import { Card } from "@/components/Card";
-import Image from "next/image";
+import Pagination from "@/components/Pagination";
 
 import YoutubeVideoPlayer from "@/components/youtubePlayer";
 import { useState, useEffect } from "react";
@@ -77,16 +75,16 @@ export default function Audio({ data }) {
   
         {/* Header */}
 
-        <div className="p-12">
+        <div className="p-8">
 
-        <div className="flex justify-between items-center bg-zinc-800 p-5 rounded-lg">
+        <div className="flex justify-center bg-zinc-800 p-5 rounded-xl">
           <h1 className="text-3xl p-10 font-bold text-zinc-700 dark:text-white">
             Audio and Video Projects
           </h1>
         </div>
 
         {/* Video Player */}
-        <div className="justify-center border border-transparent p-8 dark:border-zinc-700/40 lg:-ml-9 lg:mb-5 lg:-mr-9">
+        <div className="mb-10 justify-center mt-5">
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
             <div className="rounded-2xl bg-neutral-50 shadow border border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-2">
               <YoutubeVideoPlayer
@@ -134,20 +132,25 @@ export default function Audio({ data }) {
           </div>
         </div>
 
-        {/* Video Grid */}
-        <div className="justify-center border border-none p-5 dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9">
-          <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Video List */}
+        <div className="justify-center mb-5">
+          {/* Card */}
+          <ul className="mb-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {data.items.map((item) => {
+              // console.log('item', item);
+
               const { id, snippet = {} } = item;
-              console.log(item);
               const { title, thumbnails = {} } = snippet;
               const { maxres = {} } = thumbnails;
 
               return (
                 <li
                   key={id}
-                  className="gap-5 rounded-2xl border bg-neutral-50 shadow  border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"
+                  className="gap-5 rounded-2xl p-5 dark:bg-zinc-800"
                 >
+                  <h4 className="mt-4 italic text-zinc-700 dark:text-zinc-100">
+                    {title}
+                  </h4>
                   <p>
                     <img
                       className="mt-5"
@@ -157,13 +160,11 @@ export default function Audio({ data }) {
                       alt=""
                     />
                   </p>
-                  <h3 className="font-2xl mt-5 font-extrabold text-zinc-700 dark:text-white">
-                    {title}
-                  </h3>
                 </li>
               );
             })}
           </ul>
+          <Pagination />
         </div>
       </div>
       

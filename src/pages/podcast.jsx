@@ -68,18 +68,18 @@ export default function Podcast({ data }) {
 
   return (
     <>
-      <div className="p-12">
-        
-        <div className="flex justify-between items-center bg-zinc-800 p-5 rounded-lg">
+      <div className="p-8">
+           {/* Header  */}
+        <div className="flex justify-center bg-zinc-800 p-5 rounded-xl">
           <h1 className="text-3xl p-10 font-bold text-zinc-700 dark:text-white">
-            Audio and Video Projects
+            Podcast Interviews
           </h1>
         </div>
         
         {/* Video Player */}
-        <div className="mb-10 justify-center border border-zinc-100 p-5 dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9">
+        <div className="mb-10 justify-center mt-5">
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
-            <div className="rounded-2xl border border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-2">
+            <div className="rounded-2xl p-5 dark:bg-zinc-800 sm:col-span-2">
               <YoutubeVideoPlayer
                 className="left-o absolute top-0"
                 id={currentVideo.snippet.resourceId.videoId}
@@ -88,7 +88,7 @@ export default function Podcast({ data }) {
             </div>
 
             {/* Current Video Description */}
-            <div className="gap-5 rounded-2xl border border-zinc-100  p-5 dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-1">
+            <div className="gap-5 rounded-2xl p-5 dark:bg-zinc-800  sm:col-span-1">
               <h3 className="font-2xl mb-2 font-extrabold text-zinc-700 dark:text-white">
                 {currentVideo.snippet.title}
               </h3>
@@ -126,7 +126,7 @@ export default function Podcast({ data }) {
         </div>
 
         {/* Main Div */}
-        <div className="justify-center border border-zinc-100 p-5  dark:border-zinc-700/40 lg:-ml-9 lg:mb-10 lg:-mr-9">
+        <div className="justify-center mb-5">
           {/* Card */}
           <ul className="mb-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {data.items.map((item) => {
@@ -139,7 +139,7 @@ export default function Podcast({ data }) {
               return (
                 <li
                   key={id}
-                  className="gap-5 rounded-2xl border p-5 dark:border-zinc-700/40  dark:bg-zinc-800"
+                  className="gap-5 rounded-2xl p-5 dark:bg-zinc-800"
                 >
                   <h4 className="mt-4 italic text-zinc-700 dark:text-zinc-100">
                     {title}
