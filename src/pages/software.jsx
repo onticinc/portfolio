@@ -1,7 +1,9 @@
+import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
+import Toggle from "@/components/ToggleButton";
 import logoPodcast from "@/images/logos/podcast_template_logo.png";
 import podcast_template_01 from "@/images/software/podcast_template_01.png";
 import podcast_template_02 from "@/images/software/podcast_template_02.png";
@@ -19,15 +21,13 @@ import mtn_view_01 from "@/images/software/mtn_view_01.png";
 import mtn_view_02 from "@/images/software/mtn_view_02.png";
 import mtn_view_03 from "@/images/software/mtn_view_03.png";
 
-
-
 const projects = [
-
   // Website Template
   {
+    id: "1",
     name: "Eggs The Podcast Website",
     description:
-      'In order to simplify our publishing process I rebuilt our website to pull content from the YouTube API. Now the website updates automatically when we publish.',
+      "In order to simplify our publishing process I rebuilt our website to pull content from the YouTube API. Now the website updates automatically when we publish.",
     tech: ["NextJS13", "Javascript", "Tailwind CSS", "", "PostgreSQL"],
     link_01: {
       href: "http://www.eggscast.com",
@@ -56,6 +56,7 @@ const projects = [
 
   // Memory Game
   {
+    id: "2",
     name: "Memory Game",
     description:
       "I made this game as a Christmas present for my niece and nephews. Eventually, I would like to redesign it and add more functionality. It would be nice to choose how many pairs of cards you want and add extra players.",
@@ -84,6 +85,7 @@ const projects = [
 
   // Audiostar
   {
+    id: "3",
     name: "Audiostar Website",
     description: "This is a website that I built for Audiostar.",
     tech: ["Wordpress", "Custom CSS"],
@@ -106,6 +108,7 @@ const projects = [
 
   // DJ Ontic
   {
+    id: "4",
     name: "DJ Ontic Website",
     description: "Website for DJ Ontic.",
     tech: ["Wordpress", "Custom CSS"],
@@ -128,6 +131,7 @@ const projects = [
 
   // Mtn View Lawn Care
   {
+    id: "5",
     name: "Mountain View Lawn Website",
     description: "Website for Mountain View Lawncare.",
     tech: ["Wordpress", "Custom CSS"],
@@ -149,6 +153,7 @@ const projects = [
   },
   // Website Template
   {
+    id: "6",
     name: "Podcast Website Template",
     description:
       'This project is built with Django and it has a fully functioning blog with auth and password reset on your profile. It has email verification on signup and it will also compress the uploaded profile picture and scale it to the correct size. The show list populates from the rss feed for the podcast, which eliminates the need to update the website everytime a new show is published. I used the "Eggs Podcast" to demonstrate functionality and I worked on this with Patrick Brennan. ',
@@ -177,23 +182,19 @@ const projects = [
       },
     ],
   },
-
-
-
 ];
 
 function LinkIcon(props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path
-        d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z"
-        fill="currentColor"
-      />
+      {/* ... your SVG path ... */}
     </svg>
   );
 }
 
 export default function Projects() {
+  const [showProjectDetails, setShowProjectDetails] = useState({});
+
   return (
     <>
       <Head>
@@ -213,7 +214,7 @@ export default function Projects() {
                   {project.name}
                 </h3>
 
-                <div className="overscroll-containmt-10 relative mr-4 flex gap-2 overflow-x-scroll rounded-2xl border border-zinc-100 p-4 dark:border-zinc-700/40 dark:bg-zinc-800  dark:hover:bg-zinc-700 ">
+                <div className="relative mt-10 mr-4 flex gap-2 overflow-x-scroll overscroll-contain rounded-2xl border border-zinc-100 p-4 dark:border-zinc-700/40 dark:bg-zinc-800  dark:hover:bg-zinc-700 ">
                   {project.images.map((role, roleIndex) => (
                     <Image
                       src={role.src}
@@ -221,25 +222,38 @@ export default function Projects() {
                       width={500}
                       height={500}
                       className="w-full rounded-2xl"
+                      key={role.src}
                     />
                   ))}
                 </div>
 
-                <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                  <Link target="_blank" passHref={true} href={project.link_01.href}>{project.name}</Link>
-                </h2>
+                {/* Use the Toggle component to toggle project details */}
+                <div
+                  className={showProjectDetails[project.id] ? "" : "hidden"}
+                  id="showHide"
+                >
+                  <div>{project.description}</div>
 
-                <div>{project.description}</div>
+                  <ul className="mt-4 text-gray-400">
+                    {project.tech.map((tech) => (
+                      <li key={tech}>-{tech}</li>
+                    ))}
+                  </ul>
+                </div>
 
-                <ul className="mt-4 text-gray-400">
-                  {project.tech.map((tech) => (
-                    <li>-{tech}</li>
-                  ))}
-                </ul>
-
-                <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-orange-500 dark:text-zinc-200">
-                  <LinkIcon className="h-6 w-6 flex-none" />
-                </p>
+                {/* Use the Toggle component to toggle project details */}
+                <div className="justify-end p-5 font-semibold text-zinc-800 dark:text-zinc-100">
+                  <h1 className="mb-3">Show More:</h1>
+                  <Toggle
+                    enabled={showProjectDetails[project.id]} // Pass the enabled prop
+                    setEnabled={(enabled) =>
+                      setShowProjectDetails({
+                        ...showProjectDetails,
+                        [project.id]: enabled,
+                      })
+                    }
+                  />
+                </div>
               </div>
             ))}
           </ul>
