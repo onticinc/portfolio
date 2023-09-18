@@ -170,7 +170,6 @@ export default function Audio({ data }) {
           <Pagination />
         </div>
       </div>
-      
     </>
   );
 }

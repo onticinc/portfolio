@@ -23,12 +23,11 @@ import mtn_view_02 from "@/images/software/mtn_view_02.png";
 import mtn_view_03 from "@/images/software/mtn_view_03.png";
 
 const projects = [
-  
-
   // Website Template
   {
     name: "Podcast Website Template",
-    description: 'This project is built with Django and it has a fully functioning blog with auth and password reset on your profile. It has email verification on signup and it will also compress the uploaded profile picture and scale it to the correct size. The show list populates from the rss feed for the podcast, which eliminates the need to update the website everytime a new show is published. I used the "Eggs Podcast" to demonstrate functionality and I worked on this with Patrick Brennan. ',
+    description:
+      'This project is built with Django and it has a fully functioning blog with auth and password reset on your profile. It has email verification on signup and it will also compress the uploaded profile picture and scale it to the correct size. The show list populates from the rss feed for the podcast, which eliminates the need to update the website everytime a new show is published. I used the "Eggs Podcast" to demonstrate functionality and I worked on this with Patrick Brennan. ',
     tech: ["Django", "Linode", "Python", "Bootstrap", "PostgreSQL"],
     link_01: {
       href: "https://github.com/onticinc/podcast_template",
@@ -87,7 +86,7 @@ const projects = [
   {
     name: "Audiostar Website",
     description: "This is a website that I built for Audiostar.",
-    tech: ["Wordpress", "Custom CSS",],
+    tech: ["Wordpress", "Custom CSS"],
     link: { href: "www.audiostarinc.com", label: "www.audiostarinc.com" },
     images: [
       {
@@ -104,12 +103,12 @@ const projects = [
       },
     ],
   },
-  
+
   // DJ Ontic
   {
     name: "DJ Ontic Website",
     description: "Website for DJ Ontic.",
-    tech: ["Wordpress", "Custom CSS",],
+    tech: ["Wordpress", "Custom CSS"],
     link: { href: "https://www.djontic.com", label: "website link" },
     images: [
       {
@@ -130,7 +129,7 @@ const projects = [
   {
     name: "Mountain View Lawn Website",
     description: "Website for Mountain View Lawncare.",
-    tech: ["Wordpress", "Custom CSS",],
+    tech: ["Wordpress", "Custom CSS"],
     link: { href: "https://www.mtnviewlawn.com", label: "website link" },
     images: [
       {
@@ -147,7 +146,6 @@ const projects = [
       },
     ],
   },
-
 ];
 
 function LinkIcon(props) {
@@ -168,37 +166,30 @@ export default function Projects() {
         <title>Software Projects - Michael Smith</title>
         <meta name="description" content="Projects I have worked on..." />
       </Head>
-      <div className="p-12 -mt-9 relative">
-        <div className="p-5 -ml-9 -mr-9 justify-center">
-          <ul
-            role="list"
-            className="grid grid-cols-1 gap-5 xl:grid-cols-3"
-          >
+      <div className="relative -mt-9 p-12">
+        <div className="-ml-9 -mr-9 justify-center p-5">
+          <ul role="list" className="grid grid-cols-1 gap-5 xl:grid-cols-3">
             {projects.map((project) => (
               <Card
-                className="relative gap-1 rounded-2xl border bg-neutral-50 shadow-md border-zinc-100 p-5 dark:border-zinc-700/40  dark:bg-zinc-800"
+                className="relative gap-1 rounded-2xl border border-zinc-100 bg-neutral-50 p-5 shadow-md dark:border-zinc-700/40  dark:bg-zinc-800"
                 as="li"
                 key={project.name}
               >
                 <h3 className="font-2xl font-extrabold text-zinc-800 dark:text-white">
                   {project.name}
                 </h3>
-                
-                    <div className="relative flex overflow-x-scroll overscroll-containmt-10 mr-4 gap-2 rounded-2xl border border-zinc-100 p-4 dark:border-zinc-700/40 dark:bg-zinc-800  dark:hover:bg-zinc-700 ">
-                      
-                        {project.images.map((role, roleIndex) => (
-                          <Image
-                            src={role.src}
-                            alt={role.alt}
-                            width={500}
-                            height={500}
-                            className="w-full rounded-2xl"
-                          />
-                        ))}
-                  
-                    </div>
-                
-            
+
+                <div className="overscroll-containmt-10 relative mr-4 flex gap-2 overflow-x-scroll rounded-2xl border border-zinc-100 p-4 dark:border-zinc-700/40 dark:bg-zinc-800  dark:hover:bg-zinc-700 ">
+                  {project.images.map((role, roleIndex) => (
+                    <Image
+                      src={role.src}
+                      alt={role.alt}
+                      width={500}
+                      height={500}
+                      className="w-full rounded-2xl"
+                    />
+                  ))}
+                </div>
 
                 <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
                   {/* <Card.Link target="_blank" href={project.link_01.href}>{project.name}</Card.Link> */}
@@ -220,8 +211,7 @@ export default function Projects() {
             ))}
           </ul>
         </div>
-        </div>
-      
+      </div>
     </>
   );
 }

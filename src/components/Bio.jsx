@@ -11,7 +11,7 @@ export default function BioCard(){
             </p>
             <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
               <span className="font-bold">Software:</span> Focused on MERN | JAM stack with Next JS 13,
-              TypeScript, and python when needed. 
+              TypeScript, and Python when needed. 
             </p>
             <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
               <span className="font-bold">Audio:</span> Protools, Ableton, Creative Cloud and Logic Pro.  
