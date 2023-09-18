@@ -215,7 +215,7 @@ export default function Projects() {
                 </h3>
 
                 {/* Use the Toggle component to toggle project details */}
-                <div className="flex justify-end">
+                <div className="flex justify-end -mt-5 font-semibold text-zinc-800 dark:text-zinc-100">
                   <Toggle
                     enabled={showProjectDetails[project.id]}
                     setEnabled={(enabled) =>
@@ -227,7 +227,7 @@ export default function Projects() {
                   />
                 </div>
 
-                <div className="relative mt-10 mr-4 flex gap-2 overflow-x-scroll overscroll-contain rounded-2xl border border-zinc-100 p-4 dark:border-zinc-700/40 dark:bg-zinc-800  dark:hover:bg-zinc-700 ">
+                <div className="relative mt-3 flex gap-2 overflow-x-scroll overscroll-contain rounded-2xl border border-zinc-100 p-4 dark:border-zinc-700/40 dark:bg-zinc-800  dark:hover:bg-zinc-700 ">
                   {project.images.map((role, roleIndex) => (
                     <Image
                       src={role.src}
