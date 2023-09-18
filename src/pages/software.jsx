@@ -1,10 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import { ImageLoader } from "next/image";
-import Link from "next/link";
-import SoftwareTabs from "@/components/SoftwareTabs";
 
-import { Card } from "@/components/Card";
 import logoPodcast from "@/images/logos/podcast_template_logo.png";
 import podcast_template_01 from "@/images/software/podcast_template_01.png";
 import podcast_template_02 from "@/images/software/podcast_template_02.png";
@@ -23,12 +19,13 @@ import mtn_view_02 from "@/images/software/mtn_view_02.png";
 import mtn_view_03 from "@/images/software/mtn_view_03.png";
 
 const projects = [
+
   // Website Template
   {
-    name: "Podcast Website Template",
+    name: "Eggs The Podcast Website",
     description:
-      'This project is built with Django and it has a fully functioning blog with auth and password reset on your profile. It has email verification on signup and it will also compress the uploaded profile picture and scale it to the correct size. The show list populates from the rss feed for the podcast, which eliminates the need to update the website everytime a new show is published. I used the "Eggs Podcast" to demonstrate functionality and I worked on this with Patrick Brennan. ',
-    tech: ["Django", "Linode", "Python", "Bootstrap", "PostgreSQL"],
+      'In order to simplify our publishing process I rebuilt our website to pull content from the YouTube API. Now the website updates automatically when we publish.',
+    tech: ["NextJS13", "Javascript", "Tailwind CSS", "", "PostgreSQL"],
     link_01: {
       href: "https://github.com/onticinc/podcast_template",
       label: "github",
@@ -125,6 +122,7 @@ const projects = [
       },
     ],
   },
+
   // Mtn View Lawn Care
   {
     name: "Mountain View Lawn Website",
@@ -146,6 +144,39 @@ const projects = [
       },
     ],
   },
+  // Website Template
+  {
+    name: "Podcast Website Template",
+    description:
+      'This project is built with Django and it has a fully functioning blog with auth and password reset on your profile. It has email verification on signup and it will also compress the uploaded profile picture and scale it to the correct size. The show list populates from the rss feed for the podcast, which eliminates the need to update the website everytime a new show is published. I used the "Eggs Podcast" to demonstrate functionality and I worked on this with Patrick Brennan. ',
+    tech: ["Django", "Linode", "Python", "Bootstrap", "PostgreSQL"],
+    link_01: {
+      href: "https://github.com/onticinc/podcast_template",
+      label: "github",
+    },
+    link_02: {
+      href: "https://github.com/onticinc/podcast_template",
+      label: "github",
+    },
+    logo: logoPodcast,
+    images: [
+      {
+        src: podcast_template_01,
+        alt: "Screenshot of Podcast Website Template",
+      },
+      {
+        src: podcast_template_02,
+        alt: "Screenshot of Podcast Website Template",
+      },
+      {
+        src: podcast_template_03,
+        alt: "Screenshot of Podcast Website Template",
+      },
+    ],
+  },
+
+
+
 ];
 
 function LinkIcon(props) {
@@ -170,7 +201,7 @@ export default function Projects() {
         <div className="-ml-9 -mr-9 justify-center p-5">
           <ul role="list" className="grid grid-cols-1 gap-5 xl:grid-cols-3">
             {projects.map((project) => (
-              <Card
+              <div
                 className="relative gap-1 rounded-2xl border border-zinc-100 bg-neutral-50 p-5 shadow-md dark:border-zinc-700/40  dark:bg-zinc-800"
                 as="li"
                 key={project.name}
@@ -195,19 +226,19 @@ export default function Projects() {
                   {/* <Card.Link target="_blank" href={project.link_01.href}>{project.name}</Card.Link> */}
                 </h2>
 
-                <Card.Description>{project.description}</Card.Description>
+                <div>{project.description}</div>
 
                 <ul className="mt-4 text-gray-400">
                   {project.tech.map((tech) => (
-                    <li>- {tech}</li>
+                    <li>-{tech}</li>
                   ))}
                 </ul>
 
                 <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-orange-500 dark:text-zinc-200">
                   <LinkIcon className="h-6 w-6 flex-none" />
-                  {/* <span className="ml-2">{project.link_01.label}</span> */}
+                  <span className="ml-2">{project.link_01.label}</span>
                 </p>
-              </Card>
+              </div>
             ))}
           </ul>
         </div>
