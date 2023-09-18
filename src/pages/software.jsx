@@ -201,18 +201,31 @@ export default function Projects() {
         <title>Software Projects - Michael Smith</title>
         <meta name="description" content="Projects I have worked on..." />
       </Head>
-      <div className="relative -mt-9 p-12">
-        <div className="-ml-9 -mr-9 justify-center p-5">
+      <div className="relative">
+        <div className="justify-center p-8">
           <ul role="list" className="grid grid-cols-1 gap-5 xl:grid-cols-3">
             {projects.map((project) => (
               <div
-                className="relative gap-1 rounded-2xl border border-zinc-100 bg-neutral-50 p-5 shadow-md dark:border-zinc-700/40  dark:bg-zinc-800"
+                className="gap-1 rounded-2xl bg-neutral-50 p-5  dark:bg-zinc-800"
                 as="li"
                 key={project.name}
               >
                 <h3 className="font-2xl font-extrabold text-zinc-800 dark:text-white">
                   {project.name}
                 </h3>
+
+                {/* Use the Toggle component to toggle project details */}
+                <div className="flex justify-end">
+                  <Toggle
+                    enabled={showProjectDetails[project.id]}
+                    setEnabled={(enabled) =>
+                      setShowProjectDetails({
+                        ...showProjectDetails,
+                        [project.id]: enabled,
+                      })
+                    }
+                  />
+                </div>
 
                 <div className="relative mt-10 mr-4 flex gap-2 overflow-x-scroll overscroll-contain rounded-2xl border border-zinc-100 p-4 dark:border-zinc-700/40 dark:bg-zinc-800  dark:hover:bg-zinc-700 ">
                   {project.images.map((role, roleIndex) => (
@@ -241,19 +254,7 @@ export default function Projects() {
                   </ul>
                 </div>
 
-                {/* Use the Toggle component to toggle project details */}
-                <div className="justify-end p-5 font-semibold text-zinc-800 dark:text-zinc-100">
-                  <h1 className="mb-3">Show More:</h1>
-                  <Toggle
-                    enabled={showProjectDetails[project.id]} // Pass the enabled prop
-                    setEnabled={(enabled) =>
-                      setShowProjectDetails({
-                        ...showProjectDetails,
-                        [project.id]: enabled,
-                      })
-                    }
-                  />
-                </div>
+                
               </div>
             ))}
           </ul>
