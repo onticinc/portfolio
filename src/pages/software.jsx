@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 import logoPodcast from "@/images/logos/podcast_template_logo.png";
 import podcast_template_01 from "@/images/software/podcast_template_01.png";
@@ -18,6 +19,8 @@ import mtn_view_01 from "@/images/software/mtn_view_01.png";
 import mtn_view_02 from "@/images/software/mtn_view_02.png";
 import mtn_view_03 from "@/images/software/mtn_view_03.png";
 
+
+
 const projects = [
 
   // Website Template
@@ -27,7 +30,7 @@ const projects = [
       'In order to simplify our publishing process I rebuilt our website to pull content from the YouTube API. Now the website updates automatically when we publish.',
     tech: ["NextJS13", "Javascript", "Tailwind CSS", "", "PostgreSQL"],
     link_01: {
-      href: "https://github.com/onticinc/podcast_template",
+      href: "http://www.eggscast.com",
       label: "github",
     },
     link_02: {
@@ -61,7 +64,7 @@ const projects = [
       href: "https://onticinc.github.io/card_match_game/",
       label: "Play The Game",
     },
-    link_02: { href: "#", label: "github.com" },
+    link_02: { href: "", label: "github.com" },
     logo: memory_01,
     images: [
       {
@@ -84,7 +87,7 @@ const projects = [
     name: "Audiostar Website",
     description: "This is a website that I built for Audiostar.",
     tech: ["Wordpress", "Custom CSS"],
-    link: { href: "www.audiostarinc.com", label: "www.audiostarinc.com" },
+    link_01: { href: "www.audiostarinc.com", label: "www.audiostarinc.com" },
     images: [
       {
         src: audiostar_01,
@@ -106,7 +109,7 @@ const projects = [
     name: "DJ Ontic Website",
     description: "Website for DJ Ontic.",
     tech: ["Wordpress", "Custom CSS"],
-    link: { href: "https://www.djontic.com", label: "website link" },
+    link_01: { href: "https://www.djontic.com", label: "website link" },
     images: [
       {
         src: ontic_01,
@@ -128,7 +131,7 @@ const projects = [
     name: "Mountain View Lawn Website",
     description: "Website for Mountain View Lawncare.",
     tech: ["Wordpress", "Custom CSS"],
-    link: { href: "https://www.mtnviewlawn.com", label: "website link" },
+    link_01: { href: "https://www.mtnviewlawn.com", label: "website link" },
     images: [
       {
         src: mtn_view_01,
@@ -223,7 +226,7 @@ export default function Projects() {
                 </div>
 
                 <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                  {/* <Card.Link target="_blank" href={project.link_01.href}>{project.name}</Card.Link> */}
+                  <Link target="_blank" passHref={true} href={project.link_01.href}>{project.name}</Link>
                 </h2>
 
                 <div>{project.description}</div>
@@ -236,7 +239,6 @@ export default function Projects() {
 
                 <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-orange-500 dark:text-zinc-200">
                   <LinkIcon className="h-6 w-6 flex-none" />
-                  <span className="ml-2">{project.link_01.label}</span>
                 </p>
               </div>
             ))}
