@@ -19,7 +19,7 @@ export default function Toggle(props) {
         onChange={toggleEnabled} // Use the local toggleEnabled function
         className={classNames(
           enabled ? "bg-orange-500" : "bg-purple-500 dark:bg-zinc-500",
-          "relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+          "relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out"
         )}
       >
         <span className="sr-only">Use setting</span>
@@ -38,6 +38,7 @@ export default function Toggle(props) {
             )}
             aria-hidden="true"
           >
+            {/* X Mark */}
             <svg
               className="h-3 w-3 text-zinc-200"
               fill="none"
@@ -61,8 +62,9 @@ export default function Toggle(props) {
             )}
             aria-hidden="true"
           >
+            {/* Check Mark SVG */}
             <svg
-              className="h-3 w-3 text-indigo-600"
+              className="h-3 w-3 text-zinc-100"
               fill="currentColor"
               viewBox="0 0 12 12"
             >
