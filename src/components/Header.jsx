@@ -142,13 +142,13 @@ function NavItem({ href, children }) {
         className={clsx(
           "relative block px-3 py-2 transition",
           isActive
-            ? "text-indigo-500 dark:text-indigo-500"
+            ? "text-purple-500 dark:text-orange-500"
             : "hover:text-orange-500 dark:hover:text-orange-500"
         )}
       >
         {children}
         {isActive && (
-          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-orange-500/0 via-orange-500/40 to-orange-500/0 dark:from-orange-400/0 dark:via-indigo-500 dark:to-indigo-400/0" />
+          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-orange-500/0 via-orange-500/40 to-orange-500/0 dark:from-orange-400/0 dark:via-orange-500 dark:to-indigo-400/0" />
         )}
       </Link>
     </li>
@@ -164,6 +164,7 @@ function DesktopNavigation(props) {
         <NavItem href="/software">Software</NavItem>
         <NavItem href="/audio">Audio</NavItem>
         <NavItem href="/podcast">Podcast</NavItem>
+        <NavItem href="/landscaping">Landscaping</NavItem>
       </ul>
     </nav>
   );

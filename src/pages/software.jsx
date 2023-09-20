@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 
 import Toggle from "@/components/ToggleButton";
 import logoPodcast from "@/images/logos/podcast_template_logo.png";
@@ -28,7 +27,7 @@ const projects = [
     name: "Eggs The Podcast Website",
     description:
       "In order to simplify our publishing process I rebuilt our website to pull content from the YouTube API. Now the website updates automatically when we publish.",
-    tech: ["NextJS13", "Javascript", "Tailwind CSS", "", "PostgreSQL"],
+    tech: ["NextJS13", "Javascript", "TypeScript", "Tailwind CSS", "YouTube API", "SimpleCast API"],
     link_01: {
       href: "http://www.eggscast.com",
       label: "github",
@@ -216,6 +215,7 @@ export default function Projects() {
 
                 {/* Use the Toggle component to toggle project details */}
                 <div className="flex justify-end -mt-5 font-semibold text-zinc-800 dark:text-zinc-100">
+                  <p className="text-gray-400 pr-2">Details</p>
                   <Toggle
                     enabled={showProjectDetails[project.id]}
                     setEnabled={(enabled) =>
@@ -245,7 +245,7 @@ export default function Projects() {
                   className={showProjectDetails[project.id] ? "" : "hidden"}
                   id="showHide"
                 >
-                  <div>{project.description}</div>
+                  <div className="mt-4 text-gray-400">{project.description}</div>
 
                   <ul className="mt-4 text-gray-400">
                     {project.tech.map((tech) => (

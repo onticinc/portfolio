@@ -50,7 +50,7 @@ export default function WorkHistory() {
       title: 'Host | Producer | Co-Owner',
       logo: logoEggs,
       link: 'https://www.eggscast.com/',
-      start: '2022',
+      start: '2018',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear(),
