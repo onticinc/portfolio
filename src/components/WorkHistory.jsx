@@ -6,6 +6,7 @@ import logoZ103 from '@/images/logos/z103.png'
 import logoEggs from '@/images/logos/eggsLogo.jpeg'
 import logoOntic from '@/images/logos/ontic_logo.jpg'
 import logoAudiostar from '@/images/logos/audiostar.png'
+import wspLogo from '@/images/logos/wsp_logo.jpeg'
 
 function BriefcaseIcon(props) {
   return (
@@ -85,6 +86,17 @@ export default function WorkHistory() {
       link: 'https://www.z103.fm',
       start: '2022',
       end: '2023',
+    },
+    {
+      company: 'Washington State Parks',
+      title: 'Chelan State Park | Park Aide',
+      logo: wspLogo,
+      link: 'https://www.parks.wa.gov/',
+      start: '2023',
+      end: {
+        label: 'Seasonal',
+        dateTime: new Date().getFullYear(),
+      },
     },
     
   ]

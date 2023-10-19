@@ -3,6 +3,8 @@ import Link from 'next/link'
 
 import logoShoreline from '@/images/logos/shoreline_logo.png'
 import logoGa from '@/images/logos/GaLogo.jpeg'
+import logoIsu from '@/images/logos/isu_logo.jpeg'
+import logoTcc from '@/images/logos/tcc_logo.jpeg'
 function CapIcon(props) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -39,6 +41,22 @@ export default function Education() {
       link: 'https://www.shoreline.edu/programs/music-technology/digital-audio-engineering-aaas.aspx',
       start: '2016',
       end: '2018',
+    },
+    {
+      company: 'Idaho State University',
+      title: 'Generals',
+      logo: logoIsu,
+      link: 'https://www.isu.edu/',
+      start: '2003',
+      end: '2004',
+    },
+    {
+      company: 'Tacoma Community College',
+      title: 'Business Management',
+      logo: logoTcc,
+      link: 'https://www.tacomacc.edu/',
+      start: '1998',
+      end: '2000',
     },
   ]
 
