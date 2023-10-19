@@ -44,7 +44,7 @@ export default function Education() {
     },
     {
       company: 'Idaho State University',
-      title: 'Generals',
+      title: 'General Studies',
       logo: logoIsu,
       link: 'https://www.isu.edu/',
       start: '2003',

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 
+import Link from "next/link";
+
 import Toggle from "@/components/ToggleButton";
 import logoPodcast from "@/images/logos/podcast_template_logo.png";
 import podcast_template_01 from "@/images/software/podcast_template_01.png";
@@ -32,10 +34,7 @@ const projects = [
       href: "http://www.eggscast.com",
       label: "github",
     },
-    link_02: {
-      href: "https://github.com/onticinc/podcast_template",
-      label: "github",
-    },
+    
     logo: logoPodcast,
     images: [
       {
@@ -64,7 +63,7 @@ const projects = [
       href: "https://onticinc.github.io/card_match_game/",
       label: "Play The Game",
     },
-    link_02: { href: "", label: "github.com" },
+  
     logo: memory_01,
     images: [
       {
@@ -161,10 +160,7 @@ const projects = [
       href: "https://github.com/onticinc/podcast_template",
       label: "github",
     },
-    link_02: {
-      href: "https://github.com/onticinc/podcast_template",
-      label: "github",
-    },
+   
     logo: logoPodcast,
     images: [
       {
@@ -209,9 +205,11 @@ export default function Projects() {
                 as="li"
                 key={project.name}
               >
-                <h3 className="font-2xl font-extrabold text-zinc-800 dark:text-white">
-                  {project.name}
-                </h3>
+                <Link href={project.link_01.href} target="_blank">
+                  <h3 className="font-2xl font-extrabold text-zinc-800 dark:text-white">
+                    {project.name}
+                  </h3>
+                </Link>
 
                 {/* Use the Toggle component to toggle project details */}
                 <div className="flex justify-end -mt-5 font-semibold text-zinc-800 dark:text-zinc-100">
@@ -229,14 +227,15 @@ export default function Projects() {
 
                 <div className="relative mt-3 flex gap-2 overflow-x-scroll overscroll-contain rounded-2xl border border-zinc-100 p-4 dark:border-zinc-700/40 dark:bg-zinc-800  dark:hover:bg-zinc-700 ">
                   {project.images.map((role, roleIndex) => (
-                    <Image
-                      src={role.src}
-                      alt={role.alt}
-                      width={500}
-                      height={500}
-                      className="w-full rounded-2xl"
-                      key={role.src}
-                    />
+                      <Image
+                        src={role.src}
+                        alt={role.alt}
+                        width={500}
+                        height={500}
+                        className="w-full rounded-2xl"
+                        key={role.src}
+                      />
+                
                   ))}
                 </div>
 
