@@ -8,7 +8,7 @@ import { ArrowLeft, ArrowRight } from "heroicons-react";
 
 // Youtube API
 const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems";
-const EGGS_PODCAST_ID = "UULFz53WsQ9KmEJb5yKeMTsmGg";
+const EGGS_PODCAST_ID = "PLkk4WlaE-9QQiq_8gcwjuY87ZW_-QKqUj";
 
 export async function getStaticProps() {
   const res = await fetch(
@@ -77,7 +77,7 @@ export default function Podcast({ data }) {
         />
       </Head>
       <div className="p-8">  
-      <div className="p-5  rounded-2xl bg-neutral-50 shadow  dark:bg-zinc-800">
+      <div className="p-5 rounded-2xl bg-neutral-50 shadow  dark:bg-zinc-800">
           <h1 className="text-3xl p-5 -ml-3 font-bold text-zinc-700 dark:text-white">
             Podcast Interviews
           </h1>
@@ -96,7 +96,7 @@ export default function Podcast({ data }) {
               {/* Previous Next Button */}
               <div className="mt-5">
                 <nav className="flex items-center grow justify-between px-4 sm:px-0">
-                  <div className="-mt-px hidden flex w-0 flex-1 text-purple-500 hover:text-orange-500">
+                  <div className="-mt-px  flex w-0 flex-1 text-purple-500 hover:text-orange-500">
                     <a
                       onClick={handlePreviousVideo}
                       className="inline-flex items-center pr-1 pt-4 text-sm font-medium text-purple-500 hover:border-indigo-300 hover:text-orange-500"
@@ -148,7 +148,7 @@ export default function Podcast({ data }) {
               return (
                 <li
                   key={id}
-                  className="gap-5 rounded-2xl p-5 dark:bg-zinc-800"
+                  className="gap-5 p-5 rounded-2xl bg-neutral-50 shadow  dark:bg-zinc-800"
                 >
                   <p>
                     <img

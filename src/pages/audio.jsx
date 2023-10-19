@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 // Youtube API
 const YOUTUBE_PLAYLIST_ITEMS_API =
   "https://www.googleapis.com/youtube/v3/playlistItems";
-const YOUTUBE_PLAYLIST_ID = "PLY5aty1hlHsH4DiIKl4Mj4ZIUbE06A4E2";
+const YOUTUBE_PLAYLIST_ID = "PLY5aty1hlHsGJZKQ1bb6eadFVAxFEUqEJ";
 
 export async function getStaticProps() {
   const res = await fetch(
