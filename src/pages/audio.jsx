@@ -78,8 +78,8 @@ export default function Audio({ data }) {
 
         <div className="p-8">
 
-        <div className="bg-zinc-800 p-5 rounded-xl">
-          <h1 className="text-3xl p-5 -ml-3 font-bold text-zinc-700 dark:text-white">
+        <div className=" p-5  rounded-2xl bg-neutral-50  dark:bg-zinc-800">
+          <h1 className="text-3xl p-5 -ml-3 font-bold text-zinc-700 dark:text-white ">
             Audio and Video Projects
           </h1>
         </div>
@@ -87,7 +87,7 @@ export default function Audio({ data }) {
         {/* Video Player */}
         <div className="mb-10 justify-center mt-5">
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
-            <div className="rounded-2xl bg-neutral-50 shadow p-5 dark:bg-zinc-800  sm:col-span-2">
+            <div className="rounded-2xl bg-neutral-50 p-5 dark:bg-zinc-800  sm:col-span-2">
               <YoutubeVideoPlayer
                 className="left-o absolute top-0"
                 id={currentVideo.snippet.resourceId.videoId}
