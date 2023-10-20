@@ -87,7 +87,7 @@ const projects = [
     name: "Audiostar Website",
     description: "This is a website that I built for Audiostar.",
     tech: ["Wordpress", "Custom CSS"],
-    link_01: { href: "www.audiostarinc.com", label: "www.audiostarinc.com" },
+    link_01: { href: "http://www.audiostarinc.com", label: "www.audiostarinc.com" },
     images: [
       {
         src: audiostar_01,
