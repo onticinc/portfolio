@@ -97,7 +97,7 @@ export default function Audio({ data }) {
               {/* Previous Next Button */}
               <div className="mt-5">
                 <nav className="flex items-center grow justify-between px-4 sm:px-0">
-                  <div className="-mt-px hidden flex w-0 flex-1 text-purple-500 hover:text-orange-500">
+                  <div className="-mt-px flex w-0 flex-1 text-purple-500 hover:text-orange-500">
                     <a
                       onClick={handlePreviousVideo}
                       className="inline-flex items-center pr-1 pt-4 text-sm font-medium text-purple-500 hover:border-indigo-300 hover:text-orange-500"
@@ -152,6 +152,7 @@ export default function Audio({ data }) {
                   className="gap-5 rounded-2xl p-5 dark:bg-zinc-800"
                 >
                   <p>
+                    <a onClick={() => setCurrentVideo(item)}>
                     <img
                       className="mt-5"
                       width={maxres.width}
@@ -159,6 +160,7 @@ export default function Audio({ data }) {
                       src={maxres.url}
                       alt=""
                     />
+                    </a>
                   </p>
                   <h4 className="mt-4 italic text-zinc-700 dark:text-zinc-100">
                     {title}
