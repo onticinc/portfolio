@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Pagination from "@/components/Pagination";
 import { ArrowLeft, ArrowRight } from "heroicons-react";
+import Image from "next/image";
 
 import YoutubeVideoPlayer from "@/components/youtubePlayer";
 import { useState, useEffect } from "react";
@@ -36,16 +37,6 @@ export default function Audio({ data }) {
 
   if (!currentVideo) {
     return <div>Loading...</div>;
-  }
-
-  if (currentVideo === data.items[0]) {
-    showBackButton = false;
-  } else {
-    showBackButton = true;
-  }
-
-  if (currentVideo === data.items[data.items.length - 1]) {
-    showNextButton = false;
   }
 
   const handleNextVideo = () => {
@@ -102,7 +93,7 @@ export default function Audio({ data }) {
                       onClick={handlePreviousVideo}
                       className="inline-flex items-center pr-1 pt-4 text-sm font-medium text-purple-500 hover:border-indigo-300 hover:text-orange-500"
                     >
-                      <ArrowLeft className="mr-3 h-5 w-5" aria-hidden="true" />
+                      <ArrowLeft id="arrowLeft" className="mr-3 h-5 w-5" aria-hidden="true" />
                       Previous
                     </a>
                   </div>
@@ -112,7 +103,7 @@ export default function Audio({ data }) {
                       className="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium"
                     >
                       Next
-                      <ArrowRight className="ml-3 h-5 w-5" aria-hidden="true" />
+                      <ArrowRight id="arrowRight" className="ml-3 h-5 w-5" aria-hidden="true" />
                     </a>
                   </div>
                 </nav>
@@ -153,7 +144,7 @@ export default function Audio({ data }) {
                 >
                   <p>
                     <a onClick={() => setCurrentVideo(item)}>
-                    <img
+                    <Image 
                       className="mt-5"
                       width={maxres.width}
                       height={maxres.height}

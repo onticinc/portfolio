@@ -8,7 +8,12 @@ const nextConfig = {
     scrollRestoration: true,
   },
   images: {
-    domains: ['images.djontic.com'],
+    remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "**",
+        }
+    ],
     unoptimized: true,
     // These are the default values provided by Next.js
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
