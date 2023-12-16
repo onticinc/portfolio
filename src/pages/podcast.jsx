@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { SimpleLayout } from "@/components/SimpleLayout";
-import Image from "next/image";
 import Pagination from "@/components/Pagination";
 import YoutubeVideoPlayer from "@/components/youtubePlayer";
 import { useState, useEffect } from "react";

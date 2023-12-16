@@ -144,7 +144,7 @@ export default function Audio({ data }) {
                 >
                   <p>
                     <a onClick={() => setCurrentVideo(item)}>
-                    <Image 
+                    <img 
                       className="mt-5"
                       width={maxres.width}
                       height={maxres.height}
