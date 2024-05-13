@@ -149,6 +149,7 @@ export default function Podcast({ data }) {
                   key={id}
                   className="gap-5 p-5 rounded-2xl bg-neutral-50 shadow  dark:bg-zinc-800"
                 >
+                  <a onClick={() => setCurrentVideo(item)}>
                   <p>
                     <img
                       className="mt-5"
@@ -161,6 +162,7 @@ export default function Podcast({ data }) {
                   <h4 className="mt-4 italic text-zinc-700 dark:text-zinc-100">
                     {title}
                   </h4>
+                  </a>
                 </li>
               );
             })}
