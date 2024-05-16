@@ -87,18 +87,6 @@ export default function WorkHistory() {
       start: '2022',
       end: '2023',
     },
-    {
-      company: 'Washington State Parks',
-      title: 'Chelan State Park | Park Aide',
-      logo: wspLogo,
-      link: 'https://www.parks.wa.gov/',
-      start: '2023',
-      end: {
-        label: 'Seasonal',
-        dateTime: new Date().getFullYear(),
-      },
-    },
-    
   ]
 
   return (
