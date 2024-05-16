@@ -42,7 +42,7 @@ export default function App({ Component, pageProps, router }) {
       </div>
     
       {/* Main Content */}
-      <div className="relative max-w-prose sm:max-w-screen-sm md:max-w-screen-md xl:max-w-screen-xl ">
+      <div className="relative max-w-prose sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-1xl 2xl:max-w-screen-2xl">
         <main>
               <QueryClientProvider client={queryClient}>
                 <Header />
