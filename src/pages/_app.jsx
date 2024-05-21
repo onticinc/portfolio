@@ -42,8 +42,8 @@ export default function App({ Component, pageProps, router }) {
       </div>
     
       {/* Main Content */}
-      <div className="w-screen flex justify-center">
-      <div className="relative lg:max-w-screen-1xl">
+      <div className="w-screen p-3 flex justify-center">
+      <div className="relative max-w-screen-1xl">
         <main>
               <QueryClientProvider client={queryClient}>
                 <Header />
