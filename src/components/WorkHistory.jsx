@@ -91,13 +91,13 @@ export default function WorkHistory() {
 
   return (
     <>
-   
-      <div className="rounded-2xl border bg-neutral-50 dark:bg-zinc-800/90 shadow border-zinc-100 p-6 lg:mt-4 dark:border-zinc-700/40">
+      <div className="rounded-2xl border bg-neutral-50 dark:bg-zinc-700/90 shadow border-zinc-100 p-2  dark:border-zinc-700/40">
+      <div className="rounded-2xl border bg-neutral-50 dark:bg-zinc-800/90 shadow border-zinc-100 p-3  dark:border-zinc-700/40">
         <h2 className="flex flex-auto text-sm font-semibold text-zinc-900 dark:text-zinc-100">
           <BriefcaseIcon className="h-6 w-6 flex-none"/>
           <span className="ml-3">Work History</span>
         </h2>
-        <ol className="mt-6 space-y-4">
+        <ol className="mt-3 p-2 bg-zinc-900 space-y-4">
           {resume.map((role, roleIndex) => (
             <li key={roleIndex} className="flex gap-4">
               <Link href={role.link} target="_blank">
@@ -133,12 +133,12 @@ export default function WorkHistory() {
             </li>
           ))}
         </ol>
-        <Button href="#" variant="secondary" className="group mt-6 bg-zinc-200 dark:bg-zinc-900/50 dark:ring-indigo-500/40 dark:ring-1 rounded-sm w-full">
+        <Button href="#" variant="secondary" className="group mt-3 bg-zinc-200 rounded-2xl dark:bg-zinc-900/50 dark:ring-indigo-500/40 dark:ring-1  w-full">
           Download CV
           <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 p-5 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
         </Button>
+        </div>
       </div>
-    
     </>
   )
 }

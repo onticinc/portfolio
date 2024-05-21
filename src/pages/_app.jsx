@@ -47,7 +47,9 @@ export default function App({ Component, pageProps, router }) {
         <main>
               <QueryClientProvider client={queryClient}>
                 <Header />
+                <div className='mt-3'>
                 <Component previousPathname={previousPathname} {...pageProps} />
+                </div>
                 <Footer />
                 {/* <ReactQueryDevtools /> */}
               </QueryClientProvider>
