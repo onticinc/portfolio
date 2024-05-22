@@ -16,7 +16,7 @@ export default function Home() {
         {/* Left Column */}
 
         {/* Short Intro */}
-        <div id="left" className="col-span-3 md:col-span-2">
+        <div id="left" className="col-span-3 lg:col-span-2">
           <ShortIntro />
           <FeaturedProject />
         </div>
@@ -24,7 +24,7 @@ export default function Home() {
         {/* End Left Column */}
 
         {/* Right Column */}
-        <div id="right" className="col-span-3 md:col-span-1">
+        <div id="right" className="col-span-3 lg:col-span-1">
           <WorkHistory />
           <Education />
         </div>

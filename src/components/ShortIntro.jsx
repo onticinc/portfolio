@@ -11,7 +11,7 @@ export default function ShortIntro() {
           <Image
             src={Avatar}
             alt="Mike Smith - Nome AK"
-            className=" w-full rounded-lg object-cover lg:h-80 lg:w-80"
+            className=" rounded-lg object-cover h-80 w-80"
           />
 
           <Bio className="rounded-bl-lg" />

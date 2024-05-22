@@ -32,7 +32,7 @@ export default function FeaturedProject() {
     <>
       <div className="relative mt-3 justify-center rounded-2xl border border-zinc-100 bg-neutral-50 p-1 shadow dark:border-zinc-700/40  dark:bg-zinc-700 ">
         <div className="rounded-2xl p-3  dark:bg-zinc-800 ">
-          <h3 className="font-2xlfont-extrabold text-zinc-900 dark:text-zinc-400">
+          <h3 className="font-2xl font-extrabold text-zinc-900 dark:text-zinc-400">
             Featured Project:
           </h3>
           <div class="flex overflow-x-scroll overscroll-contain ">

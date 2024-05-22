@@ -9,6 +9,10 @@ import logoPodcast from "@/images/logos/podcast_template_logo.png";
 import podcast_template_01 from "@/images/software/podcast_template_01.png";
 import podcast_template_02 from "@/images/software/podcast_template_02.png";
 import podcast_template_03 from "@/images/software/podcast_template_03.png";
+import eggs_01 from "@/images/software/eggs_01.png";
+import eggs_02 from "@/images/software/eggs_02.png";
+import eggs_03 from "@/images/software/eggs_03.png";
+
 import memory_01 from "@/images/software/memory_01.png";
 import memory_02 from "@/images/software/memory_02.png";
 import memory_03 from "@/images/software/memory_03.png";
@@ -38,8 +42,8 @@ const projects = [
     logo: logoPodcast,
     images: [
       {
-        src: podcast_template_01,
-        alt: "Screenshot of Podcast Website Template",
+        src: eggs_01,
+        alt: "Eggs The Podcast Website",
       },
       {
         src: podcast_template_02,
