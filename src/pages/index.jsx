@@ -31,7 +31,7 @@ export default function Home() {
       </div>
 
       {/* Image Slider */}
-      <div id="image-slider" className="col-span-3">
+      <div id="image-slider" className="col-span-3 w-full">
         <ImageSlider />
       </div>
     </>
