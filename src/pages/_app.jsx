@@ -35,7 +35,7 @@ export default function App({ Component, pageProps, router }) {
 
     <>
       {/* Background Color */}
-      <div className="fixed bg-neutral-200 dark:bg-zinc-900 inset-0 justify-center flex py-10">
+      <div className="fixed bg-neutral-200 dark:bg-zinc-900 inset-0 justify-center flex">
         <div className="flex w-full justify-center">
           <div className="w-full  bg-neutral-200  dark:bg-zinc-900 dark:ring-zinc-300/20" />
         </div>
@@ -43,18 +43,18 @@ export default function App({ Component, pageProps, router }) {
     
       {/* Main Content */}
       <div className="w-screen p-3 flex justify-center">
-      <div className="relative max-w-screen-1xl">
-        <main>
-              <QueryClientProvider client={queryClient}>
-                <Header />
-                <div className='mt-3'>
-                <Component previousPathname={previousPathname} {...pageProps} />
-                </div>
-                <Footer />
-                {/* <ReactQueryDevtools /> */}
-              </QueryClientProvider>
-        </main>
-      </div>
+        <div className="relative sm:max-w-sm  xl:max-w-6xl">
+          <main>
+                <QueryClientProvider client={queryClient}>
+                  <Header />
+                  <div className='mt-3'>
+                  <Component previousPathname={previousPathname} {...pageProps} />
+                  </div>
+                  <Footer />
+                  {/* <ReactQueryDevtools /> */}
+                </QueryClientProvider>
+          </main>
+        </div>
       </div>
     </>
   )
