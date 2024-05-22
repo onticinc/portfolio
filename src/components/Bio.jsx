@@ -3,7 +3,7 @@ export default function BioCard(){
   return(
         <>
           <div className="text-base text-zinc-600 dark:text-zinc-400 w-full container pt-5 lg:pt-0 lg:pl-5">
-            <h1 id="title" className="text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+            <h1 id="title" className="text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-300 sm:text-5xl">
               Create, Document, Produce.
             </h1>
             <p className="mt-6 text-xl font-bold text-zinc-600 dark:text-zinc-400">
