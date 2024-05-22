@@ -91,7 +91,7 @@ export default function WorkHistory() {
 
   return (
     <>
-      <div className="rounded-2xl border bg-neutral-50 dark:bg-zinc-700/90 shadow border-zinc-100 p-2  dark:border-zinc-700/40">
+      <div className="rounded-2xl border bg-neutral-50 dark:bg-zinc-700/90 shadow border-zinc-100 p-1  dark:border-zinc-700/40">
       <div className="rounded-2xl border bg-neutral-50 dark:bg-zinc-800/90 shadow border-zinc-100 p-3  dark:border-zinc-700/40">
         <h2 className="flex flex-auto text-sm font-semibold text-zinc-900 dark:text-zinc-100">
           <BriefcaseIcon className="h-6 w-6 flex-none"/>

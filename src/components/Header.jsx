@@ -158,7 +158,7 @@ function NavItem({ href, children }) {
 // DESKTOP NAVIGATION
 function DesktopNavigation(props) {
   return (
-    <div className="dark:bg-zinc-700 rounded-2xl p-2">
+    <div className="dark:bg-zinc-700 rounded-2xl p-1">
     <nav {...props}>
       <ul className="flex bg-neutral-50 rounded-2xl bg-white/90 p-3 text-sm font-medium text-zinc-800 shadow-sm shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800 dark:text-zinc-200 dark:ring-white/10">
         <NavItem href="/">Home</NavItem>

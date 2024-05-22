@@ -43,7 +43,7 @@ export default function App({ Component, pageProps, router }) {
     
       {/* Main Content */}
       <div className="w-screen p-3 flex justify-center">
-        <div className="relative sm:max-w-sm  xl:max-w-6xl">
+        <div className="relative xl:max-w-7xl">
           <main>
                 <QueryClientProvider client={queryClient}>
                   <Header />

@@ -70,7 +70,7 @@ export default function Education() {
 
   return (
     <>
-      <div className="rounded-2xl border border-zinc-100 bg-neutral-50 p-2 mt-3 shadow dark:border-zinc-700/40 dark:bg-zinc-700">
+      <div className="rounded-2xl border border-zinc-100 bg-neutral-50 p-1 mt-3 shadow dark:border-zinc-700/40 dark:bg-zinc-700">
         <div className="rounded-2xl border border-zinc-100 bg-neutral-50 p-3 shadow dark:border-zinc-700/40 dark:bg-zinc-800">
           <h2 className="flex flex-auto text-sm font-semibold text-zinc-900 py-3 dark:text-zinc-100">
             <CapIcon className="h-6 w-6 flex-none" />

@@ -233,7 +233,7 @@ export default function ImageSlider() {
   
     return (
      
-      <div className="relative shadow border rounded-2xl p-2 mt-3 border-zinc-100 bg-neutral-50 dark:bg-zinc-700 justify-center  dark:border-zinc-700/40 ">
+      <div className="relative shadow border rounded-2xl p-1 mt-3 border-zinc-100 bg-neutral-50 dark:bg-zinc-700 justify-center  dark:border-zinc-700/40 ">
         <div className='dark:bg-zinc-800 p-3  rounded-2xl '>
         <h3 className="font-2xlfont-extrabold text-zinc-900 dark:text-zinc-400">Event | Production Photos:</h3>
         <div class="flex overscroll-contain overflow-x-scroll ">

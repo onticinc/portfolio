@@ -6,7 +6,7 @@ import podcast_template_01 from "@/images/software/podcast_template_01.png";
 export default function FeaturedProject() {
   return (
     <>
-        <div className="w-full justify-center dark:bg-zinc-700 rounded-2xl border bg-neutral-50 shadow border-zinc-100 p-2 dark:border-zinc-700/40"> 
+        <div className="w-full justify-center dark:bg-zinc-700 rounded-2xl border bg-neutral-50 shadow border-zinc-100 p-1 dark:border-zinc-700/40"> 
         <div className=" dark:bg-zinc-800 rounded-2xl bg-neutral-50 p-4"> 
           
           <h1 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100 lg:block">
