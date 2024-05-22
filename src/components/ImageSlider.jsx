@@ -250,7 +250,5 @@ export default function ImageSlider() {
         </div>
         </div>
       </div>
-   
-  
     )
   };
