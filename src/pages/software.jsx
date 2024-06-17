@@ -32,13 +32,20 @@ const projects = [
     id: "1",
     name: "Eggs The Podcast Website",
     description:
-      "In order to simplify our publishing process I rebuilt our website to pull content from the YouTube API. Now the website updates automatically when we publish.",
-    tech: ["NextJS13", "Javascript", "TypeScript", "Tailwind CSS", "YouTube API", "SimpleCast API"],
+      "In order to simplify our publishing process I rebuilt the website to pull content from the YouTube API. Now the website updates automatically when we publish.",
+    tech: [
+      "NextJS13",
+      "Javascript",
+      "TypeScript",
+      "Tailwind CSS",
+      "YouTube API",
+      "SimpleCast API",
+    ],
     link_01: {
       href: "http://www.eggscast.com",
       label: "github",
     },
-    
+
     logo: logoPodcast,
     images: [
       {
@@ -46,11 +53,11 @@ const projects = [
         alt: "Eggs The Podcast Website",
       },
       {
-        src: podcast_template_02,
+        src: eggs_02,
         alt: "Screenshot of Podcast Website Template",
       },
       {
-        src: podcast_template_03,
+        src: eggs_03,
         alt: "Screenshot of Podcast Website Template",
       },
     ],
@@ -67,7 +74,7 @@ const projects = [
       href: "https://onticinc.github.io/card_match_game/",
       label: "Play The Game",
     },
-  
+
     logo: memory_01,
     images: [
       {
@@ -91,7 +98,10 @@ const projects = [
     name: "Audiostar Website",
     description: "This is a website that I built for Audiostar.",
     tech: ["Wordpress", "Custom CSS"],
-    link_01: { href: "http://www.audiostarinc.com", label: "www.audiostarinc.com" },
+    link_01: {
+      href: "http://www.audiostarinc.com",
+      label: "www.audiostarinc.com",
+    },
     images: [
       {
         src: audiostar_01,
@@ -164,7 +174,7 @@ const projects = [
       href: "https://github.com/onticinc/podcast_template",
       label: "github",
     },
-   
+
     logo: logoPodcast,
     images: [
       {
@@ -201,45 +211,48 @@ export default function Projects() {
         <meta name="description" content="Projects I have worked on..." />
       </Head>
       <div className="relative">
-        <div className="justify-center p-8">
+        <div className="justify-center">
           <ul role="list" className="grid grid-cols-1 gap-5 xl:grid-cols-3">
             {projects.map((project) => (
               <div
-                className="gap-1 rounded-2xl bg-neutral-50 p-5  dark:bg-zinc-800"
+                className="gap-1 rounded-2xl bg-neutral-50 p-1 max-h-96 dark:bg-zinc-700"
                 as="li"
                 key={project.name}
               >
-                <Link href={project.link_01.href} target="_blank">
-                  <h3 className="font-2xl font-extrabold text-zinc-800 dark:text-white">
-                    {project.name}
-                  </h3>
-                </Link>
+               
+                <div className="bg-zinc-600 p-3 rounded-2xl dark:bg-zinc-800">
+                <div className="bg-zinc-600 p-4 rounded-2xl dark:bg-zinc-700">
+                  <Link href={project.link_01.href} target="_blank">
+                    <h3 className="font-2xl font-extrabold text-zinc-800 dark:text-white">
+                      {project.name}
+                    </h3>
+                  </Link>
 
-                {/* Use the Toggle component to toggle project details */}
-                <div className="flex justify-end -mt-5 font-semibold text-zinc-800 dark:text-zinc-100">
-                  <p className="text-gray-400 pr-2">Details</p>
-                  <Toggle
-                    enabled={showProjectDetails[project.id]}
-                    setEnabled={(enabled) =>
-                      setShowProjectDetails({
-                        ...showProjectDetails,
-                        [project.id]: enabled,
-                      })
-                    }
-                  />
+                  {/* Use the Toggle component to toggle project details */}
+                  <div className="-mt-5 flex justify-end font-semibold text-zinc-800 dark:text-zinc-100">
+                    <p className="pr-2 text-gray-400">Details</p>
+                    <Toggle
+                      enabled={showProjectDetails[project.id]}
+                      setEnabled={(enabled) =>
+                        setShowProjectDetails({
+                          ...showProjectDetails,
+                          [project.id]: enabled,
+                        })
+                      }
+                    />
+                  </div>
                 </div>
 
                 <div className="relative mt-3 flex gap-2 overflow-x-scroll overscroll-contain rounded-2xl border border-zinc-100 p-4 dark:border-zinc-700/40 dark:bg-zinc-800  dark:hover:bg-zinc-700 ">
                   {project.images.map((role, roleIndex) => (
-                      <Image
-                        src={role.src}
-                        alt={role.alt}
-                        width={500}
-                        height={500}
-                        className="w-full rounded-2xl"
-                        key={role.src}
-                      />
-                
+                    <Image
+                      src={role.src}
+                      alt={role.alt}
+                      height={500}
+                      width={500}
+                      className="w-full rounded-2xl"
+                      key={role.src}
+                    />
                   ))}
                 </div>
 
@@ -248,7 +261,9 @@ export default function Projects() {
                   className={showProjectDetails[project.id] ? "" : "hidden"}
                   id="showHide"
                 >
-                  <div className="mt-4 text-gray-400">{project.description}</div>
+                  <div className="mt-4 text-gray-400">
+                    {project.description}
+                  </div>
 
                   <ul className="mt-4 text-gray-400">
                     {project.tech.map((tech) => (
@@ -257,7 +272,7 @@ export default function Projects() {
                   </ul>
                 </div>
 
-                
+                </div>
               </div>
             ))}
           </ul>

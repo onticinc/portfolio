@@ -30,16 +30,16 @@ let image = [
 export default function FeaturedProject() {
   return (
     <>
-      <div className="relative mt-3 justify-center rounded-2xl border border-zinc-100 bg-neutral-50 p-1 shadow dark:border-zinc-700/40  dark:bg-zinc-700 ">
-        <div className="rounded-2xl p-3  dark:bg-zinc-800 ">
-          <h3 className="font-2xl font-extrabold text-zinc-900 dark:text-zinc-400">
+      <div className="relative mt-3 justify-center rounded-sm border border-zinc-100 bg-neutral-50 p-1 shadow dark:border-zinc-700/40  dark:bg-zinc-700 ">
+        <div className="rounded-lg p-3  dark:bg-zinc-800 ">
+          <h3 className="font-2xl font-extrabold text-zinc-900 dark:text-zinc-300">
             Featured Project:
           </h3>
           <div class="flex overflow-x-scroll overscroll-contain ">
             {image.map((role, roleIndex) => (
               <div
                 key={roleIndex}
-                className="mt-10 mr-4 gap-2 rounded-2xl border border-zinc-100 p-2 dark:border-zinc-700/40 dark:bg-zinc-600/30  dark:hover:bg-zinc-700 "
+                className="mt-3 mr-4 gap-2 rounded-2xl border border-zinc-100 p-2 dark:border-zinc-700/40 dark:bg-zinc-600/30  dark:hover:bg-zinc-700 "
               >
                 <Link href={role.link} target="_blank">
                   <div className="relative w-64 items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 md:w-96">

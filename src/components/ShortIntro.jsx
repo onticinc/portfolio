@@ -5,8 +5,8 @@ import Bio from "@/components/Bio";
 export default function ShortIntro() {
   return (
     <>
-      <div className="mb-3 w-full justify-center rounded-2xl border border-zinc-100 bg-neutral-50 p-1 shadow  dark:border-zinc-700/40 dark:bg-zinc-700">
-        <div className="p-5 rounded-2xl dark:bg-zinc-800 ">
+      <div className="mb-3 w-full justify-center rounded-sm border border-zinc-100 bg-neutral-50 p-1 shadow  dark:border-zinc-700/40 dark:bg-zinc-700">
+        <div className="p-5 rounded-lg dark:bg-zinc-800 ">
           <div className="lg:flex lg:flex-auto lg:flex-row">
           <Image
             src={Avatar}

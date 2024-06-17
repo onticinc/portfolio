@@ -1,12 +1,12 @@
-import { Button } from '@/components/Button'
-import Image from 'next/image'
-import Link from 'next/link'
+import { Button } from "@/components/Button";
+import Image from "next/image";
+import Link from "next/link";
 
-import logoZ103 from '@/images/logos/z103.png'
-import logoEggs from '@/images/logos/eggsLogo.jpeg'
-import logoOntic from '@/images/logos/ontic_logo.jpg'
-import logoAudiostar from '@/images/logos/audiostar.png'
-import wspLogo from '@/images/logos/wsp_logo.jpeg'
+import logoZ103 from "@/images/logos/z103.png";
+import logoEggs from "@/images/logos/eggsLogo.jpeg";
+import logoOntic from "@/images/logos/ontic_logo.jpg";
+import logoAudiostar from "@/images/logos/audiostar.png";
+import wspLogo from "@/images/logos/wsp_logo.jpeg";
 
 function BriefcaseIcon(props) {
   return (
@@ -28,7 +28,7 @@ function BriefcaseIcon(props) {
         className="stroke-zinc-400 dark:stroke-zinc-100"
       />
     </svg>
-  )
+  );
 }
 
 function ArrowDownIcon(props) {
@@ -41,104 +41,113 @@ function ArrowDownIcon(props) {
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }
 
 export default function WorkHistory() {
   let resume = [
     {
-      company: 'Eggs The Podcast',
-      title: 'Host | Producer | Co-Owner',
+      company: "Eggs The Podcast",
+      title: "Host | Producer | Co-Owner",
       logo: logoEggs,
-      link: 'https://www.eggscast.com/',
-      start: '2018',
+      link: "https://www.eggscast.com/",
+      start: "2018",
       end: {
-        label: 'Present',
+        label: "Present",
         dateTime: new Date().getFullYear(),
       },
     },
     {
-      company: 'DJ Ontic',
-      title: 'Mixshow | Event DJ',
+      company: "DJ Ontic",
+      title: "Mixshow | Event DJ",
       logo: logoOntic,
-      link: 'https://www.djontic.com/',
-      start: '2014',
+      link: "https://www.djontic.com/",
+      start: "2014",
       end: {
-        label: 'Present',
+        label: "Present",
         dateTime: new Date().getFullYear(),
       },
     },
     {
-      company: 'Audiostar Inc',
-      title: 'Owner',
+      company: "Audiostar Inc",
+      title: "Owner",
       logo: logoAudiostar,
-      link: 'https://www.audiostarinc.com/',
-      start: '1996',
+      link: "https://www.audiostarinc.com/",
+      start: "1996",
       end: {
-        label: 'Present',
+        label: "Present",
         dateTime: new Date().getFullYear(),
       },
     },
     {
-      company: 'Riverbend Communications',
-      title: 'Radio DJ | On-Air Personality for Z103fm',
+      company: "Riverbend Communications",
+      title: "Radio DJ | On-Air Personality for Z103fm",
       logo: logoZ103,
-      link: 'https://www.z103.fm',
-      start: '2022',
-      end: '2023',
+      link: "https://www.z103.fm",
+      start: "2022",
+      end: "2023",
     },
-  ]
+  ];
 
   return (
     <>
-      <div className="rounded-2xl border bg-neutral-50 dark:bg-zinc-700/90 shadow border-zinc-100 p-1  dark:border-zinc-700/40">
-      <div className="rounded-2xl border bg-neutral-50 dark:bg-zinc-800/90 shadow border-zinc-100 p-3  dark:border-zinc-700/40">
-        <h2 className="flex flex-auto text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-          <BriefcaseIcon className="h-6 w-6 flex-none"/>
-          <span className="ml-3">Work History</span>
-        </h2>
-        <ol className="mt-3 p-2 bg-zinc-900 space-y-4">
-          {resume.map((role, roleIndex) => (
-            <li key={roleIndex} className="flex gap-4">
-              <Link href={role.link} target="_blank">
-              <div className="relative mt-1 flex h-12 w-12 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                <Image src={role.logo} alt="" className="h-12 w-12" unoptimized />
-              </div>
-              </Link>
-              <dl className="flex flex-auto flex-wrap gap-x-2">
-                <dt className="sr-only">Company</dt>
-                <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
-                  {role.company}
-                </dd>
-                <dt className="sr-only">Role</dt>
-                <dd className="text-xs text-zinc-500 dark:text-zinc-400">
-                  {role.title}
-                </dd>
-                <dt className="sr-only">Date</dt>
-                <dd
-                  className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-                  aria-label={`${role.start.label ?? role.start} until ${
-                    role.end.label ?? role.end
-                  }`}
-                >
-                  <time dateTime={role.start.dateTime ?? role.start}>
-                    {role.start.label ?? role.start}
-                  </time>{' '}
-                  <span aria-hidden="true">—</span>{' '}
-                  <time dateTime={role.end.dateTime ?? role.end}>
-                    {role.end.label ?? role.end}
-                  </time>
-                </dd>
-              </dl>
-            </li>
-          ))}
-        </ol>
-        <Button href="#" variant="secondary" className="group mt-3 bg-zinc-200 rounded-2xl dark:bg-zinc-900/50 dark:ring-indigo-500/40 dark:ring-1  w-full">
-          Download CV
-          <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 p-5 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-        </Button>
+      <div className="rounded-sm border border-zinc-100 bg-neutral-50 p-1 shadow dark:border-zinc-700/40  dark:bg-zinc-700/90">
+        <div className="rounded-lg border border-zinc-100 bg-neutral-50 p-3 shadow dark:border-zinc-700/40  dark:bg-zinc-800/90">
+          <h2 className="flex flex-auto text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+            <BriefcaseIcon className="h-6 w-6 flex-none" />
+            <span className="ml-3">Work History</span>
+          </h2>
+          <ol className="mt-3 space-y-4 bg-zinc-900 p-2">
+            {resume.map((role, roleIndex) => (
+              <li key={roleIndex} className="flex gap-4">
+                <Link href={role.link} target="_blank">
+                  <div className="relative mt-1 flex h-12 w-12 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                    <Image
+                      src={role.logo}
+                      alt=""
+                      className="h-12 w-12"
+                      unoptimized
+                    />
+                  </div>
+                </Link>
+                <dl className="flex flex-auto flex-wrap gap-x-2">
+                  <dt className="sr-only">Company</dt>
+                  <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                    {role.company}
+                  </dd>
+                  <dt className="sr-only">Role</dt>
+                  <dd className="text-xs text-zinc-500 dark:text-zinc-400">
+                    {role.title}
+                  </dd>
+                  <dt className="sr-only">Date</dt>
+                  <dd
+                    className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
+                    aria-label={`${role.start.label ?? role.start} until ${
+                      role.end.label ?? role.end
+                    }`}
+                  >
+                    <time dateTime={role.start.dateTime ?? role.start}>
+                      {role.start.label ?? role.start}
+                    </time>{" "}
+                    <span aria-hidden="true">—</span>{" "}
+                    <time dateTime={role.end.dateTime ?? role.end}>
+                      {role.end.label ?? role.end}
+                    </time>
+                  </dd>
+                </dl>
+              </li>
+            ))}
+          </ol>
+          <Button
+            href="#"
+            variant="secondary"
+            className="group mt-3 w-full rounded-2xl bg-zinc-200 dark:bg-zinc-900/50 dark:ring-1  dark:ring-indigo-500/40"
+          >
+            Download CV
+            <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 p-5 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+          </Button>
         </div>
       </div>
     </>
-  )
+  );
 }
