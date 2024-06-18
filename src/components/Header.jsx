@@ -158,7 +158,7 @@ function NavItem({ href, children }) {
 // DESKTOP NAVIGATION
 function DesktopNavigation(props) {
   return (
-    <div className="dark:bg-zinc-700 rounded-sm p-1">
+    <div className="dark:bg-zinc-700 rounded-sm p-1 -ml-1">
     <nav {...props}>
       <ul className="flex bg-neutral-50 rounded-lg bg-white/90 p-3 text-sm font-medium text-zinc-800 shadow-sm shadow-zinc-800/5 backdrop-blur dark:bg-zinc-800 dark:text-zinc-200 dark:ring-white/10">
         <NavItem href="/">Home</NavItem>
@@ -194,7 +194,7 @@ function ModeToggle() {
   }
 
   return (
-    <div className="mr-8">
+    <div className="p-5">
       <button
         type="button"
         aria-label="Toggle dark mode"

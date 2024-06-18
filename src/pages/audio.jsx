@@ -67,7 +67,6 @@ export default function Audio({ data }) {
   
         {/* Header */}
 
-        <div className="p-8">
 
         <div className=" p-5  rounded-2xl bg-neutral-50  dark:bg-zinc-800">
           <h1 className="text-3xl p-5 -ml-3 font-bold text-zinc-700 dark:text-white ">
@@ -162,7 +161,7 @@ export default function Audio({ data }) {
           </ul>
           <Pagination />
         </div>
-      </div>
+     
     </>
   );
 }

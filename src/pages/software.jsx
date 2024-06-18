@@ -215,7 +215,7 @@ export default function Projects() {
           <ul role="list" className="grid grid-cols-1 gap-5 xl:grid-cols-3">
             {projects.map((project) => (
               <div
-                className="gap-1 rounded-2xl bg-neutral-50 p-1 max-h-96 dark:bg-zinc-700"
+                className="gap-1 rounded-2xl bg-neutral-50 p-1  dark:bg-zinc-700"
                 as="li"
                 key={project.name}
               >

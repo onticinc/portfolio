@@ -76,55 +76,61 @@ export default function Podcast({ data }) {
           content="I have worked with many great bands over the years, here are a few of my favorites."
         />
       </Head>
-      <div className="p-3">
-        <div className="rounded-2xl bg-neutral-50 p-5 shadow  dark:bg-zinc-800">
-          <h1 className="-ml-3 p-3 text-3xl font-bold text-zinc-700 dark:text-white">
-            Podcast Interviews
-          </h1>
+        
+        <div className="rounded-sm mt-3 bg-neutral-50 p-1 shadow  dark:bg-zinc-700">
+          <div className="rounded-lg bg-neutral-50 p-3 shadow  dark:bg-zinc-800">
+            <h1 className="-ml-3 p-3 text-3xl font-bold text-zinc-700 dark:text-white">
+              Podcast Interviews
+            </h1>
+          </div>
         </div>
 
         {/* Video Player */}
         <div className="mt-3 justify-center">
           <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
-            <div className="rounded-2xl bg-neutral-50 p-5 dark:bg-zinc-800  sm:col-span-2">
-              <YoutubeVideoPlayer
-                className="left-o absolute top-0"
-                id={currentVideo.snippet.resourceId.videoId}
-                playing={playing}
-              />
 
-              {/* Previous Next Button */}
-              <div className="mt-5">
-                <nav className="flex grow items-center justify-between px-4 sm:px-0">
-                  <div className="-mt-px  flex w-0 flex-1 text-purple-500 hover:text-orange-500">
-                    <a
-                      onClick={handlePreviousVideo}
-                      className="inline-flex items-center pr-1 pt-4 text-sm font-medium text-purple-500 hover:border-indigo-300 hover:text-orange-500"
-                    >
-                      <ArrowLeft className="mr-3 h-5 w-5" aria-hidden="true" />
-                      Previous
-                    </a>
-                  </div>
-                  <div className="-mt-px flex w-0 flex-1 justify-end text-purple-500 hover:text-orange-500">
-                    <a
-                      onClick={handleNextVideo}
-                      className="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium"
-                    >
-                      Next
-                      <ArrowRight className="ml-3 h-5 w-5" aria-hidden="true" />
-                    </a>
-                  </div>
-                </nav>
+            <div className="rounded-sm bg-neutral-50 p-1 dark:bg-zinc-700  sm:col-span-2">
+              <div className="rounded-lg bg-neutral-50 p-3 dark:bg-zinc-800">
+
+                <YoutubeVideoPlayer
+                  className="left-o absolute top-0"
+                  id={currentVideo.snippet.resourceId.videoId}
+                  playing={playing}
+                />
+
+                {/* Previous Next Button */}
+                <div className="mt-3">
+                  <nav className="flex grow items-center justify-between">
+                    <div className="-mt-px  flex w-0 flex-1 text-purple-500 hover:text-orange-500">
+                      <a
+                        onClick={handlePreviousVideo}
+                        className="inline-flex items-center pr-1 pt-4 text-sm font-medium text-purple-500 hover:border-indigo-300 hover:text-orange-500"
+                      >
+                        <ArrowLeft className="mr-3 h-5 w-5" aria-hidden="true" />
+                        Previous
+                      </a>
+                    </div>
+                    <div className="-mt-px flex w-0 flex-1 justify-end text-purple-500 hover:text-orange-500">
+                      <a
+                        onClick={handleNextVideo}
+                        className="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium"
+                      >
+                        Next
+                        <ArrowRight className="ml-3 h-5 w-5" aria-hidden="true" />
+                      </a>
+                    </div>
+                  </nav>
+                </div>
               </div>
             </div>
-
+          
             {/* Current Video Description */}
-            <div className="gap-5 rounded-2xl border border-zinc-100 bg-neutral-50 p-5  shadow dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-1">
+            <div className="gap-5 rounded-2xl border border-zinc-100 bg-neutral-50 p-5 shadow dark:border-zinc-700/40 dark:bg-zinc-800  sm:col-span-1">
               <h3 className="text-2xl font-extrabold text-zinc-700 dark:text-white">
                 {currentVideo.snippet.title}
               </h3>
               <div className="relative">
-                <div className="flex max-h-[560px] overflow-x-scroll overscroll-contain">
+                <div className="flex max-h-[400px] overflow-x-scroll overscroll-contain">
                   <p className="mt-5 text-zinc-700 dark:text-white">
                     {currentVideo.snippet.description}
                   </p>
@@ -170,7 +176,7 @@ export default function Podcast({ data }) {
           </ul>
           <Pagination />
         </div>
-      </div>
+   
     </>
   );
 }

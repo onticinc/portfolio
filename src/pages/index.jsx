@@ -5,6 +5,7 @@ import FeaturedProject from "@/components/FeaturedProject";
 import ImageSlider from "@/components/ImageSlider";
 import ShortIntro from "@/components/ShortIntro";
 
+
 export default function Home() {
   return (
     <>

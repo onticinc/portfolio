@@ -10,11 +10,11 @@ export default function BioCard(){
               Software developer, Audio Engineer, and Event Professional. 
             </p>
             <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-              <span className="font-bold">Software:</span> Focused on MERN | JAM stack with Next JS 13,
+              <span className="font-bold">Software:</span> Focused on MERN | JAM stack with Next JS,
               TypeScript, and Python when needed. 
             </p>
             <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-              <span className="font-bold">Audio:</span> Protools, Ableton, Creative Cloud and Logic Pro.  
+              <span className="font-bold">Audio:</span> Protools, Reaper, Ableton, Creative Cloud.  
             </p>
               
           </div>
