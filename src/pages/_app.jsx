@@ -35,11 +35,11 @@ export default function App({ Component, pageProps, router }) {
 
     <>
       {/* Background Color */}
-      <div className="flex flex-col justify-center bg-zinc-200 dark:bg-zinc-900">
+      <div className="flex flex-col justify-center bg-zinc-300 dark:bg-zinc-800">
         {/* Main Content Container */}
         <div className="w-screen flex justify-center">
           
-            <div className="bg-zinc-200 dark:bg-zinc-800 max-w-7xl p-2">
+            <div className="bg-zinc-400 dark:bg-zinc-900 max-w-7xl p-2">
           <main>
                   <Header />
                  
