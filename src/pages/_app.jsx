@@ -42,17 +42,16 @@ export default function App({ Component, pageProps, router }) {
       </div>
     
       {/* Main Content */}
-      <div className="w-screen p-3 flex justify-center">
-        <div className="relative md:max-w-md lg:max-w-2xl xl:max-w-7xl">
+      <div className="w-screen p-2 flex justify-center">
+        <div className="relative max-w-7xl">
           <main>
-                <QueryClientProvider client={queryClient}>
                   <Header />
                  
                   <Component previousPathname={previousPathname} {...pageProps} />
                 
                   <Footer />
                   {/* <ReactQueryDevtools /> */}
-                </QueryClientProvider>
+                
           </main>
         </div>
       </div>

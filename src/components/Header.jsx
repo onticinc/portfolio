@@ -68,7 +68,7 @@ function MoonIcon(props) {
 function MobileNavItem({ href, children }) {
   return (
     <li>
-      <Popover.Button as={Link} href={href} className="block py-2">
+      <Popover.Button as={Link} href={href} className="block p-3 hover:bg-zinc-400">
         {children}
       </Popover.Button>
     </li>
@@ -78,9 +78,11 @@ function MobileNavItem({ href, children }) {
 function MobileNavigation(props) {
   return (
     <Popover {...props}>
-      <Popover.Button className="group flex items-center bg-white/90 p-3 ml-6 rounded-lg text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
+      <Popover.Button className="group flex items-center bg-white/90 p-3 rounded-lg text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
         Menu
-        <ChevronDownIcon className="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400" />
+        <div className="m-1">
+          <ChevronDownIcon className="h-auto w-4 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400" />
+        </div>
       </Popover.Button>
       <Transition.Root>
         <Transition.Child
@@ -105,18 +107,18 @@ function MobileNavigation(props) {
         >
           <Popover.Panel
             focus
-            className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800"
+            className="fixed inset-x-4 top-8 z-50 origin-top bg-zinc-100 p-8 ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800"
           >
-            <div className="flex flex-row-reverse items-center justify-between">
+            <div className="flex flex-row-reverse items-center bg-zinc-300 p-3 justify-between">
               <Popover.Button aria-label="Close menu" className="-m-1 p-1">
                 <CloseIcon className="h-10 w-10 text-zinc-500 dark:text-zinc-400" />
               </Popover.Button>
-              <h2 className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
+              <h2 className="text-xl font-medium text-zinc-800 dark:text-zinc-400">
                 Navigation
               </h2>
             </div>
-            <nav className="mt-6">
-              <ul className="divide-y-1 -my-2 divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
+            <nav className="mt-6 bg-zinc-300">
+              <ul className="divide-y-1 -my-2 divide-zinc-100 text-xl text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
                 <MobileNavItem href="/">Home</MobileNavItem>
                 <MobileNavItem href="/software">Software</MobileNavItem>
                 <MobileNavItem href="/audio">Audio</MobileNavItem>
@@ -156,7 +158,7 @@ function NavItem({ href, children }) {
 
 function DesktopNavigation(props) {
   return (
-    <div className="relative shadow p-1 bg-zinc-200 dark:bg-zinc-700 dark:border-zinc-700/40 -ml-1">
+    <div className="relative shadow p-1 hidden md:block bg-zinc-200 dark:bg-zinc-700 dark:border-zinc-700/40 -ml-1">
       <div className="dark:bg-zinc-700 rounded-sm justify-center">
         <nav {...props}>
           <ul className="flex bg-zinc-100 rounded-lg  p-3 text-sm font-medium text-zinc-800 shadow-sm shadow-zinc-800/5 backdrop-blur dark:bg-zinc-800 dark:text-zinc-200 dark:ring-white/10">
