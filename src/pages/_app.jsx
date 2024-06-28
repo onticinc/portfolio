@@ -42,8 +42,8 @@ export default function App({ Component, pageProps, router }) {
       </div>
     
       {/* Main Content */}
-      <div className="w-screen p-2 flex justify-center">
-        <div className="relative max-w-7xl">
+      <div className="w-screen  max-w-7xl p-1 flex justify-center">
+        <div className="relative">
           <main>
                   <Header />
                  
