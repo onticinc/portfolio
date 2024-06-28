@@ -16,10 +16,10 @@ function NavLink({ href, children }) {
 
 export function Footer() {
   return (
-    <footer className="mt-32">
-      <Container.Outer>
-        <div className="border-t border-zinc-100 pt-10 pb-16 dark:border-zinc-700/40">
-          <Container.Inner>
+    <footer className="">
+    
+        <div className="bg-zinc-200 w-full mt-2 p-1 dark:bg-zinc-700">
+        <div className="rounded-lg border-zinc-100 bg-neutral-50 p-3   dark:bg-zinc-800">
             <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
               <div className="flex gap-6 text-sm font-medium text-zinc-800 dark:text-zinc-200">
                 <NavLink href="/">Home</NavLink>
@@ -33,9 +33,10 @@ export function Footer() {
                 reserved.
               </p>
             </div>
-          </Container.Inner>
+          </div>
+        
         </div>
-      </Container.Outer>
+
     </footer>
   )
 }

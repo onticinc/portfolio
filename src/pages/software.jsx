@@ -208,20 +208,20 @@ export default function Projects() {
     <>
       <Head>
         <title>Software Projects - Michael Smith</title>
-        <meta name="description" content="Projects I have worked on..." />
+        <meta name="description" content="Software Projects I have worked on." />
       </Head>
       <div className="relative">
-        <div className="justify-center">
-          <ul role="list" className="grid grid-cols-1 gap-5 xl:grid-cols-3">
+        <div className="justify-center mt-3">
+          <ul role="list" className="grid grid-cols-1 gap-2 xl:grid-cols-3">
             {projects.map((project) => (
               <div
-                className="gap-1 rounded-2xl bg-neutral-50 p-1  dark:bg-zinc-700"
+                className="gap-1 bg-zinc-200 p-1  dark:bg-zinc-700"
                 as="li"
                 key={project.name}
               >
                
-                <div className="bg-zinc-600 p-3 rounded-2xl dark:bg-zinc-800">
-                <div className="bg-zinc-600 p-4 rounded-2xl dark:bg-zinc-700">
+                <div className="bg-zinc-100 p-3 rounded-lg dark:bg-zinc-800">
+                <div className="bg-zinc-200 p-4 rounded-lg dark:bg-zinc-700">
                   <Link href={project.link_01.href} target="_blank">
                     <h3 className="font-2xl font-extrabold text-zinc-800 dark:text-white">
                       {project.name}
@@ -230,7 +230,7 @@ export default function Projects() {
 
                   {/* Use the Toggle component to toggle project details */}
                   <div className="-mt-5 flex justify-end font-semibold text-zinc-800 dark:text-zinc-100">
-                    <p className="pr-2 text-gray-400">Details</p>
+                    <p className="pr-2 text-zinc-400">Details</p>
                     <Toggle
                       enabled={showProjectDetails[project.id]}
                       setEnabled={(enabled) =>
@@ -243,14 +243,14 @@ export default function Projects() {
                   </div>
                 </div>
 
-                <div className="relative mt-3 flex gap-2 overflow-x-scroll overscroll-contain rounded-2xl border border-zinc-100 p-4 dark:border-zinc-700/40 dark:bg-zinc-800  dark:hover:bg-zinc-700 ">
+                <div className="relative mt-2 flex gap-2 overflow-x-scroll bg-zinc-200 overscroll-contain rounded-lg border border-zinc-100 p-2 dark:border-zinc-700/40 dark:bg-zinc-700  dark:hover:bg-zinc-700 ">
                   {project.images.map((role, roleIndex) => (
                     <Image
                       src={role.src}
                       alt={role.alt}
                       height={500}
                       width={500}
-                      className="w-full rounded-2xl"
+                      className="w-full rounded-lg"
                       key={role.src}
                     />
                   ))}

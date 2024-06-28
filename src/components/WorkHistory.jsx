@@ -81,7 +81,7 @@ export default function WorkHistory() {
     },
     {
       company: "Riverbend Communications",
-      title: "Radio DJ | On-Air Personality for Z103fm",
+      title: "On-Air Personality for Z103fm",
       logo: logoZ103,
       link: "https://www.z103.fm",
       start: "2022",
@@ -91,15 +91,15 @@ export default function WorkHistory() {
 
   return (
     <>
-      <div className="rounded-sm border border-zinc-100 bg-neutral-50 p-1 shadow dark:border-zinc-700/40  dark:bg-zinc-700/90">
-        <div className="rounded-lg border border-zinc-100 bg-neutral-50 p-3 shadow dark:border-zinc-700/40  dark:bg-zinc-800/90">
+      <div className="rounded-sm border border-zinc-300 bg-zinc-200 p-1 shadow dark:border-zinc-700/40  dark:bg-zinc-700/90">
+        <div className="rounded-lg bg-zinc-100 p-3 shadow dark:border-zinc-700/40  dark:bg-zinc-800/90">
           <h2 className="flex flex-auto text-sm font-semibold text-zinc-900 dark:text-zinc-100">
             <BriefcaseIcon className="h-6 w-6 flex-none" />
             <span className="ml-3">Work History</span>
           </h2>
-          <ol className="mt-3 space-y-4 bg-zinc-900 p-2">
+          <ol className="mt-3 space-y-4 bg-zinc-200 dark:bg-zinc-900">
             {resume.map((role, roleIndex) => (
-              <li key={roleIndex} className="flex gap-4">
+              <li key={roleIndex} className="flex gap-3 hover:bg-zinc-300 dark:hover:bg-zinc-700 p-3">
                 <Link href={role.link} target="_blank">
                   <div className="relative mt-1 flex h-12 w-12 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                     <Image
@@ -141,7 +141,7 @@ export default function WorkHistory() {
           <Button
             href="#"
             variant="secondary"
-            className="group mt-3 w-full rounded-2xl bg-zinc-200 dark:bg-zinc-900/50 dark:ring-1  dark:ring-indigo-500/40"
+            className="group mt-3 w-full bg-zinc-200 dark:bg-zinc-900/50 dark:ring-1  dark:ring-indigo-500/40"
           >
             Download CV
             <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 p-5 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />

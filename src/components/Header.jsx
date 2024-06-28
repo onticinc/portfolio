@@ -1,11 +1,11 @@
-import { Fragment, useEffect, useRef } from "react";
-import Image from "next/image";
+import { Fragment, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Popover, Transition } from "@headlessui/react";
 import clsx from "clsx";
 
-function CloseIcon(props) {
+// Define all SVG icons here
+function CloseIcon(props) { 
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
       <path
@@ -20,39 +20,37 @@ function CloseIcon(props) {
   );
 }
 
-function ChevronDownIcon(props) {
-  return (
-    <svg viewBox="0 0 8 6" aria-hidden="true" {...props}>
-      <path
-        d="M1.75 1.75 4 4.25l2.25-2.5"
-        fill="none"
+function ChevronDownIcon(props) { 
+    return (
+      <svg viewBox="0 0 8 6" aria-hidden="true" {...props}>
+        <path
+          d="M1.75 1.75 4 4.25l2.25-2.5"
+          fill="none"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg> 
+    )
+  }
+function SunIcon(props) { 
+    return (
+      <svg
+        viewBox="0 0 24 24"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function SunIcon(props) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}
-    >
-      <path d="M8 12.25A4.25 4.25 0 0 1 12.25 8v0a4.25 4.25 0 0 1 4.25 4.25v0a4.25 4.25 0 0 1-4.25 4.25v0A4.25 4.25 0 0 1 8 12.25v0Z" />
-      <path
-        d="M12.25 3v1.5M21.5 12.25H20M18.791 18.791l-1.06-1.06M18.791 5.709l-1.06 1.06M12.25 20v1.5M4.5 12.25H3M6.77 6.77 5.709 5.709M6.77 17.73l-1.061 1.061"
-        fill="none"
-      />
-    </svg>
-  );
-}
-
+        aria-hidden="true"
+        {...props}
+      >
+        <path d="M8 12.25A4.25 4.25 0 0 1 12.25 8v0a4.25 4.25 0 0 1 4.25 4.25v0a4.25 4.25 0 0 1-4.25 4.25v0A4.25 4.25 0 0 1 8 12.25v0Z" />
+        <path
+          d="M12.25 3v1.5M21.5 12.25H20M18.791 18.791l-1.06-1.06M18.791 5.709l-1.06 1.06M12.25 20v1.5M4.5 12.25H3M6.77 6.77 5.709 5.709M6.77 17.73l-1.061 1.061"
+          fill="none"
+        />
+      </svg>
+    );
+  }
 function MoonIcon(props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -64,9 +62,9 @@ function MoonIcon(props) {
       />
     </svg>
   );
+
 }
 
-// MOBILE NAVIGATION
 function MobileNavItem({ href, children }) {
   return (
     <li>
@@ -133,7 +131,8 @@ function MobileNavigation(props) {
 }
 
 function NavItem({ href, children }) {
-  let isActive = useRouter().pathname === href;
+  const { pathname } = useRouter();
+  const isActive = pathname === href;
 
   return (
     <li>
@@ -148,87 +147,100 @@ function NavItem({ href, children }) {
       >
         {children}
         {isActive && (
-          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-orange-500/0 via-orange-500/40 to-orange-500/0 dark:from-orange-400/0 dark:via-orange-500 dark:to-indigo-400/0" />
+          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-purple-500/0 via-purple-500/40 to-purple-500/0 dark:from-orange-400/0 dark:via-orange-500 dark:to-indigo-400/0" />
         )}
       </Link>
     </li>
   );
 }
 
-// DESKTOP NAVIGATION
 function DesktopNavigation(props) {
   return (
-    <div className="dark:bg-zinc-700 rounded-sm p-1 -ml-1">
-    <nav {...props}>
-      <ul className="flex bg-neutral-50 rounded-lg bg-white/90 p-3 text-sm font-medium text-zinc-800 shadow-sm shadow-zinc-800/5 backdrop-blur dark:bg-zinc-800 dark:text-zinc-200 dark:ring-white/10">
-        <NavItem href="/">Home</NavItem>
-        <NavItem href="/software">Software</NavItem>
-        <NavItem href="/audio">Audio</NavItem>
-        <NavItem href="/podcast">Podcast</NavItem>
-      </ul>
-    </nav>
-    </div>
+    <div className="relative shadow p-1 bg-zinc-200 dark:bg-zinc-700 dark:border-zinc-700/40 -ml-1">
+      <div className="dark:bg-zinc-700 rounded-sm justify-center">
+        <nav {...props}>
+          <ul className="flex bg-zinc-100 rounded-lg  p-3 text-sm font-medium text-zinc-800 shadow-sm shadow-zinc-800/5 backdrop-blur dark:bg-zinc-800 dark:text-zinc-200 dark:ring-white/10">
+            <NavItem href="/">Home</NavItem>
+            <NavItem href="/software">Software</NavItem>
+            <NavItem href="/audio">Audio</NavItem>
+            <NavItem href="/podcast">Podcast</NavItem>
+          </ul>
+        </nav>
+      </div>
+      </div>
   );
 }
 
 function ModeToggle() {
-  function disableTransitionsTemporarily() {
-    document.documentElement.classList.add("[&_*]:!transition-none");
-    window.setTimeout(() => {
-      document.documentElement.classList.remove("[&_*]:!transition-none");
-    }, 0);
-  }
+  useEffect(() => {
+    const disableTransitionsTemporarily = () => {
+      document.documentElement.classList.add("[&_*]:!transition-none");
+      window.setTimeout(() => {
+        document.documentElement.classList.remove("[&_*]:!transition-none");
+      }, 0);
+    };
 
-  function toggleMode() {
-    disableTransitionsTemporarily();
+    const toggleMode = () => {
+      disableTransitionsTemporarily();
 
-    let darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    let isSystemDarkMode = darkModeMediaQuery.matches;
-    let isDarkMode = document.documentElement.classList.toggle("dark");
+      const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      const isSystemDarkMode = darkModeMediaQuery.matches;
+      const isDarkMode = document.documentElement.classList.toggle("dark");
 
-    if (isDarkMode === isSystemDarkMode) {
-      delete window.localStorage.isDarkMode;
-    } else {
-      window.localStorage.isDarkMode = isDarkMode;
-    }
-  }
+      if (isDarkMode === isSystemDarkMode) {
+        delete window.localStorage.isDarkMode;
+      } else {
+        window.localStorage.isDarkMode = isDarkMode;
+      }
+    };
+
+    const button = document.getElementById('mode-toggle-button');
+    button.addEventListener('click', toggleMode);
+
+    return () => {
+      button.removeEventListener('click', toggleMode);
+    };
+  }, []);
 
   return (
-    <div className="p-5">
-      <button
-        type="button"
-        aria-label="Toggle dark mode"
-        className="group rounded-xl bg-neutral-50 px-3 py-2  ring-1 ring-orange-900/10 backdrop-blur transition  dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20 lg:-mr-4"
-        onClick={toggleMode}
-      >
-        <SunIcon className="h-6 w-6 animate-pulse fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-orange-600 [@media(prefers-color-scheme:dark)]:stroke-orange-200 [@media(prefers-color-scheme:dark)]:group-hover:fill-orange-500 [@media(prefers-color-scheme:dark)]:group-hover:stroke-orange-300" />
-        <MoonIcon className="hidden h-6 w-6 animate-pulse fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-teal-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-orange-500" />
-      </button>
+    <div className="p-1">
+        <button
+          type="button"
+          id="mode-toggle-button"
+          aria-label="Toggle dark mode"
+          className="group rounded-lg bg-zinc-100 p-3 backdrop-blur transition dark:bg-zinc-800/90 "
+        >
+          <SunIcon className="h-6 w-6 animate-pulse fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-yellow-400 [@media(prefers-color-scheme:dark)]:stroke-orange-200 [@media(prefers-color-scheme:dark)]:group-hover:fill-orange-500 [@media(prefers-color-scheme:dark)]:group-hover:stroke-orange-300" />
+          <MoonIcon className="hidden h-6 w-6 animate-pulse fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-teal-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-orange-500" />
+        </button>
+      
     </div>
   );
 }
 
 export function Header() {
-  let isHomePage = useRouter().pathname === "/";
-  let headerRef = useRef();
-  let isInitial = useRef(true);
+  const { pathname } = useRouter();
+  const isHomePage = pathname === "/";
+  const headerRef = useRef();
+  const isInitial = useRef(true);
+
+  useEffect(() => {
+    isInitial.current = false;
+  }, []);
 
   return (
-    <>
-      <header className="pointer-events-none relative">
-        <div ref={headerRef} className="mt-5 h-16 lg:-ml-3">
-          <div className="m-4 grid grid-cols-2 gap-4">
-            <div className="col-span-1">
-              <MobileNavigation className="pointer-events-auto md:hidden" />
-              <DesktopNavigation className="pointer-events-auto hidden md:block" />
-            </div>
-
-            <div className="pointer-events-auto col-span-1 place-self-end">
-              <ModeToggle />
-            </div>
+    <header className="pointer-events-none relative">
+      <div ref={headerRef} className="h-16 lg:-ml-3 lg:-mr-4">
+        <div className="m-4 grid grid-cols-2 gap-2">
+          <div className="col-span-1">
+            <MobileNavigation className="pointer-events-auto md:hidden" />
+            <DesktopNavigation className="pointer-events-auto hidden md:block" />
+          </div>
+          <div className="pointer-events-auto col-span-1 place-self-end">
+            <ModeToggle />
           </div>
         </div>
-      </header>
-    </>
+      </div>
+    </header>
   );
 }

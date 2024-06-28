@@ -70,16 +70,16 @@ export default function Education() {
 
   return (
     <>
-      <div className="rounded-sm border border-zinc-100 bg-neutral-50 p-1 mt-3 shadow dark:border-zinc-700/40 dark:bg-zinc-700">
-        <div className="rounded-lg border border-zinc-100 bg-neutral-50 p-3 shadow dark:border-zinc-700/40 dark:bg-zinc-800">
+      <div className="rounded-sm  bg-zinc-200 p-1 mt-3 shadow dark:border-zinc-700/40 dark:bg-zinc-700">
+        <div className="rounded-lg border border-zinc-100 bg-zinc-100 p-3 shadow dark:border-zinc-700/40 dark:bg-zinc-800">
           <h2 className="flex flex-auto text-sm font-semibold text-zinc-900 py-3 dark:text-zinc-100">
             <CapIcon className="h-6 w-6 flex-none" />
             <span className="ml-3">Education</span>
           </h2>
-          <div className="p-3 dark:bg-zinc-900">
-            <ol className="mt-4 space-y-3">
+          <div className="bg-zinc-200 dark:bg-zinc-900">
+            <ol className="space-y-3">
               {resume.map((role, roleIndex) => (
-                <li key={roleIndex} className="flex gap-4">
+                <li key={roleIndex} className="flex gap-4 p-3 hover:bg-zinc-300 dark:hover:bg-zinc-700 ">
                   <Link href={role.link} target="_blank">
                     <div className="relative mt-1 flex h-12 w-12 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                       <Image
