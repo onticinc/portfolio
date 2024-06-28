@@ -35,15 +35,11 @@ export default function App({ Component, pageProps, router }) {
 
     <>
       {/* Background Color */}
-      <div className="fixed bg-zinc-100 dark:bg-zinc-900 inset-0 justify-center flex">
-        <div className="flex w-full justify-center">
-          <div className="w-full  bg-neutral-300  dark:bg-zinc-900 dark:ring-zinc-300/20" />
-        </div>
-      </div>
-    
-      {/* Main Content */}
-      <div className="w-screen  max-w-7xl p-1 flex justify-center">
-        <div className="relative">
+      <div className="flex flex-col justify-center bg-zinc-200 dark:bg-zinc-900">
+        {/* Main Content Container */}
+        <div className="w-screen flex justify-center">
+          
+            <div className="bg-zinc-200 dark:bg-zinc-800 max-w-7xl p-2">
           <main>
                   <Header />
                  
@@ -54,6 +50,7 @@ export default function App({ Component, pageProps, router }) {
                 
           </main>
         </div>
+      </div>
       </div>
     </>
   )
