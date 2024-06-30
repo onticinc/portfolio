@@ -64,7 +64,7 @@ export default function Podcast({ data }) {
     setCurrentPage(page);
   };
 
-  let handleVideoClick = (video) => {
+  const handleVideoClick = (video) => {
     setCurrentVideo(video);
     setPlaying(true);
     window.scrollTo(0, 0);
@@ -161,18 +161,17 @@ export default function Podcast({ data }) {
       <div className="mb-3 mt-2 justify-center">
         {/* Card */}
         <div className="w-full bg-zinc-200 p-1 dark:bg-zinc-700">
-        <div className="bg-zinc-100 p-2 dark:bg-zinc-800">
-          <h3 className="text-1xl mb-3 font-extrabold text-zinc-800 dark:text-zinc-100">
-            Previous Interviews:
-          </h3>
-          <ul className="p-2 grid grid-cols-1 gap-2 dark:bg-zinc-700  sm:grid-cols-2 lg:grid-cols-3">
-            {currentPosts.map((item) => {
-              const { id, snippet = {} } = item;
-              const { title, thumbnails = {} } = snippet;
-              const { maxres = {} } = thumbnails;
+          <div className="bg-zinc-100 p-2 dark:bg-zinc-800">
+            <h3 className="text-1xl mb-3 font-extrabold text-zinc-800 dark:text-zinc-100">
+              Previous Interviews:
+            </h3>
+            <ul className="grid grid-cols-1 gap-2 p-2 dark:bg-zinc-700  sm:grid-cols-2 lg:grid-cols-3">
+              {currentPosts.map((item) => {
+                const { id, snippet = {} } = item;
+                const { title, thumbnails = {} } = snippet;
+                const { maxres = {} } = thumbnails;
 
-              return (
-                <>
+                return (
                   <li
                     key={id}
                     className="rounded-lg bg-zinc-200 p-2 dark:bg-zinc-800"
@@ -192,18 +191,17 @@ export default function Podcast({ data }) {
                       {title}
                     </h4>
                   </li>
-                </>
-              );
-            })}
-          </ul>
-          <div className="w-full rounded-lg bg-zinc-100 p-2 dark:bg-zinc-800">
-            <Pagination
-              totalPages={totalPages}
-              currentPage={currentPage}
-              onPageChange={handlePageChange}
-            />
+                );
+              })}
+            </ul>
+            <div className="w-full rounded-lg bg-zinc-100 p-2 dark:bg-zinc-800">
+              <Pagination
+                totalPages={totalPages}
+                currentPage={currentPage}
+                onPageChange={handlePageChange}
+              />
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </>

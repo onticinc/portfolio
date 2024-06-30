@@ -33,33 +33,40 @@ export default function Audio({ data }) {
   const [currentVideo, setCurrentVideo] = useState(null);
   const [playing, setPlaying] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const [shuffledData, setShuffledData] = useState([]);
   const postsPerPage = 9;
 
   useEffect(() => {
     if (data.items.length > 0) {
-      const shuffledItems = shuffleArray(data.items);
+      const shuffledItems = shuffleArray([...data.items]); // Copy to avoid mutating props
+      setShuffledData(shuffledItems);
       setCurrentVideo(shuffledItems[0]);
-      data.items = shuffledItems;
     }
   }, [data.items]);
+
+  useEffect(() => {
+    if (shuffledData.length > 0 && !currentVideo) {
+      setCurrentVideo(shuffledData[0]);
+    }
+  }, [shuffledData, currentVideo]);
 
   if (!currentVideo) {
     return <div>Loading...</div>;
   }
 
   const handleNextVideo = () => {
-    const currentIndex = data.items.findIndex(
+    const currentIndex = shuffledData.findIndex(
       (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
     );
-    setCurrentVideo(data.items[currentIndex + 1]);
+    setCurrentVideo(shuffledData[currentIndex + 1]);
     setPlaying(true);
   };
 
   const handlePreviousVideo = () => {
-    const currentIndex = data.items.findIndex(
+    const currentIndex = shuffledData.findIndex(
       (item) => item.snippet.resourceId.videoId === currentVideo.snippet.resourceId.videoId
     );
-    setCurrentVideo(data.items[currentIndex - 1]);
+    setCurrentVideo(shuffledData[currentIndex - 1]);
     setPlaying(true);
   };
 
@@ -75,8 +82,8 @@ export default function Audio({ data }) {
 
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
-  const currentPosts = data.items.slice(firstPostIndex, lastPostIndex);
-  const totalPages = Math.ceil(data.items.length / postsPerPage);
+  const currentPosts = shuffledData.slice(firstPostIndex, lastPostIndex);
+  const totalPages = Math.ceil(shuffledData.length / postsPerPage);
 
   return (
     <>
@@ -160,34 +167,32 @@ export default function Audio({ data }) {
             <h3 className="text-1xl mb-3 font-extrabold text-zinc-800 dark:text-zinc-100">
               Recordings:
             </h3>
-            <ul className="grid grid-cols-1 gap-2 p-2 dark:bg-zinc-700  sm:grid-cols-2 lg:grid-cols-3">
+            <ul className="grid grid-cols-1 gap-2 p-2 dark:bg-zinc-700 sm:grid-cols-2 lg:grid-cols-3">
               {currentPosts.map((item) => {
                 const { id, snippet = {} } = item;
                 const { title, thumbnails = {} } = snippet;
                 const { maxres = {} } = thumbnails;
 
                 return (
-                  <>
-                    <li
-                      key={id}
-                      className="rounded-lg bg-zinc-200 p-2 dark:bg-zinc-800"
-                    >
-                      <p>
-                        <a onClick={() => handleVideoClick(item)}>
-                          <img
-                            className="mt-2"
-                            width={maxres.width}
-                            height={maxres.height}
-                            src={maxres.url}
-                            alt=""
-                          />
-                        </a>
-                      </p>
-                      <h4 className="mt-3 font-bold text-zinc-700 dark:text-zinc-100">
-                        {title}
-                      </h4>
-                    </li>
-                  </>
+                  <li
+                    key={id}
+                    className="rounded-lg bg-zinc-200 p-2 dark:bg-zinc-800"
+                  >
+                    <p>
+                      <a onClick={() => handleVideoClick(item)}>
+                        <img
+                          className="mt-2"
+                          width={maxres.width}
+                          height={maxres.height}
+                          src={maxres.url}
+                          alt=""
+                        />
+                      </a>
+                    </p>
+                    <h4 className="mt-3 font-bold text-zinc-700 dark:text-zinc-100">
+                      {title}
+                    </h4>
+                  </li>
                 );
               })}
             </ul>

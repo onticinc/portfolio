@@ -237,7 +237,7 @@ export default function ImageSlider() {
         <div className='dark:bg-zinc-800 p-3 bg-zinc-100 rounded-lg '>
           <h3 className="font-2xl font-extrabold text-zinc-900 dark:text-zinc-400">Event | Production Photos:</h3>
           
-          <div class="flex overscroll-contain overflow-x-scroll ">
+          <div className="flex overscroll-contain overflow-x-scroll ">
               {image.map((role, roleIndex) => (
                 <div key={roleIndex} className="border bg-zinc-200 border-zinc-100 p-2 dark:border-zinc-700/40 mt-3 gap-2 mr-4 dark:bg-zinc-600/30  dark:hover:bg-zinc-700 ">
                   <Link href={role.link} target="_blank">

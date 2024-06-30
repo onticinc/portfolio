@@ -5,7 +5,7 @@ import { Popover, Transition } from "@headlessui/react";
 import clsx from "clsx";
 
 // Define all SVG icons here
-function CloseIcon(props) { 
+function CloseIcon(props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
       <path
@@ -20,37 +20,39 @@ function CloseIcon(props) {
   );
 }
 
-function ChevronDownIcon(props) { 
-    return (
-      <svg viewBox="0 0 8 6" aria-hidden="true" {...props}>
-        <path
-          d="M1.75 1.75 4 4.25l2.25-2.5"
-          fill="none"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg> 
-    )
-  }
-function SunIcon(props) { 
-    return (
-      <svg
-        viewBox="0 0 24 24"
+function ChevronDownIcon(props) {
+  return (
+    <svg viewBox="0 0 8 6" aria-hidden="true" {...props}>
+      <path
+        d="M1.75 1.75 4 4.25l2.25-2.5"
+        fill="none"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
-        aria-hidden="true"
-        {...props}
-      >
-        <path d="M8 12.25A4.25 4.25 0 0 1 12.25 8v0a4.25 4.25 0 0 1 4.25 4.25v0a4.25 4.25 0 0 1-4.25 4.25v0A4.25 4.25 0 0 1 8 12.25v0Z" />
-        <path
-          d="M12.25 3v1.5M21.5 12.25H20M18.791 18.791l-1.06-1.06M18.791 5.709l-1.06 1.06M12.25 20v1.5M4.5 12.25H3M6.77 6.77 5.709 5.709M6.77 17.73l-1.061 1.061"
-          fill="none"
-        />
-      </svg>
-    );
-  }
+      />
+    </svg>
+  );
+}
+
+function SunIcon(props) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="M8 12.25A4.25 4.25 0 0 1 12.25 8v0a4.25 4.25 0 0 1 4.25 4.25v0a4.25 4.25 0 0 1-4.25 4.25v0A4.25 4.25 0 0 1 8 12.25v0Z" />
+      <path
+        d="M12.25 3v1.5M21.5 12.25H20M18.791 18.791l-1.06-1.06M18.791 5.709l-1.06 1.06M12.25 20v1.5M4.5 12.25H3M6.77 6.77 5.709 5.709M6.77 17.73l-1.061 1.061"
+        fill="none"
+      />
+    </svg>
+  );
+}
+
 function MoonIcon(props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -62,7 +64,6 @@ function MoonIcon(props) {
       />
     </svg>
   );
-
 }
 
 function MobileNavItem({ href, children }) {
@@ -206,16 +207,15 @@ function ModeToggle() {
 
   return (
     <div className="p-1">
-        <button
-          type="button"
-          id="mode-toggle-button"
-          aria-label="Toggle dark mode"
-          className="group rounded-lg bg-zinc-100 p-3 backdrop-blur transition dark:bg-zinc-800/90 "
-        >
-          <SunIcon className="h-6 w-6 animate-pulse fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-yellow-400 [@media(prefers-color-scheme:dark)]:stroke-orange-200 [@media(prefers-color-scheme:dark)]:group-hover:fill-orange-500 [@media(prefers-color-scheme:dark)]:group-hover:stroke-orange-300" />
-          <MoonIcon className="hidden h-6 w-6 animate-pulse fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-teal-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-orange-500" />
-        </button>
-      
+      <button
+        type="button"
+        id="mode-toggle-button"
+        aria-label="Toggle dark mode"
+        className="group rounded-lg bg-zinc-100 p-3 backdrop-blur transition dark:bg-zinc-800/90 "
+      >
+        <SunIcon className="h-6 w-6 animate-pulse fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-yellow-400 [@media(prefers-color-scheme:dark)]:stroke-orange-200 [@media(prefers-color-scheme:dark)]:group-hover:fill-orange-500 [@media(prefers-color-scheme:dark)]:group-hover:stroke-orange-300" />
+        <MoonIcon className="hidden h-6 w-6 animate-pulse fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-teal-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-orange-500" />
+      </button>
     </div>
   );
 }

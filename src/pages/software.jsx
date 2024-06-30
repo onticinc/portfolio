@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
-
 import Link from "next/link";
-
 import Toggle from "@/components/ToggleButton";
 import logoPodcast from "@/images/logos/podcast_template_logo.png";
 import podcast_template_01 from "@/images/software/podcast_template_01.png";
@@ -12,7 +10,6 @@ import podcast_template_03 from "@/images/software/podcast_template_03.png";
 import eggs_01 from "@/images/software/eggs_01.png";
 import eggs_02 from "@/images/software/eggs_02.png";
 import eggs_03 from "@/images/software/eggs_03.png";
-
 import memory_01 from "@/images/software/memory_01.png";
 import memory_02 from "@/images/software/memory_02.png";
 import memory_03 from "@/images/software/memory_03.png";
@@ -27,8 +24,6 @@ import mtn_view_02 from "@/images/software/mtn_view_02.png";
 import mtn_view_03 from "@/images/software/mtn_view_03.png";
 
 const projects = [
-
-  // Website Template
   {
     id: "1",
     name: "Eggs The Podcast Website",
@@ -46,7 +41,6 @@ const projects = [
       href: "http://www.eggscast.com",
       label: "github",
     },
-
     logo: logoPodcast,
     images: [
       {
@@ -63,8 +57,6 @@ const projects = [
       },
     ],
   },
-
-  // Memory Game
   {
     id: "2",
     name: "Memory Game",
@@ -75,7 +67,6 @@ const projects = [
       href: "https://onticinc.github.io/card_match_game/",
       label: "Play The Game",
     },
-
     logo: memory_01,
     images: [
       {
@@ -92,8 +83,6 @@ const projects = [
       },
     ],
   },
-
-  // Audiostar
   {
     id: "3",
     name: "Audiostar Website",
@@ -118,8 +107,6 @@ const projects = [
       },
     ],
   },
-
-  // DJ Ontic
   {
     id: "4",
     name: "DJ Ontic Website",
@@ -141,8 +128,6 @@ const projects = [
       },
     ],
   },
-
-  // Mtn View Lawn Care
   {
     id: "5",
     name: "Mountain View Lawn Website",
@@ -164,7 +149,6 @@ const projects = [
       },
     ],
   },
-  // Website Template
   {
     id: "6",
     name: "Podcast Website Template",
@@ -175,7 +159,6 @@ const projects = [
       href: "https://github.com/onticinc/podcast_template",
       label: "github",
     },
-
     logo: logoPodcast,
     images: [
       {
@@ -213,66 +196,64 @@ export default function Projects() {
       </Head>
       <div className="relative">
         <div className="justify-center mt-3">
-          <ul role="list" className="grid grid-cols-1 gap-3 md:grid-cols-2">
+          <ul role="list" className="grid grid-cols-1">
             {projects.map((project) => (
               <div
-                className="gap-1 bg-zinc-200 p-1  dark:bg-zinc-700"
+                className="gap-1 bg-zinc-200 p-1 mb-5 dark:bg-zinc-700"
                 as="li"
-                key={project.name}
+                key={project.id}
               >
-               
-                <div className="bg-zinc-100 p-2 rounded-lg dark:bg-zinc-800">
-                <div className="bg-zinc-200 p-4 rounded-lg dark:bg-zinc-700">
-                  <Link href={project.link_01.href} target="_blank">
-                    <h3 className="text-1xl font-bold tracking-tight text-zinc-800 dark:text-zinc-300 sm:text-1xl">
-                      {project.name}
-                    </h3>
-                  </Link>
+                <div className="bg-zinc-100 p-2 mb-10rounded-lg dark:bg-zinc-800">
+                  <div className="bg-zinc-200 p-4 rounded-lg dark:bg-zinc-700">
+                    <Link href={project.link_01.href} target="_blank">
+                      <h3 className="text-1xl font-bold tracking-tight text-zinc-800 dark:text-zinc-300 sm:text-1xl">
+                        {project.name}
+                      </h3>
+                    </Link>
+
+                    {/* Use the Toggle component to toggle project details */}
+                    <div className="-mt-5 flex justify-end font-semibold text-zinc-800 dark:text-zinc-100">
+                      <p className="pr-2 text-zinc-400">Details</p>
+                      <Toggle
+                        enabled={showProjectDetails[project.id]}
+                        setEnabled={(enabled) =>
+                          setShowProjectDetails({
+                            ...showProjectDetails,
+                            [project.id]: enabled,
+                          })
+                        }
+                      />
+                    </div>
+                  </div>
+
+                  <div className="relative mt-2 flex gap-2 overflow-x-scroll bg-zinc-200 overscroll-contain rounded-lg border border-zinc-100 p-2 dark:border-zinc-700/40 dark:bg-zinc-700  dark:hover:bg-zinc-700 ">
+                    {project.images.map((role, roleIndex) => (
+                      <Image
+                        src={role.src}
+                        alt={role.alt}
+                        height={500}
+                        width={500}
+                        className="w-full rounded-lg"
+                        key={`${project.id}-${roleIndex}`}
+                      />
+                    ))}
+                  </div>
 
                   {/* Use the Toggle component to toggle project details */}
-                  <div className="-mt-5 flex justify-end font-semibold text-zinc-800 dark:text-zinc-100">
-                    <p className="pr-2 text-zinc-400">Details</p>
-                    <Toggle
-                      enabled={showProjectDetails[project.id]}
-                      setEnabled={(enabled) =>
-                        setShowProjectDetails({
-                          ...showProjectDetails,
-                          [project.id]: enabled,
-                        })
-                      }
-                    />
+                  <div
+                    className={showProjectDetails[project.id] ? "" : "hidden"}
+                    id="showHide"
+                  >
+                    <div className="mt-4 text-gray-400">
+                      {project.description}
+                    </div>
+
+                    <ul className="mt-4 text-gray-400">
+                      {project.tech.map((tech, techIndex) => (
+                        <li key={`${project.id}-tech-${techIndex}`}>-{tech}</li>
+                      ))}
+                    </ul>
                   </div>
-                </div>
-
-                <div className="relative mt-2 flex gap-2 overflow-x-scroll bg-zinc-200 overscroll-contain rounded-lg border border-zinc-100 p-2 dark:border-zinc-700/40 dark:bg-zinc-700  dark:hover:bg-zinc-700 ">
-                  {project.images.map((role, roleIndex) => (
-                    <Image
-                      src={role.src}
-                      alt={role.alt}
-                      height={500}
-                      width={500}
-                      className="w-full rounded-lg"
-                      key={role.src}
-                    />
-                  ))}
-                </div>
-
-                {/* Use the Toggle component to toggle project details */}
-                <div
-                  className={showProjectDetails[project.id] ? "" : "hidden"}
-                  id="showHide"
-                >
-                  <div className="mt-4 text-gray-400">
-                    {project.description}
-                  </div>
-
-                  <ul className="mt-4 text-gray-400">
-                    {project.tech.map((tech) => (
-                      <li key={tech}>-{tech}</li>
-                    ))}
-                  </ul>
-                </div>
-
                 </div>
               </div>
             ))}
