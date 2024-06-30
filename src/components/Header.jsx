@@ -158,14 +158,14 @@ function NavItem({ href, children }) {
 
 function DesktopNavigation(props) {
   return (
-    <div className="relative shadow p-1 hidden md:block bg-zinc-200 dark:bg-zinc-700 dark:border-zinc-700/40 -ml-1">
+    <div className="relative shadow p-1 min-w-fit hidden lg:block bg-zinc-200 dark:bg-zinc-700 dark:border-zinc-700/40 -ml-1">
       <div className="dark:bg-zinc-700 rounded-sm justify-center">
         <nav {...props}>
           <ul className="flex bg-zinc-100 rounded-lg  p-3 text-sm font-medium text-zinc-800 shadow-sm shadow-zinc-800/5 backdrop-blur dark:bg-zinc-800 dark:text-zinc-200 dark:ring-white/10">
             <NavItem href="/">Home</NavItem>
             <NavItem href="/software">Software</NavItem>
-            <NavItem href="/audio">Audio</NavItem>
             <NavItem href="/podcast">Podcast</NavItem>
+            <NavItem href="/audio">Audio</NavItem>
           </ul>
         </nav>
       </div>

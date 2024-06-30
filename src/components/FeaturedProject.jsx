@@ -2,7 +2,7 @@ import React from 'react';
 import YoutubeVideoPlayer from '@/components/youtubePlayer'; // Make sure the path is correct
 
 export default function FeaturedProject() {
-    const videoId = 'hU_ad6FjaZ8'; // The ID of the video you want to play
+    const videoId = '5mT5s8EQkj4&t=350s'; // The ID of the video you want to play
 
     return (
         <div className="featured-project">

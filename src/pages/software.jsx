@@ -27,6 +27,7 @@ import mtn_view_02 from "@/images/software/mtn_view_02.png";
 import mtn_view_03 from "@/images/software/mtn_view_03.png";
 
 const projects = [
+
   // Website Template
   {
     id: "1",
@@ -212,7 +213,7 @@ export default function Projects() {
       </Head>
       <div className="relative">
         <div className="justify-center mt-3">
-          <ul role="list" className="grid grid-cols-1 gap-2 xl:grid-cols-3">
+          <ul role="list" className="grid grid-cols-1 gap-3 md:grid-cols-2">
             {projects.map((project) => (
               <div
                 className="gap-1 bg-zinc-200 p-1  dark:bg-zinc-700"
@@ -220,10 +221,10 @@ export default function Projects() {
                 key={project.name}
               >
                
-                <div className="bg-zinc-100 p-3 rounded-lg dark:bg-zinc-800">
+                <div className="bg-zinc-100 p-2 rounded-lg dark:bg-zinc-800">
                 <div className="bg-zinc-200 p-4 rounded-lg dark:bg-zinc-700">
                   <Link href={project.link_01.href} target="_blank">
-                    <h3 className="font-2xl font-extrabold text-zinc-800 dark:text-white">
+                    <h3 className="text-1xl font-bold tracking-tight text-zinc-800 dark:text-zinc-300 sm:text-1xl">
                       {project.name}
                     </h3>
                   </Link>

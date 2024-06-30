@@ -1,4 +1,3 @@
-// Audio Component
 import Head from "next/head";
 import Pagination from "@/components/Pagination";
 import { ArrowLeft, ArrowRight } from "heroicons-react";
@@ -22,6 +21,14 @@ export async function getStaticProps() {
   };
 }
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 export default function Audio({ data }) {
   const [currentVideo, setCurrentVideo] = useState(null);
   const [playing, setPlaying] = useState(false);
@@ -30,7 +37,9 @@ export default function Audio({ data }) {
 
   useEffect(() => {
     if (data.items.length > 0) {
-      setCurrentVideo(data.items[0]);
+      const shuffledItems = shuffleArray(data.items);
+      setCurrentVideo(shuffledItems[0]);
+      data.items = shuffledItems;
     }
   }, [data.items]);
 
@@ -90,7 +99,7 @@ export default function Audio({ data }) {
 
       {/* Video Player */}
       <div className="justify-center mt-2">
-        <div className="grid grid-cols-1 gap-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 ">
           <div className="bg-zinc-200 p-1 dark:bg-zinc-700 sm:col-span-2">
             <div className="bg-zinc-100 rounded-lg p-2 dark:bg-zinc-800">
               <YoutubeVideoPlayer
@@ -127,7 +136,7 @@ export default function Audio({ data }) {
 
           {/* Current Video Description */}
           <div className="bg-zinc-200 w-full p-1 dark:bg-zinc-700">
-            <div className="border bg-zinc-100 rounded-lg min-h-[535px] shadow border-zinc-100 p-2 dark:border-zinc-700/40 dark:bg-zinc-800 sm:col-span-1">
+            <div className="border bg-zinc-100 rounded-lg min-h-[100px] shadow border-zinc-100 p-2 dark:border-zinc-700/40 dark:bg-zinc-800 sm:col-span-1">
               <div className="relative bg-zinc-200 dark:bg-zinc-900 p-2">
               <h3 className="text-1xl mb-3 font-extrabold text-zinc-800 dark:text-zinc-100">
                 {currentVideo.snippet.title}
@@ -144,41 +153,52 @@ export default function Audio({ data }) {
       </div>
 
       {/* Video List */}
-      <div className="justify-center mb-3 mt-2">
+      <div className="mb-3 mt-2 justify-center">
         {/* Card */}
-        <div className="bg-zinc-200 w-full p-1 dark:bg-zinc-700">
-        <div className="bg-zinc-100 p-2 rounded-lg dark:bg-zinc-800">
+        <div className="w-full bg-zinc-200 p-1 dark:bg-zinc-700">
+          <div className="bg-zinc-100 p-2 dark:bg-zinc-800">
+            <h3 className="text-1xl mb-3 font-extrabold text-zinc-800 dark:text-zinc-100">
+              Recordings:
+            </h3>
+            <ul className="grid grid-cols-1 gap-2 p-2 dark:bg-zinc-700  sm:grid-cols-2 lg:grid-cols-3">
+              {currentPosts.map((item) => {
+                const { id, snippet = {} } = item;
+                const { title, thumbnails = {} } = snippet;
+                const { maxres = {} } = thumbnails;
 
-        <h3 className="text-1xl mb-3 font-extrabold text-zinc-800 dark:text-zinc-100">Live Recordings:</h3>
-        <ul className="mb-2 grid grid-cols-1 p-2 gap-2 dark:bg-zinc-700  sm:grid-cols-2 lg:grid-cols-3">
-          {currentPosts.map((item) => {
-            const { id, snippet = {} } = item;
-            const { title, thumbnails = {} } = snippet;
-            const { maxres = {} } = thumbnails;
-
-            return (<>
-              <li key={id} className="rounded-lg p-2 bg-zinc-200 dark:bg-zinc-800">
-                <p>
-                  <a onClick={() => handleVideoClick(item)}>
-                    <img
-                      className="mt-2"
-                      width={maxres.width}
-                      height={maxres.height}
-                      src={maxres.url}
-                      alt=""
-                    />
-                  </a>
-                </p>
-                <h4 className="mt-3 font-bold text-zinc-700 dark:text-zinc-100">{title}</h4>
-              </li>
-              </>
-            );
-          })}
-        </ul>
-          <div className="bg-zinc-100 w-full p-2 rounded-lg dark:bg-zinc-800">
-            <Pagination totalPages={totalPages} currentPage={currentPage} onPageChange={handlePageChange} />
+                return (
+                  <>
+                    <li
+                      key={id}
+                      className="rounded-lg bg-zinc-200 p-2 dark:bg-zinc-800"
+                    >
+                      <p>
+                        <a onClick={() => handleVideoClick(item)}>
+                          <img
+                            className="mt-2"
+                            width={maxres.width}
+                            height={maxres.height}
+                            src={maxres.url}
+                            alt=""
+                          />
+                        </a>
+                      </p>
+                      <h4 className="mt-3 font-bold text-zinc-700 dark:text-zinc-100">
+                        {title}
+                      </h4>
+                    </li>
+                  </>
+                );
+              })}
+            </ul>
+            <div className="w-full rounded-lg bg-zinc-100 p-2 dark:bg-zinc-800">
+              <Pagination
+                totalPages={totalPages}
+                currentPage={currentPage}
+                onPageChange={handlePageChange}
+              />
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </>

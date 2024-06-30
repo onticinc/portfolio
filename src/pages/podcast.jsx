@@ -96,7 +96,7 @@ export default function Podcast({ data }) {
 
       {/* Video Player */}
       <div className="mt-2 justify-center">
-        <div className="grid grid-cols-1 gap-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1">
           <div className="bg-zinc-200 p-1 dark:bg-zinc-700 sm:col-span-2">
             <div className="rounded-lg bg-zinc-100 p-2 dark:bg-zinc-800">
               <YoutubeVideoPlayer
@@ -141,12 +141,12 @@ export default function Podcast({ data }) {
 
           {/* Current Video Description */}
           <div className="w-full bg-zinc-200 p-1 dark:bg-zinc-700">
-            <div className="min-h-[300px] rounded-lg border border-zinc-100 bg-zinc-100 p-2 shadow dark:border-zinc-700/40 dark:bg-zinc-800 sm:col-span-1">
+            <div className="rounded-lg border border-zinc-100 bg-zinc-100 p-2 shadow dark:border-zinc-700/40 dark:bg-zinc-800 sm:col-span-1">
               <div className="relative bg-zinc-200 p-2 dark:bg-zinc-900">
                 <h3 className="text-1xl mb-3 font-extrabold text-zinc-800 dark:text-zinc-100">
                   {currentVideo.snippet.title}
                 </h3>
-                <div className="flex max-h-[445px] overflow-x-scroll overscroll-contain">
+                <div className="flex max-h-[100px] overflow-x-scroll overscroll-contain">
                   <p className="text-zinc-700 dark:text-white">
                     {currentVideo.snippet.description}
                   </p>

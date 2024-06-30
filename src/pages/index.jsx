@@ -13,21 +13,24 @@ export default function Home() {
         <title>Michael Smith - Create, Document, Produce. </title>
         <meta name="portfolio" content="Portfolio of work by Michael Smith." />
       </Head>
-      <div className="mt-3 grid gap-2 grid-cols-3">
+      <div className="mt-2 grid gap-2 md:grid-cols-3">
         {/* Left Column */}
 
         {/* Short Intro */}
-        <div id="left" className="col-span-3 lg:col-span-2">
+        <div id="left" className="col-span-3 md:col-span-2">
           <ShortIntro />
-          <FeaturedProject />
         </div>
 
         {/* End Left Column */}
 
         {/* Right Column */}
-        <div id="right" className="col-span-3 lg:col-span-1">
+        <div id="right" className="col-span-3 md:col-span-1">
           <WorkHistory />
           <Education />
+        </div>
+        <div className="col-span-3">
+
+          <FeaturedProject />
         </div>
       </div>
 
