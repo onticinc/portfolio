@@ -3,7 +3,6 @@ import ImageSlider from "@/components/ImageSlider";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 import "@/styles/tailwind.css";
 import "focus-visible";

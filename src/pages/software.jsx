@@ -44,6 +44,11 @@ const projects = [
     logo: logoPodcast,
     images: [
       {
+        src: eggs_03,
+        alt: "Screenshot of Podcast Website Template",
+      },
+    
+      {
         src: eggs_01,
         alt: "Eggs The Podcast Website",
       },
@@ -51,10 +56,7 @@ const projects = [
         src: eggs_02,
         alt: "Screenshot of Podcast Website Template",
       },
-      {
-        src: eggs_03,
-        alt: "Screenshot of Podcast Website Template",
-      },
+      
     ],
   },
   {
