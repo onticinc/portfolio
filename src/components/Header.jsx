@@ -79,7 +79,7 @@ function MobileNavItem({ href, children }) {
 function MobileNavigation(props) {
   return (
     <Popover {...props}>
-      <Popover.Button className="group flex items-center bg-white/90 p-3 -ml-3  align-middle rounded-lg text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
+      <Popover.Button className="group flex items-center bg-white/90 p-3 -ml-3 align-middle rounded-lg text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
         Menu
         <div className="m-1">
           <ChevronDownIcon className="h-auto w-4 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400" />
@@ -235,7 +235,7 @@ export function Header() {
       <div ref={headerRef} className="h-16 lg:-ml-3 lg:-mr-4">
         <div className="m-4 grid grid-cols-2 gap-2">
           <div className="col-span-1">
-            <MobileNavigation className="pointer-events-auto md:hidden" />
+            <MobileNavigation className="pointer-events-auto lg:hidden" />
             <DesktopNavigation className="pointer-events-auto hidden md:block" />
           </div>
           <div className="pointer-events-auto col-span-1 place-self-end">
