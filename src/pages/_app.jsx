@@ -37,7 +37,7 @@ export default function App({ Component, pageProps, router }) {
         <div className="flex w-screen justify-center">
           <div className="
               w-full
-              md:max-w-5xl
+              md:max-w-6xl
              
               bg-zinc-300 
               p-2 
