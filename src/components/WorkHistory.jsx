@@ -45,7 +45,7 @@ function ArrowDownIcon(props) {
 }
 
 export default function WorkHistory() {
-  let resume = [
+  let resumeDetails = [
     {
       company: "Eggs The Podcast",
       title: "Host | Producer | Co-Owner",
@@ -98,7 +98,7 @@ export default function WorkHistory() {
             <span className="ml-3">Work History</span>
           </h2>
           <ol className="mt-3 space-y-4 bg-zinc-200 dark:bg-zinc-900">
-            {resume.map((role, roleIndex) => (
+            {resumeDetails.map((role, roleIndex) => (
               <li key={roleIndex} className="flex gap-3 hover:bg-zinc-300 dark:hover:bg-zinc-700 p-3">
                 <Link href={role.link} target="_blank">
                   <div className="relative mt-1 flex h-12 w-12 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
@@ -138,14 +138,15 @@ export default function WorkHistory() {
               </li>
             ))}
           </ol>
-          <Button
-            href="#"
-            variant="secondary"
-            className="group mt-3 w-full bg-zinc-200 dark:bg-zinc-900/50 dark:ring-1  dark:ring-indigo-500/40"
-          >
-            Download CV
-            <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 p-5 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-          </Button>
+          <a href="/documents/mds_resume.pdf" download="mds_resume.pdf">
+            <Button
+              variant="secondary"
+              className="group mt-3 w-full bg-zinc-200 dark:bg-zinc-900/50 dark:ring-1  dark:ring-indigo-500/40"
+            >
+              Download CV
+              <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 p-5 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+            </Button>
+          </a>
         </div>
       </div>
     </>

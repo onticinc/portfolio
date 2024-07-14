@@ -13,7 +13,7 @@ export default function Home() {
         <title>Michael Smith - Create, Document, Produce. </title>
         <meta name="portfolio" content="Portfolio of work by Michael Smith." />
       </Head>
-      <div className="mt-2 grid gap-2 md:grid-cols-3">
+      <div className="mt-3 grid gap-2 md:grid-cols-3">
         {/* Left Column */}
 
         {/* Short Intro */}

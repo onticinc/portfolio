@@ -211,9 +211,9 @@ function ModeToggle() {
         type="button"
         id="mode-toggle-button"
         aria-label="Toggle dark mode"
-        className="group rounded-lg bg-zinc-100 p-3 backdrop-blur transition dark:bg-zinc-800/90 "
+        className="group rounded-lg bg-zinc-300 p-3 backdrop-blur transition dark:bg-zinc-800/90 "
       >
-        <SunIcon className="h-6 w-6 animate-pulse fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-yellow-400 [@media(prefers-color-scheme:dark)]:stroke-orange-200 [@media(prefers-color-scheme:dark)]:group-hover:fill-orange-500 [@media(prefers-color-scheme:dark)]:group-hover:stroke-orange-300" />
+        <SunIcon className="h-8 w-8 animate-pulse fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-yellow-300 [@media(prefers-color-scheme:dark)]:stroke-orange-200 [@media(prefers-color-scheme:dark)]:group-hover:fill-orange-500 [@media(prefers-color-scheme:dark)]:group-hover:stroke-orange-300" />
         <MoonIcon className="hidden h-6 w-6 animate-pulse fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-teal-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-orange-500" />
       </button>
     </div>
