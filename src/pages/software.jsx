@@ -208,7 +208,7 @@ export default function Projects() {
                 <div className="bg-zinc-100 p-2 mb-10rounded-lg dark:bg-zinc-800">
                   <div className="bg-zinc-200 p-4 rounded-lg dark:bg-zinc-700">
                     <Link href={project.link_01.href} target="_blank">
-                      <h3 className="text-1xl font-bold tracking-tight text-zinc-800 dark:text-zinc-300 sm:text-1xl">
+                      <h3 className="text-1xl font-bold tracking-tight text-zinc-800 hover:text-zinc-500 dark:hover:text-zinc-100 dark:text-zinc-300 sm:text-1xl">
                         {project.name}
                       </h3>
                     </Link>
@@ -246,6 +246,8 @@ export default function Projects() {
                     className={showProjectDetails[project.id] ? "" : "hidden"}
                     id="showHide"
                   >
+                    
+                    
                     <div className="mt-4 text-gray-400">
                       {project.description}
                     </div>
@@ -255,6 +257,10 @@ export default function Projects() {
                         <li key={`${project.id}-tech-${techIndex}`}>-{tech}</li>
                       ))}
                     </ul>
+
+                    <Link href={project.link_01.href} target="_blank">
+                      <p className="dark:bg-zinc-400 p-3 mt-5 w-32 dark:text-zinc-800 text-center bg-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-200 rounded-lg">View Project</p>
+                    </Link>
                   </div>
                 </div>
               </div>
