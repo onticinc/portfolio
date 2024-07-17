@@ -35,16 +35,7 @@ export default function App({ Component, pageProps, router }) {
       <div className="flex flex-col justify-center bg-zinc-300 dark:bg-zinc-900">
         {/* Main Content Container */}
         <div className="flex w-screen justify-center">
-          <div className="
-              w-full
-              md:max-w-6xl
-             
-              bg-zinc-300 
-              p-2 
-             
-              dark:bg-neutral-800
-              
-              ">
+          <div className="w-full md:max-w-6xl bg-zinc-300 p-2 dark:bg-neutral-800">
             <main>
               {/* <QueryClientProvider client={queryClient}> */}
 
