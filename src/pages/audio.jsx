@@ -10,14 +10,14 @@ const YOUTUBE_PLAYLIST_ID = "PLY5aty1hlHsGJZKQ1bb6eadFVAxFEUqEJ";
 
 export async function getStaticProps() {
   const res = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&key=${process.env.YOUTUBE_API_KEY}&playlistId=${YOUTUBE_PLAYLIST_ID}&maxResults=100`,
-    { next: { revalidate: 86400 } }
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&key=${process.env.YOUTUBE_API_KEY}&playlistId=${YOUTUBE_PLAYLIST_ID}&maxResults=100`
   );
   const data = await res.json();
   return {
     props: {
       data,
     },
+    revalidate: 3600,  //  revalidate every hour
   };
 }
 
