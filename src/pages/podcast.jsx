@@ -12,14 +12,15 @@ const EGGS_PODCAST_ID = "PLkk4WlaE-9QQiq_8gcwjuY87ZW_-QKqUj";
 
 export async function getStaticProps() {
   const res = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&key=${process.env.YOUTUBE_API_KEY}&playlistId=${EGGS_PODCAST_ID}&maxResults=50`,
-    { next: { revalidate: 86400 } }
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&key=${process.env.YOUTUBE_API_KEY}&playlistId=${EGGS_PODCAST_ID}&maxResults=50`
+  
   );
   const data = await res.json();
   return {
     props: {
       data,
     },
+    revalidate: 3600,  //  revalidate every hour
   };
 }
 
