@@ -12,7 +12,7 @@ export default function BioCard(){
             </p>
             <p className=" text-base mt-5 text-zinc-600 dark:text-zinc-400">
               <span className="font-bold">Software:</span> Focused on Expo and React Native with TypeScript, Next JS,
-              , and Python when needed. 
+              and Python. 
             </p>
             <p className="mt-3 text-base text-zinc-600 dark:text-zinc-400">
               <span className="font-bold">Editing:</span> Protools, Reaper, Ableton, Creative Cloud.  
