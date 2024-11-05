@@ -11,14 +11,14 @@ export default function BioCard(){
               Software developer, Audio Engineer, and Event Professional. 
             </p>
             <p className=" text-base mt-5 text-zinc-600 dark:text-zinc-400">
-              <span className="font-bold">Software:</span> Focused on MERN | JAM stack with Next JS,
-              TypeScript, and Python when needed. 
+              <span className="font-bold">Software:</span> Focused on Expo and React Native with TypeScript, Next JS,
+              , and Python when needed. 
             </p>
             <p className="mt-3 text-base text-zinc-600 dark:text-zinc-400">
               <span className="font-bold">Editing:</span> Protools, Reaper, Ableton, Creative Cloud.  
             </p>
             <p className="mt-3 text-base text-zinc-600 dark:text-zinc-400">
-              <span className="font-bold">Hardware:</span> ShowExpress, Hog-500, Midas M32, Behringer x32, Chauvet Products, QSC K Series.  
+              <span className="font-bold">Hardware:</span> ShowExpress, Hog-500, Midas M32, Behringer x32.  
             </p>
             </div>
               
