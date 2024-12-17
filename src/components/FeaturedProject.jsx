@@ -7,10 +7,12 @@ const YoutubeVideoPlayer = dynamic(() => import('@/components/youtubePlayer'), {
 export default function FeaturedProject() {
     const videos = [
         'nbpQbcp1jHo',
-        'di2fHkIjEqA',
+        '9mo4xqOnmK4',
         '5mT5s8EQkj4',
         'Lnm-06uR6xs',
-        'hU_ad6FjaZ8'
+        'hU_ad6FjaZ8',
+        'D_oG-H0iKt4',
+        '0bKNwNfpQqM'
     ];
 
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
