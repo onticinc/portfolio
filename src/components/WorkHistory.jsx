@@ -6,7 +6,7 @@ import logoZ103 from "@/images/logos/z103.png";
 import logoEggs from "@/images/logos/eggsLogo.jpeg";
 import logoOntic from "@/images/logos/ontic_logo.jpg";
 import logoAudiostar from "@/images/logos/audiostar.png";
-import wspLogo from "@/images/logos/wsp_logo.jpeg";
+import sunValleyLogo from "@/images/logos/sun_valley_logo.jpg";
 
 function BriefcaseIcon(props) {
   return (
@@ -47,11 +47,11 @@ function ArrowDownIcon(props) {
 export default function WorkHistory() {
   let resumeDetails = [
     {
-      company: "Eggs The Podcast",
-      title: "Host | Producer | Co-Owner",
-      logo: logoEggs,
-      link: "https://www.eggscast.com/",
-      start: "2018",
+      company: "Sun Valley Resort",
+      title: "Lead Audio Engineer | AV Assistant Manager",
+      logo: sunValleyLogo,
+      link: "https://www.sunvalley.com/",
+      start: "2025",
       end: {
         label: "Present",
         dateTime: new Date().getFullYear(),
@@ -79,6 +79,18 @@ export default function WorkHistory() {
         dateTime: new Date().getFullYear(),
       },
     },
+    {
+      company: "Eggs The Podcast",
+      title: "Host | Producer | Co-Owner",
+      logo: logoEggs,
+      link: "https://www.eggscast.com/",
+      start: "2018",
+      end: {
+        label: "Present",
+        dateTime: new Date().getFullYear(),
+      },
+    },
+    
     {
       company: "Riverbend Communications",
       title: "On-Air Personality for Z103fm",
