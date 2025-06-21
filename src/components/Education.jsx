@@ -5,6 +5,7 @@ import logoShoreline from "@/images/logos/shoreline_logo.png";
 import logoGa from "@/images/logos/GaLogo.jpeg";
 import logoIsu from "@/images/logos/isu_logo.jpeg";
 import logoTcc from "@/images/logos/tcc_logo.jpeg";
+import logoDante from "@/images/logos/dante_1.png";
 function CapIcon(props) {
   return (
     <svg
@@ -65,6 +66,14 @@ export default function Education() {
       link: "https://www.tacomacc.edu/",
       start: "1998",
       end: "2000",
+    },
+    {
+      company: "Dante",
+      title: "Dante Level 1 Certification",
+      logo: logoDante,
+      link: "https://www.audinate.com/training/dante-level-1-certification",
+      start: "6/20/2025",
+      end: "N/A",
     },
   ];
 
